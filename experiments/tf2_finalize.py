@@ -364,8 +364,12 @@ Single-pass stage counts:
 - strengthened equalities added by upstream discover: {stage['strengthened_equalities']}
 - final raw statements entering TreeForge triage: {manifest['raw_candidate_count']}
 
-The first attempted live execution, Actions run `36875119955`, did not produce a valid
-scientific artifact within the expected runtime envelope. A discovery-only probe in run
+The first attempted live execution, Actions run `36875119955`, was provisionally treated as a
+pre-valid-output performance failure after it remained inside the scientific step beyond the expected
+runtime envelope and PR #5 was closed before its artifact was available. The run later completed and
+uploaded an artifact whose final statements and scientific outcomes match the repaired run after
+removing source-commit provenance labels. It is preserved as process history rather than used as the
+authoritative TF2 record. A discovery-only probe in run
 `36887027180` found 42,068 convex-hull facets while Qhull itself took about 0.48 seconds.
 TreeForge therefore replaced repeated always-true Morgan/Dalmatian state reconstruction by
 an output-equivalent cached adapter path, verified against the pinned live upstream package.
@@ -489,7 +493,8 @@ def run(artifact_dir: Path) -> dict[str, object]:
         "prior_art_candidate_ids": ["TF-000998"],
         "graduation_candidate_count": 0,
         "final_state_counts": final_state_counts,
-        "failed_pre_valid_output_actions_run": 36875119955,
+        "first_slow_actions_run": 36875119955,
+        "first_slow_run_late_equivalent_artifact_observed": True,
         "performance_probe_actions_run": 36887027180,
         "repaired_preflight_actions_run": 36887887082,
         "diagnostic_validation_actions_run": 36855637323,
