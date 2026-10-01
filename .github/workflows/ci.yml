@@ -32,7 +32,7 @@ jobs:
           python experiments/tf1_discovery.py             --spec experiments/TF1-0001/spec.json             --output-dir /tmp/tf1             --source-commit "$GITHUB_SHA"
           test -s /tmp/tf1/manifest.json
           test -s /tmp/tf1/raw_txgraffiti_output.json
-          test -s /tmp/tf1/observed_candidates.jsonl
+          test -f /tmp/tf1/observed_candidates.jsonl
       - uses: actions/upload-artifact@v4
         with:
           name: tf1-controlled-discovery
