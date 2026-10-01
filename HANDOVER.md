@@ -46,13 +46,13 @@ Prior-art search performed: **yes, bounded and candidate-specific for TF-000998 
 
 Frozen TF2 implementation pre-merge CI: `36864378120`.  
 Original TF2 diagnostic validation: `36855637323`.  
-First scientific execution attempt with no valid artifact: `36875119955`.  
+First scientific execution attempt: `36875119955` (provisionally closed as stalled; it later completed and produced an artifact equivalent in mathematical output to the authoritative repaired run).  
 Discovery-only 42,068-facet performance probe: `36887027180`.  
 Clean repaired preflight: `36887887082`.  
 Successful scientific run: `36888114138`.  
 Initial result-materialization schema failure: `36890309397`.
 
-The failed execution/materialization paths are preserved in `docs/FAILURE_AND_LESSON_LEDGER.md`. Neither changed the frozen TF2 scientific specification.
+The slow first-execution path, its later completion, and the materialization failure are preserved append-only in `docs/FAILURE_AND_LESSON_LEDGER.md`. The late artifact from run `36875119955` was audited as mathematically equivalent to the repaired run after removing source-commit provenance labels; it is not the authoritative TF2 record. None of these process events changed the frozen TF2 scientific specification.
 
 ## Precise next session
 
