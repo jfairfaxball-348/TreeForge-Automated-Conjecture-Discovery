@@ -1,0 +1,106 @@
+{
+  "experiment_id": "TF2-0001",
+  "status": "FROZEN",
+  "frozen_at": "2026-10-01T12:34:00Z",
+  "freeze_parent_head": "c160409edf422977b64a811362de08b647566df7",
+  "diagnostic_id": "TF2-DIAG-0001",
+  "diagnostic_validation_run": 36855637323,
+  "universe": ["finite", "simple", "unlabeled", "tree"],
+  "discovery_orders": [2, 10],
+  "burned_orders_excluded": [11],
+  "holdout_orders": [12, 12],
+  "expected_discovery_tree_count": 200,
+  "expected_holdout_tree_count": 551,
+  "corpus_invariants": [
+    "order",
+    "edge_count",
+    "degree_sum",
+    "min_degree",
+    "max_degree",
+    "leaf_count",
+    "support_vertex_count",
+    "diameter",
+    "radius",
+    "eccentricity_sum",
+    "matching_number",
+    "independence_number",
+    "domination_number",
+    "maximal_independent_set_count",
+    "wiener_index",
+    "cherry_count"
+  ],
+  "target": "domination_number",
+  "discovery_features": [
+    "order",
+    "leaf_count",
+    "support_vertex_count",
+    "max_degree",
+    "diameter",
+    "matching_number",
+    "maximal_independent_set_count"
+  ],
+  "excluded_from_discovery": {
+    "edge_count": "calibration/consistency column; tree identity edge_count = order - 1",
+    "degree_sum": "calibration/consistency column; handshake identity degree_sum = 2 edge_count",
+    "min_degree": "constant 1 on the nontrivial-tree discovery universe",
+    "independence_number": "not supplied alongside matching_number because alpha(T)+nu(T)=order for bipartite trees",
+    "radius": "diagnostic-only withheld feature; not added after TF1 outcome",
+    "eccentricity_sum": "diagnostic-only withheld feature; not added after TF1 outcome",
+    "wiener_index": "diagnostic-only withheld feature; not added after TF1 outcome",
+    "cherry_count": "diagnostic-only withheld feature; not added after TF1 outcome"
+  },
+  "txgraffiti": {
+    "package": "txgraffiti",
+    "version": "0.4.1",
+    "upstream_source_revision": "e37126da53b84150d142a5d61202b61f78521fcc",
+    "adapter": "treeforge.conjecturing.txgraffiti_adapter.TxGraffitiAdapter",
+    "adapter_semantics": "TreeForge empty hypothesis payload is normalized to upstream None (always-true base predicate)",
+    "methods": ["convex_hull", "ratios"],
+    "heuristics": ["morgan_accept", "dalmatian_accept"],
+    "post_processors": ["remove_duplicates", "sort_by_touch_count"],
+    "object_symbol": "T",
+    "hypothesis_payload": []
+  },
+  "hypotheses": ["finite", "simple", "unlabeled", "tree"],
+  "anti_numerology": [
+    "constant-column detection",
+    "exact duplicate-column detection",
+    "pairwise exact affine-equivalence detection",
+    "tree identity edge_count = order - 1",
+    "handshake identity degree_sum = 2 edge_count",
+    "bipartite identity independence_number + matching_number = order",
+    "exact discovery-side reevaluation of every machine statement",
+    "exact normalized duplicate detection before holdout"
+  ],
+  "candidate_policy": {
+    "allocate_permanent_id_to_every_final_TxGraffiti_statement": true,
+    "candidate_cap": null,
+    "normalization": "Use structured TxGraffiti lhs/operator/rhs metadata; preserve raw statement; no post-hoc coefficient tuning.",
+    "duplicate_equivalence": "Exact normalized (lhs, operator, rhs) equality only in TF2-0001.",
+    "known_result_filter": "Standard calibration identities remain KNOWN_RESULT/ARTIFACT only; no novelty inference."
+  },
+  "adversarial_families_reserved": {
+    "paths": {"orders": [13, 15]},
+    "stars": {"orders": [13, 15]},
+    "spiders": {
+      "arm_patterns": {
+        "one_one_long": [[1,1,10],[1,1,11],[1,1,12]],
+        "one_two_long": [[1,2,9],[1,2,10],[1,2,11]],
+        "two_two_long": [[2,2,8],[2,2,9],[2,2,10]],
+        "balanced": [[4,4,4]]
+      }
+    },
+    "caterpillars": [
+      {"spine_order": 5, "leaf_multiplicities": [4,0,0,0,4]},
+      {"spine_order": 6, "leaf_multiplicities": [2,0,2,0,2,1]},
+      {"spine_order": 7, "leaf_multiplicities": [0,3,0,3,0,2,0]}
+    ],
+    "balanced_binary_trees": [{"height": 3}],
+    "double_stars": [[5,6],[5,7],[6,7]],
+    "brooms": [[5,7],[6,7],[7,7]]
+  },
+  "random_seed": null,
+  "holdout_policy": "Order 12 is generated only after candidate generation and first-stage discovery triage. Order 11 is burned and is not used for TF2 generation, tuning, holdout testing, or adversarial selection.",
+  "source_commit_policy": "The exact GitHub commit used by the live run is recorded in the manifest and experiment registry. The freeze commit cannot self-contain its resulting SHA; freeze_parent_head fixes the pre-freeze implementation state.",
+  "mutation_policy": "Any material change to target, features, split, generators, heuristics, post-processors, normalization, candidate cap, or adversarial set closes TF2-0001 and requires a new experiment ID."
+}
