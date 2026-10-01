@@ -42,7 +42,7 @@ jobs:
             tests/test_txgraffiti_adapter.py
       - name: Execute frozen TF3-0001
         run: |
-          python experiments/tf3_discovery.py \
+          python -m experiments.tf3_discovery \
             --spec experiments/TF3-0001/spec.json \
             --output-dir /tmp/tf3-0001 \
             --source-commit "$GITHUB_SHA"
