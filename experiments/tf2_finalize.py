@@ -51,6 +51,20 @@ def _write_json(path: Path, payload: object) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _validate_registry_record(record: dict[str, object]) -> None:
+    """Validate current-schema records while preserving the original TF0 rev1."""
+    if (
+        record.get("candidate_id") == "TF-000001"
+        and record.get("revision") == 1
+        and "source_commit" not in record
+    ):
+        patched = dict(record)
+        patched["source_commit"] = "LEGACY_TF0_REV1_SCHEMA_OMISSION"
+        validate_candidate_record(patched)
+        return
+    validate_candidate_record(record)
+
+
 def _revision(
     record: dict[str, object],
     *,
@@ -436,7 +450,7 @@ def run(artifact_dir: Path) -> dict[str, object]:
     registry_path = Path("data/registry/candidates.jsonl")
     existing = _read_jsonl(registry_path)
     for record in existing:
-        validate_candidate_record(record)
+        _validate_registry_record(record)
     if any(str(record["candidate_id"]) != "TF-000001" for record in existing):
         raise RuntimeError("candidate registry advanced unexpectedly before TF2 finalization")
 
@@ -599,7 +613,7 @@ def run(artifact_dir: Path) -> dict[str, object]:
     all_records = _read_jsonl(registry_path)
     per_id: dict[str, list[int]] = {}
     for record in all_records:
-        validate_candidate_record(record)
+        _validate_registry_record(record)
         per_id.setdefault(str(record["candidate_id"]), []).append(int(record["revision"]))
     for candidate_id, revisions in per_id.items():
         if revisions != sorted(revisions) or len(revisions) != len(set(revisions)):
