@@ -188,7 +188,7 @@ def _interpret(
 
     record = current["TF-001010"]
     graph = spider([4, 4, 4, 4, 4, 4])
-    spider_row = _row_for_graph(graph, invariant_names)
+    spider_row = _row_for_graph(graph, ["order", "domination_number", "matching_number"])
     if (
         int(spider_row["order"]) != 25
         or int(spider_row["domination_number"]) != 7
