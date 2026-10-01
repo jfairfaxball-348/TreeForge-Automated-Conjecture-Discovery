@@ -45,3 +45,49 @@ def test_adapter_isolates_current_api_surface():
     assert result[0].engine == "TxGraffiti"
     assert result[0].engine_version == "0.4.1"
     assert Playground.last_instance.kwargs["hypothesis"] is None
+
+
+def test_cached_always_true_pipeline_matches_live_upstream():
+    pd = __import__("pandas")
+    pytest = __import__("pytest")
+    pytest.importorskip("txgraffiti")
+
+    from txgraffiti.generators import convex_hull, ratios
+    from txgraffiti.heuristics import dalmatian_accept, morgan_accept
+    from txgraffiti.playground import ConjecturePlayground
+    from txgraffiti.processing import remove_duplicates, sort_by_touch_count
+
+    frame = pd.DataFrame(
+        {
+            "x": [1, 2, 1, 2, 3, 1, 3, 2],
+            "z": [1, 1, 2, 2, 1, 3, 2, 3],
+            "y": [1, 3, 2, 5, 4, 6, 7, 5],
+        }
+    )
+
+    upstream = ConjecturePlayground(frame, object_symbol="T")
+    upstream.discover(
+        methods=[convex_hull, ratios],
+        features=["x", "z"],
+        target="y",
+        hypothesis=None,
+        heuristics=[morgan_accept, dalmatian_accept],
+        post_processors=[remove_duplicates, sort_by_touch_count],
+    )
+    expected = [str(upstream.forall(conjecture)) for conjecture in upstream.conjectures]
+
+    adapter = TxGraffitiAdapter()
+    actual = [
+        item.statement
+        for item in adapter.discover(
+            frame,
+            target="y",
+            features=["x", "z"],
+            object_symbol="T",
+            hypothesis=[],
+        )
+    ]
+
+    assert actual == expected
+    assert adapter.last_stage_counts is not None
+    assert adapter.last_stage_counts["final_discover_output"] == len(expected)
