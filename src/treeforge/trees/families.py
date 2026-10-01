@@ -50,3 +50,28 @@ def balanced_binary_tree(height: int) -> nx.Graph:
     if height < 0:
         raise ValueError("height must be nonnegative")
     return nx.balanced_tree(2, height)
+
+
+def double_star(left_leaves: int, right_leaves: int) -> nx.Graph:
+    if left_leaves < 1 or right_leaves < 1:
+        raise ValueError("double-star sides need at least one leaf")
+    graph = nx.Graph()
+    graph.add_edge(0, 1)
+    nxt = 2
+    for center, count in ((0, left_leaves), (1, right_leaves)):
+        for _ in range(count):
+            graph.add_edge(center, nxt)
+            nxt += 1
+    return graph
+
+
+def broom(handle_edges: int, brush_leaves: int) -> nx.Graph:
+    if handle_edges < 1 or brush_leaves < 1:
+        raise ValueError("broom needs a positive handle and at least one brush leaf")
+    graph = nx.path_graph(handle_edges + 1)
+    hub = handle_edges
+    nxt = handle_edges + 1
+    for _ in range(brush_leaves):
+        graph.add_edge(hub, nxt)
+        nxt += 1
+    return graph

@@ -1,6 +1,7 @@
 import networkx as nx
 
 from treeforge.trees.canonical import canonical_tree_code, generate_unlabeled_trees
+from treeforge.trees.families import broom, double_star
 
 
 def test_canonical_code_is_label_invariant():
@@ -14,3 +15,10 @@ def test_unlabeled_counts_through_six():
     for order in range(1, 7):
         counts.append(len(generate_unlabeled_trees(order, order)))
     assert counts == [1, 1, 1, 2, 3, 6]
+
+
+def test_reserved_hostile_families_are_trees():
+    dstar = double_star(3, 4)
+    br = broom(5, 6)
+    assert nx.is_tree(dstar) and dstar.number_of_nodes() == 9
+    assert nx.is_tree(br) and br.number_of_nodes() == 12

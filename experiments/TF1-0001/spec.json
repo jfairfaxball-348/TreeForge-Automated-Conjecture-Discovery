@@ -1,0 +1,87 @@
+{
+  "experiment_id": "TF1-0001",
+  "status": "FROZEN",
+  "frozen_at": "2026-10-01T10:49:00Z",
+  "freeze_parent_head": "f6c351b4a7a94941ab524bdfb9ec599409abcb2a",
+  "universe": ["finite", "simple", "unlabeled", "tree"],
+  "discovery_orders": [2, 10],
+  "holdout_orders": [11, 11],
+  "expected_discovery_tree_count": 200,
+  "expected_holdout_tree_count": 235,
+  "corpus_invariants": [
+    "order",
+    "edge_count",
+    "degree_sum",
+    "min_degree",
+    "max_degree",
+    "leaf_count",
+    "support_vertex_count",
+    "diameter",
+    "radius",
+    "eccentricity_sum",
+    "matching_number",
+    "independence_number",
+    "domination_number",
+    "maximal_independent_set_count",
+    "wiener_index",
+    "cherry_count"
+  ],
+  "target": "domination_number",
+  "discovery_features": [
+    "order",
+    "leaf_count",
+    "support_vertex_count",
+    "max_degree",
+    "diameter",
+    "matching_number",
+    "maximal_independent_set_count"
+  ],
+  "excluded_from_discovery": {
+    "edge_count": "calibration/consistency column; tree identity edge_count = order - 1",
+    "degree_sum": "calibration/consistency column; handshake identity degree_sum = 2 edge_count",
+    "min_degree": "constant 1 on the nontrivial-tree discovery universe",
+    "independence_number": "not supplied alongside matching_number in TF1 because alpha(T)+nu(T)=order for bipartite trees",
+    "radius": "kept in corpus but omitted from the deliberately small first feature set",
+    "eccentricity_sum": "kept in corpus but omitted from the deliberately small first feature set",
+    "wiener_index": "kept in corpus but omitted from the deliberately small first feature set",
+    "cherry_count": "kept in corpus but omitted from the deliberately small first feature set"
+  },
+  "txgraffiti": {
+    "package": "txgraffiti",
+    "version": "0.4.1",
+    "upstream_source_revision": "e37126da53b84150d142a5d61202b61f78521fcc",
+    "adapter": "treeforge.conjecturing.txgraffiti_adapter.TxGraffitiAdapter",
+    "methods": ["convex_hull", "ratios"],
+    "heuristics": ["morgan_accept", "dalmatian_accept"],
+    "post_processors": ["remove_duplicates", "sort_by_touch_count"],
+    "object_symbol": "T",
+    "hypothesis_payload": []
+  },
+  "hypotheses": ["finite", "simple", "unlabeled", "tree"],
+  "anti_numerology": [
+    "constant-column detection",
+    "exact duplicate-column detection",
+    "pairwise exact affine-equivalence detection",
+    "tree identity edge_count = order - 1",
+    "handshake identity degree_sum = 2 edge_count",
+    "bipartite identity independence_number + matching_number = order",
+    "explicit exclusion of definitional/calibration columns from TxGraffiti features"
+  ],
+  "adversarial_families_reserved": {
+    "paths": {"orders": [12, 30]},
+    "stars": {"leaves": [11, 29]},
+    "spiders": {
+      "arm_patterns": ["[1,1,k]", "[1,2,k]", "[2,2,k]", "[k,k,k]"],
+      "k_ranges": {"long_arm": [2, 20], "equal_arm": [2, 8]}
+    },
+    "caterpillars": {
+      "spine_orders": [4, 10],
+      "patterns": ["endpoint-heavy", "alternating", "single-heavy-support"]
+    },
+    "balanced_binary_trees": {"heights": [3, 4]},
+    "double_stars": {"left_leaves": [2, 12], "right_leaves": [2, 12]},
+    "brooms": {"handle_edges": [3, 15], "brush_leaves": [3, 15]}
+  },
+  "random_seed": null,
+  "mutation_policy": "Any material change closes TF1-0001 and requires a new experiment ID. Holdout rows must never be supplied to TxGraffiti."
+}

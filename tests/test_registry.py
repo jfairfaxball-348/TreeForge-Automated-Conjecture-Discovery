@@ -9,6 +9,7 @@ def _record(candidate_id: str, revision: int):
         "created_at": "2026-10-01T00:00:00Z",
         "generating_engine": "test",
         "engine_version": "1",
+        "source_commit": "TEST",
         "dataset_hash": "abc",
         "invariant_set": ["x"],
         "hypotheses": [],

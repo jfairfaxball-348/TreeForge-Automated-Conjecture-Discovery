@@ -46,6 +46,7 @@ def run(output_dir: Path, source_commit: str, timestamp: str | None = None) -> d
         "created_at": created_at,
         "generating_engine": statements[0].engine,
         "engine_version": statements[0].engine_version,
+        "source_commit": source_commit,
         "dataset_hash": discovery_hash,
         "invariant_set": INVARIANTS,
         "hypotheses": ["finite", "simple", "tree"],

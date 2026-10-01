@@ -27,6 +27,7 @@ REQUIRED_FIELDS = {
     "created_at",
     "generating_engine",
     "engine_version",
+    "source_commit",
     "dataset_hash",
     "invariant_set",
     "hypotheses",
