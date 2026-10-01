@@ -163,6 +163,11 @@ def run(output: Path) -> dict[str, object]:
         rhs = str(metadata["rhs"])
         if _rhs_support(rhs) <= 2:
             support_gate.append(item)
+    if ratios["rhs_support_histogram"] != {"1": ratios["final_count"]}:
+        raise RuntimeError("ratios-only diagnostic must emit one-feature RHS forms")
+    if len(support_gate) != 12:
+        raise RuntimeError("exposed TF2 support<=2 diagnostic count must reproduce as 12")
+
     support_gate_summary = {
         "final_count": len(support_gate),
         "rhs_support_histogram": {

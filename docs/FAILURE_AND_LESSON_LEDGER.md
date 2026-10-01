@@ -80,3 +80,18 @@ GitHub Actions run `36875119955` was provisionally classified as a pre-valid-out
 The late artifact was audited against the repaired authoritative run. Its 998 final TxGraffiti statements are identical in order and structured content to those from scientific run `36888114138`; discovery, holdout, and adversarial rows are identical after removing the source-commit provenance field; candidate lifecycle outcomes are identical. Its dataset hashes differ because TreeForge intentionally includes the exact scientific source commit in serialized corpus rows.
 
 Corrective interpretation: preserve run `36875119955` and the contemporaneous PR #5 closure as process history, but do not describe the late artifact as a distinct scientific variant or use it as the authoritative TF2 record. Run `36888114138`, source commit `d091d88889fa72322bfc49a5531bc30b1f31b049`, remains authoritative because it uses the equivalence-tested performance repair and records the complete single-pass stage counts. The frozen TF2-0001 scientific specification was unchanged throughout.
+
+
+## 2026-10-01 — TF3 diagnostic complexity parser over-escaped regexes
+
+GitHub Actions run `36906621879` successfully exercised installation, unit tests, byte-compilation,
+Ruff, calibration, the live TF2 adapter diagnostic, and the predeclared TF3 generation variants.
+However, the TF3 diagnostic script over-escaped the regular expressions used only to count RHS
+feature symbols and coefficient denominators. The generation-stage counts and timings themselves
+were valid, but the reported RHS-support/denominator summaries and the derived support-gate count
+were invalid and are not used for TF3 design.
+
+No TF3 candidate IDs were allocated, no TF3 scientific generation was run, and the timing-only
+order-13 feasibility probe persisted or reported no invariant values. Corrective action: fix the
+diagnostic parser, add a focused parser unit test plus internal sanity assertions, and rerun the
+same predeclared diagnostic comparison without changing its alternatives.
