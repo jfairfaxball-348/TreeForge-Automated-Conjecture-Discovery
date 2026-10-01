@@ -55,3 +55,12 @@ The scientific TF2-0001 specification was not changed. Corrective action: add th
 GitHub Actions run `36864222486` passed all 19 unit tests and byte-compilation, then failed Ruff because the new exact-expression evaluator imported `Mapping` from `typing` rather than `collections.abc`.
 
 No TF2 candidate generation had been enabled or executed. Corrective action: use the modern standard-library import and rerun the unchanged frozen TF2-0001 protocol.
+
+
+## 2026-10-01 — TF2 first scientific execution exposed heuristic-scaling bottleneck before valid output
+
+GitHub Actions run `36875119955`, using intended TF2-0001 scientific source commit `4e25b666b4c650047387d131ce5d05ff5c693521`, passed installation, the full unit suite, byte-compilation, Ruff, the deterministic calibration smoke test, and the live TF2 zero-yield diagnosis. It then remained inside the frozen TF2-0001 scientific step without producing the required scientific artifact within the expected runtime envelope. PR #5 was closed and no candidate, holdout, or adversarial result from that attempt is accepted as TF2 scientific evidence.
+
+A discovery-only performance probe in successful run `36887027180` used only the already-burned discovery orders 2–10. The 8-dimensional SciPy/Qhull construction itself completed in approximately 0.48 seconds but returned 42,068 facets. Inspection of pinned TxGraffiti `0.4.1` showed that its streaming Morgan/Dalmatian application repeatedly scans or reconstructs state across this large facet stream. The bottleneck is therefore adapter/upstream heuristic application cost, not corpus generation, Qhull itself, the TF2 holdout, or a scientific zero/survivor result.
+
+Corrective action: keep the frozen TF2-0001 target, features, methods, heuristics, post-processors, split, normalization, and adversarial set unchanged. For TreeForge's normalized always-true hypothesis case, cache the exact pointwise minimum used by Dalmatian and exploit the fact that Morgan cannot reject when every generated conjecture has the identical hypothesis mask. A live pinned-package equivalence test compares the complete ordered output of this optimized path with the unoptimized upstream pipeline on a nondegenerate dataset before the replacement scientific run. The replacement run must use a new exact source commit.
