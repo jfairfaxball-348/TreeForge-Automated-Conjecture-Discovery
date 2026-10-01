@@ -41,3 +41,10 @@ This was a pre-discovery implementation/style failure, so no candidate output fr
 GitHub Actions run `36852483813` passed installation, all unit tests, the live TxGraffiti API check, byte-compilation, Ruff, the calibration smoke test, and the TF1 benchmark. The frozen TF1-0001 discovery then completed successfully with TxGraffiti `0.4.1`, 200 discovery trees, 235 untouched holdout trees, no feature-audit or standard-identity violations, and **zero generated candidates**.
 
 The workflow nevertheless failed because it used `test -s` on `observed_candidates.jsonl`, incorrectly requiring a nonempty candidate registry artifact. This is contrary to TreeForge's research standard: an empty candidate batch is a valid controlled-discovery result and must not be converted into artificial progress. Corrective action: require the file to exist (`test -f`) but permit it to be empty. The frozen scientific specification was not changed.
+
+
+## 2026-10-01 — TF2 freeze CI caught an incomplete test fixture before generation
+
+GitHub Actions run `36863952291` failed in the unit-test step before any TF2 candidate generation was enabled or executed. The new TF2 lifecycle runner correctly required the frozen `hypotheses` field when constructing candidate records, but the synthetic test fixture omitted that field and raised `KeyError: 'hypotheses'`.
+
+The scientific TF2-0001 specification was not changed. Corrective action: add the frozen hypothesis list to the test fixture and rerun CI. This was runner/test plumbing only and did not expose the TF2 holdout or produce research candidates.
