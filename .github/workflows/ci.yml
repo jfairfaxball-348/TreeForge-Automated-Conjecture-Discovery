@@ -34,6 +34,46 @@ jobs:
         run: |
           python experiments/tf2_diagnostic.py --output /tmp/tf2-diagnostic.json
           test -s /tmp/tf2-diagnostic.json
+      - name: TF2 discovery convex-hull performance probe
+        if: github.event_name == 'push' && github.ref_name == 'tf2-scientific-run'
+        run: |
+          timeout 600 python - <<'PY'
+          import time
+          import numpy as np
+          import pandas as pd
+          from scipy.spatial import ConvexHull, QhullError
+          from treeforge.experiments import experiment_corpus_rows, load_frozen_spec
+
+          spec = load_frozen_spec("experiments/TF2-0001/spec.json")
+          names = list(spec["corpus_invariants"])
+          dmin, dmax = spec["discovery_orders"]
+          rows = experiment_corpus_rows(
+              dmin,
+              dmax,
+              names,
+              role="discovery",
+              source_commit="PERFORMANCE_DIAGNOSTIC",
+              experiment_id="TF2-DIAG-PERF",
+          )
+          cols = [*spec["discovery_features"], spec["target"]]
+          frame = pd.DataFrame([{name: row[name] for name in cols} for row in rows])
+          points = frame.to_numpy(dtype=float)
+          start = time.perf_counter()
+          try:
+              hull = ConvexHull(points)
+              mode = "default"
+          except QhullError:
+              hull = ConvexHull(points, qhull_options="QJ")
+              mode = "QJ"
+          elapsed = time.perf_counter() - start
+          print({
+              "rows": len(rows),
+              "dimensions": points.shape[1],
+              "qhull_mode": mode,
+              "facets": len(hull.equations),
+              "seconds": elapsed,
+          }, flush=True)
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: tf2-diagnostic
