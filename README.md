@@ -23,6 +23,13 @@ TF1 completed the first pre-frozen controlled discovery experiment, `TF1-0001`: 
 
 TF2 diagnosed that zero as a TreeForge adapter/configuration hypothesis-semantics mismatch without rewriting TF1 history, corrected the empty-payload boundary, and completed frozen experiment `TF2-0001`. The corrected run produced 998 permanent candidate lineages; 924 were falsified on untouched order 12, 74 survived the frozen adversarial set, and mathematical interpretation produced no graduation candidate. One simple finite survivor, `gamma(T) >= 3 nu(T)/5`, was later falsified exactly by an order-25 six-arm spider. See `experiments/TF2-0001/RESULTS.md`.
 
+TF3 diagnosed the 998-statement stream as overwhelmingly dense convex-hull output and froze
+`TF3-0001` with one changed discovery axis: TxGraffiti is restricted to `ratios` only. The
+target, seven features, discovery corpus, heuristics, post-processors, and hypothesis semantics stay
+fixed. The fresh holdout is all order-13 unlabeled trees and is structurally constructed only after
+the candidate batch is frozen. TF3-0001 has not yet been scientifically executed. See
+`docs/TF3_DIAGNOSTIC.md` and `docs/TF3_EXPERIMENT_FREEZE.md`.
+
 ## Quick start
 
 ```bash

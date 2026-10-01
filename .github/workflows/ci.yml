@@ -36,13 +36,7 @@ jobs:
         run: |
           python experiments/tf2_diagnostic.py --output /tmp/tf2-diagnostic.json
           test -s /tmp/tf2-diagnostic.json
-      - name: TF3 interpretability diagnosis
-        run: |
-          python experiments/tf3_diagnostic.py --output /tmp/tf3-diagnostic.json
-          test -s /tmp/tf3-diagnostic.json
       - uses: actions/upload-artifact@v4
         with:
-          name: tf2-tf3-diagnostics
-          path: |
-            /tmp/tf2-diagnostic.json
-            /tmp/tf3-diagnostic.json
+          name: tf2-diagnostic
+          path: /tmp/tf2-diagnostic.json

@@ -104,3 +104,48 @@ def test_adapter_can_restrict_generator_method_set():
         methods=["ratios"],
     )
     assert Playground.last_instance.kwargs["methods"] == [modules["txgraffiti.generators"].ratios]
+
+
+def test_ratios_only_adapter_matches_live_upstream():
+    pd = __import__("pandas")
+    pytest = __import__("pytest")
+    pytest.importorskip("txgraffiti")
+
+    from txgraffiti.generators import ratios
+    from txgraffiti.heuristics import dalmatian_accept, morgan_accept
+    from txgraffiti.playground import ConjecturePlayground
+    from txgraffiti.processing import remove_duplicates, sort_by_touch_count
+
+    frame = pd.DataFrame(
+        {
+            "x": [1, 2, 1, 2, 3, 1, 3, 2],
+            "z": [1, 1, 2, 2, 1, 3, 2, 3],
+            "y": [1, 3, 2, 5, 4, 6, 7, 5],
+        }
+    )
+
+    upstream = ConjecturePlayground(frame, object_symbol="T")
+    upstream.discover(
+        methods=[ratios],
+        features=["x", "z"],
+        target="y",
+        hypothesis=None,
+        heuristics=[morgan_accept, dalmatian_accept],
+        post_processors=[remove_duplicates, sort_by_touch_count],
+    )
+    expected = [str(upstream.forall(conjecture)) for conjecture in upstream.conjectures]
+
+    adapter = TxGraffitiAdapter()
+    actual = [
+        item.statement
+        for item in adapter.discover(
+            frame,
+            target="y",
+            features=["x", "z"],
+            object_symbol="T",
+            hypothesis=[],
+            methods=["ratios"],
+        )
+    ]
+
+    assert actual == expected

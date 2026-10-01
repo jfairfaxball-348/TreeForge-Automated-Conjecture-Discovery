@@ -95,3 +95,25 @@ No TF3 candidate IDs were allocated, no TF3 scientific generation was run, and t
 order-13 feasibility probe persisted or reported no invariant values. Corrective action: fix the
 diagnostic parser, add a focused parser unit test plus internal sanity assertions, and rerun the
 same predeclared diagnostic comparison without changing its alternatives.
+
+## 2026-10-01 — TF3 method-selection unit fixture compared unrelated object identities
+
+GitHub Actions run `36906556561` failed in the unit-test step before the TF3 diagnostic ran.
+The adapter method-selection code had correctly selected the fake `ratios` object supplied by its
+loader, but the test constructed a second independent fake-module mapping and compared object
+identity across the two mappings.
+
+No TF3 diagnostic comparison, scientific generation, candidate ID allocation, or fresh validation
+evaluation occurred in this run. Corrective action: retain one fake-module mapping for both loader
+injection and assertion, then rerun the unchanged method-selection implementation.
+
+## 2026-10-01 — first TF3 diagnostic-parser correction remained over-escaped
+
+After run `36906621879` exposed the diagnostic-only regular-expression error, commit
+`d46602df21f4d18e0b442b4b1b05ff2f9f6e3e76` added a focused parser unit test and internal
+sanity assertions. GitHub Actions run `36907013799` then failed that unit test, proving the first
+literal correction was still over-escaped. The diagnostic step did not run.
+
+No scientific configuration changed and no TF3 candidate or holdout comparison was produced.
+The regex literals were corrected without changing the predeclared diagnostic alternatives.
+Run `36907058956` subsequently passed the complete suite and the unchanged diagnostic.

@@ -325,6 +325,10 @@ def run(
         events.append(record)
         current[candidate_id] = record
 
+    pre_holdout_states = {
+        candidate_id: str(record["lifecycle_state"])
+        for candidate_id, record in current.items()
+    }
     candidate_batch, candidate_batch_hash = _freeze_candidate_batch(
         output_dir, current, source_commit=source_commit
     )
@@ -452,10 +456,7 @@ def run(
         "MATHEMATICALLY_INTERESTING",
     ]
     first_stage_counts = {
-        state: sum(
-            row["lifecycle_state"] == state
-            for row in candidate_batch
-        )
+        state: sum(value == state for value in pre_holdout_states.values())
         for state in states
     }
     final_counts = {

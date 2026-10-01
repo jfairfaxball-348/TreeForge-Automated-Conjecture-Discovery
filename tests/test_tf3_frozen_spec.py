@@ -1,10 +1,11 @@
 import json
 from pathlib import Path
 
-from experiments.tf2_discovery import _adversarial_rows as tf2_adversarial_rows
-from experiments.tf3_discovery import _adversarial_rows as tf3_adversarial_rows
+from experiments.tf2_discovery import _adversarial_graphs as tf2_adversarial_graphs
+from experiments.tf3_discovery import _adversarial_graphs as tf3_adversarial_graphs
 from treeforge.experiments import load_frozen_spec
 from treeforge.registry.candidate_registry import CandidateRegistry
+from treeforge.trees.canonical import canonical_tree_code
 
 
 def test_tf3_frozen_spec_changes_only_generator_method_axis():
@@ -36,20 +37,14 @@ def test_tf3_fresh_holdout_and_candidate_id_policy_are_frozen():
 
 
 def test_tf3_fresh_adversarial_set_is_disjoint_from_exact_tf2_set():
-    tf2 = load_frozen_spec(Path("experiments/TF2-0001/spec.json"))
-    tf3 = load_frozen_spec(Path("experiments/TF3-0001/spec.json"))
-    old_rows = tf2_adversarial_rows(
-        list(tf2["corpus_invariants"]),
-        "OLD",
-        "TF2-0001",
-    )
-    new_rows = tf3_adversarial_rows(
-        list(tf3["corpus_invariants"]),
-        "NEW",
-        "TF3-0001",
-    )
-    old_codes = {row["tree_code"] for row in old_rows}
-    new_codes = {row["tree_code"] for row in new_rows}
+    old_codes = {
+        canonical_tree_code(graph)
+        for _, _, graph in tf2_adversarial_graphs()
+    }
+    new_codes = {
+        canonical_tree_code(graph)
+        for _, _, graph in tf3_adversarial_graphs()
+    }
     assert new_codes
     assert old_codes.isdisjoint(new_codes)
 
