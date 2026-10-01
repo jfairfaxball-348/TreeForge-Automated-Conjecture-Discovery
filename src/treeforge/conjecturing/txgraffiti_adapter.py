@@ -40,6 +40,15 @@ class TxGraffitiAdapter:
         return playground_mod, generators, heuristics, processing
 
     @staticmethod
+    def _resolve_methods(generators, methods: list[str] | None):
+        names = ["convex_hull", "ratios"] if methods is None else methods
+        allowed = {"convex_hull", "ratios"}
+        unknown = set(names) - allowed
+        if unknown:
+            raise ValueError(f"unsupported TxGraffiti methods: {sorted(unknown)}")
+        return [getattr(generators, name) for name in names]
+
+    @staticmethod
     def _statement(playground, conjecture) -> GeneratedStatement:
         conclusion = getattr(conjecture, "conclusion", None)
         metadata = None
@@ -72,11 +81,12 @@ class TxGraffitiAdapter:
         features: list[str],
         object_symbol: str = "T",
         hypothesis: list[Any] | None = None,
+        methods: list[str] | None = None,
     ) -> list[GeneratedStatement]:
         playground_mod, generators, heuristics, processing = self._load_surface()
         playground = playground_mod.ConjecturePlayground(dataframe, object_symbol=object_symbol)
         playground.discover(
-            methods=[generators.convex_hull, generators.ratios],
+            methods=self._resolve_methods(generators, methods),
             features=features,
             target=target,
             hypothesis=self._normalize_hypothesis(hypothesis),
@@ -94,12 +104,14 @@ class TxGraffitiAdapter:
         object_symbol: str = "T",
         hypothesis: list[Any] | None = None,
         preserve_empty_hypothesis: bool = False,
+        methods: list[str] | None = None,
     ) -> dict[str, dict[str, object]]:
         """Inspect public pipeline stages without exposing TxGraffiti objects."""
         playground_mod, generators, heuristics, processing = self._load_surface()
         effective_hypothesis = (
             hypothesis if preserve_empty_hypothesis else self._normalize_hypothesis(hypothesis)
         )
+        resolved_methods = self._resolve_methods(generators, methods)
         stages = [
             ("raw_generator_output", None, None),
             ("after_morgan", [heuristics.morgan_accept], None),
@@ -126,7 +138,7 @@ class TxGraffitiAdapter:
             )
             conjectures = list(
                 playground.generate(
-                    methods=[generators.convex_hull, generators.ratios],
+                    methods=resolved_methods,
                     features=features,
                     target=target,
                     hypothesis=effective_hypothesis,
