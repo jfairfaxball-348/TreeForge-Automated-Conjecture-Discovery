@@ -1,0 +1,311 @@
+{
+  "experiment_id": "TF3-0001",
+  "status": "FROZEN",
+  "frozen_at": "2026-10-01T18:35:00Z",
+  "freeze_parent_head": "e6243e829e2d4bb2199780a03320ca6302c0eba0",
+  "diagnostic_id": "TF3-DIAG-0001",
+  "diagnostic_validation_run": 36907058956,
+  "universe": [
+    "finite",
+    "simple",
+    "unlabeled",
+    "tree"
+  ],
+  "discovery_orders": [
+    2,
+    10
+  ],
+  "expected_discovery_tree_count": 200,
+  "burned_or_exposed_orders": [
+    11,
+    12
+  ],
+  "holdout_orders": [
+    13,
+    13
+  ],
+  "expected_holdout_tree_count": 1301,
+  "holdout_kind": "exhaustive_all_unlabeled_trees_of_order_13",
+  "corpus_invariants": [
+    "order",
+    "edge_count",
+    "degree_sum",
+    "min_degree",
+    "max_degree",
+    "leaf_count",
+    "support_vertex_count",
+    "diameter",
+    "radius",
+    "eccentricity_sum",
+    "matching_number",
+    "independence_number",
+    "domination_number",
+    "maximal_independent_set_count",
+    "wiener_index",
+    "cherry_count"
+  ],
+  "target": "domination_number",
+  "discovery_features": [
+    "order",
+    "leaf_count",
+    "support_vertex_count",
+    "max_degree",
+    "diameter",
+    "matching_number",
+    "maximal_independent_set_count"
+  ],
+  "changed_axis": {
+    "name": "txgraffiti_method_set",
+    "tf2_value": [
+      "convex_hull",
+      "ratios"
+    ],
+    "tf3_value": [
+      "ratios"
+    ],
+    "justification": "TF2 diagnosis found 979/998 final statements used at least four RHS features and 689/998 used all seven. On the exposed discovery corpus, ratios-only produced 14 raw and 12 final statements, all one-feature RHS forms. This removes the diagnosed full-dimensional convex-hull geometry without changing target, features, heuristics, post-processors, or hypothesis semantics."
+  },
+  "txgraffiti": {
+    "package": "txgraffiti",
+    "version": "0.4.1",
+    "upstream_source_revision": "e37126da53b84150d142a5d61202b61f78521fcc",
+    "adapter": "treeforge.conjecturing.txgraffiti_adapter.TxGraffitiAdapter",
+    "adapter_semantics": "TreeForge empty hypothesis payload is normalized to upstream None (always-true base predicate)",
+    "methods": [
+      "ratios"
+    ],
+    "heuristics": [
+      "morgan_accept",
+      "dalmatian_accept"
+    ],
+    "post_processors": [
+      "remove_duplicates",
+      "sort_by_touch_count"
+    ],
+    "object_symbol": "T",
+    "hypothesis_payload": []
+  },
+  "hypotheses": [
+    "finite",
+    "simple",
+    "unlabeled",
+    "tree"
+  ],
+  "interpretability_policy": {
+    "post_generation_filter": null,
+    "generator_family": "ratios_only",
+    "expected_rhs_distinct_feature_symbols": 1,
+    "violation_policy": "Abort the scientific run if a final ratios-only statement violates the expected one-feature RHS grammar; do not silently discard or retune it.",
+    "touch_count_threshold": null,
+    "coefficient_or_denominator_threshold": null,
+    "note": "Interpretability is imposed at generator selection, not by cherry-picking final statements."
+  },
+  "candidate_policy": {
+    "next_permanent_candidate_id": "TF-001000",
+    "allocate_ids_during_diagnostics": false,
+    "allocate_permanent_id_to_every_final_txgraffiti_statement_on_scientific_run": true,
+    "candidate_cap": null,
+    "normalization": "Use structured TxGraffiti lhs/operator/rhs metadata; preserve raw statement; no post-hoc coefficient tuning.",
+    "duplicate_equivalence": "Exact normalized (lhs, operator, rhs) equality.",
+    "batch_freeze": "All discovery-side machine triage must finish and candidate_batch.json plus its SHA-256 must be written before any fresh holdout construction."
+  },
+  "exposed_data": {
+    "discovery_orders_2_to_10": "Already used for TF1/TF2 discovery and available for TF3 diagnosis/generation.",
+    "order_11": "Burned by TF1 and never fresh again.",
+    "order_12": "TF2 holdout; exposed and never fresh again.",
+    "tf2_adversarial_hash": "dea3af9c495cc79da46b7ed3797276caae22495bc86d5000ddea3605a07bcb8a",
+    "tf2_adversarial_instances": "All 26 exact TF2 frozen adversarial trees are exposed regression data only.",
+    "tf_000998_counterexample": {
+      "family": "spider",
+      "arms": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "order": 25
+    },
+    "policy": "Exposed data may be used for diagnosis or regression checks but not counted as TF3 fresh validation evidence."
+  },
+  "fresh_holdout_firewall": {
+    "holdout_generated_only_after_candidate_batch_freeze": true,
+    "holdout_visible_to_generator": false,
+    "holdout_used_for_feature_choice": false,
+    "holdout_used_for_method_choice": false,
+    "holdout_used_for_filter_thresholds": false,
+    "holdout_used_for_coefficient_selection": false,
+    "holdout_used_for_candidate_ranking": false,
+    "feasibility_probe": "Before freeze, order-13 invariant computations were timed only. Individual values were neither persisted nor printed nor inspected, and no candidate existed to evaluate against them."
+  },
+  "fresh_adversarial_families": {
+    "paths": {
+      "orders": [
+        16,
+        17
+      ]
+    },
+    "stars": {
+      "orders": [
+        16,
+        17
+      ]
+    },
+    "spiders": {
+      "arm_patterns": [
+        [
+          3,
+          3,
+          9
+        ],
+        [
+          3,
+          4,
+          9
+        ],
+        [
+          5,
+          5,
+          5
+        ],
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          2,
+          4,
+          10
+        ]
+      ]
+    },
+    "caterpillars": [
+      {
+        "spine_order": 6,
+        "leaf_multiplicities": [
+          3,
+          0,
+          0,
+          3,
+          0,
+          4
+        ]
+      },
+      {
+        "spine_order": 7,
+        "leaf_multiplicities": [
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          3
+        ]
+      },
+      {
+        "spine_order": 8,
+        "leaf_multiplicities": [
+          0,
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          2
+        ]
+      }
+    ],
+    "double_stars": [
+      [
+        7,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        8
+      ]
+    ],
+    "brooms": [
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        8,
+        9
+      ]
+    ]
+  },
+  "anti_numerology": [
+    "constant-column detection",
+    "exact duplicate-column detection",
+    "pairwise exact affine-equivalence detection",
+    "tree identity edge_count = order - 1",
+    "handshake identity degree_sum = 2 edge_count",
+    "bipartite identity independence_number + matching_number = order",
+    "exact discovery-side reevaluation of every machine statement",
+    "exact normalized duplicate detection before holdout",
+    "ratios-only one-feature RHS grammar assertion before candidate-batch freeze"
+  ],
+  "benchmark_basis": {
+    "actions_run": 36907058956,
+    "exposed_discovery_only_generation_comparisons": true,
+    "ratios_only": {
+      "runtime_seconds": 0.341796997000003,
+      "raw_generator_output": 14,
+      "after_morgan": 14,
+      "after_dalmatian": 12,
+      "after_duplicate_removal": 12,
+      "final_count": 12,
+      "rhs_support_histogram": {
+        "1": 12
+      },
+      "max_denominator": 13,
+      "max_touch_count": 149
+    },
+    "full_stream_support_at_most_2_diagnostic": {
+      "full_raw_generator_output": 23268,
+      "full_after_dalmatian": 10753,
+      "full_after_duplicate_removal": 998,
+      "estimated_admitted_count": 12
+    },
+    "pairwise_convex_hulls": {
+      "runtime_seconds": 0.7778480379999948,
+      "feature_set_count": 21,
+      "raw_generator_output": 259,
+      "after_dalmatian": 214,
+      "per_run_post_duplicate_total": 205,
+      "cross_run_exact_dedup_final_count": 146,
+      "rhs_support_histogram": {
+        "0": 2,
+        "1": 17,
+        "2": 127
+      },
+      "max_denominator": 61
+    },
+    "order_13_feasibility": {
+      "tree_count": 1301,
+      "generation_seconds": 0.18691324299999934,
+      "domination_number_seconds": 0.9491784299999964,
+      "maximal_independent_set_count_seconds": 23.976181491,
+      "values_persisted_or_reported": false
+    }
+  },
+  "random_seed": null,
+  "holdout_policy": "All unlabeled trees of order 13 are the fresh exhaustive TF3 holdout. Orders 11 and 12 are excluded as burned. The holdout is not constructed by the scientific runner until the discovery-side candidate batch is frozen.",
+  "adversarial_policy": "Only holdout survivors see the newly frozen TF3 adversarial instances. The exact TF2 hostile set and TF-000998 spider remain exposed regression material and are not counted as fresh evidence.",
+  "source_commit_policy": "The exact commit used by a future scientific run must be recorded in its manifest and experiment registry record.",
+  "mutation_policy": "Any material post-output change to target, features, discovery split, holdout, TxGraffiti method set, heuristics, post-processors, hypothesis semantics, interpretability policy, candidate normalization, or fresh adversarial set closes TF3-0001 and requires a new experiment ID."
+}
