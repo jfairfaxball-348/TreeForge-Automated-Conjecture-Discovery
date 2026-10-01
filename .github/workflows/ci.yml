@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -97,3 +101,24 @@ jobs:
         with:
           name: tf2-0001-scientific
           path: /tmp/tf2-0001
+      - name: Integrate completed TF2-0001 artifact
+        if: github.event_name == 'push' && github.ref_name == 'tf2-scientific-run'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if test -f experiments/TF2-0001/manifest.json; then
+            echo "TF2 result already integrated"
+            exit 0
+          fi
+          rm -rf /tmp/tf2-0001
+          mkdir -p /tmp/tf2-0001
+          gh run download 36875119955 \
+            --repo "$GITHUB_REPOSITORY" \
+            --name tf2-0001-scientific \
+            --dir /tmp/tf2-0001
+          python experiments/tf2_integrate_results.py --artifact-dir /tmp/tf2-0001
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/registry experiments/TF2-0001
+          git commit -m "TF2: integrate scientific result and candidate lifecycle"
+          git push origin HEAD:tf2-scientific-run
