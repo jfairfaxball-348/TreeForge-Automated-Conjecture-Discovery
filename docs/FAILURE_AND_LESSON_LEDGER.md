@@ -117,3 +117,43 @@ literal correction was still over-escaped. The diagnostic step did not run.
 No scientific configuration changed and no TF3 candidate or holdout comparison was produced.
 The regex literals were corrected without changing the predeclared diagnostic alternatives.
 Run `36907058956` subsequently passed the complete suite and the unchanged diagnostic.
+
+## 2026-10-01 — TF3 scientific workflow invoked the frozen runner in script mode
+
+GitHub Actions runs `36914094286` and `36914294452` both passed their preflight checks but
+failed immediately on `ModuleNotFoundError: No module named 'experiments'` when the workflow
+used `python experiments/tf3_discovery.py`. The second run repeated the same failure because an
+intended workflow text substitution had not actually changed the command.
+
+Both failures occurred at module import before discovery generation, candidate allocation,
+candidate-batch persistence, or order-13 construction, so neither produced TF3 scientific evidence.
+Corrective action: replace the workflow command explicitly with
+`python -m experiments.tf3_discovery` and rerun the complete unchanged preflight. Scientific
+run `36914647703` then completed successfully from source commit
+`e23b44d24a7b87d6f67aa18749059540934b2767`. The frozen TF3 specification was unchanged.
+
+## 2026-10-01 — TF3 result materialization exposed an unnecessary exponential invariant computation
+
+The first result-materialization workflow, run `36915447930`, called the full TF3 invariant set on
+the already-exposed order-25 six-arm spider while preparing the post-gate interpretation of
+`TF-001010`. That unnecessarily included the exact maximal-independent-set counter, whose current
+implementation enumerates all vertex subsets. This was finalization overhead, not a scientific
+calculation or change to any frozen evidence.
+
+Corrective action: compute only `order`, `domination_number`, and `matching_number` for that
+known counterexample. The scientific artifact, hashes, holdout outcomes, and adversarial outcomes
+were not changed.
+
+## 2026-10-01 — post-TF3 materialization invalidated pre-execution registry assumptions in tests
+
+Materialization validation runs `36915684035` and `36915894349` correctly rejected two test
+assumptions that were valid only before TF3 execution. One frozen-spec test expected
+`CandidateRegistry.next_id()` to remain `TF-001000` and expected no TF3 experiment record;
+one TF2 result test expected the entire candidate registry to end permanently at `TF-000999`.
+
+The generated TF3 records themselves were valid, and the workflow committed nothing while validation
+failed. Corrective action: keep the frozen spec assertion that TF3's starting ID was
+`TF-001000`, move post-execution registry facts into dedicated TF3 result tests, and scope TF2
+lineage assertions to TF2 candidate IDs. Materialization run `36916149651` then passed the full
+suite before committing the append-only TF3 record.
+

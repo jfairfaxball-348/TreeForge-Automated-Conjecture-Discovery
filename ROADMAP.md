@@ -40,27 +40,30 @@ No candidate reached `GRADUATION_CANDIDATE`. No theorem, novelty, Lean, Palomar,
 
 See `experiments/TF2-0001/RESULTS.md`.
 
-## TF3 — interpretability diagnosis and next experiment freeze
+## TF3 — ratios-only controlled discovery
 
-Status: **FROZEN; SCIENTIFIC EXECUTION NOT YET RUN (2026-10-01).**
+Status: **COMPLETE (2026-10-01).**
 
-TF3 quantified the TF2 interpretability problem using only exposed data. Of 998 final TF2 statements,
-979 used at least four RHS features and 689 used all seven. Corrected diagnostic run
-`36907058956` compared a small predeclared set of discovery-side alternatives. Ratios-only produced
-14 raw and 12 final statements, all one-feature RHS forms; fixed pairwise convex hulls still produced
-146 cross-run exact-deduplicated statements; a post-generation support-size gate would admit 12 only
-after creating the unchanged full TF2 hull stream.
+TF3 first diagnosed the TF2 high-volume/low-interpretability stream, then froze and executed
+`TF3-0001` with exactly one discovery-axis change: TxGraffiti was restricted to `ratios`
+only. The target, seven discovery features, orders 2-10 corpus, heuristics, post-processors, and
+empty-hypothesis semantics remained fixed.
 
-Experiment `TF3-0001` is frozen with exactly one discovery-axis change: TxGraffiti methods are
-restricted from `convex_hull + ratios` to `ratios` only. The target, seven features, orders 2-10
-discovery corpus, Morgan/Dalmatian heuristics, duplicate removal, touch-count sorting, and
-empty-hypothesis semantics remain unchanged.
+Successful scientific run: source commit
+`e23b44d24a7b87d6f67aa18749059540934b2767`, Actions run `36914647703`.
 
-Orders 11 and 12 and all exact TF2 hostile/candidate-specific structures remain exposed. The fresh
-TF3 holdout is all 1,301 unlabeled trees of order 13, constructed by the scientific runner only
-after `candidate_batch.json` and its SHA-256 are frozen. A timing-only feasibility probe did not
-persist or inspect individual order-13 invariant values. Fresh hostile instances are also frozen in
-the TF3 machine spec.
+The ratios-only pipeline produced 14 raw statements, 14 after Morgan, 12 after Dalmatian, and 12
+after exact duplicate removal. Permanent IDs `TF-001000` through `TF-001011` were frozen
+before constructing the fresh exhaustive order-13 holdout. Eight candidates were falsified on the
+1,301-tree holdout; four survived and then all four passed the exact 18-tree pre-frozen fresh hostile
+set.
 
-The next session should execute the already-frozen TF3-0001 protocol without retuning it, materialize
-the candidate lineages beginning at `TF-001000`, and perform the exact holdout/adversarial lifecycle.
+Mathematical interpretation did not force a survivor: two literal all-tree upper bounds were
+falsified by `K1`, one support-vertex lower bound was elementary and `TRIVIAL`, and the
+`3 nu/5` lower bound duplicated the already-falsified TF2 relation and was killed by the exposed
+order-25 six-arm spider. Final TF3 states are 11 `FALSIFIED` and 1 `TRIVIAL`.
+
+No TF3 candidate reached `MATHEMATICALLY_INTERESTING`; no new prior-art search was performed;
+no candidate reached `GRADUATION_CANDIDATE`.
+
+See `experiments/TF3-0001/RESULTS.md`.

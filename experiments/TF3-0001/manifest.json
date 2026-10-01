@@ -1,0 +1,96 @@
+{
+  "adversarial_hash": "37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18",
+  "adversarial_tree_count": 18,
+  "candidate_batch_frozen_before_holdout": true,
+  "candidate_batch_hash": "85669d95fb7199b720bfe488c606055dd5f38a5af157c1ed2bdb5f98710344c6",
+  "candidate_batch_ids": [
+    "TF-001000",
+    "TF-001001",
+    "TF-001002",
+    "TF-001003",
+    "TF-001004",
+    "TF-001005",
+    "TF-001006",
+    "TF-001007",
+    "TF-001008",
+    "TF-001009",
+    "TF-001010",
+    "TF-001011"
+  ],
+  "candidate_ids": [
+    "TF-001000",
+    "TF-001001",
+    "TF-001002",
+    "TF-001003",
+    "TF-001004",
+    "TF-001005",
+    "TF-001006",
+    "TF-001007",
+    "TF-001008",
+    "TF-001009",
+    "TF-001010",
+    "TF-001011"
+  ],
+  "dependencies": {
+    "networkx": "3.6.1",
+    "pandas": "3.0.6",
+    "txgraffiti": "0.4.1"
+  },
+  "discovery_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+  "discovery_tree_count": 200,
+  "experiment_id": "TF3-0001",
+  "feature_audit": {
+    "affine_equivalences": [],
+    "constants": [],
+    "duplicates": []
+  },
+  "final_state_counts": {
+    "ADVERSARIAL_PASSED": 4,
+    "ARTIFACT_OF_FEATURE_SET": 0,
+    "CONJECTURED": 0,
+    "DUPLICATE": 0,
+    "FALSIFIED": 8,
+    "HOLDOUT_PASSED": 0,
+    "KNOWN_RESULT": 0,
+    "MATHEMATICALLY_INTERESTING": 0,
+    "TRIVIAL": 0
+  },
+  "first_stage_state_counts": {
+    "ADVERSARIAL_PASSED": 0,
+    "ARTIFACT_OF_FEATURE_SET": 0,
+    "CONJECTURED": 12,
+    "DUPLICATE": 0,
+    "FALSIFIED": 0,
+    "HOLDOUT_PASSED": 0,
+    "KNOWN_RESULT": 0,
+    "MATHEMATICALLY_INTERESTING": 0,
+    "TRIVIAL": 0
+  },
+  "holdout_constructed": true,
+  "holdout_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+  "holdout_identity_violations": [],
+  "holdout_survivor_count": 4,
+  "holdout_tree_count": 1301,
+  "holdout_visible_to_generator": false,
+  "known_identity_violations": [],
+  "methods": [
+    "ratios"
+  ],
+  "raw_candidate_count": 12,
+  "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+  "spec_path": "experiments/TF3-0001/spec.json",
+  "stage_counts": {
+    "after_dalmatian": 12,
+    "after_duplicate_removal": 12,
+    "after_morgan": 14,
+    "after_touch_count_sort": 12,
+    "final_discover_output": 12,
+    "raw_generator_output": 14,
+    "strengthened_equalities": 0
+  },
+  "txgraffiti_provenance": {
+    "package": "txgraffiti",
+    "source_commit": "e37126da53b84150d142a5d61202b61f78521fcc",
+    "version": "0.4.1"
+  }
+}

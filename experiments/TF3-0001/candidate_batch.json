@@ -1,0 +1,774 @@
+[
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001000",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 1,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= matching_number)",
+      "structured_relation": {
+        "conclusion": "domination_number <= matching_number",
+        "discovery_touch_count": 149,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": "<=",
+        "rhs": "matching_number"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 2,
+        "tree_code": "(()())"
+      },
+      {
+        "order": 3,
+        "tree_code": "(()())"
+      },
+      {
+        "order": 4,
+        "tree_code": "((())(()))"
+      },
+      {
+        "order": 4,
+        "tree_code": "(()()())"
+      },
+      {
+        "order": 5,
+        "tree_code": "((()())(()))"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number <= matching_number."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001001",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 2,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= (1/2 * order))",
+      "structured_relation": {
+        "conclusion": "domination_number <= (1/2 * order)",
+        "discovery_touch_count": 8,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": "<=",
+        "rhs": "(1/2 * order)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 2,
+        "tree_code": "(()())"
+      },
+      {
+        "order": 4,
+        "tree_code": "((())(()))"
+      },
+      {
+        "order": 6,
+        "tree_code": "((())(())())"
+      },
+      {
+        "order": 8,
+        "tree_code": "(((())())((())()))"
+      },
+      {
+        "order": 8,
+        "tree_code": "((())(())(())())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number <= (1/2 * order)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001002",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 3,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (3/8 * diameter))",
+      "structured_relation": {
+        "conclusion": "domination_number >= (3/8 * diameter)",
+        "discovery_touch_count": 3,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "rhs": "(3/8 * diameter)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 9,
+        "tree_code": "((((())))(((()))))"
+      },
+      {
+        "order": 10,
+        "tree_code": "((((()())))(((()))))"
+      },
+      {
+        "order": 10,
+        "tree_code": "((((())))(((())))())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number >= (3/8 * diameter)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001003",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 4,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (1/10 * order))",
+      "structured_relation": {
+        "conclusion": "domination_number >= (1/10 * order)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "rhs": "(1/10 * order)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "(()()()()()()()()())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number >= (1/10 * order)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001004",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 5,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (1/9 * leaf_count))",
+      "structured_relation": {
+        "conclusion": "domination_number >= (1/9 * leaf_count)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "rhs": "(1/9 * leaf_count)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "(()()()()()()()()())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number >= (1/9 * leaf_count)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001005",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 6,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= (2 * leaf_count))",
+      "structured_relation": {
+        "conclusion": "domination_number <= (2 * leaf_count)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": "<=",
+        "rhs": "(2 * leaf_count)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "(((((()))))((((())))))"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number <= (2 * leaf_count)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001006",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 7,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (1/2 * support_vertex_count))",
+      "structured_relation": {
+        "conclusion": "domination_number >= (1/2 * support_vertex_count)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "rhs": "(1/2 * support_vertex_count)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 2,
+        "tree_code": "(()())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number >= (1/2 * support_vertex_count)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001007",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 8,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= (2 * support_vertex_count))",
+      "structured_relation": {
+        "conclusion": "domination_number <= (2 * support_vertex_count)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": "<=",
+        "rhs": "(2 * support_vertex_count)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "(((((()))))((((())))))"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number <= (2 * support_vertex_count)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001008",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 9,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (1/9 * max_degree))",
+      "structured_relation": {
+        "conclusion": "domination_number >= (1/9 * max_degree)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "rhs": "(1/9 * max_degree)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "(()()()()()()()()())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number >= (1/9 * max_degree)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001009",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 10,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= (5/4 * diameter))",
+      "structured_relation": {
+        "conclusion": "domination_number <= (5/4 * diameter)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": "<=",
+        "rhs": "(5/4 * diameter)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "((())(())(())(())())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number <= (5/4 * diameter)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001010",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 11,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (3/5 * matching_number))",
+      "structured_relation": {
+        "conclusion": "domination_number >= (3/5 * matching_number)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "rhs": "(3/5 * matching_number)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "((((())))(((())))())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number >= (3/5 * matching_number)."
+  },
+  {
+    "adversarial_status": {
+      "status": "NOT_TESTED"
+    },
+    "candidate_id": "TF-001011",
+    "counterexamples": [],
+    "created_at": "2026-10-01T18:35:00Z",
+    "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+    "discovery_evidence": {
+      "experiment_id": "TF3-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 12,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (3/13 * maximal_independent_set_count))",
+      "structured_relation": {
+        "conclusion": "domination_number >= (3/13 * maximal_independent_set_count)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "rhs": "(3/13 * maximal_independent_set_count)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "((((())))(((())))())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "status": "NOT_TESTED"
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "CONJECTURED",
+    "mathematical_interpretation": "Unique exact discovery-valid ratios-only target bound; admitted to the frozen candidate batch.",
+    "prior_art_status": "NOT_STARTED",
+    "revision": 2,
+    "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+    "statement": "For every finite simple tree T, domination_number >= (3/13 * maximal_independent_set_count)."
+  }
+]
