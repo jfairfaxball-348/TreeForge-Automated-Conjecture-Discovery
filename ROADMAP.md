@@ -10,10 +10,20 @@ Calibration source code checkpoint: `f0c42426fdabd3860837d3e3eb048a038842a655`. 
 
 The calibration candidate is `TF-000001`, the standard identity `|E(T)| = |V(T)| - 1`, generated only to validate plumbing. It is permanently classified `KNOWN_RESULT` and must never be presented as new mathematics.
 
-Explicitly not done in TF0: broad conjecture discovery, novelty claims, Lean, Palomar, theorem-paper work, or arXiv packaging.
+## TF1 — first controlled discovery
 
-## TF1 — next session
+Status: **COMPLETE (2026-10-01).**
 
-**Build the first serious tree-invariant corpus and perform the first controlled discovery run.**
+TF1 benchmarked the current exact invariant implementations, froze experiment `TF1-0001`, generated a 200-tree discovery corpus (orders 2–10) and a 235-tree holdout corpus (order 11) with strict generation-order separation, added practical duplicate/affine/known-identity checks, and exercised the pinned live TxGraffiti adapter in GitHub Actions.
 
-Before candidate generation, benchmark the default and optional invariant costs; freeze the discovery and holdout ranges; freeze the invariant set and TxGraffiti configuration; choose targeted adversarial families; record the corpus-generation command and dependency versions; then generate candidates from discovery data only. Do not expose the holdout until generation has finished.
+Successful scientific run: source commit `e5175b5f5667195adf64ccae75e3dc42f0061086`, Actions run `36852665881`.
+
+Result: TxGraffiti generated **zero candidates** under the frozen target/features/methods/heuristics. No standards were weakened to force a survivor. Accordingly there were no TF1 candidate IDs, holdout candidate evaluations, adversarial survivor tests, mathematical-interest promotions, or prior-art searches.
+
+See `experiments/TF1-0001/RESULTS.md`.
+
+## TF2 — recommended next session
+
+**Diagnose the zero-yield TF1 discovery using discovery data only, then freeze a new controlled experiment.**
+
+Do not reopen TF1-0001 or tune it against its holdout. Allocate a new experiment ID, justify one changed axis (target invariant or narrowly expanded conjecturing configuration), benchmark any added invariant cost, and prefer a fresh holdout allocation. The goal remains a small auditable batch, not conjecture volume.

@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "networkx": "3.6.1",
+    "pandas": "3.0.6",
+    "txgraffiti": "0.4.1"
+  },
+  "discovery_hash": "3e2fc0d8a340893ae82205f7524dd7021ea46cc921126820faf77fba1679203e",
+  "discovery_tree_count": 200,
+  "experiment_id": "TF1-0001",
+  "feature_audit": {
+    "affine_equivalences": [],
+    "constants": [],
+    "duplicates": []
+  },
+  "holdout_hash": "bf525742920c088d56162172274011fa5b44973a9ce7e89f96d6f1dcfdea7b50",
+  "holdout_tree_count": 235,
+  "holdout_visible_to_generator": false,
+  "known_identity_violations": [],
+  "raw_candidate_count": 0,
+  "source_commit": "e5175b5f5667195adf64ccae75e3dc42f0061086",
+  "spec_path": "experiments/TF1-0001/spec.json",
+  "txgraffiti_provenance": {
+    "package": "txgraffiti",
+    "source_commit": "e37126da53b84150d142a5d61202b61f78521fcc",
+    "version": "0.4.1"
+  }
+}

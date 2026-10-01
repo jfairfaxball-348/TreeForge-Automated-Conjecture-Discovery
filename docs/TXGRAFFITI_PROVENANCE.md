@@ -15,6 +15,12 @@ The adapter deliberately returns plain TreeForge `GeneratedStatement` records ra
 
 ## TF0 compatibility result
 
-GitHub Actions run `36849930237` installed `txgraffiti==0.4.1` from PyPI and successfully exercised TreeForge's adapter through a real `ConjecturePlayground.discover(...)` call. No TxGraffiti API incompatibility was demonstrated in TF0.
+GitHub Actions run `36849930237` installed `txgraffiti==0.4.1` from PyPI and successfully exercised TreeForge's adapter through a real `ConjecturePlayground.discover(...)` call.
 
-The adapter is intentionally narrow: it wraps the documented `ConjecturePlayground` surface and does not yet expose `Graffiti3`, custom upstream conjecture object internals, or every generator/heuristic/post-processor. Those are scope choices, not known upstream defects. The only installation limitation encountered was the local execution sandbox's lack of PyPI network access; CI provided the live compatibility check.
+## TF1 compatibility and controlled-run result
+
+GitHub Actions run `36852665881`, at TreeForge source commit `e5175b5f5667195adf64ccae75e3dc42f0061086`, again installed and live-tested `txgraffiti==0.4.1` before executing frozen experiment `TF1-0001`. The adapter completed without an API incompatibility and returned zero candidate statements for the frozen domination-number target and feature/configuration set.
+
+Zero output is an experiment result, not evidence of an adapter defect and not evidence that no mathematical relation exists.
+
+The adapter remains intentionally narrow: it wraps the documented `ConjecturePlayground` surface and does not expose `Graffiti3`, custom upstream conjecture internals, or every generator/heuristic/post-processor.

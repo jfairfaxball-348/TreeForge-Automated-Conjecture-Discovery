@@ -17,21 +17,29 @@ finite-tree universe
 → graduation to a separate theorem repository
 ```
 
-The first infrastructure session is deliberately small. It includes a canonical unlabeled-tree generator, a modular invariant registry, a TxGraffiti adapter pinned to `txgraffiti==0.4.1`, an append-only candidate registry, holdout machinery, and one **KNOWN/CALIBRATION** end-to-end run based on the standard tree identity `|E(T)| = |V(T)| - 1`.
+TF0 established the infrastructure and a `KNOWN/CALIBRATION` run for the standard identity `|E(T)| = |V(T)| - 1`.
+
+TF1 completed the first pre-frozen controlled discovery experiment, `TF1-0001`: 200 discovery trees at orders 2–10, 235 untouched holdout trees at order 11, a disciplined core feature set targeting domination number, and the pinned live `txgraffiti==0.4.1` adapter. The frozen run generated **zero candidates**. That is recorded as a valid research result rather than a reason to weaken the gates.
 
 ## Quick start
 
 ```bash
 python -m pip install -e '.[dev]'
-pytest
-python -m compileall -q src
-python experiments/calibration.py --output-dir /tmp/treeforge-calibration --source-commit LOCAL
+python -m pytest -q
+python -m compileall -q src experiments
+ruff check .
 ```
 
-To exercise the live TxGraffiti adapter, install the optional dependency:
+Optional live TxGraffiti compatibility requires:
 
 ```bash
 python -m pip install -e '.[conjecturing]'
 ```
 
-See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, and `docs/CANDIDATE_LIFECYCLE.md` before adding a discovery experiment.
+Reproduce the compact TF1 benchmark with:
+
+```bash
+python experiments/benchmark_tf1.py --output /tmp/tf1-benchmark.json
+```
+
+See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, and `experiments/TF1-0001/RESULTS.md` before adding another discovery experiment.

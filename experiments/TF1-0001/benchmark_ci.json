@@ -1,0 +1,25 @@
+{
+  "greedy_examples": [
+    {"family":"path","order":6,"seconds":0.0027319140000088282},
+    {"family":"path","order":7,"seconds":0.01970476300002133},
+    {"family":"path","order":8,"seconds":0.17708059800000342}
+  ],
+  "orders": [
+    {"core_seconds":0.0046285370000020976,"domination_seconds":0.0009287700000015775,"generation_seconds":0.006494248999999286,"maximal_independent_set_count_seconds":0.022864377000004765,"order":8,"tree_count":23,"treestack_seconds":0.0023821909999952595},
+    {"core_seconds":0.008722839000000704,"domination_seconds":0.0037773140000041394,"generation_seconds":0.007694309000001454,"maximal_independent_set_count_seconds":0.09373654200000203,"order":9,"tree_count":47,"treestack_seconds":0.005709015999997291},
+    {"core_seconds":0.022425415000000726,"domination_seconds":0.017155760999997938,"generation_seconds":0.01807159100000888,"maximal_independent_set_count_seconds":0.41499161200000856,"order":10,"tree_count":106,"treestack_seconds":0.015547477000012577},
+    {"core_seconds":0.058174054000005526,"domination_seconds":0.07475628999999628,"generation_seconds":0.052957699999993224,"maximal_independent_set_count_seconds":1.8658605509999973,"order":11,"tree_count":235,"treestack_seconds":0.04001876600000287},
+    {"core_seconds":0.15025940600000354,"domination_seconds":0.3525162549999976,"generation_seconds":0.11655253600000037,"maximal_independent_set_count_seconds":8.815602236999993,"order":12,"tree_count":551,"treestack_seconds":0.1088300350000111}
+  ],
+  "probstack_examples": [
+    {"family":"path","order":4,"seconds":0.00028475999999955093,"total":2},
+    {"family":"path","order":4,"seconds":0.0006669770000087283,"total":4},
+    {"family":"path","order":4,"seconds":0.0016746780000005401,"total":6},
+    {"family":"path","order":6,"seconds":0.0009072800000069492,"total":2},
+    {"family":"path","order":6,"seconds":0.0053103460000158975,"total":4},
+    {"family":"path","order":6,"seconds":0.019374725999995235,"total":6},
+    {"family":"path","order":7,"seconds":0.0017080279999959203,"total":2},
+    {"family":"path","order":7,"seconds":0.01198780500001817,"total":4},
+    {"family":"path","order":7,"seconds":0.052170380000006844,"total":6}
+  ]
+}

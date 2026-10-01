@@ -1,23 +1,25 @@
 # TF1 cost benchmark
 
-Benchmark date: 2026-10-01. The benchmark used the TF0 invariant algorithms at repository HEAD `f6c351b4a7a94941ab524bdfb9ec599409abcb2a`, Python 3.13.5, NetworkX 3.6.1, on the current execution host. Timings are wall-clock seconds and are intended only to choose conservative census bounds; they are not performance guarantees.
+TF1 used two benchmark passes: a local pre-freeze measurement to choose conservative bounds, followed by a reproducibility confirmation in GitHub Actions before the successful controlled run.
 
-Command represented by the committed benchmark harness:
+The committed harness is:
 
 ```bash
-python experiments/benchmark_tf1.py --output experiments/TF1_BENCHMARK.json
+python experiments/benchmark_tf1.py --output experiments/TF1-0001/benchmark_ci.json
 ```
+
+The successful CI confirmation ran under Python 3.11.16 with NetworkX 3.6.1. Wall-clock seconds were:
 
 | order | unlabeled trees | generation | core structural pass | domination | maximal-IS count | TreeStack estimate |
 |---:|---:|---:|---:|---:|---:|---:|
-| 8 | 23 | 0.0031 | 0.0025 | 0.0006 | 0.0133 | 0.0015 |
-| 9 | 47 | 0.0052 | 0.0058 | 0.0028 | 0.0520 | 0.0039 |
-| 10 | 106 | 0.0108 | 0.0146 | 0.0113 | 0.2662 | 0.0103 |
-| 11 | 235 | 0.0276 | 0.0380 | 0.0588 | 1.1809 | 0.0314 |
-| 12 | 551 | 0.0646 | 0.1027 | 0.2996 | 5.6285 | 0.0760 |
+| 8 | 23 | 0.0065 | 0.0046 | 0.0009 | 0.0229 | 0.0024 |
+| 9 | 47 | 0.0077 | 0.0087 | 0.0038 | 0.0937 | 0.0057 |
+| 10 | 106 | 0.0181 | 0.0224 | 0.0172 | 0.4150 | 0.0155 |
+| 11 | 235 | 0.0530 | 0.0582 | 0.0748 | 1.8659 | 0.0400 |
+| 12 | 551 | 0.1166 | 0.1503 | 0.3525 | 8.8156 | 0.1088 |
 
-Optional predecessor-inspired quantities were measured separately rather than mixed into the first discovery feature set. Exact ProbStack finite probabilities over all trees took about 0.0024/0.0147/0.0638 seconds at order 6 for totals 2/4/6, and about 0.0089/0.1709/0.2536 seconds at order 7. Exact Greedy-Uniformity bias over all trees took about 0.0115 seconds at order 6, 0.1257 seconds at order 7, and 2.3721 seconds at order 8.
+Optional predecessor-inspired quantities were benchmarked separately. On paths, exact ProbStack finite probabilities at totals 2/4/6 took about 0.0009/0.0053/0.0194 seconds at order 6 and 0.0017/0.0120/0.0522 seconds at order 7. Exact Greedy-Uniformity bias took about 0.0027 seconds at order 6, 0.0197 seconds at order 7, and 0.1771 seconds at order 8.
 
-The sharp increase in permutation enumeration and maximal-independent-set enumeration is the reason TF1 does not use those optional quantities indiscriminately or enlarge the census just because unlabeled-tree generation itself remains cheap.
+The key observation is that unlabeled-tree generation remains cheap while exhaustive combinatorial invariants grow materially faster. This justified the pre-frozen choice of discovery orders 2–10 and untouched holdout order 11, and it justified keeping optional predecessor-inspired quantities out of the first discovery feature set.
 
-Decision: freeze discovery at orders 2–10 and untouched holdout at order 11. The first controlled run uses only core exact invariants.
+The exact CI timing artifact is `experiments/TF1-0001/benchmark_ci.json`.
