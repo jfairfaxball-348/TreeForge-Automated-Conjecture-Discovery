@@ -1,124 +1,134 @@
 # TF3 handover
 
-TF3 completed the interpretability diagnosis and froze `TF3-0001`; the scientific experiment has
-**not** been executed. TF0, TF1, and TF2 history remains unchanged.
+TF3-0001 is complete as a controlled discovery/falsification experiment. TF0, TF1, TF2, and the
+TF3 diagnostic/freeze history remain preserved append-only. Finite survival was not treated as proof,
+and TF3 produced no graduation candidate.
 
-## Verified starting state
+## Verified provenance
 
-Verified starting `main` HEAD: `b0cb414a3603bf9bd2db3367878e39ae05df01bc`.
+Verified starting `main` HEAD for the TF3 execution continuation:
+`bd6fb3d72010514e6edf0b37ab638f57688d51c5`.
 
 TF2 authoritative scientific source commit:
-`d091d88889fa72322bfc49a5531bc30b1f31b049`.
+`d091d88889fa72322bfc49a5531bc30b1f31b049`.  
+TF2 authoritative Actions run: `36888114138`.  
+Corrected TF3 diagnostic run: `36907058956`.
 
-TF2 authoritative scientific GitHub Actions run: `36888114138`.
-TF2 final pre-merge validation run: `36901734182`.
+TF3 scientific source commit:
+`e23b44d24a7b87d6f67aa18749059540934b2767`.  
+TF3 scientific Actions run: `36914647703`.
 
-At TF3 start, the candidate registry contained exactly 999 candidate IDs,
-`TF-000001` through `TF-000999`; `TF-000001` remained the calibration identity. The next
-permanent ID is `TF-001000`. TF1 and TF2 experiment records remain unique and append-only.
+The exact final merged `main` HEAD and final post-merge CI run are reported in the session
+closeout because a Git commit cannot contain its own resulting SHA without changing that SHA.
 
-## TF2 interpretability diagnosis
+## Frozen changed axis and corpus
 
-The 998 TF2 final statements have RHS feature-support counts:
-
-- 1 feature: 8
-- 2 features: 4
-- 3 features: 7
-- 4 features: 12
-- 5 features: 61
-- 6 features: 217
-- 7 features: 689
-
-Therefore 979/998 (98.1%) use at least four RHS features and 689/998 (69.0%) use all seven.
-Of the already-consumed 74 order-12 survivors, 70/74 (94.6%) use at least four features.
-There are 190 upper bounds and 808 lower bounds. Discovery touch count has median 10 and
-90th percentile 17; per-candidate maximum rational denominator has median 10, 90th percentile 60,
-and maximum 1208.
-
-The principal diagnosis is full-dimensional convex-hull geometry interacting with seven supplied
-features. TF2's earlier discovery-only probe exposed 42,068 Qhull facets. Morgan is ineffective
-under the common always-true hypothesis mask; Dalmatian reduced the stream substantially, and exact
-duplicate removal reduced 10,753 statements to 998, but exact syntactic equivalence does not collapse
-the many mathematically related dense facet families. Low touch counts and complicated rational
-coefficients add opacity but are secondary to the geometry.
-
-## Alternatives considered
-
-Corrected diagnostic GitHub Actions run: `36907058956`.
-
-1. Ratios only: 14 raw, 12 after Dalmatian, 12 final; all 12 have one RHS feature; maximum
-   denominator 13; about 0.342 seconds.
-2. Unchanged full TF2 generation plus a machine RHS-support <= 2 gate: would admit 12 final TF2
-   forms, but only after the unchanged 23,268 raw / 10,753 post-Dalmatian / 998 deduplicated stream.
-3. Twenty-one fixed pairwise convex hulls: 259 raw, 214 after Dalmatian, 205 post-duplicate across
-   individual runs, 146 after cross-run exact deduplication; 127 use two RHS features; maximum
-   denominator 61; about 0.778 seconds.
-
-The support gate was rejected because it adds a threshold while retaining the diagnosed opaque
-generation process. Pairwise hulls were rejected for TF3 because they still create a materially
-larger stream and introduce a multi-hull design. No holdout survival information selected a
-coefficient, statement, or threshold.
-
-## Frozen TF3-0001
-
-Single changed discovery axis: TxGraffiti method set becomes `ratios` only.
+Exactly one material discovery axis changed relative to TF2:
+TxGraffiti methods `[convex_hull, ratios]` became `[ratios]`.
 
 Target: `domination_number`.
 
-Discovery features remain:
+Discovery features:
 `order`, `leaf_count`, `support_vertex_count`, `max_degree`, `diameter`,
 `matching_number`, `maximal_independent_set_count`.
 
-Discovery corpus: all 200 unlabeled trees of orders 2-10.
+Discovery corpus: all 200 unlabeled finite simple trees of orders 2-10.  
+Discovery SHA-256:
+`e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250`.
 
-TxGraffiti remains `0.4.1` at upstream revision
-`e37126da53b84150d142a5d61202b61f78521fcc`; Morgan/Dalmatian, duplicate removal,
-touch-count sorting, object symbol `T`, and empty-payload-to-`None` semantics remain fixed.
+TxGraffiti remained `0.4.1` at upstream revision
+`e37126da53b84150d142a5d61202b61f78521fcc`, with Morgan/Dalmatian,
+duplicate removal, touch-count sorting, object symbol `T`, and empty-payload-to-upstream-`None`
+semantics unchanged.
 
-Interpretability policy: no post-generation filter, candidate cap, touch threshold, or
-coefficient/denominator threshold. Ratios-only output is asserted to contain exactly one distinct
-RHS discovery feature; violation aborts rather than silently filters.
+## Generation and candidate-batch firewall
 
-## Exposed data and fresh validation
+Stage counts:
 
-Burned/exposed data include all trees of orders 2-12, the exact TF2 adversarial set, the
-order-25 six-arm length-4 spider, and all other structures inspected during TF2 interpretation.
+- raw ratios generator output: 14
+- after Morgan: 14
+- after Dalmatian: 12
+- after duplicate removal: 12
+- final candidate count: 12
 
-Fresh holdout: all 1,301 unlabeled trees of order 13, exhaustive rather than sampled. A pre-freeze
-timing-only probe measured about 0.187 seconds for generation, 0.949 seconds for all domination
-numbers, and 23.976 seconds for all maximal-independent-set counts. Individual order-13 invariant
-values were not persisted, printed, inspected, ranked, or compared with candidates.
+Every final statement used exactly one RHS discovery feature. Permanent IDs were allocated as
+`TF-001000` through `TF-001011` before fresh holdout construction.
 
-The runner enforces discovery generation → machine normalization/triage → candidate-batch file and
-hash freeze → only then order-13 construction. Only holdout survivors see the newly frozen TF3
-adversarial instances. Exact TF2 hostile trees remain regression-only, not fresh evidence.
+Candidate-batch SHA-256:
+`85669d95fb7199b720bfe488c606055dd5f38a5af157c1ed2bdb5f98710344c6`.
 
-## Process failures
+The persisted freeze record has `holdout_constructed=false`; the runner and regression tests
+enforce candidate-batch persistence before order-13 construction.
 
-Run `36906556561` failed a synthetic method-selection fixture before diagnostics.
-Run `36906621879` completed but its diagnostic-only complexity parser was invalid because regexes
-were over-escaped. Run `36907013799` failed the new parser unit test during the first correction.
-All are preserved in `docs/FAILURE_AND_LESSON_LEDGER.md`. Corrected run `36907058956` passed.
+Discovery-side triage: 12 `CONJECTURED`; 0 discovery-side `FALSIFIED`, `KNOWN_RESULT`,
+`TRIVIAL`, `DUPLICATE`, or `ARTIFACT_OF_FEATURE_SET`.
 
-## Execution status and next session
+## Fresh order-13 holdout
 
-Experiment ID: `TF3-0001`.
+The untouched TF3 holdout was all 1,301 unlabeled trees of order 13.  
+Holdout SHA-256:
+`5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9`.
 
-Next permanent candidate ID: `TF-001000`.
+All 12 frozen candidates were tested. Eight were falsified and four survived:
+`TF-001000`, `TF-001001`, `TF-001006`, and `TF-001010`.
+The deterministic first counterexample for every holdout failure is preserved in
+`experiments/TF3-0001/holdout_summary.json`.
 
-TF3-0001 is **frozen only; not scientifically executed**. No TF3 permanent candidate IDs have been
-allocated, no order-13 candidate evaluation has occurred, and no TF3 literature search has been
-performed.
+## Fresh pre-frozen adversarial gate
 
-The next session should verify the then-current `main` HEAD and CI, read
-`docs/TF3_DIAGNOSTIC.md`, `docs/TF3_EXPERIMENT_FREEZE.md`, and
-`experiments/TF3-0001/spec.json`, then execute the frozen runner without retuning. It should
-materialize results append-only, test every admitted candidate on the fresh holdout, apply only the
-pre-frozen fresh adversarial set to holdout survivors, and stop before any prior-art work unless a
-candidate independently reaches `MATHEMATICALLY_INTERESTING`.
+Only the four order-13 survivors were tested on the exact pre-frozen fresh hostile set.
 
-The exact final repository HEAD and final merged CI run are reported in the session closeout because
-a Git commit cannot contain its own resulting SHA without changing that SHA.
+Hostile tree count: 18.  
+Adversarial SHA-256:
+`37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18`.
+
+Adversarial falsifications: 0.  
+Adversarial finite survivors: 4.
+
+The exact TF2 hostile set remained regression-only and was not counted as fresh TF3 evidence.
+
+## Mathematical interpretation
+
+No finite survivor was promoted automatically.
+
+- `TF-001000` (`gamma <= nu`) was falsified by `K1` under the literal frozen all-tree
+  hypotheses: `gamma(K1)=1`, `nu(K1)=0`.
+- `TF-001001` (`gamma <= n/2`) was likewise falsified by `K1`.
+- `TF-001006` (`gamma >= support_vertex_count/2`) was classified `TRIVIAL` by an
+  elementary support-leaf-pair argument.
+- `TF-001010` (`gamma >= 3 nu/5`) is the same normalized relation previously examined as
+  `TF-000998`; the already-exposed order-25 six-arm length-4 spider again falsifies it with
+  `gamma=7`, `nu=12`. This was post-gate interpretation, not fresh TF3 validation evidence.
+
+Final TF3 states: 11 `FALSIFIED`, 1 `TRIVIAL`.
+
+Candidates reaching `MATHEMATICALLY_INTERESTING`: none.  
+TF3 prior-art search performed: none.  
+Candidates reaching `GRADUATION_CANDIDATE`: none.
+
+## Process failures and validation
+
+Scientific execution attempts `36914094286` and `36914294452` failed immediately at Python
+import before discovery because the workflow invoked the runner in script mode; neither produced
+scientific evidence. The successful run used module invocation only and did not change the frozen
+scientific specification.
+
+Result materialization then exposed two non-scientific maintenance issues: an unnecessary expensive
+order-25 invariant computation and tests whose assertions assumed the registry would permanently stop
+at a pre-TF3 state. These were corrected without changing the scientific artifact. All meaningful
+failures are recorded append-only in `docs/FAILURE_AND_LESSON_LEDGER.md`.
+
+The compact result record is in `experiments/TF3-0001/`; append-only candidate revisions extend
+the registry through `TF-001011`, so the next permanent candidate ID is `TF-001012`.
+Exactly one `TF3-0001` experiment record is present.
+
+## Recommendation for TF4
+
+TF4 should begin as a diagnosis session, not by inventing or immediately freezing a new generator.
+Use the completed TF3 evidence to ask why ratios-only improved interpretability but yielded only
+elementary/false one-feature relations, including the literal-hypothesis issue exposed by `K1`.
+Only after that diagnosis should TF4 freeze one justified controlled axis change and allocate fresh
+validation data. Do not reopen TF3-0001 or tune its failed coefficients.
 
 ---
 
