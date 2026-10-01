@@ -1,0 +1,60 @@
+name: TF3 Scientific Execution
+
+permissions:
+  contents: read
+  actions: read
+
+on:
+  push:
+    branches:
+      - tf3-scientific-run
+
+jobs:
+  tf3-scientific:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install
+        run: python -m pip install -e '.[dev,conjecturing]'
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Compile
+        run: python -m compileall -q src experiments
+      - name: Static checks
+        run: ruff check .
+      - name: Deterministic calibration smoke test
+        run: |
+          python experiments/calibration.py \
+            --output-dir /tmp/treeforge-calibration \
+            --source-commit "$GITHUB_SHA" \
+            --timestamp 2026-10-01T00:00:00Z
+          test -s /tmp/treeforge-calibration/registry/candidates.jsonl
+          test -s /tmp/treeforge-calibration/registry/experiments.jsonl
+      - name: Frozen TF3 guard suite
+        run: |
+          python -m pytest -q \
+            tests/test_tf2_results.py \
+            tests/test_tf3_frozen_spec.py \
+            tests/test_tf3_experiment.py \
+            tests/test_txgraffiti_adapter.py
+      - name: Execute frozen TF3-0001
+        run: |
+          python experiments/tf3_discovery.py \
+            --spec experiments/TF3-0001/spec.json \
+            --output-dir /tmp/tf3-0001 \
+            --source-commit "$GITHUB_SHA"
+          test -s /tmp/tf3-0001/manifest.json
+          test -s /tmp/tf3-0001/raw_txgraffiti_output.json
+          test -s /tmp/tf3-0001/stage_counts.json
+          test -s /tmp/tf3-0001/candidate_batch.json
+          test -s /tmp/tf3-0001/candidate_batch_freeze.json
+          test -s /tmp/tf3-0001/candidate_events.jsonl
+          test -s /tmp/tf3-0001/final_candidates.json
+      - name: Upload TF3 scientific artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tf3-0001-scientific
+          path: /tmp/tf3-0001
