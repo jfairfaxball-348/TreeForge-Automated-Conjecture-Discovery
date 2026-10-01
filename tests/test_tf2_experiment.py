@@ -104,6 +104,7 @@ def test_tf2_holdout_after_generation_and_ids(monkeypatch, tmp_path):
         ],
         "target": "domination_number",
         "discovery_features": ["order"],
+        "hypotheses": ["finite", "simple", "unlabeled", "tree"],
         "txgraffiti": {"object_symbol": "T", "hypothesis_payload": []},
     }
     spec_path = tmp_path / "spec.json"
