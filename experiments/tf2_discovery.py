@@ -277,6 +277,8 @@ def run(
         object_symbol=spec["txgraffiti"]["object_symbol"],
         hypothesis=spec["txgraffiti"]["hypothesis_payload"],
     )
+    stage_counts = getattr(engine, "last_stage_counts", None)
+    _write_json(output_dir / "stage_counts.json", stage_counts or {})
 
     raw = []
     for index, item in enumerate(statements, start=1):
@@ -508,6 +510,7 @@ def run(
         "holdout_tree_count": len(holdout),
         "adversarial_tree_count": len(adversarial),
         "raw_candidate_count": len(raw),
+        "stage_counts": stage_counts,
         "candidate_ids": sorted(current),
         "first_stage_state_counts": first_stage_state_counts,
         "holdout_survivor_count": len(holdout_survivors),
