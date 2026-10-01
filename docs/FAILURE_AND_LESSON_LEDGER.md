@@ -64,3 +64,10 @@ GitHub Actions run `36875119955`, using intended TF2-0001 scientific source comm
 A discovery-only performance probe in successful run `36887027180` used only the already-burned discovery orders 2–10. The 8-dimensional SciPy/Qhull construction itself completed in approximately 0.48 seconds but returned 42,068 facets. Inspection of pinned TxGraffiti `0.4.1` showed that its streaming Morgan/Dalmatian application repeatedly scans or reconstructs state across this large facet stream. The bottleneck is therefore adapter/upstream heuristic application cost, not corpus generation, Qhull itself, the TF2 holdout, or a scientific zero/survivor result.
 
 Corrective action: keep the frozen TF2-0001 target, features, methods, heuristics, post-processors, split, normalization, and adversarial set unchanged. For TreeForge's normalized always-true hypothesis case, cache the exact pointwise minimum used by Dalmatian and exploit the fact that Morgan cannot reject when every generated conjecture has the identical hypothesis mask. A live pinned-package equivalence test compares the complete ordered output of this optimized path with the unoptimized upstream pipeline on a nondegenerate dataset before the replacement scientific run. The replacement run must use a new exact source commit.
+
+
+## 2026-10-01 — TF2 result materialization initially rejected preserved TF0 legacy revision
+
+GitHub Actions run `36890309397` passed installation, unit tests, byte-compilation, Ruff, calibration, and the TF2 diagnostic, then failed only while materializing the already-completed TF2 scientific artifact. The finalizer applied the current candidate schema to the original `TF-000001` revision 1, which intentionally predates the later `source_commit` field and was preserved by TF1 revision 2 rather than rewritten.
+
+No TF2 scientific computation was rerun, no holdout data were changed, and no candidate result was altered. Corrective action: the finalizer now has an explicit read-only validation exception for that single preserved TF0 legacy revision while requiring the current schema for every later record.
