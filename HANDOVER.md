@@ -1,3 +1,127 @@
+# TF3 handover
+
+TF3 completed the interpretability diagnosis and froze `TF3-0001`; the scientific experiment has
+**not** been executed. TF0, TF1, and TF2 history remains unchanged.
+
+## Verified starting state
+
+Verified starting `main` HEAD: `b0cb414a3603bf9bd2db3367878e39ae05df01bc`.
+
+TF2 authoritative scientific source commit:
+`d091d88889fa72322bfc49a5531bc30b1f31b049`.
+
+TF2 authoritative scientific GitHub Actions run: `36888114138`.
+TF2 final pre-merge validation run: `36901734182`.
+
+At TF3 start, the candidate registry contained exactly 999 candidate IDs,
+`TF-000001` through `TF-000999`; `TF-000001` remained the calibration identity. The next
+permanent ID is `TF-001000`. TF1 and TF2 experiment records remain unique and append-only.
+
+## TF2 interpretability diagnosis
+
+The 998 TF2 final statements have RHS feature-support counts:
+
+- 1 feature: 8
+- 2 features: 4
+- 3 features: 7
+- 4 features: 12
+- 5 features: 61
+- 6 features: 217
+- 7 features: 689
+
+Therefore 979/998 (98.1%) use at least four RHS features and 689/998 (69.0%) use all seven.
+Of the already-consumed 74 order-12 survivors, 70/74 (94.6%) use at least four features.
+There are 190 upper bounds and 808 lower bounds. Discovery touch count has median 10 and
+90th percentile 17; per-candidate maximum rational denominator has median 10, 90th percentile 60,
+and maximum 1208.
+
+The principal diagnosis is full-dimensional convex-hull geometry interacting with seven supplied
+features. TF2's earlier discovery-only probe exposed 42,068 Qhull facets. Morgan is ineffective
+under the common always-true hypothesis mask; Dalmatian reduced the stream substantially, and exact
+duplicate removal reduced 10,753 statements to 998, but exact syntactic equivalence does not collapse
+the many mathematically related dense facet families. Low touch counts and complicated rational
+coefficients add opacity but are secondary to the geometry.
+
+## Alternatives considered
+
+Corrected diagnostic GitHub Actions run: `36907058956`.
+
+1. Ratios only: 14 raw, 12 after Dalmatian, 12 final; all 12 have one RHS feature; maximum
+   denominator 13; about 0.342 seconds.
+2. Unchanged full TF2 generation plus a machine RHS-support <= 2 gate: would admit 12 final TF2
+   forms, but only after the unchanged 23,268 raw / 10,753 post-Dalmatian / 998 deduplicated stream.
+3. Twenty-one fixed pairwise convex hulls: 259 raw, 214 after Dalmatian, 205 post-duplicate across
+   individual runs, 146 after cross-run exact deduplication; 127 use two RHS features; maximum
+   denominator 61; about 0.778 seconds.
+
+The support gate was rejected because it adds a threshold while retaining the diagnosed opaque
+generation process. Pairwise hulls were rejected for TF3 because they still create a materially
+larger stream and introduce a multi-hull design. No holdout survival information selected a
+coefficient, statement, or threshold.
+
+## Frozen TF3-0001
+
+Single changed discovery axis: TxGraffiti method set becomes `ratios` only.
+
+Target: `domination_number`.
+
+Discovery features remain:
+`order`, `leaf_count`, `support_vertex_count`, `max_degree`, `diameter`,
+`matching_number`, `maximal_independent_set_count`.
+
+Discovery corpus: all 200 unlabeled trees of orders 2-10.
+
+TxGraffiti remains `0.4.1` at upstream revision
+`e37126da53b84150d142a5d61202b61f78521fcc`; Morgan/Dalmatian, duplicate removal,
+touch-count sorting, object symbol `T`, and empty-payload-to-`None` semantics remain fixed.
+
+Interpretability policy: no post-generation filter, candidate cap, touch threshold, or
+coefficient/denominator threshold. Ratios-only output is asserted to contain exactly one distinct
+RHS discovery feature; violation aborts rather than silently filters.
+
+## Exposed data and fresh validation
+
+Burned/exposed data include all trees of orders 2-12, the exact TF2 adversarial set, the
+order-25 six-arm length-4 spider, and all other structures inspected during TF2 interpretation.
+
+Fresh holdout: all 1,301 unlabeled trees of order 13, exhaustive rather than sampled. A pre-freeze
+timing-only probe measured about 0.187 seconds for generation, 0.949 seconds for all domination
+numbers, and 23.976 seconds for all maximal-independent-set counts. Individual order-13 invariant
+values were not persisted, printed, inspected, ranked, or compared with candidates.
+
+The runner enforces discovery generation → machine normalization/triage → candidate-batch file and
+hash freeze → only then order-13 construction. Only holdout survivors see the newly frozen TF3
+adversarial instances. Exact TF2 hostile trees remain regression-only, not fresh evidence.
+
+## Process failures
+
+Run `36906556561` failed a synthetic method-selection fixture before diagnostics.
+Run `36906621879` completed but its diagnostic-only complexity parser was invalid because regexes
+were over-escaped. Run `36907013799` failed the new parser unit test during the first correction.
+All are preserved in `docs/FAILURE_AND_LESSON_LEDGER.md`. Corrected run `36907058956` passed.
+
+## Execution status and next session
+
+Experiment ID: `TF3-0001`.
+
+Next permanent candidate ID: `TF-001000`.
+
+TF3-0001 is **frozen only; not scientifically executed**. No TF3 permanent candidate IDs have been
+allocated, no order-13 candidate evaluation has occurred, and no TF3 literature search has been
+performed.
+
+The next session should verify the then-current `main` HEAD and CI, read
+`docs/TF3_DIAGNOSTIC.md`, `docs/TF3_EXPERIMENT_FREEZE.md`, and
+`experiments/TF3-0001/spec.json`, then execute the frozen runner without retuning. It should
+materialize results append-only, test every admitted candidate on the fresh holdout, apply only the
+pre-frozen fresh adversarial set to holdout survivors, and stop before any prior-art work unless a
+candidate independently reaches `MATHEMATICALLY_INTERESTING`.
+
+The exact final repository HEAD and final merged CI run are reported in the session closeout because
+a Git commit cannot contain its own resulting SHA without changing that SHA.
+
+---
+
 # TF2 handover
 
 TF2 is complete as a controlled discovery/falsification session. TreeForge remains a discovery laboratory; finite survival is not proof, and no candidate graduated to a theorem repository.

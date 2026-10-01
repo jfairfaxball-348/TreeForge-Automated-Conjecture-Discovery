@@ -128,6 +128,15 @@ class TxGraffitiAdapter:
 
         return morgan_equivalent, dalmatian_equivalent, counts
 
+    @staticmethod
+    def _select_methods(generators, methods: list[str] | None) -> list[Any]:
+        names = methods or ["convex_hull", "ratios"]
+        allowed = {"convex_hull", "ratios"}
+        unknown = [name for name in names if name not in allowed]
+        if unknown:
+            raise ValueError(f"unsupported TxGraffiti method(s): {unknown}")
+        return [getattr(generators, name) for name in names]
+
     def discover(
         self,
         dataframe: Any,
@@ -136,10 +145,12 @@ class TxGraffitiAdapter:
         features: list[str],
         object_symbol: str = "T",
         hypothesis: list[Any] | None = None,
+        methods: list[str] | None = None,
     ) -> list[GeneratedStatement]:
         playground_mod, generators, heuristics, processing = self._load_surface()
         playground = playground_mod.ConjecturePlayground(dataframe, object_symbol=object_symbol)
         effective_hypothesis = self._normalize_hypothesis(hypothesis)
+        active_methods = self._select_methods(generators, methods)
 
         if effective_hypothesis is None:
             morgan_filter, dalmatian_filter, counts = self._cached_always_true_heuristics(
@@ -151,7 +162,7 @@ class TxGraffitiAdapter:
             active_heuristics = [heuristics.morgan_accept, heuristics.dalmatian_accept]
 
         playground.discover(
-            methods=[generators.convex_hull, generators.ratios],
+            methods=active_methods,
             features=features,
             target=target,
             hypothesis=effective_hypothesis,

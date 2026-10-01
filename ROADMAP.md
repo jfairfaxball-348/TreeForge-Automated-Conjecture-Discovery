@@ -40,6 +40,27 @@ No candidate reached `GRADUATION_CANDIDATE`. No theorem, novelty, Lean, Palomar,
 
 See `experiments/TF2-0001/RESULTS.md`.
 
-## TF3 — recommended next session
+## TF3 — interpretability diagnosis and next experiment freeze
 
-Close TF2 rather than mining its used holdout or weakening its gates. Start with a discovery-side/recorded-evidence diagnosis of why the full-dimensional convex-hull configuration produced a large batch of mostly opaque facets, then freeze a new experiment ID with one justified interpretability-oriented change. Benchmark any proposed configuration before freeze, keep orders 11 and 12 burned, treat the specific TF2 adversarial trees as exposed, and allocate genuinely fresh validation data rather than representing previously inspected trees as untouched evidence.
+Status: **FROZEN; SCIENTIFIC EXECUTION NOT YET RUN (2026-10-01).**
+
+TF3 quantified the TF2 interpretability problem using only exposed data. Of 998 final TF2 statements,
+979 used at least four RHS features and 689 used all seven. Corrected diagnostic run
+`36907058956` compared a small predeclared set of discovery-side alternatives. Ratios-only produced
+14 raw and 12 final statements, all one-feature RHS forms; fixed pairwise convex hulls still produced
+146 cross-run exact-deduplicated statements; a post-generation support-size gate would admit 12 only
+after creating the unchanged full TF2 hull stream.
+
+Experiment `TF3-0001` is frozen with exactly one discovery-axis change: TxGraffiti methods are
+restricted from `convex_hull + ratios` to `ratios` only. The target, seven features, orders 2-10
+discovery corpus, Morgan/Dalmatian heuristics, duplicate removal, touch-count sorting, and
+empty-hypothesis semantics remain unchanged.
+
+Orders 11 and 12 and all exact TF2 hostile/candidate-specific structures remain exposed. The fresh
+TF3 holdout is all 1,301 unlabeled trees of order 13, constructed by the scientific runner only
+after `candidate_batch.json` and its SHA-256 are frozen. A timing-only feasibility probe did not
+persist or inspect individual order-13 invariant values. Fresh hostile instances are also frozen in
+the TF3 machine spec.
+
+The next session should execute the already-frozen TF3-0001 protocol without retuning it, materialize
+the candidate lineages beginning at `TF-001000`, and perform the exact holdout/adversarial lifecycle.
