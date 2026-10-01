@@ -42,10 +42,12 @@ def run() -> dict[str, object]:
     by_order = []
     for order in range(8, 13):
         trees, generation_seconds = elapsed(lambda order=order: generate_unlabeled_trees(order, order))
-        _, core_seconds = elapsed(lambda: [registry.compute(tree, CORE) for tree in trees])
-        _, domination_seconds = elapsed(lambda: [domination_number(tree) for tree in trees])
-        _, maximal_is_seconds = elapsed(lambda: [maximal_independent_set_count(tree) for tree in trees])
-        _, treestack_seconds = elapsed(lambda: [treestack_estimate(tree) for tree in trees])
+        _, core_seconds = elapsed(lambda trees=trees: [registry.compute(tree, CORE) for tree in trees])
+        _, domination_seconds = elapsed(lambda trees=trees: [domination_number(tree) for tree in trees])
+        _, maximal_is_seconds = elapsed(
+            lambda trees=trees: [maximal_independent_set_count(tree) for tree in trees]
+        )
+        _, treestack_seconds = elapsed(lambda trees=trees: [treestack_estimate(tree) for tree in trees])
         by_order.append(
             {
                 "order": order,

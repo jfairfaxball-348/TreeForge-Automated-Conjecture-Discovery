@@ -1,10 +1,8 @@
 import json
-from pathlib import Path
-
-from treeforge.conjecturing.txgraffiti_adapter import GeneratedStatement
-from treeforge.registry.candidate_registry import CandidateRegistry
 
 import experiments.tf1_discovery as tf1
+from treeforge.conjecturing.txgraffiti_adapter import GeneratedStatement
+from treeforge.registry.candidate_registry import CandidateRegistry
 
 
 class FakeAdapter:

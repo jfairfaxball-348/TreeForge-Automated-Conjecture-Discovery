@@ -29,3 +29,9 @@ Corrective action: make the test path explicit with `pythonpath = [".", "src"]` 
 Run `36849715804` passed the full unit-test suite, including the live TreeForge adapter call against installed `txgraffiti==0.4.1`, and passed byte-compilation. It then failed Ruff on a modern-stdlib import rule, one import-order rule, and line-length findings.
 
 Corrective action: adopt `datetime.UTC`, import `Callable` from `collections.abc`, normalize the live-test import block, and explicitly exclude `E501` from the initial lint policy. Line wrapping is a formatting preference rather than a research-integrity gate; semantic/import/static errors remain enabled.
+
+## 2026-10-01 — TF1 CI run #1 stopped at Ruff before discovery
+
+GitHub Actions run `36852332959` passed installation, the full unit suite (including the live TxGraffiti adapter call), and byte-compilation, then failed static analysis before the benchmark or TF1 discovery steps ran. Ruff reported four B023 loop-variable closure findings in the new benchmark harness, one import-order finding, and one unused import in the TF1 leakage test.
+
+This was a pre-discovery implementation/style failure, so no candidate output from the run is valid or retained as TF1 evidence. The frozen TF1-0001 scientific specification was not changed. Corrective action: bind the benchmark loop variable explicitly in timing lambdas and normalize the test import block, then rerun CI from a new source commit.
