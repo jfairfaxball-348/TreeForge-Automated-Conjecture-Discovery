@@ -55,3 +55,28 @@ The scientific TF2-0001 specification was not changed. Corrective action: add th
 GitHub Actions run `36864222486` passed all 19 unit tests and byte-compilation, then failed Ruff because the new exact-expression evaluator imported `Mapping` from `typing` rather than `collections.abc`.
 
 No TF2 candidate generation had been enabled or executed. Corrective action: use the modern standard-library import and rerun the unchanged frozen TF2-0001 protocol.
+
+
+## 2026-10-01 — TF2 first scientific execution exposed heuristic-scaling bottleneck before valid output
+
+GitHub Actions run `36875119955`, using intended TF2-0001 scientific source commit `4e25b666b4c650047387d131ce5d05ff5c693521`, passed installation, the full unit suite, byte-compilation, Ruff, the deterministic calibration smoke test, and the live TF2 zero-yield diagnosis. It then remained inside the frozen TF2-0001 scientific step without producing the required scientific artifact within the expected runtime envelope. PR #5 was closed and no candidate, holdout, or adversarial result from that attempt is accepted as TF2 scientific evidence.
+
+A discovery-only performance probe in successful run `36887027180` used only the already-burned discovery orders 2–10. The 8-dimensional SciPy/Qhull construction itself completed in approximately 0.48 seconds but returned 42,068 facets. Inspection of pinned TxGraffiti `0.4.1` showed that its streaming Morgan/Dalmatian application repeatedly scans or reconstructs state across this large facet stream. The bottleneck is therefore adapter/upstream heuristic application cost, not corpus generation, Qhull itself, the TF2 holdout, or a scientific zero/survivor result.
+
+Corrective action: keep the frozen TF2-0001 target, features, methods, heuristics, post-processors, split, normalization, and adversarial set unchanged. For TreeForge's normalized always-true hypothesis case, cache the exact pointwise minimum used by Dalmatian and exploit the fact that Morgan cannot reject when every generated conjecture has the identical hypothesis mask. A live pinned-package equivalence test compares the complete ordered output of this optimized path with the unoptimized upstream pipeline on a nondegenerate dataset before the replacement scientific run. The replacement run must use a new exact source commit.
+
+
+## 2026-10-01 — TF2 result materialization initially rejected preserved TF0 legacy revision
+
+GitHub Actions run `36890309397` passed installation, unit tests, byte-compilation, Ruff, calibration, and the TF2 diagnostic, then failed only while materializing the already-completed TF2 scientific artifact. The finalizer applied the current candidate schema to the original `TF-000001` revision 1, which intentionally predates the later `source_commit` field and was preserved by TF1 revision 2 rather than rewritten.
+
+No TF2 scientific computation was rerun, no holdout data were changed, and no candidate result was altered. Corrective action: the finalizer now has an explicit read-only validation exception for that single preserved TF0 legacy revision while requiring the current schema for every later record.
+
+
+## 2026-10-01 — late completion of the first TF2 scientific execution was observed after replacement-run planning
+
+GitHub Actions run `36875119955` was provisionally classified as a pre-valid-output performance failure after it remained inside the TF2-0001 scientific step far beyond the expected runtime envelope and PR #5 was closed before a scientific artifact was available for inspection. The run later completed successfully and uploaded artifact `11180206717`.
+
+The late artifact was audited against the repaired authoritative run. Its 998 final TxGraffiti statements are identical in order and structured content to those from scientific run `36888114138`; discovery, holdout, and adversarial rows are identical after removing the source-commit provenance field; candidate lifecycle outcomes are identical. Its dataset hashes differ because TreeForge intentionally includes the exact scientific source commit in serialized corpus rows.
+
+Corrective interpretation: preserve run `36875119955` and the contemporaneous PR #5 closure as process history, but do not describe the late artifact as a distinct scientific variant or use it as the authoritative TF2 record. Run `36888114138`, source commit `d091d88889fa72322bfc49a5531bc30b1f31b049`, remains authoritative because it uses the equivalence-tested performance repair and records the complete single-pass stage counts. The frozen TF2-0001 scientific specification was unchanged throughout.

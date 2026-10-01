@@ -1,0 +1,16 @@
+{
+  "all_conjectured_tested_on_holdout": true,
+  "candidate_id_range": [
+    "TF-000002",
+    "TF-000999"
+  ],
+  "raw_candidate_count": 998,
+  "state_counts": {
+    "ARTIFACT_OF_FEATURE_SET": 0,
+    "CONJECTURED": 998,
+    "DUPLICATE": 0,
+    "FALSIFIED": 0,
+    "KNOWN_RESULT": 0,
+    "TRIVIAL": 0
+  }
+}

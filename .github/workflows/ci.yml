@@ -1,5 +1,9 @@
 name: CI
 
+permissions:
+  contents: read
+  actions: read
+
 on:
   push:
   pull_request:
@@ -22,7 +26,10 @@ jobs:
         run: ruff check .
       - name: Deterministic calibration smoke test
         run: |
-          python experiments/calibration.py             --output-dir /tmp/treeforge-calibration             --source-commit "$GITHUB_SHA"             --timestamp 2026-10-01T00:00:00Z
+          python experiments/calibration.py \
+            --output-dir /tmp/treeforge-calibration \
+            --source-commit "$GITHUB_SHA" \
+            --timestamp 2026-10-01T00:00:00Z
           test -s /tmp/treeforge-calibration/registry/candidates.jsonl
           test -s /tmp/treeforge-calibration/registry/experiments.jsonl
       - name: TF2 zero-yield diagnosis
