@@ -1,5 +1,9 @@
 name: CI
 
+permissions:
+  contents: write
+  actions: read
+
 on:
   push:
   pull_request:
@@ -38,6 +42,22 @@ jobs:
         with:
           name: tf2-diagnostic
           path: /tmp/tf2-diagnostic.json
+      - name: Materialize completed TF2-0001 artifact
+        if: github.event_name == 'pull_request' && github.event.action == 'synchronize' && github.head_ref == 'tf2-scientific-run-2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf /tmp/tf2-0001-completed
+          gh run download 36888114138 \
+            --repo "$GITHUB_REPOSITORY" \
+            --name tf2-0001-scientific \
+            --dir /tmp/tf2-0001-completed
+          python experiments/tf2_finalize.py --artifact-dir /tmp/tf2-0001-completed
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/registry experiments/TF2-0001
+          git commit -m "TF2: materialize scientific results"
+          git push origin HEAD:tf2-scientific-run-2
       - name: TF2-0001 scientific run
         if: github.event_name == 'pull_request' && github.event.action == 'opened' && github.head_ref == 'tf2-scientific-run-2'
         run: |
