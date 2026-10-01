@@ -1,0 +1,43 @@
+{
+  "adversarial_survivors_interpreted": 74,
+  "graduation_candidate_count": 0,
+  "mathematically_interesting_reached_ids": [
+    "TF-000998"
+  ],
+  "novelty_audit_ids": [
+    "TF-000998"
+  ],
+  "prior_art_search": {
+    "close_results": [
+      {
+        "citation": "Yair Caro, Randy Davila, Michael Henning, Ryan Pepper, Conjecture(s) of TxGraffiti: Independence, domination, and matchings, arXiv:2104.01092 (2021)",
+        "relation": "Contains a distinct 3/5 lower bound for edge domination number versus matching number in connected cubic graphs, not ordinary domination number on trees.",
+        "url": "https://arxiv.org/abs/2104.01092"
+      },
+      {
+        "relation": "Searches also surfaced the standard upper relation gamma(G) <= matching_number(G) for graphs without isolated vertices, not a lower bound matching TF-000998."
+      }
+    ],
+    "conclusion": "No matching prior result was located in the searched sources. This does not establish novelty; broader expert/literature review remains necessary.",
+    "search_terms": [
+      "\"domination number\" \"matching number\" tree gamma nu bound",
+      "\"domination number\" \"matching number\" trees 3/5",
+      "\"3/5\" \"domination number\" tree matching",
+      "\"\u03b3(G)\" \"3/5\" \"\u03bc(G)\" domination matching",
+      "\"domination number\" \"matching number\" \"lower bound\" graph \u03b3 \u03bc"
+    ],
+    "searched_on": "2026-10-01",
+    "sources": [
+      "arXiv (direct inspection)",
+      "web-indexed scholarly pages surfaced from DMGT, ScienceDirect, ResearchGate, MDPI, and related publisher/index pages"
+    ],
+    "status": "BOUNDED_SEARCH_COMPLETE_NO_MATCH_LOCATED"
+  },
+  "prior_art_search_performed": true,
+  "reclassified_known_result_ids": [
+    "TF-000002",
+    "TF-000010",
+    "TF-000996"
+  ],
+  "retained_adversarial_passed_without_interest_promotion_count": 70
+}

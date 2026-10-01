@@ -1,0 +1,5 @@
+{
+  "earlier_internal_TxGraffiti_stage_counts_recorded_by_scientific_runner": false,
+  "final_TxGraffiti_statements_after_frozen_heuristics_and_postprocessors": 998,
+  "note": "No post-hoc scientific rerun was performed solely to reconstruct unrecorded internal stages."
+}
