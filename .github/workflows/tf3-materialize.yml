@@ -15,6 +15,7 @@ on:
     paths:
       - experiments/tf3_finalize.py
       - tests/test_tf3_frozen_spec.py
+      - tests/test_tf2_results.py
       - .github/workflows/tf3-materialize.yml
 
 jobs:
