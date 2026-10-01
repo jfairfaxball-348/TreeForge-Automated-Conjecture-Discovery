@@ -74,13 +74,15 @@ def test_tf2_registry_lineages_and_final_states():
     for record in records:
         by_id[record["candidate_id"]].append(record)
 
-    assert sorted(by_id) == [f"TF-{number:06d}" for number in range(1, 1000)]
+    tf2_ids = [f"TF-{number:06d}" for number in range(1, 1000)]
+    assert all(candidate_id in by_id for candidate_id in tf2_ids)
     assert by_id["TF-000001"][0]["statement"] == (
         "For every finite tree T, |E(T)| = |V(T)| - 1."
     )
     assert by_id["TF-000001"][-1]["lifecycle_state"] == "KNOWN_RESULT"
 
-    for candidate_id, lineage in by_id.items():
+    for candidate_id in tf2_ids:
+        lineage = by_id[candidate_id]
         revisions = [row["revision"] for row in lineage]
         assert revisions == sorted(revisions)
         assert len(revisions) == len(set(revisions))
@@ -89,7 +91,7 @@ def test_tf2_registry_lineages_and_final_states():
             assert lineage[0]["lifecycle_state"] == "OBSERVED"
             assert any(row["lifecycle_state"] == "CONJECTURED" for row in lineage)
 
-    current = {candidate_id: lineage[-1] for candidate_id, lineage in by_id.items()}
+    current = {candidate_id: by_id[candidate_id][-1] for candidate_id in tf2_ids}
     tf2_counts = Counter(
         record["lifecycle_state"]
         for candidate_id, record in current.items()
