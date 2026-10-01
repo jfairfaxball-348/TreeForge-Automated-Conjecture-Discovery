@@ -41,8 +41,12 @@ Single-pass stage counts:
 - strengthened equalities added by upstream discover: 0
 - final raw statements entering TreeForge triage: 998
 
-The first attempted live execution, Actions run `36875119955`, did not produce a valid
-scientific artifact within the expected runtime envelope. A discovery-only probe in run
+The first attempted live execution, Actions run `36875119955`, was provisionally treated as a
+pre-valid-output performance failure after it remained inside the scientific step beyond the expected
+runtime envelope and PR #5 was closed before its artifact was available. The run later completed and
+uploaded an artifact whose 998 final statements and scientific outcomes match the repaired run after
+removing source-commit provenance labels. It is preserved as process history rather than used as the
+authoritative TF2 record. A discovery-only probe in run
 `36887027180` found 42,068 convex-hull facets while Qhull itself took about 0.48 seconds.
 TreeForge therefore replaced repeated always-true Morgan/Dalmatian state reconstruction by
 an output-equivalent cached adapter path, verified against the pinned live upstream package.
