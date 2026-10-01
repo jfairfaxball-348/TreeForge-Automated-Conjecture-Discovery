@@ -1,0 +1,1240 @@
+{
+  "adversarial_falsified_count": 0,
+  "adversarial_hash": "37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18",
+  "adversarial_survivor_count": 4,
+  "adversarial_tree_count": 18,
+  "candidate_batch_hash": "85669d95fb7199b720bfe488c606055dd5f38a5af157c1ed2bdb5f98710344c6",
+  "candidate_id_range": [
+    "TF-001000",
+    "TF-001011"
+  ],
+  "experiment_id": "TF3-0001",
+  "final_candidate_count": 12,
+  "final_records": {
+    "TF-001000": {
+      "adversarial_status": {
+        "dataset_hash": "37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18",
+        "families": [
+          "broom",
+          "caterpillar",
+          "double_star",
+          "path",
+          "spider",
+          "star"
+        ],
+        "status": "PASSED",
+        "tree_count": 18
+      },
+      "candidate_id": "TF-001000",
+      "counterexamples": [
+        {
+          "family": "single_vertex_tree",
+          "lhs": "domination_number",
+          "operator": "<=",
+          "order": 1,
+          "parameters": {
+            "order": 1
+          },
+          "reason": "The literal all-tree statement gamma(T) <= nu(T) is false on K1: gamma(K1)=1 and nu(K1)=0. A standard nontrivial-tree relation is nearby, and the same normalized relation appeared as TF-000002, but TF3 does not silently add an order-at-least-two hypothesis or rewrite the earlier lineage.",
+          "rhs": "matching_number",
+          "source": "post_frozen_mathematical_interpretation",
+          "tree_code": "()",
+          "values": {
+            "cherry_count": 0,
+            "degree_sum": 0,
+            "diameter": 0,
+            "domination_number": 1,
+            "eccentricity_sum": 0,
+            "edge_count": 0,
+            "independence_number": 1,
+            "leaf_count": 0,
+            "matching_number": 0,
+            "max_degree": 0,
+            "maximal_independent_set_count": 1,
+            "min_degree": 0,
+            "order": 1,
+            "radius": 0,
+            "support_vertex_count": 0,
+            "tree_code": "()",
+            "wiener_index": 0
+          }
+        }
+      ],
+      "created_at": "2026-10-01T19:40:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 1,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= matching_number)",
+        "structured_relation": {
+          "conclusion": "domination_number <= matching_number",
+          "discovery_touch_count": 149,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": "<=",
+          "rhs": "matching_number"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 2,
+          "tree_code": "(()())"
+        },
+        {
+          "order": 3,
+          "tree_code": "(()())"
+        },
+        {
+          "order": 4,
+          "tree_code": "((())(()))"
+        },
+        {
+          "order": 4,
+          "tree_code": "(()()())"
+        },
+        {
+          "order": 5,
+          "tree_code": "((()())(()))"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "PASSED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "The literal all-tree statement gamma(T) <= nu(T) is false on K1: gamma(K1)=1 and nu(K1)=0. A standard nontrivial-tree relation is nearby, and the same normalized relation appeared as TF-000002, but TF3 does not silently add an order-at-least-two hypothesis or rewrite the earlier lineage. The order-13 and frozen hostile passes remain valid finite evidence only.",
+      "prior_art_status": "NOT_STARTED; ELEMENTARY_COUNTEREXAMPLE",
+      "revision": 5,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number <= matching_number."
+    },
+    "TF-001001": {
+      "adversarial_status": {
+        "dataset_hash": "37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18",
+        "families": [
+          "broom",
+          "caterpillar",
+          "double_star",
+          "path",
+          "spider",
+          "star"
+        ],
+        "status": "PASSED",
+        "tree_count": 18
+      },
+      "candidate_id": "TF-001001",
+      "counterexamples": [
+        {
+          "family": "single_vertex_tree",
+          "lhs": "domination_number",
+          "operator": "<=",
+          "order": 1,
+          "parameters": {
+            "order": 1
+          },
+          "reason": "The literal all-tree statement gamma(T) <= |V(T)|/2 is false on K1: gamma(K1)=1 > 1/2. The familiar no-isolated-vertices/nontrivial-tree bound does not rescue this frozen candidate because its recorded hypotheses do not exclude the one-vertex tree.",
+          "rhs": "(1/2 * order)",
+          "source": "post_frozen_mathematical_interpretation",
+          "tree_code": "()",
+          "values": {
+            "cherry_count": 0,
+            "degree_sum": 0,
+            "diameter": 0,
+            "domination_number": 1,
+            "eccentricity_sum": 0,
+            "edge_count": 0,
+            "independence_number": 1,
+            "leaf_count": 0,
+            "matching_number": 0,
+            "max_degree": 0,
+            "maximal_independent_set_count": 1,
+            "min_degree": 0,
+            "order": 1,
+            "radius": 0,
+            "support_vertex_count": 0,
+            "tree_code": "()",
+            "wiener_index": 0
+          }
+        }
+      ],
+      "created_at": "2026-10-01T19:40:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 2,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= (1/2 * order))",
+        "structured_relation": {
+          "conclusion": "domination_number <= (1/2 * order)",
+          "discovery_touch_count": 8,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": "<=",
+          "rhs": "(1/2 * order)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 2,
+          "tree_code": "(()())"
+        },
+        {
+          "order": 4,
+          "tree_code": "((())(()))"
+        },
+        {
+          "order": 6,
+          "tree_code": "((())(())())"
+        },
+        {
+          "order": 8,
+          "tree_code": "(((())())((())()))"
+        },
+        {
+          "order": 8,
+          "tree_code": "((())(())(())())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "PASSED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "The literal all-tree statement gamma(T) <= |V(T)|/2 is false on K1: gamma(K1)=1 > 1/2. The familiar no-isolated-vertices/nontrivial-tree bound does not rescue this frozen candidate because its recorded hypotheses do not exclude the one-vertex tree. The order-13 and frozen hostile passes remain valid finite evidence only.",
+      "prior_art_status": "NOT_STARTED; ELEMENTARY_COUNTEREXAMPLE",
+      "revision": 5,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number <= (1/2 * order)."
+    },
+    "TF-001002": {
+      "adversarial_status": {
+        "status": "NOT_TESTED"
+      },
+      "candidate_id": "TF-001002",
+      "counterexamples": [
+        {
+          "lhs": "domination_number",
+          "operator": ">=",
+          "order": 13,
+          "rhs": "(3/8 * diameter)",
+          "tree_code": "((((((()())))))(((((()))))))",
+          "values": {
+            "cherry_count": 1,
+            "degree_sum": 24,
+            "diameter": 11,
+            "domination_number": 4,
+            "eccentricity_sum": 113,
+            "edge_count": 12,
+            "independence_number": 7,
+            "leaf_count": 3,
+            "matching_number": 6,
+            "max_degree": 3,
+            "maximal_independent_set_count": 28,
+            "min_degree": 1,
+            "order": 13,
+            "radius": 6,
+            "support_vertex_count": 2,
+            "tree_code": "((((((()())))))(((((()))))))",
+            "wiener_index": 354
+          }
+        }
+      ],
+      "created_at": "2026-10-01T18:35:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 3,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (3/8 * diameter))",
+        "structured_relation": {
+          "conclusion": "domination_number >= (3/8 * diameter)",
+          "discovery_touch_count": 3,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": ">=",
+          "rhs": "(3/8 * diameter)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 9,
+          "tree_code": "((((())))(((()))))"
+        },
+        {
+          "order": 10,
+          "tree_code": "((((()())))(((()))))"
+        },
+        {
+          "order": 10,
+          "tree_code": "((((())))(((())))())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "FAILED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Falsified on the fresh TF3 order-13 holdout.",
+      "prior_art_status": "NOT_STARTED",
+      "revision": 3,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number >= (3/8 * diameter)."
+    },
+    "TF-001003": {
+      "adversarial_status": {
+        "status": "NOT_TESTED"
+      },
+      "candidate_id": "TF-001003",
+      "counterexamples": [
+        {
+          "lhs": "domination_number",
+          "operator": ">=",
+          "order": 13,
+          "rhs": "(1/10 * order)",
+          "tree_code": "(()()()()()()()()()()()())",
+          "values": {
+            "cherry_count": 66,
+            "degree_sum": 24,
+            "diameter": 2,
+            "domination_number": 1,
+            "eccentricity_sum": 25,
+            "edge_count": 12,
+            "independence_number": 12,
+            "leaf_count": 12,
+            "matching_number": 1,
+            "max_degree": 12,
+            "maximal_independent_set_count": 2,
+            "min_degree": 1,
+            "order": 13,
+            "radius": 1,
+            "support_vertex_count": 1,
+            "tree_code": "(()()()()()()()()()()()())",
+            "wiener_index": 144
+          }
+        }
+      ],
+      "created_at": "2026-10-01T18:35:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 4,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (1/10 * order))",
+        "structured_relation": {
+          "conclusion": "domination_number >= (1/10 * order)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": ">=",
+          "rhs": "(1/10 * order)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 10,
+          "tree_code": "(()()()()()()()()())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "FAILED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Falsified on the fresh TF3 order-13 holdout.",
+      "prior_art_status": "NOT_STARTED",
+      "revision": 3,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number >= (1/10 * order)."
+    },
+    "TF-001004": {
+      "adversarial_status": {
+        "status": "NOT_TESTED"
+      },
+      "candidate_id": "TF-001004",
+      "counterexamples": [
+        {
+          "lhs": "domination_number",
+          "operator": ">=",
+          "order": 13,
+          "rhs": "(1/9 * leaf_count)",
+          "tree_code": "(()()()()()()()()()()()())",
+          "values": {
+            "cherry_count": 66,
+            "degree_sum": 24,
+            "diameter": 2,
+            "domination_number": 1,
+            "eccentricity_sum": 25,
+            "edge_count": 12,
+            "independence_number": 12,
+            "leaf_count": 12,
+            "matching_number": 1,
+            "max_degree": 12,
+            "maximal_independent_set_count": 2,
+            "min_degree": 1,
+            "order": 13,
+            "radius": 1,
+            "support_vertex_count": 1,
+            "tree_code": "(()()()()()()()()()()()())",
+            "wiener_index": 144
+          }
+        }
+      ],
+      "created_at": "2026-10-01T18:35:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 5,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (1/9 * leaf_count))",
+        "structured_relation": {
+          "conclusion": "domination_number >= (1/9 * leaf_count)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": ">=",
+          "rhs": "(1/9 * leaf_count)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 10,
+          "tree_code": "(()()()()()()()()())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "FAILED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Falsified on the fresh TF3 order-13 holdout.",
+      "prior_art_status": "NOT_STARTED",
+      "revision": 3,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number >= (1/9 * leaf_count)."
+    },
+    "TF-001005": {
+      "adversarial_status": {
+        "status": "NOT_TESTED"
+      },
+      "candidate_id": "TF-001005",
+      "counterexamples": [
+        {
+          "lhs": "domination_number",
+          "operator": "<=",
+          "order": 13,
+          "rhs": "(2 * leaf_count)",
+          "tree_code": "((((((())))))(((((()))))))",
+          "values": {
+            "cherry_count": 0,
+            "degree_sum": 24,
+            "diameter": 12,
+            "domination_number": 5,
+            "eccentricity_sum": 120,
+            "edge_count": 12,
+            "independence_number": 7,
+            "leaf_count": 2,
+            "matching_number": 6,
+            "max_degree": 2,
+            "maximal_independent_set_count": 37,
+            "min_degree": 1,
+            "order": 13,
+            "radius": 6,
+            "support_vertex_count": 2,
+            "tree_code": "((((((())))))(((((()))))))",
+            "wiener_index": 364
+          }
+        }
+      ],
+      "created_at": "2026-10-01T18:35:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 6,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= (2 * leaf_count))",
+        "structured_relation": {
+          "conclusion": "domination_number <= (2 * leaf_count)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": "<=",
+          "rhs": "(2 * leaf_count)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 10,
+          "tree_code": "(((((()))))((((())))))"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "FAILED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Falsified on the fresh TF3 order-13 holdout.",
+      "prior_art_status": "NOT_STARTED",
+      "revision": 3,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number <= (2 * leaf_count)."
+    },
+    "TF-001006": {
+      "adversarial_status": {
+        "dataset_hash": "37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18",
+        "families": [
+          "broom",
+          "caterpillar",
+          "double_star",
+          "path",
+          "spider",
+          "star"
+        ],
+        "status": "PASSED",
+        "tree_count": 18
+      },
+      "candidate_id": "TF-001006",
+      "counterexamples": [],
+      "created_at": "2026-10-01T19:40:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 7,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (1/2 * support_vertex_count))",
+        "structured_relation": {
+          "conclusion": "domination_number >= (1/2 * support_vertex_count)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": ">=",
+          "rhs": "(1/2 * support_vertex_count)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 2,
+          "tree_code": "(()())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "PASSED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "TRIVIAL",
+      "mathematical_interpretation": "Elementary support-vertex consequence. For a tree of order at least 3, choose one leaf adjacent to each support vertex. The resulting support-leaf pairs are disjoint, and every dominating set must meet every pair, so gamma(T) is at least support_vertex_count(T). For K2, support_vertex_count=2 and gamma=1; for K1 the support count is 0. Therefore gamma(T) >= support_vertex_count(T)/2 for every finite tree. No prior-art search is warranted.",
+      "prior_art_status": "NOT_STARTED; ELEMENTARY_FEATURE_CONSEQUENCE",
+      "revision": 5,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number >= (1/2 * support_vertex_count)."
+    },
+    "TF-001007": {
+      "adversarial_status": {
+        "status": "NOT_TESTED"
+      },
+      "candidate_id": "TF-001007",
+      "counterexamples": [
+        {
+          "lhs": "domination_number",
+          "operator": "<=",
+          "order": 13,
+          "rhs": "(2 * support_vertex_count)",
+          "tree_code": "((((((())))))(((((()))))))",
+          "values": {
+            "cherry_count": 0,
+            "degree_sum": 24,
+            "diameter": 12,
+            "domination_number": 5,
+            "eccentricity_sum": 120,
+            "edge_count": 12,
+            "independence_number": 7,
+            "leaf_count": 2,
+            "matching_number": 6,
+            "max_degree": 2,
+            "maximal_independent_set_count": 37,
+            "min_degree": 1,
+            "order": 13,
+            "radius": 6,
+            "support_vertex_count": 2,
+            "tree_code": "((((((())))))(((((()))))))",
+            "wiener_index": 364
+          }
+        }
+      ],
+      "created_at": "2026-10-01T18:35:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 8,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= (2 * support_vertex_count))",
+        "structured_relation": {
+          "conclusion": "domination_number <= (2 * support_vertex_count)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": "<=",
+          "rhs": "(2 * support_vertex_count)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 10,
+          "tree_code": "(((((()))))((((())))))"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "FAILED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Falsified on the fresh TF3 order-13 holdout.",
+      "prior_art_status": "NOT_STARTED",
+      "revision": 3,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number <= (2 * support_vertex_count)."
+    },
+    "TF-001008": {
+      "adversarial_status": {
+        "status": "NOT_TESTED"
+      },
+      "candidate_id": "TF-001008",
+      "counterexamples": [
+        {
+          "lhs": "domination_number",
+          "operator": ">=",
+          "order": 13,
+          "rhs": "(1/9 * max_degree)",
+          "tree_code": "(()()()()()()()()()()()())",
+          "values": {
+            "cherry_count": 66,
+            "degree_sum": 24,
+            "diameter": 2,
+            "domination_number": 1,
+            "eccentricity_sum": 25,
+            "edge_count": 12,
+            "independence_number": 12,
+            "leaf_count": 12,
+            "matching_number": 1,
+            "max_degree": 12,
+            "maximal_independent_set_count": 2,
+            "min_degree": 1,
+            "order": 13,
+            "radius": 1,
+            "support_vertex_count": 1,
+            "tree_code": "(()()()()()()()()()()()())",
+            "wiener_index": 144
+          }
+        }
+      ],
+      "created_at": "2026-10-01T18:35:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 9,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (1/9 * max_degree))",
+        "structured_relation": {
+          "conclusion": "domination_number >= (1/9 * max_degree)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": ">=",
+          "rhs": "(1/9 * max_degree)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 10,
+          "tree_code": "(()()()()()()()()())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "FAILED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Falsified on the fresh TF3 order-13 holdout.",
+      "prior_art_status": "NOT_STARTED",
+      "revision": 3,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number >= (1/9 * max_degree)."
+    },
+    "TF-001009": {
+      "adversarial_status": {
+        "status": "NOT_TESTED"
+      },
+      "candidate_id": "TF-001009",
+      "counterexamples": [
+        {
+          "lhs": "domination_number",
+          "operator": "<=",
+          "order": 13,
+          "rhs": "(5/4 * diameter)",
+          "tree_code": "((()())(())(())(())(())())",
+          "values": {
+            "cherry_count": 1,
+            "degree_sum": 24,
+            "diameter": 4,
+            "domination_number": 6,
+            "eccentricity_sum": 44,
+            "edge_count": 12,
+            "independence_number": 7,
+            "leaf_count": 7,
+            "matching_number": 6,
+            "max_degree": 6,
+            "maximal_independent_set_count": 33,
+            "min_degree": 1,
+            "order": 13,
+            "radius": 2,
+            "support_vertex_count": 6,
+            "tree_code": "((()())(())(())(())(())())",
+            "wiener_index": 202
+          }
+        }
+      ],
+      "created_at": "2026-10-01T18:35:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 10,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number <= (5/4 * diameter))",
+        "structured_relation": {
+          "conclusion": "domination_number <= (5/4 * diameter)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": "<=",
+          "rhs": "(5/4 * diameter)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 10,
+          "tree_code": "((())(())(())(())())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "FAILED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Falsified on the fresh TF3 order-13 holdout.",
+      "prior_art_status": "NOT_STARTED",
+      "revision": 3,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number <= (5/4 * diameter)."
+    },
+    "TF-001010": {
+      "adversarial_status": {
+        "dataset_hash": "37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18",
+        "families": [
+          "broom",
+          "caterpillar",
+          "double_star",
+          "path",
+          "spider",
+          "star"
+        ],
+        "status": "PASSED",
+        "tree_count": 18
+      },
+      "candidate_id": "TF-001010",
+      "counterexamples": [
+        {
+          "family": "spider",
+          "lhs": "domination_number",
+          "operator": ">=",
+          "order": 25,
+          "parameters": {
+            "arms": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          },
+          "reason": "Exact normalized duplicate of the relation investigated as TF-000998. The already-exposed TF2 interpretation counterexample applies unchanged: the six-arm spider with arms [4,4,4,4,4,4] has gamma=7 and nu=12, so 7 < 3*12/5. This exposed tree is used only for post-gate interpretation, not counted as fresh TF3 validation evidence.",
+          "rhs": "(3/5 * matching_number)",
+          "source": "post_frozen_mathematical_interpretation",
+          "tree_code": "((((())))(((())))(((())))(((())))(((())))(((()))))",
+          "values": {
+            "domination_number": 7,
+            "matching_number": 12,
+            "order": 25,
+            "tree_code": "((((())))(((())))(((())))(((())))(((())))(((()))))"
+          }
+        }
+      ],
+      "created_at": "2026-10-01T19:40:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 11,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (3/5 * matching_number))",
+        "structured_relation": {
+          "conclusion": "domination_number >= (3/5 * matching_number)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": ">=",
+          "rhs": "(3/5 * matching_number)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 10,
+          "tree_code": "((((())))(((())))())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "PASSED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Exact normalized duplicate of the relation investigated as TF-000998. The already-exposed TF2 interpretation counterexample applies unchanged: the six-arm spider with arms [4,4,4,4,4,4] has gamma=7 and nu=12, so 7 < 3*12/5. This exposed tree is used only for post-gate interpretation, not counted as fresh TF3 validation evidence. No new prior-art search is warranted because the candidate is already falsified.",
+      "prior_art_status": "NOT_STARTED; DUPLICATE_OF_FALSIFIED_TF-000998",
+      "revision": 5,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number >= (3/5 * matching_number)."
+    },
+    "TF-001011": {
+      "adversarial_status": {
+        "status": "NOT_TESTED"
+      },
+      "candidate_id": "TF-001011",
+      "counterexamples": [
+        {
+          "lhs": "domination_number",
+          "operator": ">=",
+          "order": 13,
+          "rhs": "(3/13 * maximal_independent_set_count)",
+          "tree_code": "((((((()())))))(((((()))))))",
+          "values": {
+            "cherry_count": 1,
+            "degree_sum": 24,
+            "diameter": 11,
+            "domination_number": 4,
+            "eccentricity_sum": 113,
+            "edge_count": 12,
+            "independence_number": 7,
+            "leaf_count": 3,
+            "matching_number": 6,
+            "max_degree": 3,
+            "maximal_independent_set_count": 28,
+            "min_degree": 1,
+            "order": 13,
+            "radius": 6,
+            "support_vertex_count": 2,
+            "tree_code": "((((((()())))))(((((()))))))",
+            "wiener_index": 354
+          }
+        }
+      ],
+      "created_at": "2026-10-01T18:35:00Z",
+      "dataset_hash": "e1fa7090640ba0254dba399082c436cf30742d7fe19ffef1d17028e7f45ab250",
+      "discovery_evidence": {
+        "experiment_id": "TF3-0001",
+        "orders": [
+          2,
+          10
+        ],
+        "raw_index": 12,
+        "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (3/13 * maximal_independent_set_count))",
+        "structured_relation": {
+          "conclusion": "domination_number >= (3/13 * maximal_independent_set_count)",
+          "discovery_touch_count": 1,
+          "discovery_valid": true,
+          "hypothesis": "True",
+          "lhs": "domination_number",
+          "operator": ">=",
+          "rhs": "(3/13 * maximal_independent_set_count)"
+        },
+        "tree_count": 200
+      },
+      "engine_version": "0.4.1",
+      "equality_or_sharp_examples": [
+        {
+          "order": 10,
+          "tree_code": "((((())))(((())))())"
+        }
+      ],
+      "generating_engine": "TxGraffiti",
+      "holdout_status": {
+        "dataset_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+        "orders": [
+          13,
+          13
+        ],
+        "status": "FAILED",
+        "tree_count": 1301
+      },
+      "hypotheses": [
+        "finite",
+        "simple",
+        "unlabeled",
+        "tree"
+      ],
+      "invariant_set": [
+        "domination_number",
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "lifecycle_state": "FALSIFIED",
+      "mathematical_interpretation": "Falsified on the fresh TF3 order-13 holdout.",
+      "prior_art_status": "NOT_STARTED",
+      "revision": 3,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+      "statement": "For every finite simple tree T, domination_number >= (3/13 * maximal_independent_set_count)."
+    }
+  },
+  "final_state_counts": {
+    "FALSIFIED": 11,
+    "TRIVIAL": 1
+  },
+  "graduation_candidate_count": 0,
+  "historical_duplicate_falsified_ids": {
+    "TF-001010": "TF-000998"
+  },
+  "holdout_falsified_count": 8,
+  "holdout_hash": "5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9",
+  "holdout_survivor_count": 4,
+  "holdout_tree_count": 1301,
+  "literal_k1_falsified_ids": [
+    "TF-001000",
+    "TF-001001"
+  ],
+  "mathematically_interesting_reached_count": 0,
+  "post_dalmatian_count": 12,
+  "post_duplicate_count": 12,
+  "post_morgan_count": 14,
+  "pre_execution_failure_runs": [
+    36914094286,
+    36914294452
+  ],
+  "prior_art_search_performed": false,
+  "raw_generator_count": 14,
+  "scientific_completed_at": "2026-10-01T19:31:29Z",
+  "scientific_source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767",
+  "successful_scientific_actions_run": 36914647703,
+  "trivial_ids": [
+    "TF-001006"
+  ]
+}

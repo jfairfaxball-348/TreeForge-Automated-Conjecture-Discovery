@@ -1,0 +1,21 @@
+{
+  "candidate_batch_hash": "85669d95fb7199b720bfe488c606055dd5f38a5af157c1ed2bdb5f98710344c6",
+  "candidate_count": 12,
+  "candidate_ids": [
+    "TF-001000",
+    "TF-001001",
+    "TF-001002",
+    "TF-001003",
+    "TF-001004",
+    "TF-001005",
+    "TF-001006",
+    "TF-001007",
+    "TF-001008",
+    "TF-001009",
+    "TF-001010",
+    "TF-001011"
+  ],
+  "experiment_id": "TF3-0001",
+  "holdout_constructed": false,
+  "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767"
+}

@@ -1,0 +1,21 @@
+{
+  "candidate_batch_hash": "85669d95fb7199b720bfe488c606055dd5f38a5af157c1ed2bdb5f98710344c6",
+  "dataset_hash": "37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18",
+  "falsified_count": 0,
+  "note": "Exactly the pre-frozen TF3-0001 fresh hostile instances were used.",
+  "survivor_count": 4,
+  "survivor_ids": [
+    "TF-001000",
+    "TF-001001",
+    "TF-001006",
+    "TF-001010"
+  ],
+  "tested_candidate_count": 4,
+  "tested_candidate_ids": [
+    "TF-001000",
+    "TF-001001",
+    "TF-001006",
+    "TF-001010"
+  ],
+  "tree_count": 18
+}
