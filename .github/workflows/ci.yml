@@ -25,3 +25,11 @@ jobs:
           python experiments/calibration.py             --output-dir /tmp/treeforge-calibration             --source-commit "$GITHUB_SHA"             --timestamp 2026-10-01T00:00:00Z
           test -s /tmp/treeforge-calibration/registry/candidates.jsonl
           test -s /tmp/treeforge-calibration/registry/experiments.jsonl
+      - name: TF2 zero-yield diagnosis
+        run: |
+          python experiments/tf2_diagnostic.py --output /tmp/tf2-diagnostic.json
+          test -s /tmp/tf2-diagnostic.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf2-diagnostic
+          path: /tmp/tf2-diagnostic.json
