@@ -7,7 +7,6 @@
   ],
   "diagnostic_validation_actions_run": 36855637323,
   "experiment_id": "TF2-0001",
-  "failed_pre_valid_output_actions_run": 36875119955,
   "final_state_counts": {
     "ADVERSARIAL_PASSED": 70,
     "FALSIFIED": 925,
@@ -99,7 +98,7 @@
         10
       ],
       "raw_index": 997,
-      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (3/5 * matching_number))",
+      "raw_statement": "∀ T: (True) → (domination_number >= (3/5 * matching_number))",
       "structured_relation": {
         "conclusion": "domination_number >= (3/5 * matching_number)",
         "discovery_touch_count": 1,
@@ -251,5 +250,7 @@
     "TF-000681",
     "TF-000752",
     "TF-000989"
-  ]
+  ],
+  "first_slow_actions_run": 36875119955,
+  "first_slow_run_late_equivalent_artifact_observed": true
 }
