@@ -1,0 +1,9 @@
+{
+  "after_dalmatian": 10753,
+  "after_duplicate_removal": 998,
+  "after_morgan": 23268,
+  "after_touch_count_sort": 998,
+  "final_discover_output": 998,
+  "raw_generator_output": 23268,
+  "strengthened_equalities": 0
+}

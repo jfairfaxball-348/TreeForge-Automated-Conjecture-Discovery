@@ -1,0 +1,255 @@
+{
+  "adversarial_falsified_count": 0,
+  "adversarial_survivor_count": 74,
+  "candidate_id_range": [
+    "TF-000002",
+    "TF-000999"
+  ],
+  "diagnostic_validation_actions_run": 36855637323,
+  "experiment_id": "TF2-0001",
+  "failed_pre_valid_output_actions_run": 36875119955,
+  "final_state_counts": {
+    "ADVERSARIAL_PASSED": 70,
+    "FALSIFIED": 925,
+    "KNOWN_RESULT": 1,
+    "TRIVIAL": 2
+  },
+  "first_stage_state_counts": {
+    "ARTIFACT_OF_FEATURE_SET": 0,
+    "CONJECTURED": 998,
+    "DUPLICATE": 0,
+    "FALSIFIED": 0,
+    "KNOWN_RESULT": 0,
+    "TRIVIAL": 0
+  },
+  "frozen_implementation_premerge_actions_run": 36864378120,
+  "graduation_candidate_count": 0,
+  "holdout_falsified_count": 924,
+  "holdout_survivor_count": 74,
+  "known_result_ids": [
+    "TF-000002"
+  ],
+  "mathematically_interesting_reached_count": 1,
+  "mathematically_interesting_reached_ids": [
+    "TF-000998"
+  ],
+  "performance_probe_actions_run": 36887027180,
+  "prior_art_candidate_ids": [
+    "TF-000998"
+  ],
+  "prior_art_search_performed": true,
+  "raw_candidate_count": 998,
+  "repaired_preflight_actions_run": 36887887082,
+  "scientific_completed_at": "2026-10-01T15:59:16Z",
+  "scientific_source_commit": "d091d88889fa72322bfc49a5531bc30b1f31b049",
+  "successful_scientific_actions_run": 36888114138,
+  "tf_000998_final_record": {
+    "adversarial_status": {
+      "dataset_hash": "dea3af9c495cc79da46b7ed3797276caae22495bc86d5000ddea3605a07bcb8a",
+      "families": [
+        "balanced_binary_tree",
+        "broom",
+        "caterpillar",
+        "double_star",
+        "path",
+        "spider",
+        "star"
+      ],
+      "status": "PASSED",
+      "tree_count": 26
+    },
+    "candidate_id": "TF-000998",
+    "counterexamples": [
+      {
+        "family": "spider",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "order": 25,
+        "parameters": {
+          "arms": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "reason": "For the six-arm length-4 spider, choosing the center and the six vertices at distance 3 from the center gives a dominating set of size 7. Conversely, each terminal leaf forces one selected vertex from its final edge, and with only those six selections the six vertices at distance 1 from the center cannot all be dominated, so gamma=7. Two disjoint edges can be selected on each arm, giving a matching of size 12; order 25 gives the matching upper bound floor(25/2)=12. Hence 7 < (3/5)*12.",
+        "rhs": "(3/5 * matching_number)",
+        "source": "mathematical_interpretation",
+        "tree_code": "((((())))(((())))(((())))(((())))(((())))(((()))))",
+        "values": {
+          "diameter": 8,
+          "domination_number": 7,
+          "leaf_count": 6,
+          "matching_number": 12,
+          "max_degree": 6,
+          "order": 25,
+          "support_vertex_count": 6
+        }
+      }
+    ],
+    "created_at": "2026-10-01T16:20:00Z",
+    "dataset_hash": "40bc528cd8b035854de816a1fbd37f1c6d688b2b1686d006387fb16dc8f5c4a8",
+    "discovery_evidence": {
+      "experiment_id": "TF2-0001",
+      "orders": [
+        2,
+        10
+      ],
+      "raw_index": 997,
+      "raw_statement": "\u2200 T: (True) \u2192 (domination_number >= (3/5 * matching_number))",
+      "structured_relation": {
+        "conclusion": "domination_number >= (3/5 * matching_number)",
+        "discovery_touch_count": 1,
+        "discovery_valid": true,
+        "hypothesis": "True",
+        "lhs": "domination_number",
+        "operator": ">=",
+        "rhs": "(3/5 * matching_number)"
+      },
+      "tree_count": 200
+    },
+    "engine_version": "0.4.1",
+    "equality_or_sharp_examples": [
+      {
+        "order": 10,
+        "tree_code": "((((())))(((())))())"
+      }
+    ],
+    "generating_engine": "TxGraffiti",
+    "holdout_status": {
+      "dataset_hash": "ea9f5d200ec503090499b4744338a5e39a37b7412d21ed5f6f876e2129be9433",
+      "orders": [
+        12,
+        12
+      ],
+      "status": "PASSED",
+      "tree_count": 551
+    },
+    "hypotheses": [
+      "finite",
+      "simple",
+      "unlabeled",
+      "tree"
+    ],
+    "invariant_set": [
+      "domination_number",
+      "order",
+      "leaf_count",
+      "support_vertex_count",
+      "max_degree",
+      "diameter",
+      "matching_number",
+      "maximal_independent_set_count"
+    ],
+    "lifecycle_state": "FALSIFIED",
+    "mathematical_interpretation": "Falsified during deeper mathematical interpretation after the finite gates and bounded prior-art audit. The six-arm spider with all arms of length 4 has order 25, domination number 7, and matching number 12, so the claimed lower bound requires 7 >= 36/5 and fails. The finite order-12 and frozen adversarial passes remain valid historical evidence but do not support an infinite statement.",
+    "prior_art_status": {
+      "date": "2026-10-01",
+      "performed": true,
+      "result": "No matching prior result was located in the searched sources. This is not a novelty claim.",
+      "search_terms": [
+        "\"domination number\" \"matching number\" tree \"3/5\"",
+        "\"domination number\" \"matching number\" trees \"3/5\"",
+        "\"gamma(T)\" \"3/5\" \"matching number\" tree",
+        "\"lower bound\" \"domination number\" tree \"matching number\""
+      ],
+      "sources": [
+        {
+          "citation": "E. DeLaVina, R. Pepper, B. Waller, Lower Bounds for the Domination Number, Discussiones Mathematicae Graph Theory 30 (2010), 475-487",
+          "note": "Relevant lower bound uses the minimum cardinality of a maximal matching, not the maximum matching number in TF-000998."
+        },
+        {
+          "citation": "Y. Caro, R. Davila, M.A. Henning, R. Pepper, Conjectures of TxGraffiti: Independence, domination, and matchings, Australas. J. Comb. 84(2) (2022), 258-274; arXiv:2104.01092",
+          "note": "Contains a distinct 3/5 theorem for edge domination number versus maximum matching number in connected cubic graphs; it is not ordinary domination for trees."
+        },
+        {
+          "citation": "A Survey on Characterizing Trees Using Domination Number (2022)",
+          "note": "No matching ordinary-domination/maximum-matching 3/5 tree result located."
+        }
+      ],
+      "status": "BOUNDED_SEARCH_COMPLETE"
+    },
+    "revision": 7,
+    "source_commit": "d091d88889fa72322bfc49a5531bc30b1f31b049",
+    "statement": "For every finite simple tree T, domination_number >= (3/5 * matching_number)."
+  },
+  "trivial_ids": [
+    "TF-000010",
+    "TF-000996"
+  ],
+  "unpromoted_adversarial_survivor_ids": [
+    "TF-000003",
+    "TF-000004",
+    "TF-000005",
+    "TF-000007",
+    "TF-000008",
+    "TF-000009",
+    "TF-000011",
+    "TF-000012",
+    "TF-000013",
+    "TF-000014",
+    "TF-000015",
+    "TF-000016",
+    "TF-000017",
+    "TF-000019",
+    "TF-000020",
+    "TF-000021",
+    "TF-000022",
+    "TF-000023",
+    "TF-000024",
+    "TF-000025",
+    "TF-000026",
+    "TF-000027",
+    "TF-000028",
+    "TF-000036",
+    "TF-000038",
+    "TF-000044",
+    "TF-000045",
+    "TF-000046",
+    "TF-000049",
+    "TF-000053",
+    "TF-000055",
+    "TF-000057",
+    "TF-000064",
+    "TF-000068",
+    "TF-000070",
+    "TF-000071",
+    "TF-000073",
+    "TF-000084",
+    "TF-000086",
+    "TF-000087",
+    "TF-000089",
+    "TF-000102",
+    "TF-000109",
+    "TF-000110",
+    "TF-000186",
+    "TF-000188",
+    "TF-000204",
+    "TF-000208",
+    "TF-000210",
+    "TF-000243",
+    "TF-000252",
+    "TF-000259",
+    "TF-000285",
+    "TF-000291",
+    "TF-000295",
+    "TF-000297",
+    "TF-000302",
+    "TF-000327",
+    "TF-000348",
+    "TF-000401",
+    "TF-000409",
+    "TF-000480",
+    "TF-000534",
+    "TF-000555",
+    "TF-000561",
+    "TF-000569",
+    "TF-000590",
+    "TF-000681",
+    "TF-000752",
+    "TF-000989"
+  ]
+}
