@@ -17,3 +17,9 @@ Do not silently repair away failed conjectures, counterexamples, dependency mism
 GitHub Actions run `36849349936` installed the pinned `txgraffiti==0.4.1` successfully, but pytest collection failed because `tests/test_calibration.py` imported `experiments.calibration` while `experiments/` had not been made an importable package in the clean installed environment. Local checks had used an explicit repository-root `PYTHONPATH`, which masked the packaging mistake.
 
 Corrective action: add `experiments/__init__.py` and require the clean GitHub Actions environment to pass before TF0 is marked complete. The failed run remains part of the repository history and this ledger.
+
+## 2026-10-01 — CI run #2 exposed pytest import-path assumptions
+
+Run `36849570117` showed that adding `experiments/__init__.py` alone was insufficient: the clean pytest entry-point invocation still did not place the repository root on the test import path, so `experiments.calibration` remained unavailable.
+
+Corrective action: make the test path explicit with `pythonpath = [".", "src"]` and invoke tests as `python -m pytest -q` in CI. This removes dependence on the local shell's `PYTHONPATH` and makes the intended import boundary explicit.
