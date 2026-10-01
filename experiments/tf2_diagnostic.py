@@ -173,6 +173,7 @@ def run(output: Path) -> dict[str, object]:
         features=["x"],
         object_symbol="n",
         hypothesis=[],
+        methods=["ratios"],
     )
     if synthetic_frozen["raw_generator_output"]["count"] != 0:
         raise RuntimeError("legacy empty-payload calibration did not reproduce suppression")
@@ -213,6 +214,11 @@ def run(output: Path) -> dict[str, object]:
             "fix": (
                 "Normalize an empty TreeForge hypothesis payload to None inside the "
                 "TxGraffiti adapter."
+            ),
+            "next_experiment_method_rationale": (
+                "Use ratios only for TF2-0001. It has a deterministic raw bound of "
+                "two proposals per nonzero feature, while activating the seven-feature "
+                "convex-hull path is a separate high-dimensional cost axis."
             ),
         },
         "tf1_frozen_pipeline": _compact_stages(frozen_stages),
