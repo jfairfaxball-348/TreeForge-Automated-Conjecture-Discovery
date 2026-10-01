@@ -2,6 +2,7 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from experiments.tf2_discovery import _adversarial_rows
 from treeforge.experiments import experiment_corpus_rows, load_frozen_spec
 from treeforge.pipeline import stable_hash
 from treeforge.registry.schema import validate_candidate_record
@@ -9,6 +10,7 @@ from treeforge.registry.schema import validate_candidate_record
 EXPECTED_SOURCE = "d091d88889fa72322bfc49a5531bc30b1f31b049"
 EXPECTED_DISCOVERY_HASH = "40bc528cd8b035854de816a1fbd37f1c6d688b2b1686d006387fb16dc8f5c4a8"
 EXPECTED_HOLDOUT_HASH = "ea9f5d200ec503090499b4744338a5e39a37b7412d21ed5f6f876e2129be9433"
+EXPECTED_ADVERSARIAL_HASH = "dea3af9c495cc79da46b7ed3797276caae22495bc86d5000ddea3605a07bcb8a"
 
 
 def _json(path: str):
@@ -155,3 +157,15 @@ def test_tf2_recorded_discovery_and_holdout_hashes_reproduce():
     )
     assert len(holdout) == 551
     assert stable_hash(holdout) == EXPECTED_HOLDOUT_HASH
+
+
+def test_tf2_recorded_adversarial_hash_reproduces_from_frozen_families():
+    spec = load_frozen_spec(Path("experiments/TF2-0001/spec.json"))
+    rows = _adversarial_rows(
+        list(spec["corpus_invariants"]),
+        EXPECTED_SOURCE,
+        "TF2-0001",
+    )
+    assert len(rows) == 26
+    assert all(int(row["order"]) != 11 for row in rows)
+    assert stable_hash(rows) == EXPECTED_ADVERSARIAL_HASH
