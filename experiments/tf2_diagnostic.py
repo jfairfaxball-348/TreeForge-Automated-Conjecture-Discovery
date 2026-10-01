@@ -158,14 +158,6 @@ def run(output: Path) -> dict[str, object]:
     if committed_raw != []:
         raise RuntimeError("committed TF1 raw output is no longer empty")
 
-    corrected_stages = adapter.pipeline_diagnostics(
-        frame,
-        target=target,
-        features=features,
-        object_symbol=spec["txgraffiti"]["object_symbol"],
-        hypothesis=spec["txgraffiti"]["hypothesis_payload"],
-    )
-
     synthetic = pd.DataFrame({"x": [1, 2, 3, 4, 5], "y": [2, 4, 6, 8, 10]})
     synthetic_frozen = adapter.pipeline_diagnostics(
         synthetic,
@@ -224,7 +216,6 @@ def run(output: Path) -> dict[str, object]:
             ),
         },
         "tf1_frozen_pipeline": _compact_stages(frozen_stages),
-        "tf1_corrected_semantics_diagnostic_only": _compact_stages(corrected_stages),
         "synthetic_calibration": {
             "relation": "y = 2*x on five positive integer rows",
             "frozen_semantics": _compact_stages(synthetic_frozen),
