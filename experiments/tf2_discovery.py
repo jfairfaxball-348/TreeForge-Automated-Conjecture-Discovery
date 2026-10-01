@@ -120,6 +120,7 @@ def _base_record(
     tight_examples: list[dict[str, object]],
     discovery_orders: list[int],
     discovery_count: int,
+    hypotheses: list[str],
 ) -> dict[str, object]:
     return {
         "candidate_id": candidate_id,
@@ -131,7 +132,7 @@ def _base_record(
         "source_commit": source_commit,
         "dataset_hash": discovery_hash,
         "invariant_set": [target, *features],
-        "hypotheses": ["finite", "simple", "tree"],
+        "hypotheses": hypotheses,
         "equality_or_sharp_examples": tight_examples,
         "discovery_evidence": {
             "experiment_id": "TF2-0001",
@@ -316,6 +317,7 @@ def run(
             tight_examples=_tight_examples(discovery, metadata),
             discovery_orders=[dmin, dmax],
             discovery_count=len(discovery),
+            hypotheses=list(spec["hypotheses"]),
         )
         events.append(record)
         key = _candidate_key(metadata)
