@@ -94,7 +94,8 @@ def test_cached_always_true_pipeline_matches_live_upstream():
 
 
 def test_adapter_can_restrict_generator_method_set():
-    adapter = TxGraffitiAdapter(loader=_modules().__getitem__)
+    modules = _modules()
+    adapter = TxGraffitiAdapter(loader=modules.__getitem__)
     adapter.discover(
         [{"order": 2}],
         target="edge_count",
@@ -102,6 +103,4 @@ def test_adapter_can_restrict_generator_method_set():
         hypothesis=[],
         methods=["ratios"],
     )
-    modules = _modules()
-    assert len(Playground.last_instance.kwargs["methods"]) == 1
-    assert Playground.last_instance.kwargs["methods"][0] is modules["txgraffiti.generators"].ratios
+    assert Playground.last_instance.kwargs["methods"] == [modules["txgraffiti.generators"].ratios]
