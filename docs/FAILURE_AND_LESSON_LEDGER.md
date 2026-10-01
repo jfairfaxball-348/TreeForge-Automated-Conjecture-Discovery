@@ -48,3 +48,10 @@ The workflow nevertheless failed because it used `test -s` on `observed_candidat
 GitHub Actions run `36863952291` failed in the unit-test step before any TF2 candidate generation was enabled or executed. The new TF2 lifecycle runner correctly required the frozen `hypotheses` field when constructing candidate records, but the synthetic test fixture omitted that field and raised `KeyError: 'hypotheses'`.
 
 The scientific TF2-0001 specification was not changed. Corrective action: add the frozen hypothesis list to the test fixture and rerun CI. This was runner/test plumbing only and did not expose the TF2 holdout or produce research candidates.
+
+
+## 2026-10-01 — TF2 freeze CI reached static analysis and caught import policy
+
+GitHub Actions run `36864222486` passed all 19 unit tests and byte-compilation, then failed Ruff because the new exact-expression evaluator imported `Mapping` from `typing` rather than `collections.abc`.
+
+No TF2 candidate generation had been enabled or executed. Corrective action: use the modern standard-library import and rerun the unchanged frozen TF2-0001 protocol.
