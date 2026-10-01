@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from treeforge.conjecturing.calibration import KnownIdentityCalibrationAdapter
@@ -36,7 +36,7 @@ def run(output_dir: Path, source_commit: str, timestamp: str | None = None) -> d
     if not evaluation.passed:
         raise RuntimeError("known calibration identity failed holdout")
 
-    created_at = timestamp or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    created_at = timestamp or datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     candidate_registry = CandidateRegistry(candidate_path)
     candidate_id = candidate_registry.next_id()
     candidate = {

@@ -10,7 +10,6 @@ def test_live_txgraffiti_optional_api_surface():
         pytest.skip("optional txgraffiti dependency not installed")
 
     import pandas as pd
-
     from txgraffiti.generators import convex_hull, ratios
     from txgraffiti.heuristics import dalmatian_accept, morgan_accept
     from txgraffiti.playground import ConjecturePlayground
