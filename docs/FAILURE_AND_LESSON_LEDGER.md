@@ -71,3 +71,12 @@ Corrective action: keep the frozen TF2-0001 target, features, methods, heuristic
 GitHub Actions run `36890309397` passed installation, unit tests, byte-compilation, Ruff, calibration, and the TF2 diagnostic, then failed only while materializing the already-completed TF2 scientific artifact. The finalizer applied the current candidate schema to the original `TF-000001` revision 1, which intentionally predates the later `source_commit` field and was preserved by TF1 revision 2 rather than rewritten.
 
 No TF2 scientific computation was rerun, no holdout data were changed, and no candidate result was altered. Corrective action: the finalizer now has an explicit read-only validation exception for that single preserved TF0 legacy revision while requiring the current schema for every later record.
+
+
+## 2026-10-01 — late completion of the first TF2 scientific execution was observed after replacement-run planning
+
+GitHub Actions run `36875119955` was provisionally classified as a pre-valid-output performance failure after it remained inside the TF2-0001 scientific step far beyond the expected runtime envelope and PR #5 was closed before a scientific artifact was available for inspection. The run later completed successfully and uploaded artifact `11180206717`.
+
+The late artifact was audited against the repaired authoritative run. Its 998 final TxGraffiti statements are identical in order and structured content to those from scientific run `36888114138`; discovery, holdout, and adversarial rows are identical after removing the source-commit provenance field; candidate lifecycle outcomes are identical. Its dataset hashes differ because TreeForge intentionally includes the exact scientific source commit in serialized corpus rows.
+
+Corrective interpretation: preserve run `36875119955` and the contemporaneous PR #5 closure as process history, but do not describe the late artifact as a distinct scientific variant or use it as the authoritative TF2 record. Run `36888114138`, source commit `d091d88889fa72322bfc49a5531bc30b1f31b049`, remains authoritative because it uses the equivalence-tested performance repair and records the complete single-pass stage counts. The frozen TF2-0001 scientific specification was unchanged throughout.
