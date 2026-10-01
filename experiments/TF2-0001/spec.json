@@ -1,0 +1,120 @@
+{
+  "experiment_id": "TF2-0001",
+  "status": "FROZEN",
+  "frozen_at": "2026-10-01T11:35:00Z",
+  "freeze_parent_head": "a31d5087a7c92bf7ac40da31d151d70c62e414ba",
+  "scientific_source_commit_policy": "The exact GitHub Actions execution commit is captured in pre_generation_freeze.json before the TxGraffiti call and in manifest.json after the call.",
+  "design_change_from_tf1": "Only the TreeForge adapter interpretation of an empty hypothesis payload changes: [] is normalized to TxGraffiti None, meaning the always-true base predicate. Target, features, generators, heuristics and post-processors remain TF1-identical.",
+  "universe": ["finite", "simple", "unlabeled", "tree"],
+  "discovery_orders": [2, 10],
+  "holdout_orders": [12, 12],
+  "expected_discovery_tree_count": 200,
+  "expected_holdout_tree_count": 551,
+  "holdout_history": {
+    "order_11": "BURNED: TF1 holdout; excluded from TF2",
+    "order_12": "Previously used only for invariant timing/feasibility benchmarking in TF1. No order-12 invariant table, candidate outcome, relation geometry, feature selection, method selection, or threshold tuning was inspected before TF2-0001 was frozen."
+  },
+  "corpus_invariants": [
+    "order",
+    "edge_count",
+    "degree_sum",
+    "min_degree",
+    "max_degree",
+    "leaf_count",
+    "support_vertex_count",
+    "diameter",
+    "radius",
+    "eccentricity_sum",
+    "matching_number",
+    "independence_number",
+    "domination_number",
+    "maximal_independent_set_count",
+    "wiener_index",
+    "cherry_count"
+  ],
+  "target": "domination_number",
+  "discovery_features": [
+    "order",
+    "leaf_count",
+    "support_vertex_count",
+    "max_degree",
+    "diameter",
+    "matching_number",
+    "maximal_independent_set_count"
+  ],
+  "diagnostic_only_excluded_features": [
+    "radius",
+    "eccentricity_sum",
+    "independence_number",
+    "wiener_index",
+    "cherry_count"
+  ],
+  "excluded_from_discovery": {
+    "edge_count": "calibration/consistency column; tree identity edge_count = order - 1",
+    "degree_sum": "calibration/consistency column; handshake identity degree_sum = 2 edge_count",
+    "min_degree": "constant 1 on the nontrivial-tree discovery universe",
+    "independence_number": "not supplied alongside matching_number because alpha(T)+nu(T)=order for bipartite trees",
+    "radius": "diagnosed discovery-side but deliberately not added; TF2 changes only adapter semantics",
+    "eccentricity_sum": "diagnosed discovery-side but deliberately not added; TF2 changes only adapter semantics",
+    "wiener_index": "diagnosed discovery-side but deliberately not added; TF2 changes only adapter semantics",
+    "cherry_count": "diagnosed discovery-side but deliberately not added; TF2 changes only adapter semantics"
+  },
+  "txgraffiti": {
+    "package": "txgraffiti",
+    "version": "0.4.1",
+    "upstream_source_revision": "e37126da53b84150d142a5d61202b61f78521fcc",
+    "adapter": "treeforge.conjecturing.txgraffiti_adapter.TxGraffitiAdapter",
+    "methods": ["convex_hull", "ratios"],
+    "heuristics": ["morgan_accept", "dalmatian_accept"],
+    "post_processors": ["remove_duplicates", "sort_by_touch_count"],
+    "object_symbol": "T",
+    "treeforge_hypothesis_payload": [],
+    "adapter_effective_hypothesis": null,
+    "adapter_semantics": "empty TreeForge payload means no additional predicate and is normalized to TxGraffiti's always-true base predicate"
+  },
+  "hypotheses": ["finite", "simple", "unlabeled", "tree"],
+  "anti_numerology": [
+    "constant-column detection",
+    "exact duplicate-column detection",
+    "pairwise exact affine-equivalence detection",
+    "tree identity edge_count = order - 1",
+    "handshake identity degree_sum = 2 edge_count",
+    "bipartite identity independence_number + matching_number = order",
+    "explicit exclusion of definitional/calibration columns from TxGraffiti features",
+    "all engine outputs are preserved before human triage"
+  ],
+  "preprocessing": {
+    "row_order": "deterministic (order, AHU canonical tree code)",
+    "numeric_values": "exact integer invariant values",
+    "random_seed": null
+  },
+  "candidate_cap_policy": "NO_CAP; every post-heuristic/post-processor statement returned by the frozen adapter enters first-stage triage and receives a permanent ID",
+  "candidate_normalization": {
+    "raw_preservation": "preserve exact forall string emitted through the TreeForge adapter",
+    "structured_metadata": "preserve hypothesis, lhs, operator, rhs, discovery touch count and discovery validity when exposed by the adapter",
+    "duplicate_equivalence": "exact normalized (hypothesis,lhs,operator,rhs) equality is DUPLICATE; mathematically equivalent but differently oriented statements are linked and triaged explicitly rather than silently deleted"
+  },
+  "known_result_artifact_filters": [
+    "|E(T)| = |V(T)| - 1",
+    "sum_v deg(v) = 2|E(T)|",
+    "alpha(T) + nu(T) = |V(T)|",
+    "definitions and immediate algebraic consequences of supplied columns"
+  ],
+  "holdout_sealing": "Before TxGraffiti is invoked, order-12 rows are generated only to verify count, exact identities and SHA-256. Only count/hash are persisted in pre_generation_freeze.json; rows are then discarded and are never supplied to the generator or used for triage.",
+  "adversarial_families_reserved": {
+    "paths": {"orders": [13, 30]},
+    "stars": {"leaves": [12, 29]},
+    "spiders": {
+      "arm_patterns": ["[1,1,k]", "[1,2,k]", "[2,2,k]", "[k,k,k]"],
+      "k_ranges": {"long_arm": [2, 20], "equal_arm": [2, 8]}
+    },
+    "caterpillars": {
+      "spine_orders": [4, 10],
+      "patterns": ["endpoint-heavy", "alternating", "single-heavy-support"]
+    },
+    "balanced_binary_trees": {"heights": [3, 4]},
+    "double_stars": {"left_leaves": [2, 12], "right_leaves": [2, 12]},
+    "brooms": {"handle_edges": [3, 15], "brush_leaves": [3, 15]}
+  },
+  "mutation_policy": "Any material change after this freeze closes TF2-0001 and requires a new experiment ID. No holdout outcome may be used to tune generation, normalization or preference."
+}
