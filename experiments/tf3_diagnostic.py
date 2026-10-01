@@ -30,11 +30,11 @@ FEATURES = [
 
 
 def _rhs_support(rhs: str) -> int:
-    return sum(bool(re.search(rf"\\b{re.escape(name)}\\b", rhs)) for name in FEATURES)
+    return sum(bool(re.search(rf"\b{re.escape(name)}\b", rhs)) for name in FEATURES)
 
 
 def _max_denominator(rhs: str) -> int:
-    denominators = [int(value) for value in re.findall(r"-?\\d+\\s*/\\s*(\\d+)", rhs)]
+    denominators = [int(value) for value in re.findall(r"-?\d+\s*/\s*(\d+)", rhs)]
     return max(denominators, default=1)
 
 
