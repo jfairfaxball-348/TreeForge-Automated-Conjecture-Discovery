@@ -359,6 +359,18 @@ def run(
         events.append(record)
         current[candidate_id] = record
 
+    first_stage_state_counts = {
+        state: sum(1 for record in current.values() if record["lifecycle_state"] == state)
+        for state in [
+            "CONJECTURED",
+            "KNOWN_RESULT",
+            "TRIVIAL",
+            "DUPLICATE",
+            "ARTIFACT_OF_FEATURE_SET",
+            "FALSIFIED",
+        ]
+    }
+
     # The order-12 holdout is constructed only after raw generation and first-stage triage.
     hmin, hmax = spec["holdout_orders"]
     holdout = experiment_corpus_rows(
@@ -410,7 +422,16 @@ def run(
         events.append(updated)
         current[candidate_id] = updated
 
-    adversarial = _adversarial_rows(invariants, source_commit, experiment_id)
+    holdout_survivors = [
+        candidate_id
+        for candidate_id, record in current.items()
+        if record["lifecycle_state"] == "HOLDOUT_PASSED"
+    ]
+    adversarial = (
+        _adversarial_rows(invariants, source_commit, experiment_id)
+        if holdout_survivors
+        else []
+    )
     _write_jsonl(output_dir / "adversarial.jsonl", adversarial)
     adversarial_hash = stable_hash(adversarial)
     for candidate_id, record in list(current.items()):
@@ -453,6 +474,11 @@ def run(
         events.append(updated)
         current[candidate_id] = updated
 
+    adversarial_survivors = [
+        candidate_id
+        for candidate_id, record in current.items()
+        if record["lifecycle_state"] == "ADVERSARIAL_PASSED"
+    ]
     _write_jsonl(output_dir / "candidate_events.jsonl", events)
     _write_json(output_dir / "final_candidates.json", list(current.values()))
 
@@ -483,6 +509,11 @@ def run(
         "adversarial_tree_count": len(adversarial),
         "raw_candidate_count": len(raw),
         "candidate_ids": sorted(current),
+        "first_stage_state_counts": first_stage_state_counts,
+        "holdout_survivor_count": len(holdout_survivors),
+        "holdout_survivor_ids": holdout_survivors,
+        "adversarial_survivor_count": len(adversarial_survivors),
+        "adversarial_survivor_ids": adversarial_survivors,
         "final_state_counts": counts,
         "holdout_visible_to_generator": False,
         "feature_audit": audit,
