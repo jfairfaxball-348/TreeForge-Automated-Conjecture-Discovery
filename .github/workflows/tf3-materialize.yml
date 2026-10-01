@@ -4,12 +4,17 @@ permissions:
   contents: write
   actions: read
 
+concurrency:
+  group: tf3-materialize-results
+  cancel-in-progress: true
+
 on:
   push:
     branches:
       - tf3-results
     paths:
       - experiments/tf3_finalize.py
+      - tests/test_tf3_frozen_spec.py
       - .github/workflows/tf3-materialize.yml
 
 jobs:
