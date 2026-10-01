@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import ast
 import operator
+from collections.abc import Mapping
 from fractions import Fraction
-from typing import Mapping
 
 _BINOPS = {
     ast.Add: operator.add,
