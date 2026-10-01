@@ -35,7 +35,7 @@ jobs:
           python experiments/tf2_diagnostic.py --output /tmp/tf2-diagnostic.json
           test -s /tmp/tf2-diagnostic.json
       - name: TF2 discovery convex-hull performance probe
-        if: github.event_name == 'push' && github.ref_name == 'tf2-scientific-run'
+        if: github.event_name == 'pull_request' && github.event.action == 'synchronize' && github.head_ref == 'tf2-scientific-run'
         run: |
           timeout 600 python - <<'PY'
           import time
