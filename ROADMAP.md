@@ -150,3 +150,29 @@ remain diagnostic until a single-axis change is justified independently of desir
 
 See docs/TF5_TF001028_ANALYSIS.md and experiments/TF5-TF001028/analysis_summary.json.
 
+
+## TF6 — MIS-count coordinate diagnosis
+
+Status: **COMPLETE (2026-10-02), pending final PR validation/merge.**
+
+TF6 uses only exposed orders 1--14 and existing burned interpretation data to diagnose
+`maximal_independent_set_count`. The exact three-state independent-domination recurrence explains
+why the coordinate can be invariant under twin-leaf duplication yet grow exponentially under path,
+corona, or repeated-branch composition. The production invariant now uses that exact tree DP, with
+independent brute-force equivalence tests.
+
+All 20 TF4 MIS survivors remain supporting planes after every cumulative exposed extension through
+order 14. They form 3 MIS-only, 6 support/MIS, 9 diameter/MIS, and 2 matching/MIS facets; only
+TF-001091 over TF-001034 and TF-001095 over TF-001037 are strictly pointwise dominated on the
+exposed corpus.
+
+A bounded structural literature check confirms an exact exponential order-wise extremal envelope
+(Wilf/Sagan), leaf-conditioned extremal theory, the corona-extension identity, and path/caterpillar
+recurrences. TF6 considers log, per-vertex log, nth-root, extremal-ratio, recurrence-state, removal,
+and raw-coordinate choices. None of the alternatives is independently canonical for exact linear
+conjecturing.
+
+Decision: retain raw MIS count for now; freeze no TF6 scientific experiment; allocate no candidate
+ID; consume no fresh order. TF-001158 remains next and orders at least 15 remain untouched.
+
+See `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`.
