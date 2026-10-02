@@ -1,0 +1,107 @@
+{
+  "diagnostic_id": "TF4-DIAG-0001",
+  "initial_validation_run": 36972524602,
+  "refined_validation_run": 36973194898,
+  "starting_main_head": "fe2ce0cf6a0a7a749ffe8b9425a0508646cf1ad7",
+  "data_boundary": {
+    "exposed_orders": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "candidate_comparisons": "Only exposed orders 1-13 and committed TF2/TF3 outputs.",
+    "order14": "Timing only. No order-14 invariant value was persisted, printed, ranked, or compared with any candidate."
+  },
+  "ratios_only": {
+    "candidate_count": 12,
+    "exact_tf2_overlap_count": 8,
+    "touch_count_one_count": 9,
+    "extremal_coefficient_drift_by_order13_count": 8,
+    "literal_k1_failure_ids": [
+      "TF-001000",
+      "TF-001001",
+      "TF-001005",
+      "TF-001007",
+      "TF-001009"
+    ],
+    "holdout_first_counterexample_distinct_tree_count": 4,
+    "final_states": {
+      "FALSIFIED": 11,
+      "TRIVIAL": 1
+    },
+    "mathematically_interesting": 0
+  },
+  "pairwise_convex_hulls": {
+    "feature_pair_run_count": 21,
+    "raw_generator_output": 259,
+    "after_morgan": 259,
+    "after_dalmatian": 214,
+    "per_run_post_duplicate_total": 205,
+    "cross_run_exact_dedup_count": 146,
+    "rhs_support_histogram": {
+      "0": 2,
+      "1": 17,
+      "2": 127
+    },
+    "operator_histogram": {
+      "<=": 86,
+      ">=": 60
+    },
+    "exact_tf2_overlap_count": 5,
+    "k1_literal_domain_failure_count": 47,
+    "k1_literal_domain_pass_count": 99,
+    "burned_orders_11_through_n_cumulative_survivor_counts": {
+      "11": 69,
+      "12": 51,
+      "13": 48
+    },
+    "k1_and_burned_orders_11_to_13_survivor_count": 32,
+    "k1_and_burned_survivor_rhs_support_histogram": {
+      "0": 1,
+      "1": 5,
+      "2": 26
+    },
+    "k1_and_burned_survivor_two_feature_pair_distribution": {
+      "diameter+maximal_independent_set_count": 9,
+      "leaf_count+maximal_independent_set_count": 4,
+      "matching_number+maximal_independent_set_count": 2,
+      "max_degree+diameter": 1,
+      "order+diameter": 1,
+      "order+leaf_count": 1,
+      "order+max_degree": 1,
+      "support_vertex_count+diameter": 1,
+      "support_vertex_count+maximal_independent_set_count": 6
+    },
+    "max_denominator": 61,
+    "median_max_denominator": 4,
+    "p90_max_denominator": 11,
+    "touch_count_median": 5,
+    "touch_count_p90": 30
+  },
+  "order14_timing_only_feasibility": {
+    "tree_count": 3159,
+    "generation_seconds": 0.7965798509999331,
+    "domination_number_seconds": 8.047321993000082,
+    "maximal_independent_set_count_seconds": 194.60035650700001,
+    "values_persisted_or_reported": false,
+    "candidate_specific_comparison_performed": false,
+    "source_run": 36972524602
+  },
+  "diagnosis": {
+    "ratios_only": "The one-feature homogeneous grammar is the primary scientific limitation: most TF3 coefficients were boundary fits that drifted immediately on exposed larger orders, while the stable forms were K1-invalid, elementary, or already falsified historically.",
+    "hypothesis_domain": "The literal all-tree statement and discovery orders 2-10 are mismatched. Changing to a nontrivial-tree hypothesis would not change generator output, so TF4 keeps the all-tree domain and adds an exposed K1 domain-consistency check before fresh validation.",
+    "feature_vocabulary": "No feature change is justified. maximal_independent_set_count is qualitatively different and dominates many pairwise survivors, but removing it now would confound the grammar experiment.",
+    "target": "No target change is justified by the exposed evidence.",
+    "selected_axis": "Replace ratios-only generation with fixed pairwise convex-hull generation over all 21 unordered pairs of the same seven features, followed only by exact cross-run deduplication."
+  }
+}
