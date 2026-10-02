@@ -33,7 +33,7 @@ def canonical_tree_code(graph: nx.Graph) -> str:
     return "(" + "".join(halves) + ")"
 
 
-def generate_unlabeled_trees(min_order: int, max_order: int) -> list[nx.Graph]:
+def canonical_tree_identity(graph: nx.Graph) -> tuple[int, str]:\n    """Return an exact cross-order tree identity without changing legacy codes."""\n    _validate_tree(graph)\n    return graph.number_of_nodes(), canonical_tree_code(graph)\n\n\ndef generate_unlabeled_trees(min_order: int, max_order: int) -> list[nx.Graph]:
     """Generate one representative of every unlabeled tree in a closed order range.
 
     Results are sorted by `(order, canonical_code)` so serialization is reproducible.
