@@ -1,0 +1,97 @@
+{
+  "adversarial_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+  "artifact_of_feature_set_ids": [
+    "TF-001065",
+    "TF-001066",
+    "TF-001069",
+    "TF-001070"
+  ],
+  "burned_exposed_falsified": [
+    "TF-001068"
+  ],
+  "burned_order_11_counterexample": {
+    "candidate_id": "TF-001068",
+    "domination_number": 5,
+    "leaf_count": 4,
+    "maximal_independent_set_count": 17,
+    "order": 11,
+    "tree_code": "((((())()))(((())())))"
+  },
+  "candidate_batch_hash": "2bbb81b85eb6e40351f0913fafdc822c5417b2336e957e83fc08b505aedabf0f",
+  "candidate_id_range": [
+    "TF-001012",
+    "TF-001157"
+  ],
+  "discovery_hash": "6871f362f6897f390a1e4819358deb0fd342c6ad88bf8cde5c4ba026acbdd377",
+  "exact_tf2_overlap_ids": [
+    "TF-001018",
+    "TF-001022",
+    "TF-001031",
+    "TF-001088",
+    "TF-001156"
+  ],
+  "exact_tf3_overlap_ids": [],
+  "experiment_id": "TF4-0001",
+  "final_state_counts": {
+    "ADVERSARIAL_PASSED": 20,
+    "ARTIFACT_OF_FEATURE_SET": 4,
+    "FALSIFIED": 114,
+    "KNOWN_RESULT": 1,
+    "NOVELTY_AUDIT": 1,
+    "TRIVIAL": 6
+  },
+  "finite_survivor_count_before_interpretation": 33,
+  "graduation_candidate_ids": [],
+  "holdout_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+  "known_result_ids": [
+    "TF-001013"
+  ],
+  "mathematically_interesting_reached_ids": [
+    "TF-001013",
+    "TF-001028"
+  ],
+  "mis_count_interpretation": "maximal_independent_set_count remained qualitatively dominant: after removing the burned failure, elementary/known/dominated forms and the order-diameter audit candidate, all 20 unpromoted finite survivors still involve maximal_independent_set_count. The pairwise grammar made these facets readable but did not supply a structural reason to promote them.",
+  "newly_constructed_counterexample_count": 0,
+  "next_candidate_id": "TF-001158",
+  "novelty_audit_ids": [
+    "TF-001028"
+  ],
+  "pairwise_interpretability_conclusion": "Pairwise hulls are materially more interpretable than TF2 full-dimensional hulls, but a large neighboring MIS-count facet fan remains. TF4 therefore improved interpretability without eliminating geometric repetition.",
+  "prior_art_search_performed_for": [
+    "TF-001013",
+    "TF-001028"
+  ],
+  "scientific_source_commit": "d8e0874a22dde7f226431fc4f15a36adb8254efa",
+  "successful_scientific_actions_run": 36983184665,
+  "tf5_recommendation": "Do not broaden the discovery grammar yet. First make TF5 a structural attack on TF-001028: seek a proof or explicit family counterexample for gamma <= (2n+1-diameter)/3 and complete its focused prior-art audit. If it resolves negatively, diagnose the MIS-count facet fan before freezing any next discovery-axis change.",
+  "trivial_ids": [
+    "TF-001015",
+    "TF-001021",
+    "TF-001027",
+    "TF-001032",
+    "TF-001078",
+    "TF-001107"
+  ],
+  "unpromoted_finite_survivor_ids": [
+    "TF-001033",
+    "TF-001034",
+    "TF-001037",
+    "TF-001090",
+    "TF-001091",
+    "TF-001093",
+    "TF-001095",
+    "TF-001098",
+    "TF-001099",
+    "TF-001134",
+    "TF-001135",
+    "TF-001137",
+    "TF-001139",
+    "TF-001140",
+    "TF-001141",
+    "TF-001142",
+    "TF-001144",
+    "TF-001145",
+    "TF-001154",
+    "TF-001155"
+  ]
+}
