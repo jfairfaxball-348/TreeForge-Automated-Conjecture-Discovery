@@ -76,15 +76,17 @@ def _candidate_metadata() -> dict[str, dict[str, object]]:
     if sorted(selected) != sorted(MIS_IDS):
         raise AssertionError("TF4 candidate batch does not contain the exact TF6 MIS fan")
 
-    latest: dict[str, dict[str, object]] = {}
+    tf6_snapshot: dict[str, dict[str, object]] = {}
     for row in _jsonl(CANDIDATE_REGISTRY):
-        if row["candidate_id"] in MIS_IDS:
-            latest[str(row["candidate_id"])] = row
+        if row["candidate_id"] in MIS_IDS and row["revision"] == 5:
+            tf6_snapshot[str(row["candidate_id"])] = row
+    if sorted(tf6_snapshot) != sorted(MIS_IDS):
+        raise AssertionError("TF6 revision-5 candidate snapshot changed")
 
     dossier: dict[str, dict[str, object]] = {}
     for candidate_id in MIS_IDS:
         original = selected[candidate_id]
-        current = latest[candidate_id]
+        current = tf6_snapshot[candidate_id]
         operator, coefficients, constant = RELATIONS[candidate_id]
         other = [
             (name, coefficient)

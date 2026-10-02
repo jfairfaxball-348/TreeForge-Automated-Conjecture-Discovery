@@ -48,14 +48,15 @@ def test_tf6_preserves_candidate_and_experiment_registries():
     assert [row["revision"] for row in tf001028] == list(range(1, 8))
     assert tf001028[-1]["lifecycle_state"] == "KNOWN_RESULT"
 
-    latest = {}
-    for row in candidates:
-        if row["candidate_id"] in MIS_IDS:
-            latest[row["candidate_id"]] = row
-    assert sorted(latest) == sorted(MIS_IDS)
-    assert all(row["lifecycle_state"] == "ADVERSARIAL_PASSED" for row in latest.values())
-    assert all(row["holdout_status"]["status"] == "PASSED" for row in latest.values())
-    assert all(row["adversarial_status"]["status"] == "PASSED" for row in latest.values())
+    tf6_snapshot = {
+        row["candidate_id"]: row
+        for row in candidates
+        if row["candidate_id"] in MIS_IDS and row["revision"] == 5
+    }
+    assert sorted(tf6_snapshot) == sorted(MIS_IDS)
+    assert all(row["lifecycle_state"] == "ADVERSARIAL_PASSED" for row in tf6_snapshot.values())
+    assert all(row["holdout_status"]["status"] == "PASSED" for row in tf6_snapshot.values())
+    assert all(row["adversarial_status"]["status"] == "PASSED" for row in tf6_snapshot.values())
 
     assert sum(row["experiment_id"] == "TF4-0001" for row in experiments) == 1
     assert all(not str(row["experiment_id"]).startswith("TF5") for row in experiments)

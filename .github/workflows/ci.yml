@@ -56,3 +56,11 @@ jobs:
         with:
           name: tf6-mis-diagnosis
           path: /tmp/tf6-mis-diagnosis.json
+      - name: TF7 support/MIS structural diagnosis
+        run: |
+          python -m experiments.tf7_support_mis_diagnosis --output /tmp/tf7-support-mis-diagnosis.json
+          test -s /tmp/tf7-support-mis-diagnosis.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf7-support-mis-diagnosis
+          path: /tmp/tf7-support-mis-diagnosis.json

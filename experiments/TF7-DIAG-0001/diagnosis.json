@@ -1,0 +1,213 @@
+{
+  "analysis_id": "TF7-DIAG-0001",
+  "burned_data_boundary": {
+    "exhaustive_orders": [
+      1,
+      14
+    ],
+    "orders_at_least_15": "untouched",
+    "tf2_tf3_tf4_hostile_sets": "burned",
+    "tf5_family_instances": "burned interpretation data"
+  },
+  "candidate_implications": {
+    "TF-001034": {
+      "algebra": "(m+2s+4)/5 <= (m+4)/3 exactly when m>=3s-4; TF7 proves that condition for every finite tree.",
+      "new_revision": 6,
+      "new_state": "ARTIFACT_OF_FEATURE_SET",
+      "universally_dominated_by": "TF-001091"
+    },
+    "TF-001037": {
+      "algebra": "(m+3s+12)/8 <= (m+12)/5 exactly when m>=5s-12; TF7 proves that condition for every finite tree.",
+      "new_revision": 6,
+      "new_state": "ARTIFACT_OF_FEATURE_SET",
+      "universally_dominated_by": "TF-001095"
+    },
+    "TF-001091": {
+      "interpretation": "TF7 proves only that this finite survivor is pointwise stronger than TF-001034; it does not prove the domination-number inequality itself.",
+      "revision": 5,
+      "state": "ADVERSARIAL_PASSED"
+    },
+    "TF-001095": {
+      "interpretation": "TF7 proves only that this finite survivor is pointwise stronger than TF-001037; it does not prove the domination-number inequality itself.",
+      "revision": 5,
+      "state": "ADVERSARIAL_PASSED"
+    }
+  },
+  "classification": "STRUCTURAL_DIAGNOSIS_NO_SCIENTIFIC_EXPERIMENT",
+  "decision": {
+    "candidate_ids_allocated": [],
+    "experiment_registry_updated": false,
+    "new_experiment_frozen": false,
+    "next_session_recommendation": "Keep orders >=15 untouched. Treat the fixed-support theorem and its equality mechanism as structural mathematics; leave the residual MIS facet fan archived unless a separately motivated question identifies a new controlled axis.",
+    "raw_mis_coordinate": "RETAIN_UNCHANGED",
+    "reason": "The fixed-support extremal theorem explains the two exposed dominance relations and removes two redundant projections, but it does not select an independently canonical transformation/removal of raw MIS or another single discovery-axis change.",
+    "remaining_mis_fan": "Archive as finite geometry after reclassifying TF-001034 and TF-001037 as universal projection artifacts; the other 18 TF4 MIS facets are not promoted."
+  },
+  "exposed_computational_check": {
+    "classification": "burned/exposed interpretation data only; not proof",
+    "fibonacci_bound_failures_excluding_P2": 0,
+    "fixed_support_minima": {
+      "0": {
+        "minimum_mis_count": 1,
+        "orders_at_minimum": [
+          1
+        ],
+        "tree_count_at_minimum": 1
+      },
+      "1": {
+        "minimum_mis_count": 2,
+        "orders_at_minimum": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "tree_count_at_minimum": 12
+      },
+      "2": {
+        "minimum_mis_count": 2,
+        "orders_at_minimum": [
+          2
+        ],
+        "tree_count_at_minimum": 1
+      },
+      "3": {
+        "minimum_mis_count": 5,
+        "orders_at_minimum": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "tree_count_at_minimum": 95
+      },
+      "4": {
+        "minimum_mis_count": 8,
+        "orders_at_minimum": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "tree_count_at_minimum": 110
+      },
+      "5": {
+        "minimum_mis_count": 13,
+        "orders_at_minimum": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "tree_count_at_minimum": 70
+      },
+      "6": {
+        "minimum_mis_count": 21,
+        "orders_at_minimum": [
+          12,
+          13,
+          14
+        ],
+        "tree_count_at_minimum": 16
+      },
+      "7": {
+        "minimum_mis_count": 34,
+        "orders_at_minimum": [
+          14
+        ],
+        "tree_count_at_minimum": 1
+      }
+    },
+    "m_ge_3s_minus_4_failures": 0,
+    "m_ge_5s_minus_12_failures": 0,
+    "orders": [
+      1,
+      14
+    ],
+    "path_corona_checks": {
+      "3": {
+        "maximal_independent_set_count": 5,
+        "order": 6,
+        "support_vertex_count": 3
+      },
+      "4": {
+        "maximal_independent_set_count": 8,
+        "order": 8,
+        "support_vertex_count": 4
+      },
+      "5": {
+        "maximal_independent_set_count": 13,
+        "order": 10,
+        "support_vertex_count": 5
+      },
+      "6": {
+        "maximal_independent_set_count": 21,
+        "order": 12,
+        "support_vertex_count": 6
+      },
+      "7": {
+        "maximal_independent_set_count": 34,
+        "order": 14,
+        "support_vertex_count": 7
+      }
+    },
+    "support_forest_injection_failures_excluding_P2": 0,
+    "tree_count": 5447
+  },
+  "fresh_data_consumed": false,
+  "provenance_verification": {
+    "highest_allocated_candidate": "TF-001157",
+    "next_permanent_candidate_id": "TF-001158",
+    "tf001028_revision": 7,
+    "tf001028_state": "KNOWN_RESULT",
+    "tf4_experiment_registry_records": 1,
+    "tf6_final_main_head": "3d4b3035301e681a7a5eed0facb2f5068051c746",
+    "tf6_post_merge_ci": 37047300108,
+    "tf6_pr": 12,
+    "tf7_scientific_experiment_records": 0
+  },
+  "starting_main_ci_run": 37047300108,
+  "starting_main_head": "3d4b3035301e681a7a5eed0facb2f5068051c746",
+  "structural_result": {
+    "adjacent_support_vertices": "Adjacent supports require no exceptional recurrence: their edges simply appear in the support-induced forest T[S]. P2 is the sole exception because its support vertices are themselves leaves.",
+    "duplicate_leaf_reduction": "Deleting duplicate leaves at an existing support vertex, while retaining one leaf, preserves both m(T) and s(T). Fixed-support extremal analysis may therefore reduce to one leaf per support without changing the objective.",
+    "extremal_family": "For every s>=3, the corona P_s o K1 has support count s and m=i(P_s)=F_(s+2), so the fixed-support lower bound is exact.",
+    "fixed_support_minimum": {
+      "s=0": "1 (K1)",
+      "s=1": "2 (nontrivial stars attain it)",
+      "s=2": "2 (P2; among trees of order at least 3 the minimum is 3)",
+      "s>=3": "F_(s+2)"
+    },
+    "forest_fibonacci_bound": "Every forest F on s vertices has i(F)>=F_(s+2), by induction using an isolated vertex or a leaf v with neighbor u: i(F)=i(F-v)+i(F-{u,v}).",
+    "notation": "m(T)=maximal_independent_set_count, S(T)=support-vertex set, s(T)=|S(T)|, i(F)=number of independent sets of a forest F.",
+    "strong_bound": "For every finite tree T other than P2, m(T)>=F_(s(T)+2), with F_0=0,F_1=1. P2 has s=2 and m=2.",
+    "support_forest_injection": "For every tree except P2, each independent I subset S(T) seeds a nonempty, pairwise-disjoint class of maximal independent sets: include I and every leaf whose support neighbor is outside I, then extend to a maximal independent set. Hence m(T)>=i(T[S(T)]). K1 also satisfies the conclusion directly."
+  },
+  "target_inequalities": {
+    "m_ge_3s_minus_4": {
+      "derivation": "Check s<=2 directly. For s>=3, F_(s+2)>=3s-4; equality starts at s=3 and Fibonacci increments F_(s+1) are at least 3.",
+      "status": "PROVED_FOR_ALL_FINITE_TREES"
+    },
+    "m_ge_5s_minus_12": {
+      "derivation": "Check s<=3 directly. At s=4, F_6=8=5s-12; thereafter Fibonacci increments F_(s+1) are at least 5.",
+      "status": "PROVED_FOR_ALL_FINITE_TREES"
+    }
+  }
+}
