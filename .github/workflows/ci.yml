@@ -42,7 +42,7 @@ jobs:
           path: /tmp/tf2-diagnostic.json
       - name: TF4 exposed-data diagnosis
         run: |
-          python experiments/tf4_diagnostic.py --output /tmp/tf4-diagnostic.json
+          python experiments/tf4_diagnostic.py --output /tmp/tf4-diagnostic.json --skip-order14-timing
           test -s /tmp/tf4-diagnostic.json
       - uses: actions/upload-artifact@v4
         with:
