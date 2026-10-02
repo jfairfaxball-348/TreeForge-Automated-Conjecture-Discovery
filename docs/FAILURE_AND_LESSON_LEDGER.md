@@ -157,3 +157,23 @@ failed. Corrective action: keep the frozen spec assertion that TF3's starting ID
 lineage assertions to TF2 candidate IDs. Materialization run `36916149651` then passed the full
 suite before committing the append-only TF3 record.
 
+## 2026-10-02 — TF4 freeze validation exposed cross-order ambiguity in the legacy bare tree code
+
+GitHub Actions run `36974147991` failed in the unit-test step before any TF4 scientific
+execution. The new TF4 hostile-set test incorrectly treated `canonical_tree_code(graph)` by itself
+as an exact identity across different orders and asserted that the 19 frozen hostile instances must
+produce 19 distinct bare code strings.
+
+The failing pair was not a duplicated tree: `P18` and `P19` have different orders and therefore
+cannot be isomorphic. The historical AHU-style encoding can nevertheless give the same bare string
+across orders because the extra wrapper used for a two-center tree can coincide with the rooted
+encoding of a one-center tree. Existing corpus rows always serialize `order` separately, and
+unlabeled-tree generation deduplicates codes within each fixed order, so this discovery does not
+change or invalidate the preserved TF0-TF3 dataset hashes.
+
+Corrective action: preserve the historical code function and all prior hashes, document its
+cross-order limitation, add `canonical_tree_identity(graph) = (order, canonical_tree_code)`, and
+use that exact pair for TF4 cross-order hostile-set uniqueness/disjointness checks. The frozen TF4
+scientific target, features, pairwise generator, order-14 holdout, and hostile-family parameters were
+not changed. No TF4 candidate ID was allocated and no fresh validation value was inspected.
+
