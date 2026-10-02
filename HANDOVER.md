@@ -1,3 +1,132 @@
+# TF6 MIS-coordinate diagnosis handover
+
+TF6 diagnoses `maximal_independent_set_count` using only exposed data and stops without
+freezing a new scientific experiment.
+
+## Verified starting state
+
+Starting `main` HEAD:
+`1a0bd2363908659a76ebba8a9d0cc1662f4b4980`.
+
+Starting post-TF5 `main` CI:
+`37032824545`, successful. PR #11 is merged.
+
+Authoritative TF2 source/run:
+`d091d88889fa72322bfc49a5531bc30b1f31b049` / `36888114138`.
+
+Corrected TF3 diagnostic run: `36907058956`.
+Authoritative TF3 source/run:
+`e23b44d24a7b87d6f67aa18749059540934b2767` / `36914647703`.
+
+TF4 diagnostic runs: `36972524602`, `36973194898`.
+Authoritative TF4 source/run:
+`d8e0874a22dde7f226431fc4f15a36adb8254efa` / `36983184665`.
+
+TF5 final main/CI:
+`1a0bd2363908659a76ebba8a9d0cc1662f4b4980` / `37032824545`.
+
+TF-001028 remains append-only `KNOWN_RESULT` at revision 7 and did not reach
+`GRADUATION_CANDIDATE`. The experiment registry still has exactly one `TF4-0001` row and
+no TF5 scientific experiment row. TF-001157 is still the highest allocated candidate, so the next
+permanent candidate ID remains TF-001158.
+
+## Exact surviving MIS fan
+
+The 20 finite survivors remain:
+
+`TF-001033`, `TF-001034`, `TF-001037`, `TF-001090`, `TF-001091`,
+`TF-001093`, `TF-001095`, `TF-001098`, `TF-001099`, `TF-001134`,
+`TF-001135`, `TF-001137`, `TF-001139`, `TF-001140`, `TF-001141`,
+`TF-001142`, `TF-001144`, `TF-001145`, `TF-001154`, `TF-001155`.
+
+Coordinate-family counts remain 3 MIS-only, 6 support/MIS, 9 diameter/MIS, and 2 matching/MIS.
+There are 16 upper bounds and 4 lower bounds.
+
+All 20 remain valid and equality-supported after each cumulative exposed extension through orders
+11, 12, 13, and 14. Separately at each of orders 11--14 every candidate has at least one equality.
+No two have exactly the same equality-tree set or equality-invariant-vector set through order 14.
+
+The common vector `(gamma,D,support,matching,MIS)=(4,5,4,4,8)` makes ten facets tight and
+occurs on 110 exposed trees total. The only strict exposed-corpus pointwise dominance relations
+remain:
+
+- TF-001091 over TF-001034;
+- TF-001095 over TF-001037.
+
+Those dominance relations reduce algebraically to the exposed inequalities
+`MIS >= 3*support-4` and `MIS >= 5*support-12`, respectively. TF6 does not claim either as a
+universal theorem.
+
+## Structural finding
+
+A maximal independent set is an independent dominating set. Rooted-tree counting therefore has
+three exact states: root selected `A`, root unselected but dominated by a child `B`, and root
+unselected and needing its parent `C`. For child states `(A_u,B_u,C_u)`:
+
+`A_v=prod(B_u+C_u)`,
+`C_v=prod(B_u)`,
+`B_v=prod(A_u+B_u)-prod(B_u)`,
+and `MIS(T)=A_r+B_r`.
+
+TF6 installs this exact DP as the core implementation and independently checks it against the
+historical brute-force definition on all unlabeled trees through order 8.
+
+The recurrence explains the scale rather than merely observing it. Twin-leaf duplication at an
+existing support vertex does not change MIS count; path extension gives the Padovan-type recurrence
+`m(P_n)=m(P_{n-2})+m(P_{n-3})`; repeated fixed branches produce multiplicative powers; and
+`MIS(H corona K1)=independent_set_count(H)`. Wilf/Sagan's exact order-wise maximum is exponential,
+so the raw scale is intrinsically real.
+
+## Transformation decision
+
+TF6 considered raw MIS, `log(MIS)`, `log(MIS)/n`, the nth-root growth factor, normalization
+by the Wilf/Sagan order-wise extremal MIS count, and rooted recurrence-state coordinates.
+
+Result: retain raw `maximal_independent_set_count` unchanged for now.
+
+The alternatives have independent diagnostic meaning, but none is a canonical linear discovery
+coordinate: logs/growth rates abandon exact rational hull geometry; order normalization couples the
+feature to another invariant and suppresses absolute multiplicity; recurrence states depend on a
+root unless a new aggregation rule is invented. Removing raw MIS is likewise not independently
+justified because the current planes remain stable and equality-supported.
+
+## TF6 experiment decision
+
+New experiment frozen: **no**.
+
+Fresh exhaustive order allocated or consumed: **no**.
+
+New candidate ID allocated: **no**.
+
+Experiment registry updated: **no**.
+
+Orders 1--14, all TF2/TF3/TF4 hostile sets, and all TF5 family instances remain burned. Orders at
+least 15 remain untouched.
+
+## Process failures
+
+Runs `37045955391` and `37046259205` failed only because the first CI form invoked the TF6
+diagnosis by file path even though it imports `experiments.tf5_analysis`. Unit tests, compile,
+Ruff, calibration, TF2 diagnosis and TF4 diagnosis had already passed. The fix is module invocation
+(`python -m experiments.tf6_mis_diagnosis`). No mathematical result, candidate state, registry,
+or data boundary changed.
+
+## Next session
+
+Do not manufacture an experiment merely to reduce facet volume. Keep orders at least 15 untouched.
+If continuing this coordinate, attack the two support/MIS dominance conditions structurally or
+define a root-invariant transfer statistic independently of candidate yield. Otherwise archive the
+20 facets as stable finite geometry and choose a separately motivated TreeForge scientific question
+before freezing any new discovery axis.
+
+See `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md` and
+`experiments/TF6-DIAG-0001/diagnosis.json`.
+
+The exact merged final `main` HEAD and final post-merge CI are reported in the session closeout
+because a commit cannot contain its own resulting SHA.
+
+---
+
 # TF5 structural-resolution handover
 
 TF5 resolves TF-001028 and diagnoses the remaining TF4 MIS-count facet fan without opening a new
