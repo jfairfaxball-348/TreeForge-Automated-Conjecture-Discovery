@@ -1,0 +1,108 @@
+name: TF4 scientific execution
+
+permissions:
+  contents: write
+  actions: read
+
+on:
+  push:
+    branches:
+      - tf4-scientific-execution
+
+jobs:
+  tf4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned environment
+        run: python -m pip install -e '.[dev,conjecturing]'
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Compile
+        run: python -m compileall -q src experiments
+      - name: Ruff
+        run: ruff check .
+      - name: Deterministic calibration smoke
+        run: |
+          python experiments/calibration.py             --output-dir /tmp/treeforge-calibration             --source-commit "$GITHUB_SHA"             --timestamp 2026-10-01T00:00:00Z
+          test -s /tmp/treeforge-calibration/registry/candidates.jsonl
+          test -s /tmp/treeforge-calibration/registry/experiments.jsonl
+      - name: Live pinned TxGraffiti compatibility
+        run: python -m pytest -q tests/test_txgraffiti_adapter.py
+      - name: TF2 reproducibility
+        run: python -m pytest -q tests/test_tf2_results.py
+      - name: TF3 reproducibility
+        run: python -m pytest -q tests/test_tf3_results.py
+      - name: TF4 frozen-spec and diagnostic checks
+        run: |
+          python -m pytest -q tests/test_tf4_frozen_spec.py tests/test_tf4_diagnostic.py
+          python experiments/tf4_diagnostic.py --output /tmp/tf4-diagnostic.json --skip-order14-timing
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from treeforge.registry.candidate_registry import CandidateRegistry
+
+          assert CandidateRegistry("data/registry/candidates.jsonl").next_id() == "TF-001012"
+          rows = [
+              json.loads(line)
+              for line in Path("data/registry/experiments.jsonl").read_text(encoding="utf-8").splitlines()
+              if line.strip()
+          ]
+          assert sum(r["experiment_id"] == "TF3-0001" for r in rows) == 1
+          assert sum(r["experiment_id"] == "TF4-0001" for r in rows) == 0
+          diag = json.loads(Path("/tmp/tf4-diagnostic.json").read_text(encoding="utf-8"))
+          pairwise = diag["pairwise_convex_hulls"]
+          assert pairwise["feature_pair_count"] == 21
+          assert pairwise["stage_totals"]["raw_generator_output"] == 259
+          assert pairwise["stage_totals"]["after_morgan"] == 259
+          assert pairwise["stage_totals"]["after_dalmatian"] == 214
+          assert pairwise["stage_totals"]["after_duplicate_removal"] == 205
+          assert pairwise["cross_run_exact_dedup_count"] == 146
+          PY
+      - name: Execute frozen TF4-0001
+        run: |
+          rm -rf /tmp/tf4-scientific
+          python -m experiments.tf4_discovery             --output-dir /tmp/tf4-scientific             --source-commit "$GITHUB_SHA"
+      - name: Report finite survivors
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          root = Path("/tmp/tf4-scientific")
+          manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+          final = json.loads((root / "final_candidates.json").read_text(encoding="utf-8"))
+          print("TF4_MANIFEST=" + json.dumps(manifest, sort_keys=True))
+          survivors = [
+              {
+                  "candidate_id": r["candidate_id"],
+                  "statement": r["statement"],
+                  "state": r["lifecycle_state"],
+                  "relation": r["discovery_evidence"]["structured_relation"],
+                  "source_feature_pairs": r["discovery_evidence"]["source_feature_pairs"],
+              }
+              for r in final if r["lifecycle_state"] == "ADVERSARIAL_PASSED"
+          ]
+          print("TF4_FINITE_SURVIVORS=" + json.dumps(survivors, sort_keys=True))
+          print("TF4_FINAL_COUNTS=" + json.dumps(dict(sorted(Counter(r["lifecycle_state"] for r in final).items())), sort_keys=True))
+          PY
+      - name: Preserve compact scientific artifact on execution branch
+        run: |
+          mkdir -p experiments/TF4-0001/scientific_artifact
+          for f in             manifest.json             pairwise_stage_counts.json             raw_pairwise_final_output.json             cross_run_deduplicated_output.json             candidate_batch.json             candidate_batch_freeze.json             literal_domain_guard.json             candidate_events.jsonl             final_candidates.json; do
+            cp "/tmp/tf4-scientific/$f" "experiments/TF4-0001/scientific_artifact/$f"
+          done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/TF4-0001/scientific_artifact
+          git commit -m "Preserve TF4-0001 scientific artifact [skip ci]"
+          git push origin HEAD:tf4-scientific-execution
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf4-scientific-full
+          path: /tmp/tf4-scientific
