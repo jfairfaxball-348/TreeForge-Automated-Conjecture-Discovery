@@ -1,3 +1,100 @@
+# TF5 structural-resolution handover
+
+TF5 resolves TF-001028 and diagnoses the remaining TF4 MIS-count facet fan without opening a new
+scientific experiment.
+
+## Verified provenance
+
+Starting main HEAD: 308104fee32f55dc12a110357c48f15249193be5.
+Starting post-TF4 main CI: 37016098699, successful. PR #10 remained merged.
+
+Authoritative TF2 source/run:
+d091d88889fa72322bfc49a5531bc30b1f31b049 / 36888114138.
+
+Corrected TF3 diagnostic run: 36907058956.
+Authoritative TF3 source/run:
+e23b44d24a7b87d6f67aa18749059540934b2767 / 36914647703.
+
+TF4 diagnostic runs: 36972524602 and 36973194898.
+Authoritative TF4 source/run:
+d8e0874a22dde7f226431fc4f15a36adb8254efa / 36983184665.
+TF4 final main/CI checkpoint before TF5:
+308104fee32f55dc12a110357c48f15249193be5 / 37016098699.
+
+The TF4 pairwise stage counts, TF-001012--TF-001157 allocation, 99-candidate firewall hash,
+order-14 count/hash/outcome, 19-tree hostile count/hash/outcome, interpreted state counts, and
+single TF4-0001 experiment record were rechecked from committed artifacts. TF-001158 remains the
+next permanent candidate ID.
+
+## TF-001028 resolution
+
+Exact frozen statement:
+
+gamma(T) <= (2 |V(T)| + 1 - diameter(T)) / 3,
+
+equivalently
+
+3 gamma(T) + diameter(T) <= 2 |V(T)| + 1.
+
+Starting lifecycle state: NOVELTY_AUDIT.
+
+TF5 found no counterexample. Exposed exhaustive orders 1-14 and 24,048 candidate-specific family
+instances were checked exactly as interpretation work, not fresh evidence. Infinite equality
+mechanisms include P_(3k+1) and P_k o K1 for k>=2.
+
+The decisive result is prior art. K1 is equality. For every nontrivial tree, Ore's 1962 bound
+gamma<=floor(n/2) proves the candidate when 2D<=n+2. When D>=n/2+1,
+Gu-Meng-Zhang-Wan (2013), Lemma 2.3, gives
+gamma<=n-D+ceil((2D-n-1)/3), and 3ceil(x/3)<=x+2 yields the frozen inequality.
+The integer diameter regimes cover all nontrivial trees.
+
+Final lifecycle state: KNOWN_RESULT, revision 7.
+GRADUATION_CANDIDATE reached: no.
+New candidate ID allocated: no.
+
+## Prior-art scope
+
+The bounded audit checked exact/equivalent forms, domination versus order/diameter, fixed-diameter
+extremal domination, older foundational bounds, and recent tree-domination upper-bound literature.
+The key match is not an exact printed copy of TF-001028 but a stronger fixed-(n,D) extremal theorem
+that directly implies it. The earlier TF4 negative exact-form search remains only negative search
+evidence and is superseded for lifecycle purposes by this stronger match.
+
+Key sources are Ore (1962), Gu-Meng-Zhang-Wan (2013, JORSC 1:217-225,
+DOI 10.1007/s40305-013-0012-0), Cabrera Martinez (2024, Discrete Applied Mathematics 343:44-48),
+and Guo-Xue-Liu (2025, Linear and Multilinear Algebra 73:763-775).
+
+## MIS-count facet diagnosis
+
+The 20 unpromoted TF4 survivors split into four coordinate families:
+3 MIS-only, 6 support/MIS, 9 diameter/MIS, and 2 matching/MIS.
+
+All 20 remain valid and equality-supported separately at exposed orders 11, 12, 13, and 14.
+Therefore their frozen coefficients do not display the exposed-order drift seen in TF3. A single
+invariant vector (gamma,D,support,matching,MIS)=(4,5,4,4,8) makes 10 facets tight and occurs
+in increasing multiplicity from orders 8 through 14. Only two strict exposed-corpus pointwise
+dominance relations were found: TF-001091 over TF-001034 and TF-001095 over TF-001037.
+
+Conclusion: MIS count has awkward raw scaling, but the surviving fan is stable low-dimensional
+facet geometry. TF5 does not have an independently defensible reason to remove or transform the
+feature.
+
+## Experiment decision and recommendation
+
+MIS-count facet fan diagnosed: yes.
+New experiment frozen: no.
+Fresh data allocated or consumed after TF4: no.
+
+The next session should remain an exposed-data diagnosis of the MIS-count coordinate itself:
+seek a structural reason for a normalization/transformation/removal, or conclude that the fan should
+remain archived finite geometry. Do not freeze a new discovery experiment until that produces one
+independently justified axis change.
+
+The exact merged final main HEAD and final CI run are reported in the session closeout because a
+commit cannot contain its own resulting SHA.
+
+---
+
 # TF4 scientific-execution handover
 
 TF4-0001 is scientifically complete on the `tf4-scientific-execution` branch. This section

@@ -36,6 +36,18 @@ TF4 completed `TF4-0001` with the frozen one-axis change from ratios to 21 fixed
 
 The fresh exhaustive 3,159-tree order-14 holdout falsified 66 of those 99 and left 33 survivors; all 33 survived the exact 19-tree frozen hostile set. Post-gate interpretation then found one already-exposed order-11 counterexample, classified six forms as elementary, four as feature-set artifacts, identified `TF-001013` as the known Lemańska leaf bound, and left `TF-001028`, `gamma(T) <= (2n+1-diameter(T))/3`, in bounded `NOVELTY_AUDIT` after a targeted search found no exact match. That negative search is not evidence of novelty. Twenty maximal-independent-set-count facets remain finite `ADVERSARIAL_PASSED` without promotion. No candidate reached `GRADUATION_CANDIDATE`. See `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, and `docs/TF4_EXPERIMENT_FREEZE.md`.
 
+TF5 resolved TF-001028 structurally rather than broadening discovery. The frozen bound
+gamma(T) <= (2n+1-diameter(T))/3 is a direct consequence of Ore's classical
+gamma<=floor(n/2) bound in the short-diameter regime and Gu-Meng-Zhang-Wan (2013),
+Lemma 2.3, in the long-diameter regime. TF-001028 is therefore append-only KNOWN_RESULT,
+not a novelty or graduation candidate. Candidate-specific exact family searches found no
+counterexample and exposed infinite equality families, but the lifecycle decision rests on the
+published implication. TF5 also diagnosed the 20 surviving maximal-independent-set-count facets:
+they form four neighboring coordinate families and their frozen coefficient planes remain
+equality-supported through exposed orders 11-14. That stability is not enough to justify removing
+or transforming the MIS-count feature, so TF5 freezes no new experiment. See
+docs/TF5_TF001028_ANALYSIS.md.
+
 ## Quick start
 
 ```bash

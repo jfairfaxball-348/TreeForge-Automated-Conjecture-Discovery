@@ -73,11 +73,12 @@ def test_tf4_interpreted_results_and_registries_are_append_only():
 
     rows = _jsonl("data/registry/candidates.jsonl")
     tf4_rows = [row for row in rows if 1012 <= int(row["candidate_id"].split("-")[1]) <= 1157]
-    latest = {}
+    tf4_cutoff = {}
     for row in tf4_rows:
-        latest[row["candidate_id"]] = row
-    assert sorted(latest) == [f"TF-{n:06d}" for n in range(1012, 1158)]
-    assert Counter(row["lifecycle_state"] for row in latest.values()) == Counter(
+        if row["created_at"] <= "2026-10-02T08:40:00Z":
+            tf4_cutoff[row["candidate_id"]] = row
+    assert sorted(tf4_cutoff) == [f"TF-{n:06d}" for n in range(1012, 1158)]
+    assert Counter(row["lifecycle_state"] for row in tf4_cutoff.values()) == Counter(
         summary["final_state_counts"]
     )
     assert CandidateRegistry("data/registry/candidates.jsonl").next_id() == "TF-001158"

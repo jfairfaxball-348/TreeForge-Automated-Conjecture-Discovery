@@ -224,3 +224,18 @@ authoritative result commit. Subsequent CI was green.
 These failures were result-materialization/test-ordering issues only. They did not rerun or alter
 TF4-0001 scientific generation, the 99-candidate frozen batch, the order-14 holdout, the 19-tree
 hostile set, or any lifecycle outcome.
+
+## 2026-10-02 — TF4 exact-form prior-art search did not surface a stronger fixed-diameter theorem
+
+TF4's bounded audit of TF-001028 searched the exact normalized form and closely related
+domination/diameter bounds and correctly recorded only a negative search result. TF5 broadened the
+same candidate-specific audit to extremal domination at fixed order and diameter and found
+Gu, Meng, Zhang and Wan (2013), Lemma 2.3. Combined with Ore's classical isolate-free bound, that
+published result directly implies TF-001028.
+
+This does not invalidate the TF4 audit because TF4 explicitly stated that negative search was not
+novelty evidence and left the candidate in NOVELTY_AUDIT. The process lesson is that a bounded
+audit for a simple two-parameter candidate should include fixed-parameter extremal formulations,
+not only exact algebraic-string variants. TF5 records the candidate append-only as KNOWN_RESULT;
+no novelty or theorem-repository claim is made.
+
