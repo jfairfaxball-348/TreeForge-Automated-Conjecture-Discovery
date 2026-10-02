@@ -223,24 +223,30 @@ The candidate batch and its SHA-256 must be persisted with `holdout_constructed=
 runner constructs order 14.
 
 The exact fresh hostile families are frozen in the machine spec and consist of 19 new
-path/star/spider/caterpillar/double-star/broom instances. Regression tests require their canonical
-tree codes to be disjoint from both TF2 and TF3 exact hostile sets.
+path/star/spider/caterpillar/double-star/broom instances. Regression tests require their exact `(order, canonical_tree_code)` identities to be disjoint from both TF2 and TF3 exact hostile sets. The order component preserves correctness across orders without changing historical bare codes or hashes.
 
 Only fresh order-14 survivors see those hostile trees.
 
 ## Failures and CI
 
-No meaningful TF4 process failure occurred before the freeze. The initial and refined diagnostic
-runs both completed successfully. No new failure entry was therefore required in
-`docs/FAILURE_AND_LESSON_LEDGER.md`.
+The initial and refined TF4 diagnostic runs completed successfully.
+
+Freeze-validation run `36974147991` then failed before scientific execution because the new hostile
+set test incorrectly assumed the historical bare `canonical_tree_code` string was globally injective
+across different orders. `P18` and `P19` expose a cross-order string collision even though they
+are non-isomorphic by order. Historical corpus rows already carry `order`, so TF0-TF3 hashes are
+preserved. TF4 adds `canonical_tree_identity = (order, canonical_tree_code)` for cross-order
+identity checks rather than changing the legacy encoding. This process failure is recorded
+append-only in `docs/FAILURE_AND_LESSON_LEDGER.md`.
 
 Relevant validation runs at this handover stage:
 
 - pre-TF4 main validation: `36917219570`
 - initial TF4 diagnostic: `36972524602`
 - refined TF4 diagnostic: `36973194898`
+- first TF4 freeze validation failure: `36974147991`
 
-The final freeze/PR validation and post-merge run are reported in the session closeout.
+The corrected freeze/PR validation and post-merge run are reported in the session closeout.
 
 ## Next session
 
