@@ -1,0 +1,129 @@
+{
+  "analysis_id": "TF9-AUDIT-0001",
+  "classification": "BOUNDED_PRIOR_ART_AUDIT_NO_SCIENTIFIC_EXPERIMENT",
+  "starting_main_head": "2dcf6df89648dab8b050b1ebf05f332dceb90c54",
+  "starting_main_ci_run": 37059395616,
+  "fresh_data_consumed": false,
+  "burned_data_boundary": {
+    "exhaustive_orders": [1, 14],
+    "orders_at_least_15": "untouched"
+  },
+  "provenance_verification": {
+    "tf8_pr": 14,
+    "tf8_pr_head": "395ae9befe2e858a47fc73d2d00e30ad53e6427f",
+    "tf8_pr_head_ci": 37059137030,
+    "tf8_merge_commit": "2dcf6df89648dab8b050b1ebf05f332dceb90c54",
+    "tf8_post_merge_ci": 37059395616,
+    "tf001028": {"revision": 7, "state": "KNOWN_RESULT"},
+    "tf001034": {"revision": 6, "state": "ARTIFACT_OF_FEATURE_SET"},
+    "tf001037": {"revision": 6, "state": "ARTIFACT_OF_FEATURE_SET"},
+    "tf001091": {"revision": 5, "state": "ADVERSARIAL_PASSED"},
+    "tf001095": {"revision": 5, "state": "ADVERSARIAL_PASSED"},
+    "tf4_mis_fan": {
+      "adversarial_passed": 18,
+      "artifact_of_feature_set": 2
+    },
+    "highest_allocated_candidate": "TF-001157",
+    "next_permanent_candidate_id": "TF-001158",
+    "tf4_experiment_registry_records": 1,
+    "tf5_tf6_tf7_tf8_tf9_scientific_experiment_records": 0
+  },
+  "audited_theorem": {
+    "value": "For every finite tree T with s(T)>=3, m(T)>=F_(s(T)+2).",
+    "equality": "Equality holds exactly for duplicate-leaf blowups of P_s corona K1."
+  },
+  "component_status": {
+    "forest_independent_set_minimum": {
+      "status": "DIRECT_COROLLARY",
+      "basis": "Prodinger-Tichy 1982 tree minimum plus elementary bridging of forest components"
+    },
+    "support_induced_injection": {
+      "status": "NO_EXACT_MATCH_LOCATED_IN_BOUNDED_AUDIT",
+      "closest_relationship": "RELATED_ONLY"
+    },
+    "support_injection_equality": {
+      "status": "NO_EXACT_MATCH_LOCATED_IN_BOUNDED_AUDIT",
+      "closest_relationship": "RELATED_ONLY"
+    },
+    "fixed_support_value": {
+      "status": "DIRECT_COROLLARY",
+      "stronger_source_relationship": "STRICTLY_STRONGER_RESULT",
+      "basis": "Tian-Tu 2025 mis(T)>=F_(n-alpha+2), n-alpha=nu for trees, and s(T)<=nu(T) for T!=P2"
+    },
+    "complete_fixed_support_equality_class": {
+      "status": "NOT_SHOWN_TO_BE_DIRECT_COROLLARY",
+      "known_ingredients": [
+        "Prodinger-Tichy path minimum for all independent sets",
+        "Taletskii-Malyshev 2022 i(H)=mi(ext(H))",
+        "Taletskii-Malyshev 2022 twin-leaf addition preserves mi",
+        "Tian-Tu 2025 sharp construction contains P_s corona K1 at n=2s, alpha=s"
+      ],
+      "bounded_search_note": "No exact published only-if classification was located; this is not a novelty claim."
+    }
+  },
+  "source_relationships": [
+    {
+      "source": "Prodinger-Tichy 1982, Fibonacci Numbers of Graphs",
+      "doi": "10.1080/00150517.1982.12430021",
+      "relationship": "DIRECT_COROLLARY"
+    },
+    {
+      "source": "Wilf 1986, The Number of Maximal Independent Sets in a Tree",
+      "doi": "10.1137/0607015",
+      "relationship": "RELATED_ONLY"
+    },
+    {
+      "source": "Sagan 1988, A Note on Independent Sets in Trees",
+      "doi": "10.1137/0401012",
+      "relationship": "RELATED_ONLY"
+    },
+    {
+      "source": "Ortiz-Villanueva 2012, Maximal independent sets in caterpillar graphs",
+      "doi": "10.1016/j.dam.2011.10.024",
+      "relationship": "RELATED_ONLY"
+    },
+    {
+      "source": "Taletskii-Malyshev 2020, Trees without twin-leaves with smallest number of maximal independent sets",
+      "doi": "10.1515/dma-2020-0006",
+      "relationship": "SAME_INGREDIENT_DIFFERENT_PARAMETER"
+    },
+    {
+      "source": "Taletskii-Malyshev 2022, The number of maximal independent sets in trees with a given number of leaves",
+      "doi": "10.1016/j.dam.2022.03.012",
+      "relationship": "SAME_INGREDIENT_DIFFERENT_PARAMETER"
+    },
+    {
+      "source": "Cambie-Wagner 2024, The Minimum Number of Maximal Independent Sets in Twin-Free Graphs",
+      "doi": "10.37236/12789",
+      "relationship": "SAME_INGREDIENT_DIFFERENT_PARAMETER"
+    },
+    {
+      "source": "Tian-Tu 2025, The minimum number of maximal independent sets in graphs with given order and independence number",
+      "doi": "10.1016/j.dam.2025.02.027",
+      "relationship": "STRICTLY_STRONGER_RESULT"
+    }
+  ],
+  "significance": {
+    "fixed_support_parameter": "natural but the numerical extremal value is subsumed by stronger published theory",
+    "remaining_structural_value": "equality-only sharpening and the core-edgeless support-injection criterion",
+    "separate_theorem_project": false,
+    "reason": "The value theorem is a direct corollary of Tian-Tu 2025; other main ingredients are classical or explicit in Taletskii-Malyshev, while the unlocated equality-only sharpening is short and elementary."
+  },
+  "decision": {
+    "candidate_lifecycle_revisions": [],
+    "tf4_mis_fan_reopened": false,
+    "raw_mis_coordinate": "RETAIN_UNCHANGED",
+    "new_coordinate_introduced": false,
+    "new_experiment_frozen": false,
+    "candidate_ids_allocated": [],
+    "candidate_registry_updated": false,
+    "experiment_registry_updated": false,
+    "theorem_repository_created": false,
+    "next_session_recommendation": "Keep orders >=15 untouched and the TF4 MIS fan archived; continue TreeForge only from a separately motivated controlled research question."
+  },
+  "limitations": {
+    "negative_search_is_novelty_evidence": false,
+    "exact_equality_novelty_claimed": false,
+    "note": "Equivalent literature under unsearched terminology may exist; later expert bibliographic review may revise the equality-only status."
+  }
+}
