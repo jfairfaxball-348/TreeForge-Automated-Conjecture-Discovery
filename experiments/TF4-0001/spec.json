@@ -1,0 +1,334 @@
+{
+  "experiment_id": "TF4-0001",
+  "status": "FROZEN",
+  "frozen_at": "2026-10-02T06:30:00Z",
+  "freeze_parent_head": "af7ca6eafdc73d0755242bab05586031752a6112",
+  "diagnostic_id": "TF4-DIAG-0001",
+  "diagnostic_validation_runs": [
+    36972524602,
+    36973194898
+  ],
+  "universe": [
+    "finite",
+    "simple",
+    "unlabeled",
+    "tree"
+  ],
+  "discovery_orders": [
+    2,
+    10
+  ],
+  "expected_discovery_tree_count": 200,
+  "burned_or_exposed_orders": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "holdout_orders": [
+    14,
+    14
+  ],
+  "expected_holdout_tree_count": 3159,
+  "holdout_kind": "exhaustive_all_unlabeled_trees_of_order_14",
+  "corpus_invariants": [
+    "order",
+    "edge_count",
+    "degree_sum",
+    "min_degree",
+    "max_degree",
+    "leaf_count",
+    "support_vertex_count",
+    "diameter",
+    "radius",
+    "eccentricity_sum",
+    "matching_number",
+    "independence_number",
+    "domination_number",
+    "maximal_independent_set_count",
+    "wiener_index",
+    "cherry_count"
+  ],
+  "target": "domination_number",
+  "discovery_features": [
+    "order",
+    "leaf_count",
+    "support_vertex_count",
+    "max_degree",
+    "diameter",
+    "matching_number",
+    "maximal_independent_set_count"
+  ],
+  "changed_axis": {
+    "name": "txgraffiti_relation_geometry",
+    "tf3_value": "ratios_only_one_feature_homogeneous_rhs",
+    "tf4_value": "fixed_pairwise_convex_hull_over_all_21_unordered_feature_pairs",
+    "justification": "TF4-DIAG-0001 found 8/12 TF3 ratios exactly overlapped TF2, 9/12 had discovery touch count 1, and 8/12 extremal coefficients drifted by exposed order 13. Fixed pairwise hulls produced 146 exact-deduplicated low-dimensional forms, 127 with exactly two RHS features, only 5 exact TF2 overlaps, median denominator 4, and 32 forms that are both K1-valid and stable across burned orders 11-13. This is the minimal controlled interaction increase supported by the completed TF3 failure mode."
+  },
+  "txgraffiti": {
+    "package": "txgraffiti",
+    "version": "0.4.1",
+    "upstream_source_revision": "e37126da53b84150d142a5d61202b61f78521fcc",
+    "adapter": "treeforge.conjecturing.txgraffiti_adapter.TxGraffitiAdapter",
+    "adapter_semantics": "TreeForge empty hypothesis payload is normalized to upstream None (always-true base predicate)",
+    "methods": [
+      "convex_hull"
+    ],
+    "feature_set_construction": "Run once for each of the 21 unordered pairs of the seven discovery features, in combinations(discovery_features, 2) order.",
+    "cross_run_processing": "Exact normalized (lhs, operator, rhs) deduplication only; preserve every source feature pair for provenance.",
+    "heuristics": [
+      "morgan_accept",
+      "dalmatian_accept"
+    ],
+    "post_processors": [
+      "remove_duplicates",
+      "sort_by_touch_count"
+    ],
+    "object_symbol": "T",
+    "hypothesis_payload": []
+  },
+  "hypotheses": [
+    "finite",
+    "simple",
+    "unlabeled",
+    "tree"
+  ],
+  "interpretability_policy": {
+    "post_generation_filter": null,
+    "generator_family": "fixed_pairwise_convex_hulls_only",
+    "expected_rhs_distinct_feature_symbols_maximum": 2,
+    "expected_cross_run_exact_dedup_count_from_exposed_diagnostic": 146,
+    "candidate_cap": null,
+    "touch_count_threshold": null,
+    "coefficient_or_denominator_threshold": null,
+    "violation_policy": "Abort if a final cross-run-deduplicated statement uses a symbol outside the seven frozen discovery features, uses more than two RHS discovery features, or otherwise violates the frozen pairwise grammar. Do not silently filter or retune it."
+  },
+  "literal_domain_consistency_gate": {
+    "mathematical_hypothesis_changed": false,
+    "declared_domain": "every finite simple tree",
+    "exposed_guard_tree": "K1",
+    "timing": "After permanent IDs are allocated to every cross-run exact-deduplicated final statement and after exact discovery-side reevaluation, but before candidate_batch.json is frozen and before any order-14 holdout construction.",
+    "action": "Any otherwise-CONJECTURED statement false on K1 is permanently classified FALSIFIED with K1 as exposed domain-consistency evidence.",
+    "rationale": "Discovery starts at order 2 although the literal statement includes K1. TF4 retains the all-tree hypothesis and closes that lifecycle mismatch without using fresh validation data."
+  },
+  "candidate_policy": {
+    "next_permanent_candidate_id": "TF-001012",
+    "allocate_ids_during_diagnostics": false,
+    "allocate_permanent_id_to_every_cross_run_exact_deduplicated_statement_on_scientific_run": true,
+    "candidate_cap": null,
+    "normalization": "Use structured TxGraffiti lhs/operator/rhs metadata; preserve raw per-pair statements and source feature pairs; no post-hoc coefficient tuning.",
+    "duplicate_equivalence": "Exact normalized (lhs, operator, rhs) equality across pairwise runs.",
+    "batch_freeze": "All discovery-side machine triage plus the exposed K1 domain-consistency gate must finish and candidate_batch.json plus its SHA-256 must be written before any fresh order-14 holdout construction."
+  },
+  "exposed_data": {
+    "orders_1_to_13": "All orders 1-13 are burned/exposed for TF4. Orders 2-10 remain the discovery corpus; K1 and orders 11-13 are diagnosis/domain-check material only.",
+    "tf2_candidates_and_counterexamples": "Fully exposed.",
+    "tf3_candidates_and_counterexamples": "Fully exposed.",
+    "tf2_adversarial_hash": "dea3af9c495cc79da46b7ed3797276caae22495bc86d5000ddea3605a07bcb8a",
+    "tf3_adversarial_hash": "37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18",
+    "tf_000998_counterexample": {
+      "family": "spider",
+      "arms": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "order": 25
+    },
+    "policy": "Exposed data may be used for diagnosis, domain consistency, or regression checks but never counted as TF4 fresh validation evidence."
+  },
+  "fresh_holdout_firewall": {
+    "holdout_generated_only_after_candidate_batch_freeze": true,
+    "holdout_visible_to_generator": false,
+    "holdout_used_for_feature_choice": false,
+    "holdout_used_for_method_choice": false,
+    "holdout_used_for_filter_thresholds": false,
+    "holdout_used_for_coefficient_selection": false,
+    "holdout_used_for_candidate_ranking": false,
+    "feasibility_probe": "TF4-DIAG-0001 run 36972524602 timed all order-14 generation and the two expensive exact invariants. Individual order-14 invariant values were not persisted, printed, ranked, or compared with any candidate."
+  },
+  "fresh_adversarial_families": {
+    "paths": {
+      "orders": [
+        18,
+        19
+      ]
+    },
+    "stars": {
+      "orders": [
+        18,
+        19
+      ]
+    },
+    "spiders": {
+      "arm_patterns": [
+        [
+          2,
+          2,
+          13
+        ],
+        [
+          3,
+          5,
+          10
+        ],
+        [
+          2,
+          6,
+          10
+        ],
+        [
+          4,
+          4,
+          5,
+          5
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          5,
+          12
+        ]
+      ]
+    },
+    "caterpillars": [
+      {
+        "spine_order": 6,
+        "leaf_multiplicities": [
+          0,
+          4,
+          0,
+          0,
+          4,
+          3
+        ]
+      },
+      {
+        "spine_order": 7,
+        "leaf_multiplicities": [
+          3,
+          0,
+          0,
+          3,
+          0,
+          0,
+          4
+        ]
+      },
+      {
+        "spine_order": 8,
+        "leaf_multiplicities": [
+          2,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          3
+        ]
+      }
+    ],
+    "double_stars": [
+      [
+        8,
+        9
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    "brooms": [
+      [
+        10,
+        7
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        9,
+        9
+      ]
+    ]
+  },
+  "anti_numerology": [
+    "constant-column detection",
+    "exact duplicate-column detection",
+    "pairwise exact affine-equivalence detection",
+    "tree identity edge_count = order - 1",
+    "handshake identity degree_sum = 2 edge_count",
+    "bipartite identity independence_number + matching_number = order",
+    "exact discovery-side reevaluation of every machine statement",
+    "exact normalized cross-run duplicate detection before candidate-batch freeze",
+    "literal all-tree K1 domain-consistency check before candidate-batch freeze",
+    "pairwise RHS grammar assertion before candidate-batch freeze"
+  ],
+  "diagnostic_basis": {
+    "actions_runs": [
+      36972524602,
+      36973194898
+    ],
+    "pairwise_convex_hulls": {
+      "feature_set_count": 21,
+      "raw_generator_output": 259,
+      "after_morgan": 259,
+      "after_dalmatian": 214,
+      "per_run_post_duplicate_total": 205,
+      "cross_run_exact_dedup_final_count": 146,
+      "rhs_support_histogram": {
+        "0": 2,
+        "1": 17,
+        "2": 127
+      },
+      "exact_tf2_overlap_count": 5,
+      "k1_literal_domain_failure_count": 47,
+      "burned_orders_11_to_13_survivor_count": 48,
+      "k1_and_burned_orders_11_to_13_survivor_count": 32,
+      "max_denominator": 61,
+      "median_max_denominator": 4,
+      "p90_max_denominator": 11,
+      "touch_count_median": 5,
+      "touch_count_p90": 30
+    },
+    "order_14_feasibility": {
+      "tree_count": 3159,
+      "generation_seconds": 0.7965798509999331,
+      "domination_number_seconds": 8.047321993000082,
+      "maximal_independent_set_count_seconds": 194.60035650700001,
+      "values_persisted_or_reported": false
+    }
+  },
+  "random_seed": null,
+  "holdout_policy": "All unlabeled trees of order 14 are the fresh exhaustive TF4 holdout. Orders 1-13 are excluded as burned/exposed. The holdout is not constructed by the scientific runner until permanent IDs, discovery-side triage, the exposed K1 domain-consistency gate, and candidate-batch persistence are complete.",
+  "adversarial_policy": "Only fresh order-14 holdout survivors see the exact pre-frozen TF4 adversarial instances. Exact TF2/TF3 hostile trees and all previously inspected structures are regression-only, not fresh evidence.",
+  "source_commit_policy": "The exact commit used by a future scientific run must be recorded in its manifest and experiment registry record. Corpus hashes that include source-commit labels are recorded by that run.",
+  "mutation_policy": "Any material post-output change to target, features, discovery split, holdout, pairwise feature-set construction, TxGraffiti method set, heuristics, post-processors, hypothesis semantics, literal-domain gate, interpretability policy, candidate normalization, or fresh adversarial set closes TF4-0001 and requires a new experiment ID."
+}
