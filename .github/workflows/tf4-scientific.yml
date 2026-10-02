@@ -57,11 +57,11 @@ jobs:
           assert sum(r["experiment_id"] == "TF4-0001" for r in rows) == 0
           diag = json.loads(Path("/tmp/tf4-diagnostic.json").read_text(encoding="utf-8"))
           pairwise = diag["pairwise_convex_hulls"]
-          assert pairwise["feature_pair_count"] == 21
-          assert pairwise["stage_totals"]["raw_generator_output"] == 259
-          assert pairwise["stage_totals"]["after_morgan"] == 259
-          assert pairwise["stage_totals"]["after_dalmatian"] == 214
-          assert pairwise["stage_totals"]["after_duplicate_removal"] == 205
+          assert pairwise["feature_pair_run_count"] == 21
+          assert pairwise["stage_totals_before_cross_run_exact_dedup"]["raw_generator_output"] == 259
+          assert pairwise["stage_totals_before_cross_run_exact_dedup"]["after_morgan"] == 259
+          assert pairwise["stage_totals_before_cross_run_exact_dedup"]["after_dalmatian"] == 214
+          assert pairwise["stage_totals_before_cross_run_exact_dedup"]["after_duplicate_removal"] == 205
           assert pairwise["cross_run_exact_dedup_count"] == 146
           PY
       - name: Execute frozen TF4-0001
