@@ -324,7 +324,6 @@ def mis_diagnosis(rows: list[dict[str, int]]) -> dict[str, object]:
             "All 20 remain valid and have equality examples at each exposed order "
             "11,12,13,14; no frozen coefficient plane loses support."
         ),
-        "stability_details": stability,
         "mis_count_ranges": {
             str(order): [
                 min(row["maximal_independent_set_count"] for row in by_order[order]),
