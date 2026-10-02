@@ -67,3 +67,22 @@ No TF3 candidate reached `MATHEMATICALLY_INTERESTING`; no new prior-art search w
 no candidate reached `GRADUATION_CANDIDATE`.
 
 See `experiments/TF3-0001/RESULTS.md`.
+
+## TF4 — diagnose ratios-only limits and freeze pairwise interaction experiment
+
+Status: **FROZEN; SCIENTIFIC EXECUTION NOT YET RUN (2026-10-02).**
+
+TF4-DIAG-0001 used only exposed orders 1-13 and committed TF2/TF3 outputs. Validation runs `36972524602` and `36973194898` found that 8/12 TF3 ratios are exact TF2 repeats, 9/12 have discovery touch count 1, and 8/12 extremal coefficients drift by exposed order 13. Five of the twelve statements also fail on K1 under the literal all-finite-tree hypothesis, showing that the orders-2-10 discovery domain had not fully matched the stated candidate domain.
+
+The diagnosis does not justify changing the target, feature vocabulary, or mathematical hypothesis. A nontrivial-tree hypothesis would leave the generator output unchanged on orders 2-10 and mainly rescue K1-sensitive forms. No new invariant is sufficiently motivated independently of a desired conjecture.
+
+Fixed pairwise convex hulls were reconsidered for a new reason supplied by completed TF3: one-feature grammar is now the diagnosed limitation. Across all 21 unordered feature pairs they produce 259 raw generator outputs, 214 after Dalmatian, 205 per-run post-duplicate forms, and 146 exact cross-run unique statements. Of those, 127 use exactly two RHS features; only 5 exactly overlap TF2. Median maximum denominator is 4, the 90th percentile is 11, and the maximum is 61. On burned orders 11-13, 48 survive cumulatively; after also enforcing literal K1 validity, 32 remain, including 26 two-feature forms.
+
+Experiment `TF4-0001` is therefore frozen with exactly one material scientific change relative to TF3: ratios-only generation becomes fixed pairwise convex-hull generation over all 21 unordered pairs of the unchanged seven discovery features, followed only by exact cross-run deduplication. A pre-holdout K1 domain-consistency gate enforces the already-declared all-tree statement without changing that hypothesis.
+
+Fresh exhaustive holdout: all 3,159 unlabeled trees of order 14. The only order-14 access was a timing-only feasibility probe in run `36972524602`; no individual value was persisted, printed, ranked, or compared with a candidate.
+
+The exact fresh hostile-family parameters are frozen in `experiments/TF4-0001/spec.json`. No TF4 permanent candidate ID has yet been allocated; the next ID remains `TF-001012`.
+
+See `docs/TF4_DIAGNOSTIC.md` and `docs/TF4_EXPERIMENT_FREEZE.md`.
+

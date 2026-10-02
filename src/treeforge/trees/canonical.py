@@ -20,7 +20,13 @@ def _rooted_code(graph: nx.Graph, vertex: int, parent: int | None) -> str:
 
 
 def canonical_tree_code(graph: nx.Graph) -> str:
-    """Return an exact isomorphism-invariant AHU-style code for an unrooted tree."""
+    """Return the historical AHU-style code used by TreeForge.
+
+    The code is complete within a fixed order, which is how corpus generation
+    deduplicates trees. Across different orders the bare string is not globally
+    injective because the two-center wrapper can coincide with a one-center
+    rooted encoding. Use canonical_tree_identity for cross-order identity.
+    """
     _validate_tree(graph)
     graph = nx.convert_node_labels_to_integers(graph, ordering="sorted")
     centers = nx.center(graph)
@@ -33,10 +39,16 @@ def canonical_tree_code(graph: nx.Graph) -> str:
     return "(" + "".join(halves) + ")"
 
 
+def canonical_tree_identity(graph: nx.Graph) -> tuple[int, str]:
+    """Return an exact cross-order tree identity without changing legacy codes."""
+    _validate_tree(graph)
+    return graph.number_of_nodes(), canonical_tree_code(graph)
+
+
 def generate_unlabeled_trees(min_order: int, max_order: int) -> list[nx.Graph]:
     """Generate one representative of every unlabeled tree in a closed order range.
 
-    Results are sorted by `(order, canonical_code)` so serialization is reproducible.
+    Results are sorted by (order, canonical_code) so serialization is reproducible.
     """
     if min_order < 1 or max_order < min_order:
         raise ValueError("require 1 <= min_order <= max_order")

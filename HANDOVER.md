@@ -1,3 +1,273 @@
+# TF4 handover
+
+TF4 completed the exposed-data diagnosis of TF3's interpretable-but-zero-interest result and froze
+`TF4-0001`. No TF4 scientific run has been executed. TF0-TF3 diagnostics, freezes, candidate
+lineages, and scientific results remain preserved append-only.
+
+## Verified starting state and authoritative history
+
+Verified starting `main` HEAD for TF4:
+`fe2ce0cf6a0a7a749ffe8b9425a0508646cf1ad7`.
+
+The existing post-TF3 main validation run `36917219570` was rechecked: installation, unit tests,
+compileall, Ruff, deterministic calibration, and live pinned TxGraffiti compatibility were green.
+
+TF2 authoritative scientific source:
+`d091d88889fa72322bfc49a5531bc30b1f31b049`.  
+TF2 authoritative scientific run: `36888114138`.
+
+Corrected TF3 diagnostic run: `36907058956`.
+
+TF3 authoritative scientific source:
+`e23b44d24a7b87d6f67aa18749059540934b2767`.  
+TF3 authoritative scientific run: `36914647703`.
+
+The exact final merged `main` HEAD and final post-merge CI run are reported in the session
+closeout because a Git commit cannot contain its own resulting SHA without changing that SHA.
+
+## Reproduced TF3 record
+
+TF3 pipeline counts remain:
+
+- raw ratios generator output: 14
+- after Morgan: 14
+- after Dalmatian: 12
+- after duplicate removal: 12
+- final: 12
+
+TF3 permanent IDs: `TF-001000` through `TF-001011`.
+
+Candidate-batch SHA-256:
+`85669d95fb7199b720bfe488c606055dd5f38a5af157c1ed2bdb5f98710344c6`.
+
+Fresh TF3 order-13 holdout:
+
+- 1,301 trees
+- SHA-256 `5b02d81644415adc2df55d0a2ec3694125ef328cb1a0c4a2eeb733efaecef7e9`
+- 12 tested
+- 8 falsified
+- 4 survived
+
+Fresh TF3 adversarial set:
+
+- 18 trees
+- SHA-256 `37abd291592c4e98730d4dc8fef8c1678c4835ac87a555aad19edd5b75f14a18`
+- 4 tested
+- 0 falsified
+- 4 finite survivors
+
+Final TF3 interpreted states remain 11 `FALSIFIED`, 1 `TRIVIAL`; zero reached
+`MATHEMATICALLY_INTERESTING`, no TF3 prior-art search was performed, and zero reached
+`GRADUATION_CANDIDATE`.
+
+The TF2/TF3 reproducibility tests, registry lineage tests, candidate-batch firewall checks, and
+experiment-record uniqueness checks were green before TF4 diagnosis. The candidate registry remains
+contiguous through `TF-001011`; the next permanent ID is `TF-001012`. The experiment registry
+still contains exactly one scientific `TF3-0001` record and no `TF4-0001` scientific record.
+
+## TF4 diagnostic runs and data boundary
+
+TF4-DIAG-0001 initial validation run: `36972524602`.  
+TF4-DIAG-0001 refined validation run: `36973194898`.
+
+All candidate-selection and stability comparisons used only already-exposed orders 1-13 and committed
+TF2/TF3 outputs.
+
+Order 14 was accessed only for timing in run `36972524602`:
+
+- all unlabeled order-14 trees: 3,159
+- generation: about 0.797 s
+- all domination numbers: about 8.047 s
+- all maximal-independent-set counts: about 194.600 s
+- individual values persisted/printed/ranked: no
+- candidate-specific comparison: no
+
+Order 14 therefore remains fresh candidate-validation data.
+
+## Exact diagnosis of TF3 zero-interest output
+
+The 12 ratios-only statements were interpretable but mostly bounded-order extremal fits:
+
+- 8/12 exactly duplicate normalized TF2 statements.
+- 9/12 have discovery touch count 1.
+- 8/12 have the relevant extremal coefficient drift when exposed orders through 13 are included.
+- The eight order-13 holdout failures collapse to four deterministic first-counterexample trees/failure
+  modes.
+- K1 falsifies 5/12 statements under the literal all-finite-tree domain:
+  `TF-001000`, `TF-001001`, `TF-001005`, `TF-001007`, and `TF-001009`.
+
+The four coefficients stable through exposed order 13 do not yield interest: two are K1-invalid,
+one is elementary/trivial, and the `3 matching_number/5` lower bound is the already-falsified
+TF-000998/TF-001010 relation.
+
+Conclusion: the dominant TF3 limitation is the one-feature homogeneous relation grammar. It fits
+discovery-boundary extrema but cannot express the interactions required by the exposed structural
+counterexamples.
+
+## Literal-hypothesis conclusion
+
+The candidate statement says “for every finite simple tree”, while discovery begins at order 2.
+TF4 treats this as an experiment-design/lifecycle mismatch.
+
+It is not silently repaired. TF3 statements remain unchanged.
+
+Changing TF4 to a “nontrivial tree” hypothesis was considered and rejected as the next scientific
+axis because the unchanged orders-2-10 discovery dataframe is already nontrivial; generator output
+would not change. Such a hypothesis mostly changes truth status for K1-sensitive forms.
+
+TF4 therefore keeps the literal all-tree hypothesis and freezes an exposed K1 domain-consistency
+gate before fresh validation. This enforces the already-declared domain; it is not a new mathematical
+hypothesis and is not fresh evidence.
+
+## Feature-vocabulary and target conclusions
+
+No existing feature produced a mathematically interesting one-feature ratio.
+
+- `order`, `leaf_count`, and `max_degree` show direct bounded-order scale artifacts.
+- path-like growth breaks the upper `leaf_count` and `support_vertex_count` ratios.
+- diameter alone fails in both directions.
+- matching number yields a familiar upper relation and a historically falsified lower ratio.
+- the support-vertex lower ratio is elementary.
+- `maximal_independent_set_count` is qualitatively different: its ratio coefficient is strongly
+  order-dependent, while it participates heavily in the more stable two-feature relations.
+
+No feature is removed in TF4 because that would confound feature vocabulary with relation grammar.
+No new invariant is added: the exposed evidence does not independently justify one strongly enough.
+The target remains `domination_number`; the evidence diagnoses relation grammar before target
+exhaustion.
+
+## Alternatives considered
+
+The following were explicitly considered:
+
+- keep ratios and change only to a nontrivial-tree hypothesis — rejected;
+- remove one existing feature — rejected for TF4;
+- add one new invariant — rejected for lack of independent justification;
+- change target — rejected;
+- restore full-dimensional convex hulls — rejected because TF2 already diagnosed their opacity;
+- full TF2 generation plus an RHS-support gate — rejected because it recreates the opaque stream and
+  adds a threshold;
+- fixed pairwise convex hulls — selected for one controlled experiment.
+
+Pairwise hulls were not selected merely because ratios produced zero interest. They were reconsidered
+because completed TF3 specifically diagnosed missing feature interaction as the limiting grammar.
+
+## Quantitative pairwise-hull evidence
+
+Across the fixed 21 unordered feature pairs:
+
+- raw generator outputs: 259
+- after Morgan: 259
+- after Dalmatian: 214
+- per-run post-duplicate total: 205
+- cross-run exact-deduplicated forms: 146
+- RHS support 0 / 1 / 2: 2 / 17 / 127
+- exact TF2 overlap: 5 / 146
+- upper / lower forms: 86 / 60
+- median maximum denominator: 4
+- 90th-percentile maximum denominator: 11
+- maximum denominator: 61
+- median touch count: 5
+- 90th-percentile touch count: 30
+
+On burned data, cumulative survivors were 69 through order 11, 51 through order 12, and 48 through
+order 13. K1 falsifies 47/146 independently. Requiring both K1 validity and survival of burned
+orders 11-13 leaves 32 forms: 1 zero-feature, 5 one-feature, and 26 two-feature forms.
+
+Of those 26 two-feature exposed-data survivors, 21 involve `maximal_independent_set_count`. This
+concentration is preserved as a diagnostic warning for interpretation; it was not used to delete or
+downweight that feature.
+
+Conclusion: pairwise hulls reintroduce more volume than TF3, but not TF2's high-dimensional opacity.
+They supply genuinely new low-dimensional interaction forms with bounded feature support and moderate
+coefficient complexity.
+
+## Frozen TF4-0001
+
+TF4-0001 is frozen with exactly one material scientific change relative to TF3:
+
+> `ratios` over all seven features becomes `convex_hull` run separately over each of the 21
+> unordered feature pairs, followed only by exact cross-run normalized deduplication.
+
+Unchanged:
+
+- target: `domination_number`
+- discovery corpus: all 200 unlabeled trees of orders 2-10
+- seven discovery features
+- TxGraffiti `0.4.1` / upstream `e37126da53b84150d142a5d61202b61f78521fcc`
+- Morgan/Dalmatian
+- duplicate removal / touch-count sorting
+- object symbol `T`
+- empty payload -> upstream `None`
+- literal all-finite-tree mathematical hypothesis
+
+The machine freeze is `experiments/TF4-0001/spec.json`; the scientific runner is
+`experiments/tf4_discovery.py`.
+
+Permanent IDs begin at `TF-001012` only when the scientific run occurs. Every cross-run unique
+statement receives an ID before the exposed K1 gate. Only statements remaining `CONJECTURED` after
+discovery reevaluation and K1 testing enter the frozen candidate batch.
+
+No cap, touch threshold, denominator threshold, coefficient threshold, ranking rule, or post-hoc
+support gate is permitted.
+
+## Fresh TF4 validation design
+
+Burned/exposed orders: 1 through 13.
+
+Fresh holdout:
+
+> every one of the 3,159 unlabeled trees of order 14.
+
+The candidate batch and its SHA-256 must be persisted with `holdout_constructed=false` before the
+runner constructs order 14.
+
+The exact fresh hostile families are frozen in the machine spec and consist of 19 new
+path/star/spider/caterpillar/double-star/broom instances. Regression tests require their exact `(order, canonical_tree_code)` identities to be disjoint from both TF2 and TF3 exact hostile sets. The order component preserves correctness across orders without changing historical bare codes or hashes.
+
+Only fresh order-14 survivors see those hostile trees.
+
+## Failures and CI
+
+The initial and refined TF4 diagnostic runs completed successfully.
+
+Freeze-validation run `36974147991` then failed before scientific execution because the new hostile
+set test incorrectly assumed the historical bare `canonical_tree_code` string was globally injective
+across different orders. `P18` and `P19` expose a cross-order string collision even though they
+are non-isomorphic by order. Historical corpus rows already carry `order`, so TF0-TF3 hashes are
+preserved. TF4 adds `canonical_tree_identity = (order, canonical_tree_code)` for cross-order
+identity checks rather than changing the legacy encoding. This process failure is recorded
+append-only in `docs/FAILURE_AND_LESSON_LEDGER.md`.
+
+Relevant validation runs at this handover stage:
+
+- pre-TF4 main validation: `36917219570`
+- initial TF4 diagnostic: `36972524602`
+- refined TF4 diagnostic: `36973194898`
+- first TF4 freeze validation failure: `36974147991`
+- cross-order identity helper syntax failure: `36974559986`
+
+Run `36974559986` was a collection-time implementation error: the new helper was initially committed with literal escaped newline text. It produced no diagnostic or scientific evidence and was corrected without changing the TF4 scientific freeze.
+
+The corrected freeze/PR validation and post-merge run are reported in the session closeout.
+
+## Next session
+
+Do not redesign TF4-0001.
+
+Verify the then-current `main` HEAD and CI, reproduce the frozen spec/runner checks, and execute the
+already-frozen TF4-0001 runner from an exact source commit. Preserve this ordering:
+
+pairwise discovery -> exact cross-run dedup -> permanent IDs -> discovery reevaluation -> exposed K1
+domain gate -> candidate-batch hash/freeze -> fresh order-14 construction/evaluation -> exact frozen
+TF4 hostile set for holdout survivors -> mathematical interpretation.
+
+Do not treat burned orders 1-13 or old hostile trees as fresh evidence. Do not tune pairwise feature
+pairs, coefficients, thresholds, candidate count, or the order-14 holdout after seeing output. Do not
+perform broad prior-art search unless a candidate independently reaches `MATHEMATICALLY_INTERESTING`.
+
+---
+
 # TF3 handover
 
 TF3-0001 is complete as a controlled discovery/falsification experiment. TF0, TF1, TF2, and the
