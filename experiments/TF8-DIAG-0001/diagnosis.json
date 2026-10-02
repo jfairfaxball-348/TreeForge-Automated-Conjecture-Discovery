@@ -1,0 +1,173 @@
+{
+  "analysis_id": "TF8-DIAG-0001",
+  "burned_data_boundary": {
+    "exhaustive_orders": [
+      1,
+      14
+    ],
+    "orders_at_least_15": "untouched",
+    "tf2_tf3_tf4_hostile_sets": "burned",
+    "tf5_family_instances": "burned interpretation data"
+  },
+  "candidate_consequences": {
+    "lifecycle_revisions": [],
+    "reason": "The equality theorem characterizes the sharp lower envelope of MIS at fixed support count but does not prove or refute any of the 18 surviving domination facets. Their coefficients are not reopened or mined.",
+    "remaining_mis_survivors": 18
+  },
+  "classification": "STRUCTURAL_EQUALITY_CHARACTERIZATION_NO_SCIENTIFIC_EXPERIMENT",
+  "coordinate_decision": {
+    "duplicate_leaf_reduction": "STRUCTURAL_QUOTIENT_NOT_NEW_DISCOVERY_COORDINATE",
+    "raw_maximal_independent_set_count": "RETAIN_UNCHANGED",
+    "reason": "i(T[S]) is canonical in the proof but intentionally discards core-completion multiplicity, while twin-leaf reduction preserves m and s but changes other discovery coordinates. Neither supplies an independent reason that domination should be linear in a replacement feature.",
+    "support_forest_independent_set_count": "STRUCTURALLY_CANONICAL_LOWER_ENVELOPE_ONLY"
+  },
+  "decision": {
+    "candidate_ids_allocated": [],
+    "experiment_registry_updated": false,
+    "new_experiment_frozen": false,
+    "next_session_recommendation": "Keep orders >=15 untouched and the 18 TF4 MIS survivors archived. If the equality theorem is pursued further, the next defensible session is a bounded prior-art audit of this fixed-support/equality result before any theorem-repository decision, not a new discovery experiment.",
+    "raw_mis_coordinate_changed": false,
+    "reason": "The fixed-support extremal problem is structurally complete: the only minimizers for s>=3 are duplicate-leaf blowups of path coronas. This is meaningful theorem content but does not independently select a new TreeForge discovery axis.",
+    "tf4_mis_fan_reopened": false,
+    "theorem_repository_created": false
+  },
+  "exposed_computational_check": {
+    "classification": "burned/exposed interpretation data only; not proof",
+    "fixed_support_characterization_failures_for_s_at_least_3": 0,
+    "fixed_support_equality_counts_by_s_and_order": {
+      "3": {
+        "10": 9,
+        "11": 12,
+        "12": 16,
+        "13": 20,
+        "14": 25,
+        "6": 1,
+        "7": 2,
+        "8": 4,
+        "9": 6
+      },
+      "4": {
+        "10": 6,
+        "11": 10,
+        "12": 19,
+        "13": 28,
+        "14": 44,
+        "8": 1,
+        "9": 2
+      },
+      "5": {
+        "10": 1,
+        "11": 3,
+        "12": 9,
+        "13": 19,
+        "14": 38
+      },
+      "6": {
+        "12": 1,
+        "13": 3,
+        "14": 12
+      },
+      "7": {
+        "14": 1
+      }
+    },
+    "generated_leaf_blowup_family_match_failures": 0,
+    "injection_equality_equivalence_failures_excluding_P2": 0,
+    "injection_equality_tree_count_excluding_P2": 2327,
+    "internal_core_examples": {
+      "P5": {
+        "core_edge_count": 0,
+        "core_vertex_count": 1,
+        "maximal_independent_set_count": 4,
+        "order": 5,
+        "support_forest_independent_set_count": 4,
+        "support_vertex_count": 2
+      },
+      "P6": {
+        "core_edge_count": 1,
+        "core_vertex_count": 2,
+        "maximal_independent_set_count": 5,
+        "order": 6,
+        "support_forest_independent_set_count": 4,
+        "support_vertex_count": 2
+      },
+      "interpretation": "P5 has one core vertex and equality m=i(T[S]); P6 has a core edge and strict inequality. Internal vertices alone do not break equality; adjacency inside the core does."
+    },
+    "orders": [
+      1,
+      14
+    ],
+    "support_forest_path_equality_failures": 0,
+    "tree_count": 5447
+  },
+  "fresh_data_consumed": false,
+  "provenance_verification": {
+    "highest_allocated_candidate": "TF-001157",
+    "next_permanent_candidate_id": "TF-001158",
+    "starting_main_ci_run": 37050985352,
+    "starting_main_head": "cdfa0cdd86aee25498c7315dfcb083cfb1c5a7c1",
+    "tf001028": {
+      "revision": 7,
+      "state": "KNOWN_RESULT"
+    },
+    "tf001034": {
+      "revision": 6,
+      "state": "ARTIFACT_OF_FEATURE_SET"
+    },
+    "tf001037": {
+      "revision": 6,
+      "state": "ARTIFACT_OF_FEATURE_SET"
+    },
+    "tf001091": {
+      "revision": 5,
+      "state": "ADVERSARIAL_PASSED"
+    },
+    "tf001095": {
+      "revision": 5,
+      "state": "ADVERSARIAL_PASSED"
+    },
+    "tf4_experiment_registry_records": 1,
+    "tf4_mis_fan": {
+      "adversarial_passed": 18,
+      "artifact_of_feature_set": 2,
+      "candidate_ids": [
+        "TF-001033",
+        "TF-001034",
+        "TF-001037",
+        "TF-001090",
+        "TF-001091",
+        "TF-001093",
+        "TF-001095",
+        "TF-001098",
+        "TF-001099",
+        "TF-001134",
+        "TF-001135",
+        "TF-001137",
+        "TF-001139",
+        "TF-001140",
+        "TF-001141",
+        "TF-001142",
+        "TF-001144",
+        "TF-001145",
+        "TF-001154",
+        "TF-001155"
+      ]
+    },
+    "tf5_tf6_tf7_tf8_scientific_experiment_records": 0,
+    "tf7_pr": 13
+  },
+  "structural_result": {
+    "fixed_support_equality_for_s_at_least_3": "m(T)=F_(s(T)+2) iff T is obtained from P_s by attaching at least one private leaf to every path vertex and adding no other vertices.",
+    "forest_equality": "For every forest F on s vertices, i(F)=F_(s+2) iff F is the path P_s, with P_0 interpreted as the empty forest.",
+    "notation": "m(T)=maximal independent set count; S(T)=support vertices; L(T)=leaves; C(T)=V(T) minus (S(T) union L(T)); i(F)=all independent sets of a forest F.",
+    "small_support_cases": {
+      "s=0": "K1 is the unique tree and has m=1.",
+      "s=1": "The equality trees are exactly stars K_(1,k) with k>=2; all have m=2.",
+      "s=2": "The global fixed-support minimum is the exceptional P2 with m=2. Among T!=P2, the Fibonacci-chain equality m=3 occurs exactly for a support edge with at least one private leaf attached to each endpoint."
+    },
+    "support_injection_equality": "For every finite tree T other than P2, m(T)=i(T[S(T)]) iff the induced core T[C(T)] is edgeless. Equivalently every component of the non-support/non-leaf core is a single vertex.",
+    "support_injection_mechanism": "Maximal independent sets partition by I=M intersect S(T). Once I is fixed, leaf membership is forced. For I empty, completions are exactly maximal independent sets of T[C(T)], so any core edge gives at least two completions. If the core is edgeless, each core vertex is forced in exactly when it has no neighbor in I, giving one completion for every independent I subset S(T).",
+    "twin_reduced_form": "After deleting duplicate leaves while retaining one leaf at each support, every s>=3 equality tree reduces to exactly P_s corona K1. Conversely arbitrary duplicate-leaf additions at those supports preserve m and s and remain equality trees.",
+    "why_no_other_core_survives_extremality": "Forest equality forces T[S(T)]=P_s, hence the support-induced subgraph is connected. In a tree, any nonempty core vertex together with an edgeless core would have at least two support neighbors, creating a cycle through the connected support path. Therefore the core is empty."
+  }
+}
