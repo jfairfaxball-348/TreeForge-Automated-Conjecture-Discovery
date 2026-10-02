@@ -1,3 +1,111 @@
+# TF7 support/MIS structural-diagnosis handover
+
+TF7 resolves the two support/MIS dominance conditions left open by TF6 and stops without freezing
+a new scientific experiment.
+
+## Verified starting state
+
+Starting `main` HEAD:
+`3d4b3035301e681a7a5eed0facb2f5068051c746`.
+
+Starting post-TF6 `main` CI:
+`37047300108`, successful. PR #12 is merged.
+
+TF-001028 remains `KNOWN_RESULT` revision 7. TF-001157 remains the highest allocated candidate,
+so TF-001158 remains next. The experiment registry has exactly one `TF4-0001` record and no
+TF5, TF6, or TF7 scientific experiment record. Orders 1--14 remain burned and orders at least 15
+remain untouched.
+
+## Structural result
+
+Write (m(T)) for maximal-independent-set count, (S(T)) for the support-vertex set, and
+(s(T)=|S(T)|). For every finite tree except (P_2),
+
+[
+m(T)\ge i(T[S(T)])\ge F_{s(T)+2}.
+]
+
+For the first inequality, take any independent set (I) of the support-induced forest, include
+(I) together with every leaf whose support is outside (I), then extend to a maximal independent
+set. Different (I) force different intersections with the support set, so they seed disjoint
+nonempty classes of maximal independent sets.
+
+For the second inequality, every forest on (s) vertices has at least (F_{s+2}) independent
+sets. Induct using an isolated vertex, or a leaf (v) with neighbor (u):
+(i(F)=i(F-v)+i(F-\{u,v\})).
+
+The explicit exception is (P_2): both vertices are leaves and support vertices, with (s=2) and
+(m=2).
+
+The exact fixed-support minimum over all finite trees is therefore (1) at (s=0), (2) at
+(s=1), (2) at (s=2), and (F_{s+2}) for every (s\ge3). The path corona
+(P_s\circ K_1) attains the Fibonacci branch. Duplicate leaves at an existing support may be
+stripped down to one without changing either (m) or (s).
+
+## TF6 dominance conditions
+
+Both previously finite-only conditions are now proved universally:
+
+[
+m(T)\ge3s(T)-4,
+qquad
+m(T)\ge5s(T)-12.
+]
+
+Hence TF-001091 universally pointwise dominates TF-001034, and TF-001095 universally pointwise
+dominates TF-001037.
+
+TF-001034 and TF-001037 receive append-only revision 6 in
+`ARTIFACT_OF_FEATURE_SET`. The stronger siblings TF-001091 and TF-001095 remain revision-5
+`ADVERSARIAL_PASSED`: TF7 proves only the dominance relation, not either domination-number
+candidate itself.
+
+Historical TF4 and TF6 records remain unchanged. The TF6 deterministic reproducer is pinned to its
+revision-5 candidate snapshot so later legitimate lifecycle revisions do not rewrite TF6 history.
+
+## Exposed computation
+
+The TF7 deterministic reproducer uses only all 5,447 already exposed unlabeled trees through order
+14. It finds zero failures of either linear inequality, zero failures of the support-forest/Fibonacci
+bound apart from the explicitly excluded (P_2), and exposed fixed-support minima
+(1,2,2,5,8,13,21,34) for support counts (0,ldots,7).
+
+These checks are interpretation data, not the proof. No order 15 tree is inspected.
+
+## Decision
+
+Raw `maximal_independent_set_count`: **retain unchanged**.
+
+Residual MIS fan: **archive as finite geometry** after removing the two universal projection
+artifacts from the active survivor set.
+
+New experiment frozen: **no**.
+
+Fresh exhaustive order consumed: **no**.
+
+New candidate ID allocated: **no**.
+
+Experiment registry updated: **no**.
+
+The fixed-support theorem is genuine structural content, but it does not independently select a
+log/growth normalization, removal, rooted replacement, broader grammar, or other single-axis
+discovery change.
+
+## Next session
+
+Keep orders at least 15 untouched. The fixed-support theorem may support a later pure structural
+equality-classification question, but that is not by itself a reason to reopen the archived MIS fan
+or freeze a TreeForge discovery experiment. A next discovery session should begin only from a
+separately motivated scientific question with one defensible controlled axis.
+
+See `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md` and
+`experiments/TF7-DIAG-0001/diagnosis.json`.
+
+The exact merged final `main` HEAD and final post-merge CI are reported in the session closeout
+because a commit cannot contain its own resulting SHA.
+
+---
+
 # TF6 MIS-coordinate diagnosis handover
 
 TF6 diagnoses `maximal_independent_set_count` using only exposed data and stops without
