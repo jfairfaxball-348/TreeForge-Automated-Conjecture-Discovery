@@ -32,6 +32,8 @@ set. Mathematical interpretation then falsified 3 of those survivors and classif
 `experiments/TF3-0001/RESULTS.md`, `docs/TF3_DIAGNOSTIC.md`, and
 `docs/TF3_EXPERIMENT_FREEZE.md`.
 
+TF4 diagnosed the completed TF3 zero-interest result using only exposed orders 1-13 and committed history. The diagnosis found that 8/12 ratios already appeared exactly in TF2, 9/12 had discovery touch count 1, and 8/12 extremal coefficients drifted by exposed order 13. It also made the literal-domain mismatch explicit: K1 falsifies 5/12 TF3 forms under the stated all-tree hypothesis. TF4 therefore froze `TF4-0001` with one scientific change: fixed pairwise convex-hull generation over all 21 unordered pairs of the same seven features, with exact cross-run deduplication. The target, feature vocabulary, orders 2-10 discovery corpus, TxGraffiti pin, heuristics, post-processors, and all-tree hypothesis remain fixed. Order 14 is reserved as the fresh exhaustive holdout and has only been used for timing without value inspection. TF4-0001 has not been scientifically executed. See `docs/TF4_DIAGNOSTIC.md` and `docs/TF4_EXPERIMENT_FREEZE.md`.
+
 ## Quick start
 
 ```bash
@@ -53,4 +55,4 @@ Reproduce the compact TF1 benchmark with:
 python experiments/benchmark_tf1.py --output /tmp/tf1-benchmark.json
 ```
 
-See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, and `experiments/TF3-0001/RESULTS.md` before adding another discovery experiment.
+See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, and `experiments/TF3-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, and `docs/TF4_EXPERIMENT_FREEZE.md` before adding another discovery experiment.
