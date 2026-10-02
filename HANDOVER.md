@@ -1,3 +1,90 @@
+# TF8 fixed-support equality handover
+
+TF8 completes the equality question left open by TF7 and stops without freezing a new scientific
+experiment.
+
+## Verified starting state
+
+Starting main HEAD: cdfa0cdd86aee25498c7315dfcb083cfb1c5a7c1.
+Starting post-TF7 main CI: 37050985352, successful. PR #13 is merged and its exact head was
+7f1bbe426e25837f41a53672844ffae5c21d3def.
+
+TF-001028 remains KNOWN_RESULT revision 7. TF-001034 and TF-001037 remain
+ARTIFACT_OF_FEATURE_SET revision 6. TF-001091 and TF-001095 remain revision-5
+ADVERSARIAL_PASSED. The TF4 MIS fan therefore remains 18 finite survivors plus two projection
+artifacts. TF-001157 is still the highest allocated candidate and TF-001158 remains next.
+
+The experiment registry still contains exactly one TF4-0001 row and no TF5--TF8 scientific
+experiment row. Orders 1--14 remain burned; orders at least 15 remain untouched.
+
+## Equality theorems
+
+For every forest F on s vertices, i(F)=F_(s+2) if and only if F=P_s, with P_0 empty.
+Equality cannot contain an isolated vertex, and equality in the leaf recurrence forces both
+inductive subforests to be paths; the leaf must attach at an endpoint.
+
+For every finite tree T other than P2, define the core C(T) as the vertices that are neither
+supports nor leaves. Then
+
+m(T)=i(T[S(T)])
+
+if and only if T[C(T)] is edgeless. With the support seed empty, completions are exactly maximal
+independent sets of the core, so any core edge gives multiplicity. Conversely an edgeless core
+forces every core choice uniquely once the support intersection is fixed.
+
+Combining the two mechanisms gives the exact equality class for s>=3:
+
+m(T)=F_(s(T)+2)
+
+if and only if T is obtained from P_s by attaching at least one private leaf to every path vertex
+and adding no other vertices. Thus the minimizers are exactly duplicate-leaf blowups of
+P_s corona K1, and twin-leaf reduction leaves the unique reduced minimizer P_s corona K1.
+
+Small cases remain: K1 for s=0; stars K_(1,k), k>=2, for s=1; and the exceptional P2 gives the
+global s=2 minimum 2, while the non-P2 Fibonacci equality value 3 is attained exactly by a support
+edge with at least one private leaf at both endpoints.
+
+## Exposed computation
+
+The deterministic reproducer uses only all 5,447 already exposed trees of orders 1--14. It finds
+zero failures of the injection-equality criterion, zero failures of path uniqueness for the forest
+bound, and zero failures of the final path-leaf-blowup characterization. Generated positive
+leaf-multiplicity path blowups match every exposed extremizer exactly up to isomorphism.
+
+These checks are interpretation data, not proof. No order 15 tree is inspected.
+
+## Decision
+
+Candidate lifecycle revisions: none.
+
+Raw maximal_independent_set_count: retain unchanged.
+
+Support-forest independent-set count: canonical lower-envelope statistic, not adopted as a new
+discovery coordinate.
+
+Residual TF4 MIS fan: keep the 18 finite survivors archived; do not reopen coefficient mining.
+
+New experiment frozen: no.
+Fresh order consumed: no.
+New candidate ID allocated: no.
+Candidate registry updated: no.
+Experiment registry updated: no.
+Theorem repository created: no.
+
+## Next session
+
+Keep orders at least 15 untouched. If the fixed-support theorem is pursued further, the next
+defensible session is a bounded prior-art audit of the theorem and equality characterization before
+any separate theorem-repository decision. It is not a reason to reopen the archived MIS fan or to
+freeze a new TreeForge discovery experiment.
+
+See docs/TF8_FIXED_SUPPORT_EQUALITY.md and experiments/TF8-DIAG-0001/diagnosis.json.
+
+The exact merged final main HEAD and final post-merge CI are reported in the session closeout
+because a commit cannot contain its own resulting SHA.
+
+---
+
 # TF7 support/MIS structural-diagnosis handover
 
 TF7 resolves the two support/MIS dominance conditions left open by TF6 and stops without freezing
