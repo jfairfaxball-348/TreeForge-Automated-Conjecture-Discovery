@@ -239,3 +239,20 @@ audit for a simple two-parameter candidate should include fixed-parameter extrem
 not only exact algebraic-string variants. TF5 records the candidate append-only as KNOWN_RESULT;
 no novelty or theorem-repository claim is made.
 
+## 2026-10-02 — TF5 reproducibility test initially compared different summary schemas
+
+GitHub Actions run `37031645190` at commit
+`5e340e069be3a9ed350bb4b8d0ffa663bdfc3630` reached the unit-test step and failed
+`tests/test_tf5_analysis.py::test_tf5_summary_reproduces_from_exposed_data`. The deterministic
+TF5 analysis helper emitted an extra per-candidate `stability_details` field that the committed
+compact `analysis_summary.json` intentionally omitted. The substantive derived values shown in
+the comparison agreed; this was a serialization-schema mismatch, not a counterexample, proof
+failure, lifecycle change, or fresh-data event.
+
+Corrective action: remove the nonessential verbose field from the generated compact summary so the
+reproducer and committed artifact use one schema. Commit
+`5adee4117017de3765b63f08287e78eba0d2b40f` applied that correction and CI run
+`37031706953` then passed. TF-001028's statement, prior-art implication, revision-7
+`KNOWN_RESULT` classification, exposed/family analyses, MIS-facet diagnosis, and decision not to
+freeze a new experiment were unchanged.
+
