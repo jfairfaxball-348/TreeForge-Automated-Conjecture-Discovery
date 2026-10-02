@@ -256,3 +256,20 @@ reproducer and committed artifact use one schema. Commit
 `KNOWN_RESULT` classification, exposed/family analyses, MIS-facet diagnosis, and decision not to
 freeze a new experiment were unchanged.
 
+
+## 2026-10-02 — TF6 diagnosis entry-point failure
+
+- GitHub Actions run `37045955391` reached the new TF6 exposed-data diagnosis only after unit
+  tests, compileall, Ruff, deterministic calibration, TF2 diagnosis, and TF4 diagnosis had all
+  passed.
+- The TF6 step then failed immediately with
+  `ModuleNotFoundError: No module named 'experiments'` because the workflow invoked
+  `python experiments/tf6_mis_diagnosis.py` while that script imports the existing
+  `experiments.tf5_analysis` module.
+- This was an entry-point/import-path mistake, not a mathematical failure, candidate event, data
+  event, or TxGraffiti event. The TF6 script had not begun exposed-corpus construction and no fresh
+  data existed to consume.
+- Fix: invoke the diagnosis as a module,
+  `python -m experiments.tf6_mis_diagnosis`, matching the repository's earlier TF3 lesson about
+  package-aware scientific entry points.
+- Scientific consequence: none. TF0--TF5 provenance and all frozen data boundaries remain unchanged.
