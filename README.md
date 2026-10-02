@@ -81,6 +81,22 @@ lifecycle change, raw MIS is retained, no new experiment is frozen, TF-001158 re
 orders at least 15 remain untouched. See docs/TF8_FIXED_SUPPORT_EQUALITY.md and
 experiments/TF8-DIAG-0001/diagnosis.json.
 
+
+TF9 completes a bounded prior-art and theorem-significance audit of the TF7/TF8 fixed-support
+result. The forest independent-set minimum is classical via Prodinger--Tichy (1982). More
+decisively, Tian--Tu (2025) prove the stronger tree bound
+`m(T) >= F_(n-alpha(T)+2)`; for trees `n-alpha=nu`, and for `T != P2` one private
+support--leaf edge per support gives `s(T)<=nu(T)`. Thus the TF7 fixed-support **value** theorem
+is a direct corollary of published stronger prior art. Taletskii--Malyshev (2022) also explicitly
+record `i(H)=mi(H corona K1)` and twin-leaf invariance. The bounded audit did not locate an exact
+published counterpart of TF8's core-edgeless injection-equality criterion or the complete only-if
+minimizer classification, but negative search is not novelty evidence. Because the numerical theorem
+is subsumed and the remaining equality-only sharpening is short and elementary, TF9 keeps the result
+inside TreeForge and does not create a separate theorem project. No candidate lifecycle event,
+experiment, new coordinate, or fresh order occurs; TF-001158 remains next and orders at least 15
+remain untouched. See `docs/TF9_FIXED_SUPPORT_PRIOR_ART.md` and
+`experiments/TF9-AUDIT-0001/audit_summary.json`.
+
 ## Quick start
 
 ```bash
@@ -102,4 +118,4 @@ Reproduce the compact TF1 benchmark with:
 python experiments/benchmark_tf1.py --output /tmp/tf1-benchmark.json
 ```
 
-See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, `docs/TF4_EXPERIMENT_FREEZE.md`, `docs/TF5_TF001028_ANALYSIS.md`, `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`, and `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md`, plus `docs/TF8_FIXED_SUPPORT_EQUALITY.md`, before adding another discovery experiment.
+See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, `docs/TF4_EXPERIMENT_FREEZE.md`, `docs/TF5_TF001028_ANALYSIS.md`, `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`, and `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md`, plus `docs/TF8_FIXED_SUPPORT_EQUALITY.md` and `docs/TF9_FIXED_SUPPORT_PRIOR_ART.md`, before adding another discovery experiment.
