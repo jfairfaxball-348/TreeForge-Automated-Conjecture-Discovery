@@ -64,3 +64,11 @@ jobs:
         with:
           name: tf7-support-mis-diagnosis
           path: /tmp/tf7-support-mis-diagnosis.json
+      - name: TF8 fixed-support equality diagnosis
+        run: |
+          python -m experiments.tf8_fixed_support_equality --output /tmp/tf8-fixed-support-equality.json
+          test -s /tmp/tf8-fixed-support-equality.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf8-fixed-support-equality
+          path: /tmp/tf8-fixed-support-equality.json
