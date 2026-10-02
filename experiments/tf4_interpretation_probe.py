@@ -40,7 +40,7 @@ def run(output: Path) -> dict[str, object]:
         11,
         13,
         invariants,
-        role="interpretation_exposed",
+        role="discovery",
         source_commit=SCIENTIFIC_SOURCE,
         experiment_id=EXPERIMENT_ID,
     )
