@@ -48,6 +48,17 @@ equality-supported through exposed orders 11-14. That stability is not enough to
 or transforming the MIS-count feature, so TF5 freezes no new experiment. See
 docs/TF5_TF001028_ANALYSIS.md.
 
+TF6 completes the requested exposed-data diagnosis of `maximal_independent_set_count`.
+A three-state independent-domination tree DP now makes the coordinate's local recurrence explicit
+and replaces the value-equivalent brute-force core implementation. The 20 surviving TF4 MIS facets
+remain supporting and equality-attaining through every exposed extension to order 14; the only
+strict exposed dominance relations are TF-001091 over TF-001034 and TF-001095 over TF-001037.
+A bounded structural literature check confirms that exponential MIS scale is intrinsic, but log,
+per-vertex growth, nth-root, extremal-ratio, removal, and rooted-state replacements are not
+independently canonical linear discovery coordinates. TF6 therefore retains raw MIS count, freezes
+no new experiment, allocates no candidate ID, and leaves every order at least 15 untouched. See
+`docs/TF6_MIS_COORDINATE_DIAGNOSIS.md` and `experiments/TF6-DIAG-0001/diagnosis.json`.
+
 ## Quick start
 
 ```bash
@@ -69,4 +80,4 @@ Reproduce the compact TF1 benchmark with:
 python experiments/benchmark_tf1.py --output /tmp/tf1-benchmark.json
 ```
 
-See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, and `docs/TF4_EXPERIMENT_FREEZE.md` before adding another discovery experiment.
+See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, `docs/TF4_EXPERIMENT_FREEZE.md`, `docs/TF5_TF001028_ANALYSIS.md`, and `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md` before adding another discovery experiment.

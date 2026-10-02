@@ -15,7 +15,7 @@ Every invariant has a mathematical definition, provenance, implementation, exact
 | `matching_number` | maximum matching size | exact integer | tree dynamic program |
 | `independence_number` | maximum independent-set size | exact integer | independent tree dynamic program |
 | `domination_number` | minimum dominating-set size | exact integer | exhaustive subset search; deliberately small-order use |
-| `maximal_independent_set_count` | number of inclusion-maximal independent sets | exact integer | exhaustive subset search; deliberately small-order use |
+| `maximal_independent_set_count` | number of inclusion-maximal independent sets (equivalently independent dominating sets) | exact integer | three-state rooted tree dynamic program; TF6 replacement is value-equivalent to the earlier exhaustive implementation |
 | `wiener_index` | sum of distances over unordered vertex pairs | exact integer | all-pairs tree distances |
 | `cherry_count` | number of unordered leaf pairs sharing a support vertex | exact integer | definition |
 

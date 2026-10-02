@@ -48,3 +48,11 @@ jobs:
         with:
           name: tf4-diagnostic
           path: /tmp/tf4-diagnostic.json
+      - name: TF6 exposed MIS-coordinate diagnosis
+        run: |
+          python -m experiments.tf6_mis_diagnosis --output /tmp/tf6-mis-diagnosis.json
+          test -s /tmp/tf6-mis-diagnosis.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf6-mis-diagnosis
+          path: /tmp/tf6-mis-diagnosis.json
