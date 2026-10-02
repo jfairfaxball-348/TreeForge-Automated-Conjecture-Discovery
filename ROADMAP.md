@@ -153,7 +153,7 @@ See docs/TF5_TF001028_ANALYSIS.md and experiments/TF5-TF001028/analysis_summary.
 
 ## TF6 — MIS-count coordinate diagnosis
 
-Status: **COMPLETE (2026-10-02), pending final PR validation/merge.**
+Status: **COMPLETE (2026-10-02).**
 
 TF6 uses only exposed orders 1--14 and existing burned interpretation data to diagnose
 `maximal_independent_set_count`. The exact three-state independent-domination recurrence explains
@@ -176,3 +176,34 @@ Decision: retain raw MIS count for now; freeze no TF6 scientific experiment; all
 ID; consume no fresh order. TF-001158 remains next and orders at least 15 remain untouched.
 
 See `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`.
+
+## TF7 — support/MIS structural diagnosis
+
+Status: **COMPLETE (2026-10-02), pending final PR validation/merge.**
+
+TF7 attacks the only two strict exposed-corpus dominance conditions isolated by TF6 without using
+order 15 or any other fresh exhaustive corpus. The key structural result is stronger than either
+condition. If (S(T)) is the support-vertex set, (s=|S(T)|), and (m(T)) is the number of
+maximal independent sets, then every tree other than (P_2) satisfies
+
+(m(T) \ge i(T[S(T)]) \ge F_{s+2}).
+
+The first inequality comes from seeding disjoint classes of maximal independent sets with independent
+sets of the support-induced forest. The second is the sharp minimum number of independent sets in an
+(s)-vertex forest. Path coronas (P_s\circ K_1) attain the Fibonacci value for every (s\ge3);
+(P_2) is the unique support/leaf-overlap exception relevant to the formula. Thus the exact
+fixed-support minimum is (1,2,2,F_{s+2}) for (s=0,1,2,s\ge3).
+
+Consequently (m\ge3s-4) and (m\ge5s-12) are proved for every finite tree. The resulting
+candidate implications are append-only: TF-001034 becomes `ARTIFACT_OF_FEATURE_SET` revision 6
+because TF-001091 is universally pointwise stronger, and TF-001037 receives the same state at
+revision 6 because TF-001095 is universally pointwise stronger. TF-001091 and TF-001095 themselves
+remain revision-5 `ADVERSARIAL_PASSED`; TF7 does not prove either domination-number statement.
+
+Raw MIS remains retained. The residual 18 MIS facets stay archived as finite geometry. No TF7
+scientific experiment is frozen, no candidate ID is allocated, the experiment registry is unchanged,
+TF-001158 remains next, and orders at least 15 remain untouched.
+
+See `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md` and
+`experiments/TF7-DIAG-0001/diagnosis.json`.
+
