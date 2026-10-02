@@ -1,0 +1,38 @@
+name: TF5 registry materialization
+
+on:
+  push:
+    branches:
+      - tf5-tf001028-resolution
+
+permissions:
+  contents: write
+
+jobs:
+  append:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tf5-tf001028-resolution
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install TreeForge
+        run: python -m pip install -e .
+      - name: Append TF-001028 lifecycle event
+        run: python experiments/tf5_materialize_registry.py
+      - name: Commit append-only registry update
+        shell: bash
+        run: |
+          if git diff --quiet -- data/registry/candidates.jsonl; then
+            echo "Registry already materialized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/registry/candidates.jsonl
+          git commit -m "TF5: append TF-001028 known-result revision [skip ci]"
+          git push origin HEAD:tf5-tf001028-resolution
