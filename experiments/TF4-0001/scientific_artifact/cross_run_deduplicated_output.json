@@ -1,0 +1,3801 @@
+[
+  {
+    "cross_run_index": 1,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((7/8 * order) + 5/4) + (-1 * leaf_count))",
+      "discovery_touch_count": 28,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((7/8 * order) + 5/4) + (-1 * leaf_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((7/8 * order) + 5/4) + (-1 * leaf_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "leaf_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((7/8 * order) + 5/4) + (-1 * leaf_count)))"
+  },
+  {
+    "cross_run_index": 2,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((1/3 * order) + 2/3) + (-1/3 * leaf_count))",
+      "discovery_touch_count": 20,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((1/3 * order) + 2/3) + (-1/3 * leaf_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((1/3 * order) + 2/3) + (-1/3 * leaf_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "leaf_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((1/3 * order) + 2/3) + (-1/3 * leaf_count)))"
+  },
+  {
+    "cross_run_index": 3,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/3 * leaf_count) + (1/3 * order))",
+      "discovery_touch_count": 11,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/3 * leaf_count) + (1/3 * order))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * leaf_count) + (1/3 * order)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "leaf_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * leaf_count) + (1/3 * order)))"
+  },
+  {
+    "cross_run_index": 4,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= 1",
+      "discovery_touch_count": 9,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "1"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= 1)",
+      "\u2200 T: (True) \u2192 (domination_number >= 1)",
+      "\u2200 T: (True) \u2192 (domination_number >= 1)",
+      "\u2200 T: (True) \u2192 (domination_number >= 1)",
+      "\u2200 T: (True) \u2192 (domination_number >= 1)",
+      "\u2200 T: (True) \u2192 (domination_number >= 1)",
+      "\u2200 T: (True) \u2192 (domination_number >= 1)",
+      "\u2200 T: (True) \u2192 (domination_number >= 1)"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "leaf_count"
+      ],
+      [
+        "order",
+        "support_vertex_count"
+      ],
+      [
+        "order",
+        "diameter"
+      ],
+      [
+        "leaf_count",
+        "support_vertex_count"
+      ],
+      [
+        "leaf_count",
+        "max_degree"
+      ],
+      [
+        "leaf_count",
+        "diameter"
+      ],
+      [
+        "support_vertex_count",
+        "max_degree"
+      ],
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= 1)"
+  },
+  {
+    "cross_run_index": 5,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (1/2 * order)",
+      "discovery_touch_count": 8,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(1/2 * order)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (1/2 * order))",
+      "\u2200 T: (True) \u2192 (domination_number <= (1/2 * order))",
+      "\u2200 T: (True) \u2192 (domination_number <= (1/2 * order))",
+      "\u2200 T: (True) \u2192 (domination_number <= (1/2 * order))",
+      "\u2200 T: (True) \u2192 (domination_number <= (1/2 * order))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "leaf_count"
+      ],
+      [
+        "order",
+        "support_vertex_count"
+      ],
+      [
+        "order",
+        "max_degree"
+      ],
+      [
+        "order",
+        "diameter"
+      ],
+      [
+        "order",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (1/2 * order))"
+  },
+  {
+    "cross_run_index": 6,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-1 * leaf_count) + (-4 + order))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-1 * leaf_count) + (-4 + order))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-1 * leaf_count) + (-4 + order)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "leaf_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-1 * leaf_count) + (-4 + order)))"
+  },
+  {
+    "cross_run_index": 7,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((1/8 * order) + -5/4) + support_vertex_count)",
+      "discovery_touch_count": 91,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((1/8 * order) + -5/4) + support_vertex_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((1/8 * order) + -5/4) + support_vertex_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "support_vertex_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((1/8 * order) + -5/4) + support_vertex_count))"
+  },
+  {
+    "cross_run_index": 8,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/3 * order) + (1/3 * support_vertex_count))",
+      "discovery_touch_count": 11,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/3 * order) + (1/3 * support_vertex_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * order) + (1/3 * support_vertex_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "support_vertex_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * order) + (1/3 * support_vertex_count)))"
+  },
+  {
+    "cross_run_index": 9,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((3 * support_vertex_count) + -2)",
+      "discovery_touch_count": 9,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((3 * support_vertex_count) + -2)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((3 * support_vertex_count) + -2))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((3 * support_vertex_count) + -2))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((3 * support_vertex_count) + -2))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "support_vertex_count"
+      ],
+      [
+        "leaf_count",
+        "support_vertex_count"
+      ],
+      [
+        "support_vertex_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((3 * support_vertex_count) + -2))"
+  },
+  {
+    "cross_run_index": 10,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((-1 * max_degree) + order)",
+      "discovery_touch_count": 25,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((-1 * max_degree) + order)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((-1 * max_degree) + order))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((-1 * max_degree) + order))"
+  },
+  {
+    "cross_run_index": 11,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-1 * max_degree) + (-4 + order))",
+      "discovery_touch_count": 15,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-1 * max_degree) + (-4 + order))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-1 * max_degree) + (-4 + order)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-1 * max_degree) + (-4 + order)))"
+  },
+  {
+    "cross_run_index": 12,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((1/5 * order) + 4/5) + (-1/5 * max_degree))",
+      "discovery_touch_count": 10,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((1/5 * order) + 4/5) + (-1/5 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((1/5 * order) + 4/5) + (-1/5 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((1/5 * order) + 4/5) + (-1/5 * max_degree)))"
+  },
+  {
+    "cross_run_index": 13,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/4 * order) + -1/2) + max_degree)",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/4 * order) + -1/2) + max_degree)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/4 * order) + -1/2) + max_degree))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/4 * order) + -1/2) + max_degree))"
+  },
+  {
+    "cross_run_index": 14,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-5 * max_degree) + (4 + order))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-5 * max_degree) + (4 + order))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-5 * max_degree) + (4 + order)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-5 * max_degree) + (4 + order)))"
+  },
+  {
+    "cross_run_index": 15,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((5/13 * order) + 12/13) + (-9/13 * max_degree))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((5/13 * order) + 12/13) + (-9/13 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((5/13 * order) + 12/13) + (-9/13 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((5/13 * order) + 12/13) + (-9/13 * max_degree)))"
+  },
+  {
+    "cross_run_index": 16,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((1/3 * diameter) + 1/3)",
+      "discovery_touch_count": 20,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((1/3 * diameter) + 1/3)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/3 * diameter) + 1/3))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/3 * diameter) + 1/3))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/3 * diameter) + 1/3))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/3 * diameter) + 1/3))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/3 * diameter) + 1/3))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/3 * diameter) + 1/3))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "diameter"
+      ],
+      [
+        "leaf_count",
+        "diameter"
+      ],
+      [
+        "support_vertex_count",
+        "diameter"
+      ],
+      [
+        "max_degree",
+        "diameter"
+      ],
+      [
+        "diameter",
+        "matching_number"
+      ],
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((1/3 * diameter) + 1/3))"
+  },
+  {
+    "cross_run_index": 17,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((2/3 * order) + 1/3) + (-1/3 * diameter))",
+      "discovery_touch_count": 7,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((2/3 * order) + 1/3) + (-1/3 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((2/3 * order) + 1/3) + (-1/3 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((2/3 * order) + 1/3) + (-1/3 * diameter)))"
+  },
+  {
+    "cross_run_index": 18,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (-5 + diameter)",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(-5 + diameter)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (-5 + diameter))",
+      "\u2200 T: (True) \u2192 (domination_number >= (-5 + diameter))",
+      "\u2200 T: (True) \u2192 (domination_number >= (-5 + diameter))",
+      "\u2200 T: (True) \u2192 (domination_number >= (-5 + diameter))",
+      "\u2200 T: (True) \u2192 (domination_number >= (-5 + diameter))",
+      "\u2200 T: (True) \u2192 (domination_number >= (-5 + diameter))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "diameter"
+      ],
+      [
+        "leaf_count",
+        "diameter"
+      ],
+      [
+        "support_vertex_count",
+        "diameter"
+      ],
+      [
+        "max_degree",
+        "diameter"
+      ],
+      [
+        "diameter",
+        "matching_number"
+      ],
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (-5 + diameter))"
+  },
+  {
+    "cross_run_index": 19,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/4 * order) + -1/2) + (2 * diameter))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/4 * order) + -1/2) + (2 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/4 * order) + -1/2) + (2 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/4 * order) + -1/2) + (2 * diameter)))"
+  },
+  {
+    "cross_run_index": 20,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= matching_number",
+      "discovery_touch_count": 149,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "matching_number"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= matching_number)",
+      "\u2200 T: (True) \u2192 (domination_number <= matching_number)",
+      "\u2200 T: (True) \u2192 (domination_number <= matching_number)",
+      "\u2200 T: (True) \u2192 (domination_number <= matching_number)",
+      "\u2200 T: (True) \u2192 (domination_number <= matching_number)",
+      "\u2200 T: (True) \u2192 (domination_number <= matching_number)"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "matching_number"
+      ],
+      [
+        "leaf_count",
+        "matching_number"
+      ],
+      [
+        "support_vertex_count",
+        "matching_number"
+      ],
+      [
+        "max_degree",
+        "matching_number"
+      ],
+      [
+        "diameter",
+        "matching_number"
+      ],
+      [
+        "matching_number",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= matching_number)"
+  },
+  {
+    "cross_run_index": 21,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((1/2 * matching_number) + 1/2)",
+      "discovery_touch_count": 19,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((1/2 * matching_number) + 1/2)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/2 * matching_number) + 1/2))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/2 * matching_number) + 1/2))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/2 * matching_number) + 1/2))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/2 * matching_number) + 1/2))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/2 * matching_number) + 1/2))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/2 * matching_number) + 1/2))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "matching_number"
+      ],
+      [
+        "leaf_count",
+        "matching_number"
+      ],
+      [
+        "support_vertex_count",
+        "matching_number"
+      ],
+      [
+        "max_degree",
+        "matching_number"
+      ],
+      [
+        "diameter",
+        "matching_number"
+      ],
+      [
+        "matching_number",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((1/2 * matching_number) + 1/2))"
+  },
+  {
+    "cross_run_index": 22,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/2 * maximal_independent_set_count) + 1/2)",
+      "discovery_touch_count": 38,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/2 * maximal_independent_set_count) + 1/2)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/2 * maximal_independent_set_count) + 1/2))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/2 * maximal_independent_set_count) + 1/2))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/2 * maximal_independent_set_count) + 1/2))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "maximal_independent_set_count"
+      ],
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/2 * maximal_independent_set_count) + 1/2))"
+  },
+  {
+    "cross_run_index": 23,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/3 * maximal_independent_set_count) + 4/3)",
+      "discovery_touch_count": 31,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/3 * maximal_independent_set_count) + 4/3)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * maximal_independent_set_count) + 4/3))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * maximal_independent_set_count) + 4/3))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * maximal_independent_set_count) + 4/3))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "maximal_independent_set_count"
+      ],
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * maximal_independent_set_count) + 4/3))"
+  },
+  {
+    "cross_run_index": 24,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (-1 + maximal_independent_set_count)",
+      "discovery_touch_count": 25,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(-1 + maximal_independent_set_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (-1 + maximal_independent_set_count))",
+      "\u2200 T: (True) \u2192 (domination_number <= (-1 + maximal_independent_set_count))",
+      "\u2200 T: (True) \u2192 (domination_number <= (-1 + maximal_independent_set_count))",
+      "\u2200 T: (True) \u2192 (domination_number <= (-1 + maximal_independent_set_count))",
+      "\u2200 T: (True) \u2192 (domination_number <= (-1 + maximal_independent_set_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "maximal_independent_set_count"
+      ],
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ],
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (-1 + maximal_independent_set_count))"
+  },
+  {
+    "cross_run_index": 25,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((2/11 * maximal_independent_set_count) + 7/11)",
+      "discovery_touch_count": 10,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((2/11 * maximal_independent_set_count) + 7/11)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((2/11 * maximal_independent_set_count) + 7/11))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((2/11 * maximal_independent_set_count) + 7/11))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((2/11 * maximal_independent_set_count) + 7/11))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((2/11 * maximal_independent_set_count) + 7/11))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((2/11 * maximal_independent_set_count) + 7/11))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "maximal_independent_set_count"
+      ],
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ],
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((2/11 * maximal_independent_set_count) + 7/11))"
+  },
+  {
+    "cross_run_index": 26,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/5 * maximal_independent_set_count) + 12/5)",
+      "discovery_touch_count": 10,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/5 * maximal_independent_set_count) + 12/5)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/5 * maximal_independent_set_count) + 12/5))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/5 * maximal_independent_set_count) + 12/5))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/5 * maximal_independent_set_count) + 12/5))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "maximal_independent_set_count"
+      ],
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/5 * maximal_independent_set_count) + 12/5))"
+  },
+  {
+    "cross_run_index": 27,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-3/32 * order) + 11/16) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-3/32 * order) + 11/16) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-3/32 * order) + 11/16) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-3/32 * order) + 11/16) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 28,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-3/7 * order) + 1) + (3/7 * maximal_independent_set_count))",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-3/7 * order) + 1) + (3/7 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-3/7 * order) + 1) + (3/7 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-3/7 * order) + 1) + (3/7 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 29,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((11/7 * order) + -1) + (-4/7 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((11/7 * order) + -1) + (-4/7 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((11/7 * order) + -1) + (-4/7 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "order",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((11/7 * order) + -1) + (-4/7 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 30,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/3 * leaf_count) + 10/3) + (2/3 * support_vertex_count))",
+      "discovery_touch_count": 35,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/3 * leaf_count) + 10/3) + (2/3 * support_vertex_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/3 * leaf_count) + 10/3) + (2/3 * support_vertex_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "support_vertex_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/3 * leaf_count) + 10/3) + (2/3 * support_vertex_count)))"
+  },
+  {
+    "cross_run_index": 31,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((1/6 * leaf_count) + -5/3) + (7/6 * support_vertex_count))",
+      "discovery_touch_count": 28,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((1/6 * leaf_count) + -5/3) + (7/6 * support_vertex_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((1/6 * leaf_count) + -5/3) + (7/6 * support_vertex_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "support_vertex_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((1/6 * leaf_count) + -5/3) + (7/6 * support_vertex_count)))"
+  },
+  {
+    "cross_run_index": 32,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((-1 * leaf_count) + 10)",
+      "discovery_touch_count": 27,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((-1 * leaf_count) + 10)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((-1 * leaf_count) + 10))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((-1 * leaf_count) + 10))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((-1 * leaf_count) + 10))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "max_degree"
+      ],
+      [
+        "leaf_count",
+        "diameter"
+      ],
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((-1 * leaf_count) + 10))"
+  },
+  {
+    "cross_run_index": 33,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/3 * leaf_count) + 10/3)",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/3 * leaf_count) + 10/3)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * leaf_count) + 10/3))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * leaf_count) + 10/3))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * leaf_count) + 10/3))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "max_degree"
+      ],
+      [
+        "leaf_count",
+        "diameter"
+      ],
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * leaf_count) + 10/3))"
+  },
+  {
+    "cross_run_index": 34,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((2/5 * leaf_count) + 11/20) + (-7/20 * max_degree))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((2/5 * leaf_count) + 11/20) + (-7/20 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((2/5 * leaf_count) + 11/20) + (-7/20 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((2/5 * leaf_count) + 11/20) + (-7/20 * max_degree)))"
+  },
+  {
+    "cross_run_index": 35,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-2 * max_degree) + (3/2 * leaf_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-2 * max_degree) + (3/2 * leaf_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-2 * max_degree) + (3/2 * leaf_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-2 * max_degree) + (3/2 * leaf_count)))"
+  },
+  {
+    "cross_run_index": 36,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-2/3 * leaf_count) + -2/3) + (3 * max_degree))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-2/3 * leaf_count) + -2/3) + (3 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-2/3 * leaf_count) + -2/3) + (3 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-2/3 * leaf_count) + -2/3) + (3 * max_degree)))"
+  },
+  {
+    "cross_run_index": 37,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1 * leaf_count) + -1/2) + (7/2 * max_degree))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1 * leaf_count) + -1/2) + (7/2 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1 * leaf_count) + -1/2) + (7/2 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1 * leaf_count) + -1/2) + (7/2 * max_degree)))"
+  },
+  {
+    "cross_run_index": 38,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((-1 + leaf_count) + (1/3 * diameter))",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((-1 + leaf_count) + (1/3 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((-1 + leaf_count) + (1/3 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((-1 + leaf_count) + (1/3 * diameter)))"
+  },
+  {
+    "cross_run_index": 39,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/4 * leaf_count) + 1/4) + (1/4 * diameter))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/4 * leaf_count) + 1/4) + (1/4 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/4 * leaf_count) + 1/4) + (1/4 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/4 * leaf_count) + 1/4) + (1/4 * diameter)))"
+  },
+  {
+    "cross_run_index": 40,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((7/8 * leaf_count) + -7/8) + (3/8 * diameter))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((7/8 * leaf_count) + -7/8) + (3/8 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((7/8 * leaf_count) + -7/8) + (3/8 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((7/8 * leaf_count) + -7/8) + (3/8 * diameter)))"
+  },
+  {
+    "cross_run_index": 41,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-2/9 * leaf_count) + -1/9) + (14/9 * diameter))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-2/9 * leaf_count) + -1/9) + (14/9 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-2/9 * leaf_count) + -1/9) + (14/9 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-2/9 * leaf_count) + -1/9) + (14/9 * diameter)))"
+  },
+  {
+    "cross_run_index": 42,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((5/6 * leaf_count) + -7/6) + (1/2 * diameter))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((5/6 * leaf_count) + -7/6) + (1/2 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((5/6 * leaf_count) + -7/6) + (1/2 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((5/6 * leaf_count) + -7/6) + (1/2 * diameter)))"
+  },
+  {
+    "cross_run_index": 43,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-10 + leaf_count) + (2 * matching_number))",
+      "discovery_touch_count": 48,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-10 + leaf_count) + (2 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-10 + leaf_count) + (2 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-10 + leaf_count) + (2 * matching_number)))"
+  },
+  {
+    "cross_run_index": 44,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/3 * leaf_count) + 5/3) + (1/3 * matching_number))",
+      "discovery_touch_count": 8,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/3 * leaf_count) + 5/3) + (1/3 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/3 * leaf_count) + 5/3) + (1/3 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/3 * leaf_count) + 5/3) + (1/3 * matching_number)))"
+  },
+  {
+    "cross_run_index": 45,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/2 * leaf_count) + 1/2) + (1/2 * matching_number))",
+      "discovery_touch_count": 6,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/2 * leaf_count) + 1/2) + (1/2 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * leaf_count) + 1/2) + (1/2 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * leaf_count) + 1/2) + (1/2 * matching_number)))"
+  },
+  {
+    "cross_run_index": 46,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1 * leaf_count) + 1) + matching_number)",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1 * leaf_count) + 1) + matching_number)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1 * leaf_count) + 1) + matching_number))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1 * leaf_count) + 1) + matching_number))"
+  },
+  {
+    "cross_run_index": 47,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-17 + leaf_count) + maximal_independent_set_count)",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-17 + leaf_count) + maximal_independent_set_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-17 + leaf_count) + maximal_independent_set_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-17 + leaf_count) + maximal_independent_set_count))"
+  },
+  {
+    "cross_run_index": 48,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((3/10 * leaf_count) + -23/10) + (3/10 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((3/10 * leaf_count) + -23/10) + (3/10 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((3/10 * leaf_count) + -23/10) + (3/10 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((3/10 * leaf_count) + -23/10) + (3/10 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 49,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((1/4 * maximal_independent_set_count) + -1/4)",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((1/4 * maximal_independent_set_count) + -1/4)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/4 * maximal_independent_set_count) + -1/4))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/4 * maximal_independent_set_count) + -1/4))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/4 * maximal_independent_set_count) + -1/4))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((1/4 * maximal_independent_set_count) + -1/4))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ],
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ],
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((1/4 * maximal_independent_set_count) + -1/4))"
+  },
+  {
+    "cross_run_index": 50,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((3/35 * leaf_count) + -8/35) + (8/35 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((3/35 * leaf_count) + -8/35) + (8/35 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((3/35 * leaf_count) + -8/35) + (8/35 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((3/35 * leaf_count) + -8/35) + (8/35 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 51,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1/5 * leaf_count) + 1) + (1/5 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1/5 * leaf_count) + 1) + (1/5 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1/5 * leaf_count) + 1) + (1/5 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1/5 * leaf_count) + 1) + (1/5 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 52,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1/4 * leaf_count) + 1/2) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1/4 * leaf_count) + 1/2) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1/4 * leaf_count) + 1/2) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1/4 * leaf_count) + 1/2) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 53,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((11/4 * leaf_count) + -103/4) + maximal_independent_set_count)",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((11/4 * leaf_count) + -103/4) + maximal_independent_set_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((11/4 * leaf_count) + -103/4) + maximal_independent_set_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((11/4 * leaf_count) + -103/4) + maximal_independent_set_count))"
+  },
+  {
+    "cross_run_index": 54,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/7 * leaf_count) + 8/7) + (1/7 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/7 * leaf_count) + 8/7) + (1/7 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/7 * leaf_count) + 8/7) + (1/7 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/7 * leaf_count) + 8/7) + (1/7 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 55,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/8 * leaf_count) + 3/2) + (1/8 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/8 * leaf_count) + 3/2) + (1/8 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/8 * leaf_count) + 3/2) + (1/8 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/8 * leaf_count) + 3/2) + (1/8 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 56,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/2 * leaf_count) + 11) + (-1/2 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/2 * leaf_count) + 11) + (-1/2 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * leaf_count) + 11) + (-1/2 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * leaf_count) + 11) + (-1/2 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 57,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((5/12 * leaf_count) + 11/6) + (1/12 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((5/12 * leaf_count) + 11/6) + (1/12 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((5/12 * leaf_count) + 11/6) + (1/12 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((5/12 * leaf_count) + 11/6) + (1/12 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 58,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((5/9 * leaf_count) + 10/9) + (1/9 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((5/9 * leaf_count) + 10/9) + (1/9 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((5/9 * leaf_count) + 10/9) + (1/9 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((5/9 * leaf_count) + 10/9) + (1/9 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 59,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((2/5 * leaf_count) + 4/5) + (1/5 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((2/5 * leaf_count) + 4/5) + (1/5 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((2/5 * leaf_count) + 4/5) + (1/5 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((2/5 * leaf_count) + 4/5) + (1/5 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 60,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/2 * leaf_count) + 1/4) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/2 * leaf_count) + 1/4) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * leaf_count) + 1/4) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "leaf_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * leaf_count) + 1/4) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 61,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((2/3 * support_vertex_count) + 10/3) + (-1/3 * max_degree))",
+      "discovery_touch_count": 8,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((2/3 * support_vertex_count) + 10/3) + (-1/3 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((2/3 * support_vertex_count) + 10/3) + (-1/3 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((2/3 * support_vertex_count) + 10/3) + (-1/3 * max_degree)))"
+  },
+  {
+    "cross_run_index": 62,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((8/7 * support_vertex_count) + -10/7) + (1/7 * max_degree))",
+      "discovery_touch_count": 6,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((8/7 * support_vertex_count) + -10/7) + (1/7 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((8/7 * support_vertex_count) + -10/7) + (1/7 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((8/7 * support_vertex_count) + -10/7) + (1/7 * max_degree)))"
+  },
+  {
+    "cross_run_index": 63,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((4/3 * support_vertex_count) + -5/3)",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((4/3 * support_vertex_count) + -5/3)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((4/3 * support_vertex_count) + -5/3))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((4/3 * support_vertex_count) + -5/3))",
+      "\u2200 T: (True) \u2192 (domination_number >= ((4/3 * support_vertex_count) + -5/3))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "max_degree"
+      ],
+      [
+        "support_vertex_count",
+        "diameter"
+      ],
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((4/3 * support_vertex_count) + -5/3))"
+  },
+  {
+    "cross_run_index": 64,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/3 * support_vertex_count) + 10/3)",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/3 * support_vertex_count) + 10/3)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * support_vertex_count) + 10/3))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * support_vertex_count) + 10/3))",
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * support_vertex_count) + 10/3))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "max_degree"
+      ],
+      [
+        "support_vertex_count",
+        "diameter"
+      ],
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * support_vertex_count) + 10/3))"
+  },
+  {
+    "cross_run_index": 65,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3 * support_vertex_count) + -8) + (3 * max_degree))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3 * support_vertex_count) + -8) + (3 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3 * support_vertex_count) + -8) + (3 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3 * support_vertex_count) + -8) + (3 * max_degree)))"
+  },
+  {
+    "cross_run_index": 66,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-2/3 * support_vertex_count) + -2/3) + (3 * max_degree))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-2/3 * support_vertex_count) + -2/3) + (3 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-2/3 * support_vertex_count) + -2/3) + (3 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "max_degree"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-2/3 * support_vertex_count) + -2/3) + (3 * max_degree)))"
+  },
+  {
+    "cross_run_index": 67,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((1/4 * support_vertex_count) + 1/4) + (1/4 * diameter))",
+      "discovery_touch_count": 19,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((1/4 * support_vertex_count) + 1/4) + (1/4 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((1/4 * support_vertex_count) + 1/4) + (1/4 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((1/4 * support_vertex_count) + 1/4) + (1/4 * diameter)))"
+  },
+  {
+    "cross_run_index": 68,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((9/10 * support_vertex_count) + -1/2) + (3/10 * diameter))",
+      "discovery_touch_count": 13,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((9/10 * support_vertex_count) + -1/2) + (3/10 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((9/10 * support_vertex_count) + -1/2) + (3/10 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((9/10 * support_vertex_count) + -1/2) + (3/10 * diameter)))"
+  },
+  {
+    "cross_run_index": 69,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((5/6 * support_vertex_count) + -1/2) + (1/3 * diameter))",
+      "discovery_touch_count": 13,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((5/6 * support_vertex_count) + -1/2) + (1/3 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((5/6 * support_vertex_count) + -1/2) + (1/3 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((5/6 * support_vertex_count) + -1/2) + (1/3 * diameter)))"
+  },
+  {
+    "cross_run_index": 70,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-4 * support_vertex_count) + 3) + diameter)",
+      "discovery_touch_count": 11,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-4 * support_vertex_count) + 3) + diameter)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-4 * support_vertex_count) + 3) + diameter))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-4 * support_vertex_count) + 3) + diameter))"
+  },
+  {
+    "cross_run_index": 71,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((2/3 * support_vertex_count) + -1) + (2/3 * diameter))",
+      "discovery_touch_count": 10,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((2/3 * support_vertex_count) + -1) + (2/3 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((2/3 * support_vertex_count) + -1) + (2/3 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((2/3 * support_vertex_count) + -1) + (2/3 * diameter)))"
+  },
+  {
+    "cross_run_index": 72,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((9/8 * support_vertex_count) + -11/8) + (1/8 * diameter))",
+      "discovery_touch_count": 7,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((9/8 * support_vertex_count) + -11/8) + (1/8 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((9/8 * support_vertex_count) + -11/8) + (1/8 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((9/8 * support_vertex_count) + -11/8) + (1/8 * diameter)))"
+  },
+  {
+    "cross_run_index": 73,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/4 * support_vertex_count) + 1/4) + (1/4 * diameter))",
+      "discovery_touch_count": 6,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/4 * support_vertex_count) + 1/4) + (1/4 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/4 * support_vertex_count) + 1/4) + (1/4 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/4 * support_vertex_count) + 1/4) + (1/4 * diameter)))"
+  },
+  {
+    "cross_run_index": 74,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1 * support_vertex_count) + 1) + matching_number)",
+      "discovery_touch_count": 25,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1 * support_vertex_count) + 1) + matching_number)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1 * support_vertex_count) + 1) + matching_number))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1 * support_vertex_count) + 1) + matching_number))"
+  },
+  {
+    "cross_run_index": 75,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/2 * support_vertex_count) + 1/2) + (1/2 * matching_number))",
+      "discovery_touch_count": 16,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/2 * support_vertex_count) + 1/2) + (1/2 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * support_vertex_count) + 1/2) + (1/2 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * support_vertex_count) + 1/2) + (1/2 * matching_number)))"
+  },
+  {
+    "cross_run_index": 76,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((-1/2 + support_vertex_count) + (1/2 * matching_number))",
+      "discovery_touch_count": 15,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((-1/2 + support_vertex_count) + (1/2 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((-1/2 + support_vertex_count) + (1/2 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((-1/2 + support_vertex_count) + (1/2 * matching_number)))"
+  },
+  {
+    "cross_run_index": 77,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/3 * support_vertex_count) + 5/3) + (1/3 * matching_number))",
+      "discovery_touch_count": 13,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/3 * support_vertex_count) + 5/3) + (1/3 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/3 * support_vertex_count) + 5/3) + (1/3 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/3 * support_vertex_count) + 5/3) + (1/3 * matching_number)))"
+  },
+  {
+    "cross_run_index": 78,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-5/4 + support_vertex_count) + (1/4 * matching_number))",
+      "discovery_touch_count": 12,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-5/4 + support_vertex_count) + (1/4 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-5/4 + support_vertex_count) + (1/4 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-5/4 + support_vertex_count) + (1/4 * matching_number)))"
+  },
+  {
+    "cross_run_index": 79,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1 * support_vertex_count) + 1) + maximal_independent_set_count)",
+      "discovery_touch_count": 39,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1 * support_vertex_count) + 1) + maximal_independent_set_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1 * support_vertex_count) + 1) + maximal_independent_set_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1 * support_vertex_count) + 1) + maximal_independent_set_count))"
+  },
+  {
+    "cross_run_index": 80,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((2/5 * support_vertex_count) + 4/5) + (1/5 * maximal_independent_set_count))",
+      "discovery_touch_count": 37,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((2/5 * support_vertex_count) + 4/5) + (1/5 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((2/5 * support_vertex_count) + 4/5) + (1/5 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((2/5 * support_vertex_count) + 4/5) + (1/5 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 81,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/4 * support_vertex_count) + -1/4) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 30,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/4 * support_vertex_count) + -1/4) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/4 * support_vertex_count) + -1/4) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/4 * support_vertex_count) + -1/4) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 82,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/7 * support_vertex_count) + 8/7) + (1/7 * maximal_independent_set_count))",
+      "discovery_touch_count": 19,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/7 * support_vertex_count) + 8/7) + (1/7 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/7 * support_vertex_count) + 8/7) + (1/7 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/7 * support_vertex_count) + 8/7) + (1/7 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 83,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((13/9 * support_vertex_count) + -2/3) + (1/9 * maximal_independent_set_count))",
+      "discovery_touch_count": 15,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((13/9 * support_vertex_count) + -2/3) + (1/9 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((13/9 * support_vertex_count) + -2/3) + (1/9 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((13/9 * support_vertex_count) + -2/3) + (1/9 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 84,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/8 * support_vertex_count) + 3/2) + (1/8 * maximal_independent_set_count))",
+      "discovery_touch_count": 14,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/8 * support_vertex_count) + 3/2) + (1/8 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/8 * support_vertex_count) + 3/2) + (1/8 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/8 * support_vertex_count) + 3/2) + (1/8 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 85,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-2/9 * support_vertex_count) + 7/9) + (2/9 * maximal_independent_set_count))",
+      "discovery_touch_count": 11,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-2/9 * support_vertex_count) + 7/9) + (2/9 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-2/9 * support_vertex_count) + 7/9) + (2/9 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-2/9 * support_vertex_count) + 7/9) + (2/9 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 86,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1/2 * support_vertex_count) + 1) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 11,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1/2 * support_vertex_count) + 1) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1/2 * support_vertex_count) + 1) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1/2 * support_vertex_count) + 1) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 87,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((9/4 * support_vertex_count) + -3) + (-1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 11,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((9/4 * support_vertex_count) + -3) + (-1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((9/4 * support_vertex_count) + -3) + (-1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((9/4 * support_vertex_count) + -3) + (-1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 88,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((5/9 * support_vertex_count) + 10/9) + (1/9 * maximal_independent_set_count))",
+      "discovery_touch_count": 11,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((5/9 * support_vertex_count) + 10/9) + (1/9 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((5/9 * support_vertex_count) + 10/9) + (1/9 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((5/9 * support_vertex_count) + 10/9) + (1/9 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 89,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((5/12 * support_vertex_count) + 11/6) + (1/12 * maximal_independent_set_count))",
+      "discovery_touch_count": 6,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((5/12 * support_vertex_count) + 11/6) + (1/12 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((5/12 * support_vertex_count) + 11/6) + (1/12 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((5/12 * support_vertex_count) + 11/6) + (1/12 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 90,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1/4 * support_vertex_count) + 1/2) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1/4 * support_vertex_count) + 1/2) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1/4 * support_vertex_count) + 1/2) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1/4 * support_vertex_count) + 1/2) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 91,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((3/7 * support_vertex_count) + -1/7) + (1/7 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((3/7 * support_vertex_count) + -1/7) + (1/7 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((3/7 * support_vertex_count) + -1/7) + (1/7 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((3/7 * support_vertex_count) + -1/7) + (1/7 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 92,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-17/15 + support_vertex_count) + (1/15 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-17/15 + support_vertex_count) + (1/15 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-17/15 + support_vertex_count) + (1/15 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-17/15 + support_vertex_count) + (1/15 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 93,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/2 * support_vertex_count) + 11) + (-1/2 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/2 * support_vertex_count) + 11) + (-1/2 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * support_vertex_count) + 11) + (-1/2 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "support_vertex_count",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * support_vertex_count) + 11) + (-1/2 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 94,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/2 * max_degree) + 19/2) + (-1/2 * diameter))",
+      "discovery_touch_count": 7,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/2 * max_degree) + 19/2) + (-1/2 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/2 * max_degree) + 19/2) + (-1/2 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/2 * max_degree) + 19/2) + (-1/2 * diameter)))"
+  },
+  {
+    "cross_run_index": 95,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((-1 * max_degree) + 10)",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((-1 * max_degree) + 10)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((-1 * max_degree) + 10))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((-1 * max_degree) + 10))"
+  },
+  {
+    "cross_run_index": 96,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1/3 * max_degree) + 1) + (1/3 * diameter))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1/3 * max_degree) + 1) + (1/3 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1/3 * max_degree) + 1) + (1/3 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1/3 * max_degree) + 1) + (1/3 * diameter)))"
+  },
+  {
+    "cross_run_index": 97,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1 * max_degree) + 38/3) + (-2/3 * diameter))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1 * max_degree) + 38/3) + (-2/3 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1 * max_degree) + 38/3) + (-2/3 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1 * max_degree) + 38/3) + (-2/3 * diameter)))"
+  },
+  {
+    "cross_run_index": 98,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((4/7 * max_degree) + -1/7) + (4/7 * diameter))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((4/7 * max_degree) + -1/7) + (4/7 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((4/7 * max_degree) + -1/7) + (4/7 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((4/7 * max_degree) + -1/7) + (4/7 * diameter)))"
+  },
+  {
+    "cross_run_index": 99,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/5 * max_degree) + -2/5) + (8/5 * diameter))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/5 * max_degree) + -2/5) + (8/5 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/5 * max_degree) + -2/5) + (8/5 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/5 * max_degree) + -2/5) + (8/5 * diameter)))"
+  },
+  {
+    "cross_run_index": 100,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-5 * max_degree) + 5) + diameter)",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-5 * max_degree) + 5) + diameter)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-5 * max_degree) + 5) + diameter))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-5 * max_degree) + 5) + diameter))"
+  },
+  {
+    "cross_run_index": 101,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((17/11 * max_degree) + -8/11) + (2/11 * diameter))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((17/11 * max_degree) + -8/11) + (2/11 * diameter))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((17/11 * max_degree) + -8/11) + (2/11 * diameter)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "diameter"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((17/11 * max_degree) + -8/11) + (2/11 * diameter)))"
+  },
+  {
+    "cross_run_index": 102,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-10 + max_degree) + (2 * matching_number))",
+      "discovery_touch_count": 10,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-10 + max_degree) + (2 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-10 + max_degree) + (2 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-10 + max_degree) + (2 * matching_number)))"
+  },
+  {
+    "cross_run_index": 103,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1 * max_degree) + 1) + matching_number)",
+      "discovery_touch_count": 6,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1 * max_degree) + 1) + matching_number)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1 * max_degree) + 1) + matching_number))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1 * max_degree) + 1) + matching_number))"
+  },
+  {
+    "cross_run_index": 104,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((-1/2 + max_degree) + (1/2 * matching_number))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((-1/2 + max_degree) + (1/2 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((-1/2 + max_degree) + (1/2 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((-1/2 + max_degree) + (1/2 * matching_number)))"
+  },
+  {
+    "cross_run_index": 105,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/3 * max_degree) + 1/3) + (1/3 * maximal_independent_set_count))",
+      "discovery_touch_count": 7,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/3 * max_degree) + 1/3) + (1/3 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/3 * max_degree) + 1/3) + (1/3 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/3 * max_degree) + 1/3) + (1/3 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 106,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/4 * max_degree) + -1/4) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 6,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/4 * max_degree) + -1/4) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/4 * max_degree) + -1/4) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/4 * max_degree) + -1/4) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 107,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/5 * maximal_independent_set_count) + (4/5 * max_degree))",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/5 * maximal_independent_set_count) + (4/5 * max_degree))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/5 * maximal_independent_set_count) + (4/5 * max_degree)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/5 * maximal_independent_set_count) + (4/5 * max_degree)))"
+  },
+  {
+    "cross_run_index": 108,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1/4 * max_degree) + 1/2) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1/4 * max_degree) + 1/2) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1/4 * max_degree) + 1/2) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1/4 * max_degree) + 1/2) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 109,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/2 * max_degree) + 11) + (-1/2 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/2 * max_degree) + 11) + (-1/2 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * max_degree) + 11) + (-1/2 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/2 * max_degree) + 11) + (-1/2 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 110,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/7 * max_degree) + 25/7) + (1/7 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/7 * max_degree) + 25/7) + (1/7 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/7 * max_degree) + 25/7) + (1/7 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/7 * max_degree) + 25/7) + (1/7 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 111,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= ((-136/15 + max_degree) + (8/15 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "((-136/15 + max_degree) + (8/15 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= ((-136/15 + max_degree) + (8/15 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= ((-136/15 + max_degree) + (8/15 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 112,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((3/35 * max_degree) + -8/35) + (8/35 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((3/35 * max_degree) + -8/35) + (8/35 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((3/35 * max_degree) + -8/35) + (8/35 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((3/35 * max_degree) + -8/35) + (8/35 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 113,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= 5",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "5"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= 5)",
+      "\u2200 T: (True) \u2192 (domination_number <= 5)"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ],
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= 5)"
+  },
+  {
+    "cross_run_index": 114,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((2/5 * max_degree) + 32/5) + (-1/5 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((2/5 * max_degree) + 32/5) + (-1/5 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((2/5 * max_degree) + 32/5) + (-1/5 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((2/5 * max_degree) + 32/5) + (-1/5 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 115,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((13/9 * max_degree) + -2/3) + (1/9 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((13/9 * max_degree) + -2/3) + (1/9 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((13/9 * max_degree) + -2/3) + (1/9 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((13/9 * max_degree) + -2/3) + (1/9 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 116,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-2/9 * max_degree) + 7/9) + (2/9 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-2/9 * max_degree) + 7/9) + (2/9 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-2/9 * max_degree) + 7/9) + (2/9 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-2/9 * max_degree) + 7/9) + (2/9 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 117,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1/2 * max_degree) + 1) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1/2 * max_degree) + 1) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1/2 * max_degree) + 1) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1/2 * max_degree) + 1) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 118,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-3/11 * max_degree) + 53/11) + (1/11 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-3/11 * max_degree) + 53/11) + (1/11 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-3/11 * max_degree) + 53/11) + (1/11 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-3/11 * max_degree) + 53/11) + (1/11 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 119,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/5 * max_degree) + 17/5) + (1/5 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/5 * max_degree) + 17/5) + (1/5 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/5 * max_degree) + 17/5) + (1/5 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "max_degree",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/5 * max_degree) + 17/5) + (1/5 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 120,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1/3 * diameter) + 1/4) + (13/12 * matching_number))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1/3 * diameter) + 1/4) + (13/12 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1/3 * diameter) + 1/4) + (13/12 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1/3 * diameter) + 1/4) + (13/12 * matching_number)))"
+  },
+  {
+    "cross_run_index": 121,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1 * diameter) + 1/4) + (7/4 * matching_number))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1 * diameter) + 1/4) + (7/4 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1 * diameter) + 1/4) + (7/4 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1 * diameter) + 1/4) + (7/4 * matching_number)))"
+  },
+  {
+    "cross_run_index": 122,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/3 * diameter) + 16/3) + (1/3 * matching_number))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/3 * diameter) + 16/3) + (1/3 * matching_number))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/3 * diameter) + 16/3) + (1/3 * matching_number)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "matching_number"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/3 * diameter) + 16/3) + (1/3 * matching_number)))"
+  },
+  {
+    "cross_run_index": 123,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1 * diameter) + 2) + maximal_independent_set_count)",
+      "discovery_touch_count": 85,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1 * diameter) + 2) + maximal_independent_set_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1 * diameter) + 2) + maximal_independent_set_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1 * diameter) + 2) + maximal_independent_set_count))"
+  },
+  {
+    "cross_run_index": 124,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/2 * diameter) + 5/2) + (1/2 * maximal_independent_set_count))",
+      "discovery_touch_count": 60,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/2 * diameter) + 5/2) + (1/2 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/2 * diameter) + 5/2) + (1/2 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/2 * diameter) + 5/2) + (1/2 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 125,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= ((1/3 * diameter) + (1/3 * maximal_independent_set_count))",
+      "discovery_touch_count": 39,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "((1/3 * diameter) + (1/3 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * diameter) + (1/3 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= ((1/3 * diameter) + (1/3 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 126,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/4 * diameter) + 3/4) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 38,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/4 * diameter) + 3/4) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/4 * diameter) + 3/4) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/4 * diameter) + 3/4) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 127,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((5/12 * diameter) + 1/12) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 30,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((5/12 * diameter) + 1/12) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((5/12 * diameter) + 1/12) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((5/12 * diameter) + 1/12) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 128,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((1/6 * diameter) + 11/6) + (1/6 * maximal_independent_set_count))",
+      "discovery_touch_count": 18,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((1/6 * diameter) + 11/6) + (1/6 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((1/6 * diameter) + 11/6) + (1/6 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((1/6 * diameter) + 11/6) + (1/6 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 129,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((3/2 * diameter) + -3) + (-1/2 * maximal_independent_set_count))",
+      "discovery_touch_count": 15,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((3/2 * diameter) + -3) + (-1/2 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((3/2 * diameter) + -3) + (-1/2 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((3/2 * diameter) + -3) + (-1/2 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 130,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/4 * diameter) + 13/4) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 13,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/4 * diameter) + 13/4) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/4 * diameter) + 13/4) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/4 * diameter) + 13/4) + (1/4 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 131,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((3/8 * diameter) + 11/8) + (1/8 * maximal_independent_set_count))",
+      "discovery_touch_count": 9,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((3/8 * diameter) + 11/8) + (1/8 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((3/8 * diameter) + 11/8) + (1/8 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((3/8 * diameter) + 11/8) + (1/8 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 132,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((17/24 * diameter) + 1/24) + (1/8 * maximal_independent_set_count))",
+      "discovery_touch_count": 9,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((17/24 * diameter) + 1/24) + (1/8 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((17/24 * diameter) + 1/24) + (1/8 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((17/24 * diameter) + 1/24) + (1/8 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 133,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-5/4 * diameter) + 29/4) + (1/2 * maximal_independent_set_count))",
+      "discovery_touch_count": 9,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-5/4 * diameter) + 29/4) + (1/2 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-5/4 * diameter) + 29/4) + (1/2 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-5/4 * diameter) + 29/4) + (1/2 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 134,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-3 * diameter) + 15) + maximal_independent_set_count)",
+      "discovery_touch_count": 7,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-3 * diameter) + 15) + maximal_independent_set_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-3 * diameter) + 15) + maximal_independent_set_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-3 * diameter) + 15) + maximal_independent_set_count))"
+  },
+  {
+    "cross_run_index": 135,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-5/9 * diameter) + 49/9) + (2/9 * maximal_independent_set_count))",
+      "discovery_touch_count": 6,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-5/9 * diameter) + 49/9) + (2/9 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-5/9 * diameter) + 49/9) + (2/9 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-5/9 * diameter) + 49/9) + (2/9 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 136,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-1 * diameter) + -8) + maximal_independent_set_count)",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-1 * diameter) + -8) + maximal_independent_set_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-1 * diameter) + -8) + maximal_independent_set_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-1 * diameter) + -8) + maximal_independent_set_count))"
+  },
+  {
+    "cross_run_index": 137,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-3/11 * diameter) + 8/11) + (3/11 * maximal_independent_set_count))",
+      "discovery_touch_count": 5,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-3/11 * diameter) + 8/11) + (3/11 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-3/11 * diameter) + 8/11) + (3/11 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-3/11 * diameter) + 8/11) + (3/11 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 138,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-11/3 * diameter) + 8/3) + maximal_independent_set_count)",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-11/3 * diameter) + 8/3) + maximal_independent_set_count)"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-11/3 * diameter) + 8/3) + maximal_independent_set_count))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-11/3 * diameter) + 8/3) + maximal_independent_set_count))"
+  },
+  {
+    "cross_run_index": 139,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-3/61 * diameter) + 38/61) + (13/61 * maximal_independent_set_count))",
+      "discovery_touch_count": 4,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-3/61 * diameter) + 38/61) + (13/61 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-3/61 * diameter) + 38/61) + (13/61 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-3/61 * diameter) + 38/61) + (13/61 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 140,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((1/7 * diameter) + -13/7) + (2/7 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((1/7 * diameter) + -13/7) + (2/7 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((1/7 * diameter) + -13/7) + (2/7 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((1/7 * diameter) + -13/7) + (2/7 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 141,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-1/3 * diameter) + 53/3) + (-2/3 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-1/3 * diameter) + 53/3) + (-2/3 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-1/3 * diameter) + 53/3) + (-2/3 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-1/3 * diameter) + 53/3) + (-2/3 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 142,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number <= (((-2/9 * diameter) + 70/9) + (-1/9 * maximal_independent_set_count))",
+      "discovery_touch_count": 3,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": "<=",
+      "rhs": "(((-2/9 * diameter) + 70/9) + (-1/9 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number <= (((-2/9 * diameter) + 70/9) + (-1/9 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "diameter",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number <= (((-2/9 * diameter) + 70/9) + (-1/9 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 143,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((2 * matching_number) + 1) + (-1 * maximal_independent_set_count))",
+      "discovery_touch_count": 34,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((2 * matching_number) + 1) + (-1 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((2 * matching_number) + 1) + (-1 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "matching_number",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((2 * matching_number) + 1) + (-1 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 144,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((5/2 * matching_number) + -3) + (-1/2 * maximal_independent_set_count))",
+      "discovery_touch_count": 20,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((5/2 * matching_number) + -3) + (-1/2 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((5/2 * matching_number) + -3) + (-1/2 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "matching_number",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((5/2 * matching_number) + -3) + (-1/2 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 145,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-3/11 * matching_number) + 8/11) + (3/11 * maximal_independent_set_count))",
+      "discovery_touch_count": 15,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-3/11 * matching_number) + 8/11) + (3/11 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-3/11 * matching_number) + 8/11) + (3/11 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "matching_number",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-3/11 * matching_number) + 8/11) + (3/11 * maximal_independent_set_count)))"
+  },
+  {
+    "cross_run_index": 146,
+    "engine": "TxGraffiti",
+    "engine_version": "0.4.1",
+    "metadata": {
+      "conclusion": "domination_number >= (((-3/16 * matching_number) + 11/16) + (1/4 * maximal_independent_set_count))",
+      "discovery_touch_count": 13,
+      "discovery_valid": true,
+      "hypothesis": "True",
+      "lhs": "domination_number",
+      "operator": ">=",
+      "rhs": "(((-3/16 * matching_number) + 11/16) + (1/4 * maximal_independent_set_count))"
+    },
+    "raw_statements": [
+      "\u2200 T: (True) \u2192 (domination_number >= (((-3/16 * matching_number) + 11/16) + (1/4 * maximal_independent_set_count)))"
+    ],
+    "source_feature_pairs": [
+      [
+        "matching_number",
+        "maximal_independent_set_count"
+      ]
+    ],
+    "statement": "\u2200 T: (True) \u2192 (domination_number >= (((-3/16 * matching_number) + 11/16) + (1/4 * maximal_independent_set_count)))"
+  }
+]

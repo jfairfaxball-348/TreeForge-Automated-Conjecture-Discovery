@@ -68,21 +68,50 @@ no candidate reached `GRADUATION_CANDIDATE`.
 
 See `experiments/TF3-0001/RESULTS.md`.
 
-## TF4 — diagnose ratios-only limits and freeze pairwise interaction experiment
+## TF4 — pairwise interaction controlled discovery
 
-Status: **FROZEN; SCIENTIFIC EXECUTION NOT YET RUN (2026-10-02).**
+Status: **COMPLETE (2026-10-02).**
 
-TF4-DIAG-0001 used only exposed orders 1-13 and committed TF2/TF3 outputs. Validation runs `36972524602` and `36973194898` found that 8/12 TF3 ratios are exact TF2 repeats, 9/12 have discovery touch count 1, and 8/12 extremal coefficients drift by exposed order 13. Five of the twelve statements also fail on K1 under the literal all-finite-tree hypothesis, showing that the orders-2-10 discovery domain had not fully matched the stated candidate domain.
+TF4 first diagnosed TF3's interpretable-but-zero-interest result, then froze and executed
+`TF4-0001` with exactly one material discovery-axis change: ratios-only generation became
+`convex_hull` run separately on all 21 unordered pairs of the unchanged seven discovery features,
+followed only by exact normalized cross-run deduplication. The target, orders 2–10 discovery corpus,
+TxGraffiti pin, heuristics, post-processors, feature vocabulary, and literal all-tree hypothesis were
+unchanged.
 
-The diagnosis does not justify changing the target, feature vocabulary, or mathematical hypothesis. A nontrivial-tree hypothesis would leave the generator output unchanged on orders 2-10 and mainly rescue K1-sensitive forms. No new invariant is sufficiently motivated independently of a desired conjecture.
+Authoritative scientific source:
+`d8e0874a22dde7f226431fc4f15a36adb8254efa`. Actions run: `36983184665`.
 
-Fixed pairwise convex hulls were reconsidered for a new reason supplied by completed TF3: one-feature grammar is now the diagnosed limitation. Across all 21 unordered feature pairs they produce 259 raw generator outputs, 214 after Dalmatian, 205 per-run post-duplicate forms, and 146 exact cross-run unique statements. Of those, 127 use exactly two RHS features; only 5 exactly overlap TF2. Median maximum denominator is 4, the 90th percentile is 11, and the maximum is 61. On burned orders 11-13, 48 survive cumulatively; after also enforcing literal K1 validity, 32 remain, including 26 two-feature forms.
+The pairwise pipeline produced 259 raw outputs, 259 after Morgan, 214 after Dalmatian, 205
+per-run post-duplicate forms, and 146 exact cross-run unique statements. Permanent IDs
+`TF-001012` through `TF-001157` were allocated before the exposed K1 domain gate. Exact
+discovery reevaluation killed none; K1 killed 47. The remaining 99 candidates were frozen before
+holdout construction with batch SHA-256
+`2bbb81b85eb6e40351f0913fafdc822c5417b2336e957e83fc08b505aedabf0f`.
 
-Experiment `TF4-0001` is therefore frozen with exactly one material scientific change relative to TF3: ratios-only generation becomes fixed pairwise convex-hull generation over all 21 unordered pairs of the unchanged seven discovery features, followed only by exact cross-run deduplication. A pre-holdout K1 domain-consistency gate enforces the already-declared all-tree statement without changing that hypothesis.
+Fresh exhaustive order-14 holdout: 3,159 trees, SHA-256
+`84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3`.
+It falsified 66 candidates and left 33. Only those 33 saw the exact pre-frozen 19-tree hostile set,
+SHA-256 `caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3`;
+none failed that finite hostile gate.
 
-Fresh exhaustive holdout: all 3,159 unlabeled trees of order 14. The only order-14 access was a timing-only feasibility probe in run `36972524602`; no individual value was persisted, printed, ranked, or compared with a candidate.
+Post-gate interpretation did not force a graduation candidate. `TF-001068` is falsified by an
+already-exposed order-11 tree; six candidates are `TRIVIAL`; four leaf/MIS facets are
+`ARTIFACT_OF_FEATURE_SET` because same-coefficient support/MIS facets are pointwise stronger.
+`TF-001013` independently reached mathematical interest but a bounded audit identified it as the
+known Lemańska leaf bound. `TF-001028`, `gamma(T) <= (2n+1-diameter(T))/3`, independently
+reached mathematical interest and remains in `NOVELTY_AUDIT`: a targeted exact-form search found
+related literature but no exact match, which is explicitly not evidence of novelty. Twenty
+maximal-independent-set-count facets remain finite `ADVERSARIAL_PASSED` without promotion.
 
-The exact fresh hostile-family parameters are frozen in `experiments/TF4-0001/spec.json`. No TF4 permanent candidate ID has yet been allocated; the next ID remains `TF-001012`.
+Final TF4 states: 114 `FALSIFIED`, 6 `TRIVIAL`, 4 `ARTIFACT_OF_FEATURE_SET`,
+1 `KNOWN_RESULT`, 1 `NOVELTY_AUDIT`, and 20 `ADVERSARIAL_PASSED`. No candidate reached
+`GRADUATION_CANDIDATE`.
 
-See `docs/TF4_DIAGNOSTIC.md` and `docs/TF4_EXPERIMENT_FREEZE.md`.
+TF5 should not broaden the discovery grammar yet. First attack `TF-001028` structurally: seek a
+proof or an explicit family counterexample and complete its focused prior-art audit. If it resolves
+negatively, diagnose the maximal-independent-set-count facet fan before freezing another discovery
+axis change.
 
+See `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, and
+`docs/TF4_EXPERIMENT_FREEZE.md`.

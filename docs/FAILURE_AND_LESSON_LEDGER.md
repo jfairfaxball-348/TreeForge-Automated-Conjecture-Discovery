@@ -189,3 +189,38 @@ Corrective action: replace the malformed helper text with valid Python while kee
 unchanged: exact cross-order identity is `(order, canonical_tree_code)`, and the historical bare
 code remains unchanged for all prior hashes and records.
 
+
+
+## 2026-10-02 — TF4 exposed-data interpretation probe used an unsupported corpus-role label
+
+GitHub Actions run `36984250743` failed after the successful authoritative TF4 scientific run while
+executing a post-gate interpretation probe on already-exposed orders. The probe passed a role label
+that `experiment_corpus_rows` does not accept and raised
+`ValueError: role must be discovery or holdout`.
+
+This failure occurred after TF4's candidate batch, fresh order-14 holdout, and frozen hostile-set
+evaluation were already complete. It exposed no new fresh data and changed no candidate or frozen
+scientific setting.
+
+Corrective action: use a supported role value for the exposed-data reconstruction only. Runs
+`36984350503` and `36984350541` then completed successfully with the same scientific record.
+
+## 2026-10-02 — TF4 result materialization exposed pre-materialization and terminal-registry test assumptions
+
+After authoritative scientific run `36983184665`, CI runs `36985331317` and
+`36985361656` failed because newly added TF4 result tests expected compact materialized files
+(`manifest.json`, `interpretation_summary.json`) before those generated files had been committed.
+
+One-shot materialization run `36985361788` then generated the compact TF4 record correctly but
+validation caught a separate historical TF3 test asserting that
+`CandidateRegistry.next_id()` must remain `TF-001012`. Once TF4 had append-only candidate IDs
+through `TF-001157`, that assertion was no longer a valid TF3 invariant. It was removed without
+weakening TF3's own lineage or result checks.
+
+CI run `36985673530` still ran against the pre-materialization commit and therefore again saw the
+compact TF4 result files absent, while paired materialization run `36985673542` completed the
+authoritative result commit. Subsequent CI was green.
+
+These failures were result-materialization/test-ordering issues only. They did not rerun or alter
+TF4-0001 scientific generation, the 99-candidate frozen batch, the order-14 holdout, the 19-tree
+hostile set, or any lifecycle outcome.
