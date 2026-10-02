@@ -47,6 +47,8 @@ def fibonacci(index: int) -> int:
 
 def independent_set_count_forest(forest: nx.Graph) -> int:
     """Count all independent sets in a forest by an exact two-state DP."""
+    if forest.number_of_nodes() == 0:
+        return 1
     if not nx.is_forest(forest):
         raise ValueError("expected a forest")
 
