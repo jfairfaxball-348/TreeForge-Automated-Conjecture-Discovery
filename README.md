@@ -71,6 +71,16 @@ TF7 retains raw MIS, freezes no experiment, allocates no candidate ID, and leave
 15 untouched. See `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md` and
 `experiments/TF7-DIAG-0001/diagnosis.json`.
 
+TF8 characterizes equality in the TF7 theorem without opening fresh data. Equality in the
+forest bound is unique: an s-vertex forest has exactly F_(s+2) independent sets only when it is
+P_s. Equality in the support injection holds exactly when the non-support/non-leaf core is
+edgeless. Combining them shows that for every s>=3 the fixed-support minimizers are exactly the
+trees obtained from P_s by attaching at least one private leaf to every path vertex; after
+twin-leaf reduction the unique minimizer is P_s corona K1. No remaining TF4 MIS facet receives a
+lifecycle change, raw MIS is retained, no new experiment is frozen, TF-001158 remains next, and
+orders at least 15 remain untouched. See docs/TF8_FIXED_SUPPORT_EQUALITY.md and
+experiments/TF8-DIAG-0001/diagnosis.json.
+
 ## Quick start
 
 ```bash
@@ -92,4 +102,4 @@ Reproduce the compact TF1 benchmark with:
 python experiments/benchmark_tf1.py --output /tmp/tf1-benchmark.json
 ```
 
-See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, `docs/TF4_EXPERIMENT_FREEZE.md`, `docs/TF5_TF001028_ANALYSIS.md`, `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`, and `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md` before adding another discovery experiment.
+See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, `docs/TF4_EXPERIMENT_FREEZE.md`, `docs/TF5_TF001028_ANALYSIS.md`, `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`, and `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md`, plus `docs/TF8_FIXED_SUPPORT_EQUALITY.md`, before adding another discovery experiment.
