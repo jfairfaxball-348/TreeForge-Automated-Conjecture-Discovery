@@ -177,3 +177,15 @@ use that exact pair for TF4 cross-order hostile-set uniqueness/disjointness chec
 scientific target, features, pairwise generator, order-14 holdout, and hostile-family parameters were
 not changed. No TF4 candidate ID was allocated and no fresh validation value was inspected.
 
+## 2026-10-02 — TF4 cross-order identity helper was committed with escaped newlines
+
+After run `36974147991` exposed the need for an explicit cross-order tree identity, GitHub Actions
+run `36974559986` failed during pytest collection before any diagnostic or scientific step. The
+new `canonical_tree_identity` helper had been written with literal `\\n` escape text rather than
+actual line breaks, causing a Python `SyntaxError` on import.
+
+No TF4 candidate generation, order-14 evaluation, or fresh hostile-tree evaluation occurred.
+Corrective action: replace the malformed helper text with valid Python while keeping its semantics
+unchanged: exact cross-order identity is `(order, canonical_tree_code)`, and the historical bare
+code remains unchanged for all prior hashes and records.
+
