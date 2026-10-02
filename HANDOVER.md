@@ -245,6 +245,9 @@ Relevant validation runs at this handover stage:
 - initial TF4 diagnostic: `36972524602`
 - refined TF4 diagnostic: `36973194898`
 - first TF4 freeze validation failure: `36974147991`
+- cross-order identity helper syntax failure: `36974559986`
+
+Run `36974559986` was a collection-time implementation error: the new helper was initially committed with literal escaped newline text. It produced no diagnostic or scientific evidence and was corrected without changing the TF4 scientific freeze.
 
 The corrected freeze/PR validation and post-merge run are reported in the session closeout.
 
