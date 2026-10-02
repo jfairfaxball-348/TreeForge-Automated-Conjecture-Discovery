@@ -146,7 +146,7 @@ The following families/parameters are frozen before any order-14 survivor is kno
   - `[7,10]`
   - `[9,9]`
 
-Regression tests must confirm that the exact canonical tree codes are disjoint from both the TF2 and TF3 hostile sets.
+Regression tests must confirm that the exact `(order, canonical_tree_code)` identities are disjoint from both the TF2 and TF3 hostile sets. The order component is required because TreeForge preserves a legacy bare canonical code that is complete only within a fixed order.
 
 Only order-14 holdout survivors see these trees during scientific execution.
 
