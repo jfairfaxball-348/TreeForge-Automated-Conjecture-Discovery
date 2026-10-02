@@ -236,7 +236,7 @@ experiments/TF8-DIAG-0001/diagnosis.json.
 
 ## TF9 — fixed-support prior-art and theorem-significance audit
 
-Status: **COMPLETE (2026-10-02), pending final PR validation/merge.**
+Status: **COMPLETE (2026-10-02).**
 
 TF9 audits the TF7/TF8 fixed-support MIS theorem without consuming fresh data or reopening the
 archived TF4 MIS fan. The classical all-independent-set ingredient is already contained in
