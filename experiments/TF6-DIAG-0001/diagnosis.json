@@ -1,0 +1,2947 @@
+{
+  "analysis_id": "TF6-DIAG-0001",
+  "burned_data_boundary": {
+    "exhaustive_orders": [
+      1,
+      14
+    ],
+    "tf2_tf3_tf4_hostile_sets": "burned",
+    "tf5_candidate_specific_family_instances": "burned interpretation data"
+  },
+  "candidate_fan": {
+    "candidate_ids": [
+      "TF-001033",
+      "TF-001034",
+      "TF-001037",
+      "TF-001090",
+      "TF-001091",
+      "TF-001093",
+      "TF-001095",
+      "TF-001098",
+      "TF-001099",
+      "TF-001134",
+      "TF-001135",
+      "TF-001137",
+      "TF-001139",
+      "TF-001140",
+      "TF-001141",
+      "TF-001142",
+      "TF-001144",
+      "TF-001145",
+      "TF-001154",
+      "TF-001155"
+    ],
+    "count": 20,
+    "dossier": {
+      "TF-001033": {
+        "constant": "1/2",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 54,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 75,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 100,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 131,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 38,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 4,
+            "tree_code": "((())(()))"
+          },
+          {
+            "order": 5,
+            "tree_code": "((()())(()))"
+          },
+          {
+            "order": 6,
+            "tree_code": "((()()())(()))"
+          },
+          {
+            "order": 6,
+            "tree_code": "((()())(()()))"
+          },
+          {
+            "order": 6,
+            "tree_code": "((())(())())"
+          }
+        ],
+        "discovery_touch_count": 38,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 16,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 21,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 25,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 31,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/2",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": null,
+        "other_feature_coefficient": null,
+        "source_feature_pairs": [
+          [
+            "order",
+            "maximal_independent_set_count"
+          ],
+          [
+            "leaf_count",
+            "maximal_independent_set_count"
+          ],
+          [
+            "max_degree",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= ((1/2 * maximal_independent_set_count) + 1/2).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001034": {
+        "constant": "4/3",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 53,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 88,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 136,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 205,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 31,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 6,
+            "tree_code": "((())(())())"
+          },
+          {
+            "order": 7,
+            "tree_code": "((()())(())())"
+          },
+          {
+            "order": 7,
+            "tree_code": "((())(())()())"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 8,
+            "tree_code": "((()()())(())())"
+          }
+        ],
+        "discovery_touch_count": 31,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 22,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 35,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 48,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 69,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/3",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": null,
+        "other_feature_coefficient": null,
+        "source_feature_pairs": [
+          [
+            "order",
+            "maximal_independent_set_count"
+          ],
+          [
+            "leaf_count",
+            "maximal_independent_set_count"
+          ],
+          [
+            "max_degree",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= ((1/3 * maximal_independent_set_count) + 4/3).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001037": {
+        "constant": "12/5",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 23,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 51,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 98,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 180,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 10,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 8,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((()())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((())()())((())()))"
+          },
+          {
+            "order": 10,
+            "tree_code": "(((()()())())((())()))"
+          },
+          {
+            "order": 10,
+            "tree_code": "(((()())()())((())()))"
+          }
+        ],
+        "discovery_touch_count": 10,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 13,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 28,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 47,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 82,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/5",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": null,
+        "other_feature_coefficient": null,
+        "source_feature_pairs": [
+          [
+            "order",
+            "maximal_independent_set_count"
+          ],
+          [
+            "leaf_count",
+            "maximal_independent_set_count"
+          ],
+          [
+            "max_degree",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= ((1/5 * maximal_independent_set_count) + 12/5).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001090": {
+        "constant": "1",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 55,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 76,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 101,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 132,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 39,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 2,
+            "tree_code": "(()())"
+          },
+          {
+            "order": 4,
+            "tree_code": "((())(()))"
+          },
+          {
+            "order": 5,
+            "tree_code": "((()())(()))"
+          },
+          {
+            "order": 6,
+            "tree_code": "((()()())(()))"
+          },
+          {
+            "order": 6,
+            "tree_code": "((()())(()()))"
+          }
+        ],
+        "discovery_touch_count": 39,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 16,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 21,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 25,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 31,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "support_vertex_count",
+        "other_feature_coefficient": "-1",
+        "source_feature_pairs": [
+          [
+            "support_vertex_count",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((-1 * support_vertex_count) + 1) + maximal_independent_set_count).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001091": {
+        "constant": "4/5",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 62,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 100,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 152,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 225,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 37,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 6,
+            "tree_code": "((())(())())"
+          },
+          {
+            "order": 7,
+            "tree_code": "(((()))((())))"
+          },
+          {
+            "order": 7,
+            "tree_code": "((()())(())())"
+          },
+          {
+            "order": 7,
+            "tree_code": "((())(())()())"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((()()))((())))"
+          }
+        ],
+        "discovery_touch_count": 37,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 25,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 38,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 52,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 73,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/5",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "support_vertex_count",
+        "other_feature_coefficient": "2/5",
+        "source_feature_pairs": [
+          [
+            "support_vertex_count",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((2/5 * support_vertex_count) + 4/5) + (1/5 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001093": {
+        "constant": "8/7",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 38,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 70,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 117,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 186,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 19,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 7,
+            "tree_code": "(((()))((())))"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((()()))((())))"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "((((())()))(((()))))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((()()()))((())))"
+          }
+        ],
+        "discovery_touch_count": 19,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 19,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 32,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 47,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 69,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/7",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "support_vertex_count",
+        "other_feature_coefficient": "3/7",
+        "source_feature_pairs": [
+          [
+            "support_vertex_count",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((3/7 * support_vertex_count) + 8/7) + (1/7 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001095": {
+        "constant": "3/2",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 33,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 71,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 133,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 236,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 14,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 8,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "((((())()))(((()))))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((()())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((())()())((())()))"
+          },
+          {
+            "order": 10,
+            "tree_code": "((((()())()))(((()))))"
+          }
+        ],
+        "discovery_touch_count": 14,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 19,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 38,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 62,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 103,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/8",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "support_vertex_count",
+        "other_feature_coefficient": "3/8",
+        "source_feature_pairs": [
+          [
+            "support_vertex_count",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((3/8 * support_vertex_count) + 3/2) + (1/8 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001098": {
+        "constant": "-3",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 24,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 52,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 99,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 181,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 11,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 2,
+            "tree_code": "(()())"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((()())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((())()())((())()))"
+          },
+          {
+            "order": 10,
+            "tree_code": "(((()()())())((())()))"
+          }
+        ],
+        "discovery_touch_count": 11,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 13,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 28,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 47,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 82,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "-1/4",
+        "operator": ">=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "support_vertex_count",
+        "other_feature_coefficient": "9/4",
+        "source_feature_pairs": [
+          [
+            "support_vertex_count",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number >= (((9/4 * support_vertex_count) + -3) + (-1/4 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001099": {
+        "constant": "10/9",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 21,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 36,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 57,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 85,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 11,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 7,
+            "tree_code": "(((()))((())))"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((()()))((())))"
+          },
+          {
+            "order": 9,
+            "tree_code": "((((())()))(((()))))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((()()()))((())))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((()()))((()())))"
+          }
+        ],
+        "discovery_touch_count": 11,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 10,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 15,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 21,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 28,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/9",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "support_vertex_count",
+        "other_feature_coefficient": "5/9",
+        "source_feature_pairs": [
+          [
+            "support_vertex_count",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((5/9 * support_vertex_count) + 10/9) + (1/9 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001134": {
+        "constant": "2",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 126,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 179,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 245,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 326,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 85,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 4,
+            "tree_code": "((())(()))"
+          },
+          {
+            "order": 5,
+            "tree_code": "((()())(()))"
+          },
+          {
+            "order": 5,
+            "tree_code": "((())(()))"
+          },
+          {
+            "order": 6,
+            "tree_code": "(((()))((())))"
+          },
+          {
+            "order": 6,
+            "tree_code": "((()()())(()))"
+          }
+        ],
+        "discovery_touch_count": 85,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 41,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 53,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 66,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 81,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "-1",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((-1 * diameter) + 2) + maximal_independent_set_count).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001135": {
+        "constant": "5/2",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 106,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 175,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 274,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 411,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 60,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 6,
+            "tree_code": "((())(())())"
+          },
+          {
+            "order": 7,
+            "tree_code": "(((())())((())))"
+          },
+          {
+            "order": 7,
+            "tree_code": "(((()))((())))"
+          },
+          {
+            "order": 7,
+            "tree_code": "((()())(())())"
+          },
+          {
+            "order": 7,
+            "tree_code": "((())(())()())"
+          }
+        ],
+        "discovery_touch_count": 60,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 46,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 69,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 99,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 137,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/2",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "-1/2",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((-1/2 * diameter) + 5/2) + (1/2 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001137": {
+        "constant": "3/4",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 67,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 113,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 177,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 269,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 38,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 6,
+            "tree_code": "((())(())())"
+          },
+          {
+            "order": 7,
+            "tree_code": "((()())(())())"
+          },
+          {
+            "order": 7,
+            "tree_code": "((())(())()())"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 8,
+            "tree_code": "((()()())(())())"
+          }
+        ],
+        "discovery_touch_count": 38,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 29,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 46,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 64,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 92,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/4",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "1/4",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((1/4 * diameter) + 3/4) + (1/4 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001139": {
+        "constant": "11/6",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 42,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 92,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 179,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 330,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 18,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 8,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 8,
+            "tree_code": "((())(())(())())"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((()())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((())()())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "((()())(())(())())"
+          }
+        ],
+        "discovery_touch_count": 18,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 24,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 50,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 87,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 151,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/6",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "1/6",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((1/6 * diameter) + 11/6) + (1/6 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001140": {
+        "constant": "-3",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 22,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 31,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 41,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 53,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 15,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 6,
+            "tree_code": "(((()))((())))"
+          },
+          {
+            "order": 7,
+            "tree_code": "(((()()))((())))"
+          },
+          {
+            "order": 8,
+            "tree_code": "((((())))(((()))))"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((()()()))((())))"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((()()))((()())))"
+          }
+        ],
+        "discovery_touch_count": 15,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 7,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 9,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 10,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 12,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "-1/2",
+        "operator": ">=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "3/2",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number >= (((3/2 * diameter) + -3) + (-1/2 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001141": {
+        "constant": "13/4",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 32,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 70,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 136,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 246,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 13,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 8,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((()())())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((())()())((())()))"
+          },
+          {
+            "order": 9,
+            "tree_code": "(((())())((())()))"
+          },
+          {
+            "order": 10,
+            "tree_code": "(((()()())())((())()))"
+          }
+        ],
+        "discovery_touch_count": 13,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 19,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 38,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 66,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 110,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/4",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "-1/4",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((-1/4 * diameter) + 13/4) + (1/4 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001142": {
+        "constant": "11/8",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 22,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 48,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 95,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 176,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 9,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 8,
+            "tree_code": "((())(())(())())"
+          },
+          {
+            "order": 9,
+            "tree_code": "((()())(())(())())"
+          },
+          {
+            "order": 9,
+            "tree_code": "((())(())(())()())"
+          },
+          {
+            "order": 10,
+            "tree_code": "(((())(())())((())()))"
+          },
+          {
+            "order": 10,
+            "tree_code": "((()()())(())(())())"
+          }
+        ],
+        "discovery_touch_count": 9,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 13,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 26,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 47,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 81,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/8",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "3/8",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((3/8 * diameter) + 11/8) + (1/8 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001144": {
+        "constant": "29/4",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 18,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 33,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 53,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 81,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 9,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 8,
+            "tree_code": "((((())))(((()))))"
+          },
+          {
+            "order": 9,
+            "tree_code": "((((()())))(((()))))"
+          },
+          {
+            "order": 9,
+            "tree_code": "((((())()))(((()))))"
+          },
+          {
+            "order": 10,
+            "tree_code": "(((((()))))((((())))))"
+          },
+          {
+            "order": 10,
+            "tree_code": "((((()()())))(((()))))"
+          }
+        ],
+        "discovery_touch_count": 9,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 9,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 15,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 20,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 28,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1/2",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "-5/4",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((-5/4 * diameter) + 29/4) + (1/2 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001145": {
+        "constant": "15",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 12,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 19,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 27,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 37,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 7,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 8,
+            "tree_code": "((((())))(((()))))"
+          },
+          {
+            "order": 9,
+            "tree_code": "((((()())))(((()))))"
+          },
+          {
+            "order": 9,
+            "tree_code": "((((())))(((()))))"
+          },
+          {
+            "order": 10,
+            "tree_code": "(((((()))))((((())))))"
+          },
+          {
+            "order": 10,
+            "tree_code": "((((()()())))(((()))))"
+          }
+        ],
+        "discovery_touch_count": 7,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 5,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 7,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 8,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 10,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "1",
+        "operator": "<=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "diameter",
+        "other_feature_coefficient": "-3",
+        "source_feature_pairs": [
+          [
+            "diameter",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number <= (((-3 * diameter) + 15) + maximal_independent_set_count).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001154": {
+        "constant": "1",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 42,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 52,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 62,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 74,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 34,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 2,
+            "tree_code": "(()())"
+          },
+          {
+            "order": 3,
+            "tree_code": "(()())"
+          },
+          {
+            "order": 4,
+            "tree_code": "((())(()))"
+          },
+          {
+            "order": 4,
+            "tree_code": "(()()())"
+          },
+          {
+            "order": 5,
+            "tree_code": "((()())(()))"
+          }
+        ],
+        "discovery_touch_count": 34,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 8,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 10,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 10,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 12,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "-1",
+        "operator": ">=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "matching_number",
+        "other_feature_coefficient": "2",
+        "source_feature_pairs": [
+          [
+            "matching_number",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number >= (((2 * matching_number) + 1) + (-1 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      },
+      "TF-001155": {
+        "constant": "-3",
+        "cumulative_support_geometry": {
+          "cumulative_through_11": {
+            "equalities": 35,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 435
+          },
+          "cumulative_through_12": {
+            "equalities": 58,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 986
+          },
+          "cumulative_through_13": {
+            "equalities": 89,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 2287
+          },
+          "cumulative_through_14": {
+            "equalities": 131,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 5446
+          },
+          "discovery_orders_2_10": {
+            "equalities": 20,
+            "failures": 0,
+            "supporting_hyperplane_on_exposed_sample": true,
+            "tree_count": 200
+          }
+        },
+        "current_lifecycle_state": "ADVERSARIAL_PASSED",
+        "current_revision": 5,
+        "discovery_equality_examples": [
+          {
+            "order": 6,
+            "tree_code": "(((()))((())))"
+          },
+          {
+            "order": 7,
+            "tree_code": "(((()()))((())))"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((()()()))((())))"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((()()))((()())))"
+          },
+          {
+            "order": 8,
+            "tree_code": "(((())())((())))"
+          }
+        ],
+        "discovery_touch_count": 20,
+        "exposed_order_equality_counts_11_14": {
+          "11": {
+            "equalities": 15,
+            "failures": 0,
+            "tree_count": 235
+          },
+          "12": {
+            "equalities": 23,
+            "failures": 0,
+            "tree_count": 551
+          },
+          "13": {
+            "equalities": 31,
+            "failures": 0,
+            "tree_count": 1301
+          },
+          "14": {
+            "equalities": 42,
+            "failures": 0,
+            "tree_count": 3159
+          }
+        },
+        "maximal_independent_set_count_coefficient": "-1/2",
+        "operator": ">=",
+        "order14_holdout_status": {
+          "dataset_hash": "84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3",
+          "orders": [
+            14,
+            14
+          ],
+          "status": "PASSED",
+          "tree_count": 3159
+        },
+        "other_feature": "matching_number",
+        "other_feature_coefficient": "5/2",
+        "source_feature_pairs": [
+          [
+            "matching_number",
+            "maximal_independent_set_count"
+          ]
+        ],
+        "statement": "For every finite simple tree T, domination_number >= (((5/2 * matching_number) + -3) + (-1/2 * maximal_independent_set_count)).",
+        "tf4_hostile_status": {
+          "dataset_hash": "caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3",
+          "families": [
+            "broom",
+            "caterpillar",
+            "double_star",
+            "path",
+            "spider",
+            "star"
+          ],
+          "status": "PASSED",
+          "tree_count": 19
+        }
+      }
+    }
+  },
+  "classification": "EXPOSED_DATA_DIAGNOSIS_ONLY",
+  "decision": {
+    "candidate_ids_allocated": [],
+    "experiment_registry_updated": false,
+    "new_experiment_frozen": false,
+    "next_session_recommendation": "Keep orders >=15 untouched. If continuing the MIS question, attack the two exposed support/MIS dominance conditions or derive a root-invariant transfer statistic independently of candidate yield; otherwise archive the fan and choose a separately motivated scientific question before freezing another discovery experiment.",
+    "raw_mis_coordinate": "RETAIN_UNCHANGED_FOR_NOW",
+    "reason": "TF6 finds an independent structural explanation for the raw count's scale but no independently canonical replacement or removal criterion. Log/growth/extremal normalizations are meaningful diagnostics, not justified discovery coordinates. The exposed coefficient planes remain stable and equality-supported through order 14, so freezing a new experiment would manufacture an axis rather than diagnose one."
+  },
+  "fresh_data_consumed": false,
+  "geometry": {
+    "coordinate_family_counts": {
+      "diameter_plus_mis": 9,
+      "matching_plus_mis": 2,
+      "mis_only": 3,
+      "support_plus_mis": 6
+    },
+    "dominance_algebra": {
+      "TF-001091_over_TF-001034": "On any tree, TF-001091's upper RHS is at most TF-001034's exactly when MIS >= 3*support_vertex_count - 4. TF6 verifies this only on exposed data.",
+      "TF-001095_over_TF-001037": "On any tree, TF-001095's upper RHS is at most TF-001037's exactly when MIS >= 5*support_vertex_count - 12. TF6 verifies this only on exposed data."
+    },
+    "exposed_pointwise_dominance_relations": [
+      [
+        "TF-001091",
+        "TF-001034"
+      ],
+      [
+        "TF-001095",
+        "TF-001037"
+      ]
+    ],
+    "facet_chain_summary": {
+      "diameter_plus_mis_lower": [
+        "TF-001140"
+      ],
+      "diameter_plus_mis_upper": [
+        "TF-001134",
+        "TF-001135",
+        "TF-001137",
+        "TF-001139",
+        "TF-001141",
+        "TF-001142",
+        "TF-001144",
+        "TF-001145"
+      ],
+      "matching_plus_mis_lower": [
+        "TF-001154",
+        "TF-001155"
+      ],
+      "mis_only_upper": [
+        "TF-001033",
+        "TF-001034",
+        "TF-001037"
+      ],
+      "support_plus_mis_lower": [
+        "TF-001098"
+      ],
+      "support_plus_mis_upper": [
+        "TF-001090",
+        "TF-001091",
+        "TF-001093",
+        "TF-001095",
+        "TF-001099"
+      ]
+    },
+    "identical_equality_invariant_vector_set_groups": [],
+    "identical_equality_tree_set_groups": [],
+    "largest_common_tight_vectors": [
+      {
+        "tight_candidate_count": 10,
+        "tight_candidate_ids": [
+          "TF-001034",
+          "TF-001037",
+          "TF-001091",
+          "TF-001093",
+          "TF-001095",
+          "TF-001098",
+          "TF-001135",
+          "TF-001137",
+          "TF-001139",
+          "TF-001141"
+        ],
+        "tree_count_orders_1_14": 110,
+        "tree_counts_by_order": {
+          "8": 1,
+          "9": 2,
+          "10": 6,
+          "11": 10,
+          "12": 19,
+          "13": 28,
+          "14": 44
+        },
+        "vector": {
+          "diameter": 5,
+          "domination_number": 4,
+          "matching_number": 4,
+          "maximal_independent_set_count": 8,
+          "support_vertex_count": 4
+        }
+      },
+      {
+        "tight_candidate_count": 7,
+        "tight_candidate_ids": [
+          "TF-001033",
+          "TF-001034",
+          "TF-001090",
+          "TF-001091",
+          "TF-001134",
+          "TF-001135",
+          "TF-001137"
+        ],
+        "tree_count_orders_1_14": 95,
+        "tree_counts_by_order": {
+          "6": 1,
+          "7": 2,
+          "8": 4,
+          "9": 6,
+          "10": 9,
+          "11": 12,
+          "12": 16,
+          "13": 20,
+          "14": 25
+        },
+        "vector": {
+          "diameter": 4,
+          "domination_number": 3,
+          "matching_number": 3,
+          "maximal_independent_set_count": 5,
+          "support_vertex_count": 3
+        }
+      },
+      {
+        "tight_candidate_count": 5,
+        "tight_candidate_ids": [
+          "TF-001037",
+          "TF-001095",
+          "TF-001098",
+          "TF-001139",
+          "TF-001141"
+        ],
+        "tree_count_orders_1_14": 70,
+        "tree_counts_by_order": {
+          "10": 1,
+          "11": 3,
+          "12": 9,
+          "13": 19,
+          "14": 38
+        },
+        "vector": {
+          "diameter": 6,
+          "domination_number": 5,
+          "matching_number": 5,
+          "maximal_independent_set_count": 13,
+          "support_vertex_count": 5
+        }
+      },
+      {
+        "tight_candidate_count": 5,
+        "tight_candidate_ids": [
+          "TF-001091",
+          "TF-001093",
+          "TF-001099",
+          "TF-001134",
+          "TF-001135"
+        ],
+        "tree_count_orders_1_14": 20,
+        "tree_counts_by_order": {
+          "7": 1,
+          "8": 1,
+          "9": 2,
+          "10": 2,
+          "11": 3,
+          "12": 3,
+          "13": 4,
+          "14": 4
+        },
+        "vector": {
+          "diameter": 6,
+          "domination_number": 3,
+          "matching_number": 3,
+          "maximal_independent_set_count": 7,
+          "support_vertex_count": 2
+        }
+      },
+      {
+        "tight_candidate_count": 4,
+        "tight_candidate_ids": [
+          "TF-001093",
+          "TF-001095",
+          "TF-001099",
+          "TF-001144"
+        ],
+        "tree_count_orders_1_14": 56,
+        "tree_counts_by_order": {
+          "9": 1,
+          "10": 3,
+          "11": 6,
+          "12": 10,
+          "13": 15,
+          "14": 21
+        },
+        "vector": {
+          "diameter": 7,
+          "domination_number": 4,
+          "matching_number": 4,
+          "maximal_independent_set_count": 11,
+          "support_vertex_count": 3
+        }
+      },
+      {
+        "tight_candidate_count": 4,
+        "tight_candidate_ids": [
+          "TF-001033",
+          "TF-001090",
+          "TF-001134",
+          "TF-001154"
+        ],
+        "tree_count_orders_1_14": 36,
+        "tree_counts_by_order": {
+          "4": 1,
+          "5": 1,
+          "6": 2,
+          "7": 2,
+          "8": 3,
+          "9": 3,
+          "10": 4,
+          "11": 4,
+          "12": 5,
+          "13": 5,
+          "14": 6
+        },
+        "vector": {
+          "diameter": 3,
+          "domination_number": 2,
+          "matching_number": 2,
+          "maximal_independent_set_count": 3,
+          "support_vertex_count": 2
+        }
+      },
+      {
+        "tight_candidate_count": 4,
+        "tight_candidate_ids": [
+          "TF-001134",
+          "TF-001140",
+          "TF-001154",
+          "TF-001155"
+        ],
+        "tree_count_orders_1_14": 25,
+        "tree_counts_by_order": {
+          "6": 1,
+          "7": 1,
+          "8": 2,
+          "9": 2,
+          "10": 3,
+          "11": 3,
+          "12": 4,
+          "13": 4,
+          "14": 5
+        },
+        "vector": {
+          "diameter": 5,
+          "domination_number": 2,
+          "matching_number": 3,
+          "maximal_independent_set_count": 5,
+          "support_vertex_count": 2
+        }
+      },
+      {
+        "tight_candidate_count": 3,
+        "tight_candidate_ids": [
+          "TF-001137",
+          "TF-001139",
+          "TF-001142"
+        ],
+        "tree_count_orders_1_14": 64,
+        "tree_counts_by_order": {
+          "8": 1,
+          "9": 2,
+          "10": 4,
+          "11": 7,
+          "12": 11,
+          "13": 16,
+          "14": 23
+        },
+        "vector": {
+          "diameter": 4,
+          "domination_number": 4,
+          "matching_number": 4,
+          "maximal_independent_set_count": 9,
+          "support_vertex_count": 4
+        }
+      },
+      {
+        "tight_candidate_count": 3,
+        "tight_candidate_ids": [
+          "TF-001140",
+          "TF-001144",
+          "TF-001145"
+        ],
+        "tree_count_orders_1_14": 16,
+        "tree_counts_by_order": {
+          "8": 1,
+          "9": 1,
+          "10": 2,
+          "11": 2,
+          "12": 3,
+          "13": 3,
+          "14": 4
+        },
+        "vector": {
+          "diameter": 7,
+          "domination_number": 3,
+          "matching_number": 4,
+          "maximal_independent_set_count": 9,
+          "support_vertex_count": 2
+        }
+      },
+      {
+        "tight_candidate_count": 3,
+        "tight_candidate_ids": [
+          "TF-001099",
+          "TF-001144",
+          "TF-001145"
+        ],
+        "tree_count_orders_1_14": 9,
+        "tree_counts_by_order": {
+          "10": 1,
+          "11": 1,
+          "12": 2,
+          "13": 2,
+          "14": 3
+        },
+        "vector": {
+          "diameter": 9,
+          "domination_number": 4,
+          "matching_number": 5,
+          "maximal_independent_set_count": 16,
+          "support_vertex_count": 2
+        }
+      },
+      {
+        "tight_candidate_count": 3,
+        "tight_candidate_ids": [
+          "TF-001033",
+          "TF-001091",
+          "TF-001137"
+        ],
+        "tree_count_orders_1_14": 1,
+        "tree_counts_by_order": {
+          "1": 1
+        },
+        "vector": {
+          "diameter": 0,
+          "domination_number": 1,
+          "matching_number": 0,
+          "maximal_independent_set_count": 1,
+          "support_vertex_count": 0
+        }
+      },
+      {
+        "tight_candidate_count": 3,
+        "tight_candidate_ids": [
+          "TF-001090",
+          "TF-001098",
+          "TF-001154"
+        ],
+        "tree_count_orders_1_14": 1,
+        "tree_counts_by_order": {
+          "2": 1
+        },
+        "vector": {
+          "diameter": 1,
+          "domination_number": 1,
+          "matching_number": 1,
+          "maximal_independent_set_count": 2,
+          "support_vertex_count": 2
+        }
+      }
+    ],
+    "operator_counts": {
+      "lower_bounds": 4,
+      "upper_bounds": 16
+    },
+    "projection_diagnosis": "Two MIS-only upper facets are strictly dominated on the exposed corpus by support/MIS facets (TF-001091 over TF-001034; TF-001095 over TF-001037). TF-001033 is not. This is finite geometry, not a universal implication."
+  },
+  "literature_scope": [
+    {
+      "role": "order-wise extremal MIS-count scale",
+      "source": "Herbert S. Wilf, The Number of Maximal Independent Sets in a Tree, SIAM J. Algebraic Discrete Methods 7 (1986), 125-130, DOI 10.1137/0607015"
+    },
+    {
+      "role": "simple proof and characterization of the Wilf extremal envelope",
+      "source": "Bruce E. Sagan, A Note on Independent Sets in Trees, SIAM J. Discrete Math. 1 (1988), 105-108, DOI 10.1137/0401012"
+    },
+    {
+      "role": "structurally conditioned extremal counts; also records the corona/extension identity mi(ext(T))=i(T)",
+      "source": "D. S. Taletskii and D. S. Malyshev, The number of maximal independent sets in trees with a given number of leaves, Discrete Appl. Math. 314 (2022), 321-330, DOI 10.1016/j.dam.2022.03.012"
+    },
+    {
+      "role": "targeted confirmation that MIS enumeration has dedicated caterpillar structure",
+      "source": "Maximal independent sets in caterpillar graphs, Discrete Appl. Math. 160 (2012), 259-266, DOI 10.1016/j.dam.2011.10.024"
+    }
+  ],
+  "provenance_verification": {
+    "highest_allocated_candidate": "TF-001157",
+    "next_permanent_candidate_id": "TF-001158",
+    "tf2": {
+      "scientific_run": 36888114138,
+      "source_commit": "d091d88889fa72322bfc49a5531bc30b1f31b049"
+    },
+    "tf3": {
+      "corrected_diagnostic_run": 36907058956,
+      "scientific_run": 36914647703,
+      "source_commit": "e23b44d24a7b87d6f67aa18749059540934b2767"
+    },
+    "tf4": {
+      "diagnostic_runs": [
+        36972524602,
+        36973194898
+      ],
+      "experiment_registry_records": 1,
+      "scientific_run": 36983184665,
+      "source_commit": "d8e0874a22dde7f226431fc4f15a36adb8254efa"
+    },
+    "tf5": {
+      "final_main_ci_run": 37032824545,
+      "final_main_head": "1a0bd2363908659a76ebba8a9d0cc1662f4b4980",
+      "pr": 11,
+      "scientific_experiment_records": 0,
+      "tf001028_final_revision": 7,
+      "tf001028_final_state": "KNOWN_RESULT",
+      "tf001028_graduation_candidate": false
+    }
+  },
+  "starting_main_ci_run": 37032824545,
+  "starting_main_head": "1a0bd2363908659a76ebba8a9d0cc1662f4b4980",
+  "structural_recurrence": {
+    "known_order_extremal_envelope": {
+      "interpretation": "Exponential raw scale is intrinsic and extremally sharp, not a plotting artifact.",
+      "n_even_2k": "2^(k-1)+1",
+      "n_odd_2k_plus_1": "2^k",
+      "source": "Wilf (1986), The Number of Maximal Independent Sets in a Tree; Sagan (1988), A Note on Independent Sets in Trees, DOI 10.1137/0401012."
+    },
+    "local_operations": {
+      "caterpillars_and_spiders": "Their repeated spine/arm pieces compose the same finite-state messages; periodic families therefore admit transfer recurrences, but no root-independent scalar state component is canonical apart from the final total A+B.",
+      "corona_extension": "For any tree H, maximal independent sets of H corona K1 are in bijection with all independent sets of H: choose each base vertex or, when it is not chosen, its private leaf.",
+      "fixed_branch_attachment": "If a rooted attached branch has state (a,b,c), adding it to a parent's existing local state (A,B,C) gives ((b+c)A, (a+b)B+aC, bC).",
+      "leaf_attachment": "A leaf child has state (1,0,1). Adding it to a parent's existing local state (A,B,C) gives (A, B+C, 0).",
+      "path_subdivision": "For paths, M(P_n)=M(P_{n-2})+M(P_{n-3}) for n>=4, with 1,2,2 initially; repeated subdivision therefore has Padovan-type exponential growth.",
+      "repeated_fixed_branches": "For a root with m identical branch children (a,b,c), the whole-tree count is (b+c)^m + (a+b)^m - b^m, explicitly exhibiting multiplicative/exponential scale.",
+      "support_vertex_leaf_duplication": "Once that parent already has a leaf child its C-state is zero, so any further twin-leaf attachment leaves (A,B,0) unchanged. Thus duplicating a leaf at an existing support vertex does not change the whole-tree MIS count."
+    },
+    "meaning": "A maximal independent set is exactly an independent dominating set, so the count has a direct domination-theoretic interpretation independent of TF4 coefficients.",
+    "mis_count_ranges_by_exposed_order": {
+      "1": [
+        1,
+        1
+      ],
+      "2": [
+        2,
+        2
+      ],
+      "3": [
+        2,
+        2
+      ],
+      "4": [
+        2,
+        3
+      ],
+      "5": [
+        2,
+        4
+      ],
+      "6": [
+        2,
+        5
+      ],
+      "7": [
+        2,
+        8
+      ],
+      "8": [
+        2,
+        9
+      ],
+      "9": [
+        2,
+        16
+      ],
+      "10": [
+        2,
+        17
+      ],
+      "11": [
+        2,
+        32
+      ],
+      "12": [
+        2,
+        33
+      ],
+      "13": [
+        2,
+        64
+      ],
+      "14": [
+        2,
+        65
+      ]
+    },
+    "path_counts_orders_1_20": [
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      7,
+      9,
+      12,
+      16,
+      21,
+      28,
+      37,
+      49,
+      65,
+      86,
+      114,
+      151,
+      200,
+      265
+    ],
+    "rooted_three_state_recurrence": {
+      "formula": {
+        "A_v": "product_u (B_u + C_u)",
+        "B_v": "product_u (A_u + B_u) - product_u B_u",
+        "C_v": "product_u B_u",
+        "MIS_T": "A_r + B_r"
+      },
+      "states": {
+        "A": "root selected",
+        "B": "root unselected and dominated by at least one selected child",
+        "C": "root unselected and not internally dominated; requires selected parent"
+      }
+    }
+  },
+  "transformations_considered": [
+    {
+      "coordinate": "raw maximal_independent_set_count",
+      "decision": "retain",
+      "independent_meaning": "exact number of independent dominating sets",
+      "reason": "It is exact, root-independent, combinatorial, and recurrence-natural. The 20 facets remain supporting through every exposed extension to order 14."
+    },
+    {
+      "coordinate": "log(maximal_independent_set_count)",
+      "decision": "reject_for_now",
+      "independent_meaning": "logarithmic enumerative scale",
+      "reason": "The recurrence is sum-product rather than multiplicative, so log does not linearize tree composition generally; it also replaces exact rational hull coordinates by non-exact real values without an independent gamma-versus-log theorem."
+    },
+    {
+      "coordinate": "log(maximal_independent_set_count) / order",
+      "decision": "reject_for_now",
+      "independent_meaning": "per-vertex exponential growth rate",
+      "reason": "Meaningful for asymptotic families but not canonical for individual finite-tree linear inequalities; it entangles MIS with order and loses absolute count scale."
+    },
+    {
+      "coordinate": "maximal_independent_set_count ** (1/order)",
+      "decision": "reject_for_now",
+      "independent_meaning": "finite-tree growth factor",
+      "reason": "Equivalent information to normalized log at fixed order, with the same lack of a canonical linear relation to domination and worse exact-arithmetic behavior."
+    },
+    {
+      "coordinate": "MIS / order-extremal-MIS(order)",
+      "decision": "reject_for_now",
+      "independent_meaning": "fraction of the Wilf/Sagan order-wise maximum",
+      "reason": "This exact bounded normalization has independent extremal meaning, but it mixes order into the feature and suppresses absolute multiplicity. No exposed structural argument says domination should be linear in this fraction."
+    },
+    {
+      "coordinate": "rooted recurrence-state statistic",
+      "decision": "reject_as_single_replacement",
+      "independent_meaning": "transfer state (A,B,C) for independent domination",
+      "reason": "The states explain composition, but depend on a chosen root. Any root-invariant compression would require a new aggregation choice and would become a bespoke feature rather than a canonical replacement."
+    }
+  ]
+}
