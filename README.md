@@ -32,7 +32,9 @@ set. Mathematical interpretation then falsified 3 of those survivors and classif
 `experiments/TF3-0001/RESULTS.md`, `docs/TF3_DIAGNOSTIC.md`, and
 `docs/TF3_EXPERIMENT_FREEZE.md`.
 
-TF4 diagnosed the completed TF3 zero-interest result using only exposed orders 1-13 and committed history. The diagnosis found that 8/12 ratios already appeared exactly in TF2, 9/12 had discovery touch count 1, and 8/12 extremal coefficients drifted by exposed order 13. It also made the literal-domain mismatch explicit: K1 falsifies 5/12 TF3 forms under the stated all-tree hypothesis. TF4 therefore froze `TF4-0001` with one scientific change: fixed pairwise convex-hull generation over all 21 unordered pairs of the same seven features, with exact cross-run deduplication. The target, feature vocabulary, orders 2-10 discovery corpus, TxGraffiti pin, heuristics, post-processors, and all-tree hypothesis remain fixed. Order 14 is reserved as the fresh exhaustive holdout and has only been used for timing without value inspection. TF4-0001 has not been scientifically executed. See `docs/TF4_DIAGNOSTIC.md` and `docs/TF4_EXPERIMENT_FREEZE.md`.
+TF4 completed `TF4-0001` with the frozen one-axis change from ratios to 21 fixed pairwise convex-hull runs. The scientific run at source `d8e0874a22dde7f226431fc4f15a36adb8254efa` (Actions `36983184665`) reproduced 259 raw outputs, 214 after Dalmatian, 205 per-run post-duplicate outputs, and 146 exact cross-run unique statements. Permanent IDs `TF-001012`–`TF-001157` were allocated before the exposed K1 gate; K1 falsified 47, leaving a 99-candidate batch frozen with SHA-256 `2bbb81b85eb6e40351f0913fafdc822c5417b2336e957e83fc08b505aedabf0f` before order 14 was constructed.
+
+The fresh exhaustive 3,159-tree order-14 holdout falsified 66 of those 99 and left 33 survivors; all 33 survived the exact 19-tree frozen hostile set. Post-gate interpretation then found one already-exposed order-11 counterexample, classified six forms as elementary, four as feature-set artifacts, identified `TF-001013` as the known Lemańska leaf bound, and left `TF-001028`, `gamma(T) <= (2n+1-diameter(T))/3`, in bounded `NOVELTY_AUDIT` after a targeted search found no exact match. That negative search is not evidence of novelty. Twenty maximal-independent-set-count facets remain finite `ADVERSARIAL_PASSED` without promotion. No candidate reached `GRADUATION_CANDIDATE`. See `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, and `docs/TF4_EXPERIMENT_FREEZE.md`.
 
 ## Quick start
 
@@ -55,4 +57,4 @@ Reproduce the compact TF1 benchmark with:
 python experiments/benchmark_tf1.py --output /tmp/tf1-benchmark.json
 ```
 
-See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, and `experiments/TF3-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, and `docs/TF4_EXPERIMENT_FREEZE.md` before adding another discovery experiment.
+See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, and `docs/TF4_EXPERIMENT_FREEZE.md` before adding another discovery experiment.
