@@ -210,7 +210,7 @@ See `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md` and
 
 ## TF8 — fixed-support equality characterization
 
-Status: **COMPLETE (2026-10-02), pending final PR validation/merge.**
+Status: **COMPLETE (2026-10-02).**
 
 TF8 refines the TF7 theorem using only burned orders 1--14. The forest lower bound has a unique
 equality structure: i(F)=F_(s+2) for an s-vertex forest if and only if F=P_s. Separately, for every
@@ -232,3 +232,39 @@ scientific experiment is frozen, and no candidate ID is allocated. TF-001158 rem
 
 See docs/TF8_FIXED_SUPPORT_EQUALITY.md and
 experiments/TF8-DIAG-0001/diagnosis.json.
+
+
+## TF9 — fixed-support prior-art and theorem-significance audit
+
+Status: **COMPLETE (2026-10-02), pending final PR validation/merge.**
+
+TF9 audits the TF7/TF8 fixed-support MIS theorem without consuming fresh data or reopening the
+archived TF4 MIS fan. The classical all-independent-set ingredient is already contained in
+Prodinger--Tichy (1982): among n-vertex trees the path uniquely minimizes the number of independent
+sets, with value F_(n+2).
+
+The strongest prior-art implication is Tian--Tu (2025), who prove for every tree T of order n and
+independence number alpha that m(T)>=F_(n-alpha+2), sharply. Since trees are bipartite,
+n-alpha(T)=nu(T), and for T!=P2 one can choose pairwise disjoint private support--leaf edges, so
+s(T)<=nu(T). Hence the TF7 fixed-support value theorem m(T)>=F_(s(T)+2) is a direct corollary of a
+strictly stronger published bound; Tian--Tu's sharp family contains P_s corona K1 at n=2s,
+alpha=s.
+
+Taletskii--Malyshev (2022) independently record the extension identity i(H)=mi(H corona K1) and
+that adding twin leaves preserves the maximal-independent-set count. Their fixed-leaf extremal
+problem and the twin-free extremal literature are genuinely different parameterizations, but these
+identities already cover substantial ingredients of the TF8 equality examples.
+
+The bounded audit did not locate an exact published statement of the support-induced injection
+m(T)>=i(T[S(T)]), its equality criterion T[C(T)] edgeless, or the complete only-if classification
+of all fixed-support minimizers. This is explicitly not a novelty claim. The remaining
+equality-only sharpening is elementary, while the main numerical extremal theorem is subsumed by
+stronger literature.
+
+Decision: keep the theorem inside TreeForge; do not create a separate theorem repository. No
+candidate lifecycle revision, no experiment registry record, no new coordinate, no new candidate
+ID, and no fresh exhaustive order are created. TF-001158 remains next; orders at least 15 remain
+untouched.
+
+See `docs/TF9_FIXED_SUPPORT_PRIOR_ART.md` and
+`experiments/TF9-AUDIT-0001/audit_summary.json`.
