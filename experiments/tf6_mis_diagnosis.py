@@ -560,7 +560,7 @@ def build_diagnosis() -> dict[str, object]:
             },
             {
                 "source": (
-                    "D. S. Taletskii and A. V. Malyshev, The number of maximal independent "
+                    "D. S. Taletskii and D. S. Malyshev, The number of maximal independent "
                     "sets in trees with a given number of leaves, Discrete Appl. Math. 314 "
                     "(2022), 321-330, DOI 10.1016/j.dam.2022.03.012"
                 ),
