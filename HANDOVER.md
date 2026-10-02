@@ -1,3 +1,188 @@
+# TF4 scientific-execution handover
+
+TF4-0001 is scientifically complete on the `tf4-scientific-execution` branch. This section
+records the continuation that executed the already-frozen pairwise experiment. The earlier TF4
+diagnosis-and-freeze handover remains preserved below unchanged.
+
+## Verified starting state and authoritative history
+
+Verified starting `main` HEAD for this TF4 continuation:
+`4053c0254efad6a64df2c082574540e7f8ec26c2`.
+
+The post-freeze main validation run was `36977299098`, successful. PR #9 was verified merged.
+
+Authoritative TF2 scientific source/run remain:
+`d091d88889fa72322bfc49a5531bc30b1f31b049` / `36888114138`.
+
+Corrected TF3 diagnostic run remains `36907058956`.
+
+Authoritative TF3 scientific source/run remain:
+`e23b44d24a7b87d6f67aa18749059540934b2767` / `36914647703`.
+
+TF4 diagnostic validation runs remain `36972524602` and `36973194898`.
+
+## Frozen scientific change
+
+Relative to TF3, exactly one material discovery axis changed:
+
+- TF3: one `ratios` run over all seven frozen features;
+- TF4: `convex_hull` run separately over all 21 unordered pairs of the same seven features,
+  followed only by exact normalized `(lhs, operator, rhs)` cross-run deduplication.
+
+Target, discovery orders 2-10, seven features, TxGraffiti `0.4.1` pin, Morgan/Dalmatian,
+post-processors, empty-payload-to-upstream-`None` semantics, and the literal all-tree hypothesis
+were unchanged.
+
+## Authoritative TF4 scientific run
+
+Scientific source commit:
+`d8e0874a22dde7f226431fc4f15a36adb8254efa`.
+
+Successful scientific GitHub Actions run:
+`36983184665`.
+
+Pairwise pipeline counts:
+
+- feature-pair runs: 21
+- raw generator outputs: 259
+- after Morgan: 259
+- after Dalmatian: 214
+- per-run post-duplicate/touch-sort total: 205
+- exact cross-run unique statements: 146
+
+All 146 exact unique statements received permanent IDs `TF-001012` through `TF-001157`
+before the exposed K1 consistency gate. Exact discovery-side reevaluation falsified 0. The exposed
+K1 gate falsified 47.
+
+## Candidate-batch firewall
+
+After discovery reevaluation and K1 consistency, 99 candidates remained `CONJECTURED`.
+
+Candidate-batch SHA-256:
+`2bbb81b85eb6e40351f0913fafdc822c5417b2336e957e83fc08b505aedabf0f`.
+
+The persisted freeze record has `holdout_constructed=false`. The order-14 holdout was constructed
+only after that batch and hash were persisted.
+
+## Fresh exhaustive order-14 holdout
+
+Fresh holdout: all 3,159 unlabeled trees of order 14.
+
+Holdout SHA-256:
+`84978208ee2c65e3cda8327709e662cc71f9018ef2afc1ca03ff86a19a6197c3`.
+
+- candidates tested: 99
+- falsified: 66
+- survived: 33
+
+Deterministic first counterexamples and exact invariant values are preserved in
+`experiments/TF4-0001/holdout_summary.json`.
+
+## Fresh frozen hostile set
+
+Fresh hostile corpus: exactly 19 pre-frozen path/star/spider/caterpillar/double-star/broom trees.
+
+Hostile SHA-256:
+`caf97df7db6b739383e015f816e3d643352cf53f164363d171c0eb1751e955f3`.
+
+Only the 33 order-14 survivors were tested. Hostile falsifications: 0. Finite hostile survivors: 33.
+
+## Mathematical interpretation
+
+Every finite survivor was interpreted after the frozen computational gates.
+
+- `TF-001068` was falsified by an already-exposed order-11 tree.
+- `TF-001015`, `TF-001021`, `TF-001027`, `TF-001032`, `TF-001078`, and
+  `TF-001107` are `TRIVIAL` elementary consequences.
+- `TF-001065`, `TF-001066`, `TF-001069`, and `TF-001070` are
+  `ARTIFACT_OF_FEATURE_SET`: same-coefficient support/MIS forms are dominated because
+  `support_vertex_count <= leaf_count`.
+- `TF-001013` independently reached `MATHEMATICALLY_INTERESTING`; a bounded candidate-specific
+  audit identified the exact Lemańska 2004 leaf bound, so the final state is `KNOWN_RESULT`.
+- `TF-001028`, `gamma(T) <= (2|V(T)| + 1 - diameter(T))/3`, independently reached
+  `MATHEMATICALLY_INTERESTING`. A bounded exact-form audit found related literature but no exact
+  match. It remains `NOVELTY_AUDIT`; the negative search is not evidence of novelty.
+- The remaining 20 finite survivors are all maximal-independent-set-count facets and remain
+  `ADVERSARIAL_PASSED` without promotion because no convincing structural mechanism was found.
+
+Exact historical normalized overlaps:
+
+- TF2 overlaps: `TF-001018`, `TF-001022`, `TF-001031`, `TF-001088`, `TF-001156`
+- TF3 overlaps: none
+
+All five TF2-overlap statements were already falsified during TF4's computational gates.
+
+Newly constructed post-gate mathematical counterexamples: 0. The only post-gate falsification used
+the already-exposed order-11 counterexample for `TF-001068`.
+
+Final interpreted lifecycle counts:
+
+- `FALSIFIED`: 114
+- `TRIVIAL`: 6
+- `ARTIFACT_OF_FEATURE_SET`: 4
+- `KNOWN_RESULT`: 1
+- `NOVELTY_AUDIT`: 1
+- `ADVERSARIAL_PASSED`: 20
+
+Candidates that reached `MATHEMATICALLY_INTERESTING`: 2
+(`TF-001013`, `TF-001028`).
+
+Candidate-specific prior-art searches were performed only for those two candidates.
+
+Candidates reaching `GRADUATION_CANDIDATE`: 0.
+
+The next permanent candidate ID is `TF-001158`.
+
+## Scientific conclusion
+
+Pairwise interactions improved interpretability over TF2 because every form now has at most two RHS
+features and the non-MIS survivors can be analyzed directly. They did not fully eliminate the
+geometric-facet problem: `maximal_independent_set_count` behaved qualitatively differently and
+still generated a neighboring fan of 20 finite survivors without a structural reason for promotion.
+
+TF4 is therefore a successful controlled negative/diagnostic result, not a theorem-producing run.
+
+## Post-run implementation failures and fixes
+
+The authoritative scientific run itself succeeded without retuning the frozen experiment.
+
+Post-gate interpretation run `36984250743` failed because the probe passed an unsupported corpus
+role label to `experiment_corpus_rows`. This touched only already-exposed data. The role was
+corrected to a supported non-fresh role and validation runs `36984350503` and `36984350541`
+then succeeded.
+
+Result-materialization integration runs `36985331317` and `36985361656` failed because new
+TF4 result tests were present before the generated compact result files were committed.
+Materialization run `36985361788` then generated the result files successfully but validation
+caught a historical TF3 test that still asserted the global registry would stop at
+`TF-001012`. That obsolete terminal-registry assumption was removed. CI run `36985673530`
+still saw the intentionally not-yet-committed result files absent, while the paired materialization
+run `36985673542` completed the authoritative commit. These were materialization/test-ordering
+issues only; none changed the scientific source commit, candidate batch, holdout, hostile set, or
+candidate outcomes.
+
+Branch CI `36986024438` passed installation, unit tests, compileall, Ruff, deterministic
+calibration, TF2 diagnostic regression, and TF4 exposed-data diagnostic regression.
+
+## TF5 recommendation
+
+Do not broaden the discovery grammar yet.
+
+First make TF5 a structural attack on `TF-001028`:
+
+1. seek a direct proof or a parameterized family counterexample for
+   `gamma(T) <= (2|V(T)| + 1 - diameter(T))/3`;
+2. complete its focused prior-art audit without treating negative search as novelty evidence;
+3. if it resolves negatively, diagnose the maximal-independent-set-count facet fan before freezing
+   any new discovery-axis change.
+
+No Lean, Palomar, theorem repository, paper, or arXiv work is justified yet.
+
+The exact merged final `main` HEAD and final post-merge CI run are recorded in the session closeout,
+because a commit cannot contain its own resulting SHA.
+
+---
+
 # TF4 handover
 
 TF4 completed the exposed-data diagnosis of TF3's interpretable-but-zero-interest result and froze
