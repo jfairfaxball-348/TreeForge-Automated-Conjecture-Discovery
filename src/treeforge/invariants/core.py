@@ -76,12 +76,27 @@ def _is_maximal_independent(graph: nx.Graph, subset: set[int]) -> bool:
 
 
 def maximal_independent_set_count(graph: nx.Graph) -> int:
-    vertices = list(graph.nodes())
-    total = 0
-    for mask in range(1 << len(vertices)):
-        subset = {vertices[i] for i in range(len(vertices)) if mask & (1 << i)}
-        total += _is_maximal_independent(graph, subset)
-    return total
+    """Count maximal independent sets by a three-state exact tree DP.
+
+    A maximal independent set is exactly an independent dominating set.  For a
+    rooted subtree the returned states count solutions where the root is
+    selected, is unselected but dominated by a selected child, or is
+    unselected and still needs its parent to dominate it.
+    """
+    root = next(iter(graph.nodes()))
+
+    def visit(vertex: int, parent: int | None) -> tuple[int, int, int]:
+        children = [visit(u, vertex) for u in graph.neighbors(vertex) if u != parent]
+        selected = math.prod(dominated + needs_parent for _, dominated, needs_parent in children)
+        needs_parent = math.prod(dominated for _, dominated, _ in children)
+        child_closed = math.prod(
+            selected_child + dominated for selected_child, dominated, _ in children
+        )
+        dominated_by_child = child_closed - needs_parent
+        return selected, dominated_by_child, needs_parent
+
+    selected, dominated, _ = visit(root, None)
+    return selected + dominated
 
 
 def wiener_index(graph: nx.Graph) -> int:
