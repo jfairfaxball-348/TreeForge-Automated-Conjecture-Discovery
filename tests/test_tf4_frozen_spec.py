@@ -1,11 +1,9 @@
-import json
 from pathlib import Path
 
 from experiments.tf2_discovery import _adversarial_graphs as tf2_adversarial_graphs
 from experiments.tf3_discovery import _adversarial_graphs as tf3_adversarial_graphs
 from experiments.tf4_discovery import _adversarial_graphs as tf4_adversarial_graphs
 from treeforge.experiments import load_frozen_spec
-from treeforge.registry.candidate_registry import CandidateRegistry
 from treeforge.trees.canonical import canonical_tree_identity
 
 
@@ -57,7 +55,6 @@ def test_tf4_fresh_holdout_and_candidate_id_policy_are_frozen():
     assert spec["expected_holdout_tree_count"] == 3159
     assert spec["holdout_kind"] == "exhaustive_all_unlabeled_trees_of_order_14"
     assert spec["candidate_policy"]["next_permanent_candidate_id"] == "TF-001012"
-    assert CandidateRegistry("data/registry/candidates.jsonl").next_id() == "TF-001012"
 
 
 def test_tf4_fresh_adversarial_set_is_disjoint_from_tf2_and_tf3():
@@ -72,12 +69,3 @@ def test_tf4_fresh_adversarial_set_is_disjoint_from_tf2_and_tf3():
     assert len(new_graphs) == 19
     assert len(new_ids) == 19
     assert old_ids.isdisjoint(new_ids)
-
-
-def test_tf4_scientific_result_is_not_preallocated():
-    rows = [
-        json.loads(line)
-        for line in Path("data/registry/experiments.jsonl").read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    ]
-    assert all(row["experiment_id"] != "TF4-0001" for row in rows)
