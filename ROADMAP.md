@@ -179,7 +179,7 @@ See `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`.
 
 ## TF7 — support/MIS structural diagnosis
 
-Status: **COMPLETE (2026-10-02), pending final PR validation/merge.**
+Status: **COMPLETE (2026-10-02).**
 
 TF7 attacks the only two strict exposed-corpus dominance conditions isolated by TF6 without using
 order 15 or any other fresh exhaustive corpus. The key structural result is stronger than either
@@ -207,3 +207,28 @@ TF-001158 remains next, and orders at least 15 remain untouched.
 See `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md` and
 `experiments/TF7-DIAG-0001/diagnosis.json`.
 
+
+## TF8 — fixed-support equality characterization
+
+Status: **COMPLETE (2026-10-02), pending final PR validation/merge.**
+
+TF8 refines the TF7 theorem using only burned orders 1--14. The forest lower bound has a unique
+equality structure: i(F)=F_(s+2) for an s-vertex forest if and only if F=P_s. Separately, for every
+tree T other than P2, equality m(T)=i(T[S(T)]) holds if and only if the induced subgraph on
+vertices that are neither supports nor leaves is edgeless.
+
+Combining the two equality mechanisms gives the exact fixed-support minimizers for every s>=3:
+they are precisely the trees obtained from P_s by attaching at least one private leaf to every
+support-path vertex and no other vertices. Equivalently, they are the arbitrary duplicate-leaf
+closure of P_s corona K1; after twin-leaf reduction the minimizer is unique.
+
+The deterministic exposed check recomputes all 5,447 unlabeled trees of orders 1--14 and finds zero
+failures of the two equality characterizations or the final extremal family. This is interpretation
+data, not proof. No order at least 15 is inspected.
+
+No TF4 survivor receives a lifecycle revision, the archived 18-candidate MIS fan is not reopened,
+raw maximal_independent_set_count remains unchanged, no new coordinate is introduced, no
+scientific experiment is frozen, and no candidate ID is allocated. TF-001158 remains next.
+
+See docs/TF8_FIXED_SUPPORT_EQUALITY.md and
+experiments/TF8-DIAG-0001/diagnosis.json.
