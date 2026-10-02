@@ -115,3 +115,38 @@ axis change.
 
 See `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, and
 `docs/TF4_EXPERIMENT_FREEZE.md`.
+
+## TF5 — structural resolution of TF-001028
+
+Status: **COMPLETE (2026-10-02).**
+
+TF5 began from main 308104fee32f55dc12a110357c48f15249193be5 with successful post-TF4
+CI 37016098699. It did not reopen TF4-0001 or consume new fresh holdout data.
+
+The primary candidate TF-001028,
+
+gamma(T) <= (2n+1-diameter(T))/3,
+
+was attacked structurally and by candidate-specific exact family search. The mathematical resolution
+is prior art rather than a new TreeForge theorem. Ore's 1962 isolate-free bound gamma<=floor(n/2)
+proves the required inequality when 2D<=n+2. For the complementary long-diameter regime,
+Gu, Meng, Zhang and Wan (2013), Lemma 2.3, give the exact maximum domination number for trees
+with fixed order n and diameter D>=n/2+1:
+gamma<=n-D+ceil((2D-n-1)/3). The elementary inequality
+3 ceil(x/3)<=x+2 then gives 3gamma+D<=2n+1. K1 is equality separately.
+
+TF-001028 therefore moves append-only from NOVELTY_AUDIT to KNOWN_RESULT. It does not reach
+GRADUATION_CANDIDATE. No new candidate ID was allocated; TF-001158 remains next.
+
+TF5 also diagnosed the 20 remaining MIS-count finite survivors. They split into 3 MIS-only,
+6 support/MIS, 9 diameter/MIS, and 2 matching/MIS facets. All 20 remain valid and have equality
+examples at each exposed order 11-14; a common exposed invariant vector makes 10 facets tight.
+Thus the fan is genuine neighboring low-dimensional geometry, not merely TF3-style coefficient
+drift. Raw MIS count is scale-sensitive, but this evidence does not independently justify deleting,
+logging, normalizing, or replacing it.
+
+No new experiment was frozen and no fresh data boundary was allocated. The next session should
+remain diagnostic until a single-axis change is justified independently of desired yield.
+
+See docs/TF5_TF001028_ANALYSIS.md and experiments/TF5-TF001028/analysis_summary.json.
+
