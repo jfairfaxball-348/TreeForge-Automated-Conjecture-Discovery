@@ -338,6 +338,34 @@ def _pairwise_hull_diagnosis(
             _first_failure(metadata, running_orders) is None for metadata in unique_rows
         )
 
+    burned_rows = [
+        row for order in range(11, 14) for row in exposed_by_order[order]
+    ]
+    k1_valid_rows = [
+        metadata
+        for metadata in unique_rows
+        if evaluate_relation(*_relation_key(metadata), k1_row)
+    ]
+    burned_survivors = [
+        metadata
+        for metadata in unique_rows
+        if _first_failure(metadata, burned_rows) is None
+    ]
+    domain_and_burned_survivors = [
+        metadata
+        for metadata in burned_survivors
+        if evaluate_relation(*_relation_key(metadata), k1_row)
+    ]
+    survivor_supports = Counter(
+        len(_rhs_features(str(metadata["rhs"])))
+        for metadata in domain_and_burned_survivors
+    )
+    survivor_pairs = Counter(
+        "+".join(_rhs_features(str(metadata["rhs"])))
+        for metadata in domain_and_burned_survivors
+        if len(_rhs_features(str(metadata["rhs"]))) == 2
+    )
+
     return {
         "feature_pair_run_count": 21,
         "runtime_seconds": runtime_seconds,
@@ -350,6 +378,11 @@ def _pairwise_hull_diagnosis(
         "exact_tf2_overlap_count": exact_tf2_overlap,
         "exact_tf2_overlap_fraction": f"{exact_tf2_overlap}/{len(statements)}",
         "k1_literal_domain_failure_count": k1_fail_count,
+        "k1_literal_domain_pass_count": len(k1_valid_rows),
+        "burned_orders_11_to_13_survivor_count": len(burned_survivors),
+        "k1_and_burned_orders_11_to_13_survivor_count": len(domain_and_burned_survivors),
+        "k1_and_burned_survivor_rhs_support_histogram": dict(sorted(survivor_supports.items())),
+        "k1_and_burned_survivor_two_feature_pair_distribution": dict(sorted(survivor_pairs.items())),
         "max_denominator": max(denominators, default=1),
         "median_max_denominator": int(median(denominators)) if denominators else 1,
         "p90_max_denominator": _percentile(denominators, 0.9),
@@ -391,7 +424,7 @@ def _timing_only_order14() -> dict[str, object]:
     }
 
 
-def run(output: Path) -> dict[str, object]:
+def run(output: Path, *, skip_order14_timing: bool = False) -> dict[str, object]:
     exposed_by_order = {order: _corpus(order) for order in range(1, 14)}
     discovery_rows = [
         row for order in range(2, 11) for row in exposed_by_order[order]
@@ -438,7 +471,14 @@ def run(output: Path) -> dict[str, object]:
             ),
         },
         "pairwise_convex_hulls": pairwise,
-        "order14_timing_only_feasibility": _timing_only_order14(),
+        "order14_timing_only_feasibility": (
+            {
+                "skipped": True,
+                "reason": "Already measured without value inspection in initial TF4 diagnostic run 36972524602.",
+            }
+            if skip_order14_timing
+            else _timing_only_order14()
+        ),
     }
     output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     concise = {
@@ -457,6 +497,12 @@ def run(output: Path) -> dict[str, object]:
             "burned_orders_11_through_n_cumulative_survivor_counts"
         ],
         "pairwise_k1_failures": pairwise["k1_literal_domain_failure_count"],
+        "pairwise_k1_and_burned_survivors": pairwise[
+            "k1_and_burned_orders_11_to_13_survivor_count"
+        ],
+        "pairwise_k1_and_burned_support": pairwise[
+            "k1_and_burned_survivor_rhs_support_histogram"
+        ],
         "pairwise_max_denominator": pairwise["max_denominator"],
         "order14_timing_only": result["order14_timing_only_feasibility"],
     }
@@ -467,8 +513,9 @@ def run(output: Path) -> dict[str, object]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--skip-order14-timing", action="store_true")
     args = parser.parse_args()
-    run(args.output)
+    run(args.output, skip_order14_timing=args.skip_order14_timing)
 
 
 if __name__ == "__main__":
