@@ -259,7 +259,7 @@ freeze a new experiment were unchanged.
 
 ## 2026-10-02 — TF6 diagnosis entry-point failure
 
-- GitHub Actions run `37045955391` reached the new TF6 exposed-data diagnosis only after unit
+- GitHub Actions runs `37045955391` and `37046259205` reached the new TF6 exposed-data diagnosis only after unit
   tests, compileall, Ruff, deterministic calibration, TF2 diagnosis, and TF4 diagnosis had all
   passed.
 - The TF6 step then failed immediately with
