@@ -6,7 +6,7 @@ from experiments.tf3_discovery import _adversarial_graphs as tf3_adversarial_gra
 from experiments.tf4_discovery import _adversarial_graphs as tf4_adversarial_graphs
 from treeforge.experiments import load_frozen_spec
 from treeforge.registry.candidate_registry import CandidateRegistry
-from treeforge.trees.canonical import canonical_tree_code
+from treeforge.trees.canonical import canonical_tree_identity
 
 
 def test_tf4_frozen_spec_changes_only_pairwise_relation_geometry():
@@ -61,16 +61,13 @@ def test_tf4_fresh_holdout_and_candidate_id_policy_are_frozen():
 
 
 def test_tf4_fresh_adversarial_set_is_disjoint_from_tf2_and_tf3():
-    def identity(graph):
-        return graph.number_of_nodes(), canonical_tree_code(graph)
-
     old_ids = {
-        identity(graph)
+        canonical_tree_identity(graph)
         for builder in [tf2_adversarial_graphs, tf3_adversarial_graphs]
         for _, _, graph in builder()
     }
     new_graphs = tf4_adversarial_graphs()
-    new_ids = {identity(graph) for _, _, graph in new_graphs}
+    new_ids = {canonical_tree_identity(graph) for _, _, graph in new_graphs}
 
     assert len(new_graphs) == 19
     assert len(new_ids) == 19
