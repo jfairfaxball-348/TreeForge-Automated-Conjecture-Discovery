@@ -59,6 +59,18 @@ independently canonical linear discovery coordinates. TF6 therefore retains raw 
 no new experiment, allocates no candidate ID, and leaves every order at least 15 untouched. See
 `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md` and `experiments/TF6-DIAG-0001/diagnosis.json`.
 
+TF7 resolves those two exposed dominance conditions structurally. If (S(T)) is the support-vertex
+set and (s=|S(T)|), then every tree other than (P_2) satisfies
+(m(T)\ge i(T[S(T)])\ge F_{s+2}), while (P_2) is the explicit support/leaf-overlap exception.
+This gives the exact fixed-support minimum (1,2,2,F_{s+2}) for (s=0,1,2,s\ge3),
+respectively, with path coronas attaining the Fibonacci branch. Hence both
+(m\ge3s-4) and (m\ge5s-12) hold for every finite tree. TF-001034 and TF-001037 therefore
+move append-only to `ARTIFACT_OF_FEATURE_SET`, universally dominated by TF-001091 and
+TF-001095 respectively; the stronger siblings remain finite `ADVERSARIAL_PASSED` candidates.
+TF7 retains raw MIS, freezes no experiment, allocates no candidate ID, and leaves orders at least
+15 untouched. See `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md` and
+`experiments/TF7-DIAG-0001/diagnosis.json`.
+
 ## Quick start
 
 ```bash
@@ -80,4 +92,4 @@ Reproduce the compact TF1 benchmark with:
 python experiments/benchmark_tf1.py --output /tmp/tf1-benchmark.json
 ```
 
-See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, `docs/TF4_EXPERIMENT_FREEZE.md`, `docs/TF5_TF001028_ANALYSIS.md`, and `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md` before adding another discovery experiment.
+See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, `docs/TF4_EXPERIMENT_FREEZE.md`, `docs/TF5_TF001028_ANALYSIS.md`, `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`, and `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md` before adding another discovery experiment.
