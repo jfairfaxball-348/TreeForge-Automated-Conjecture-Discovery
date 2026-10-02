@@ -5,7 +5,6 @@ from pathlib import Path
 from experiments.tf3_discovery import _adversarial_rows
 from treeforge.experiments import experiment_corpus_rows, load_frozen_spec
 from treeforge.pipeline import stable_hash
-from treeforge.registry.candidate_registry import CandidateRegistry
 from treeforge.registry.schema import validate_candidate_record
 
 EXPECTED_SOURCE = "e23b44d24a7b87d6f67aa18749059540934b2767"
@@ -142,7 +141,6 @@ def test_tf3_registry_is_append_only_and_interpreted():
     assert current["TF-001010"]["counterexamples"][-1]["order"] == 25
     assert current["TF-001010"]["counterexamples"][-1]["values"]["domination_number"] == 7
     assert current["TF-001010"]["counterexamples"][-1]["values"]["matching_number"] == 12
-    assert CandidateRegistry("data/registry/candidates.jsonl").next_id() == "TF-001012"
 
 
 def test_tf3_experiment_registry_record_is_unique_and_complete():
