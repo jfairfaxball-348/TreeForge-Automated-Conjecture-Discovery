@@ -1,3 +1,122 @@
+# TF9 fixed-support prior-art handover
+
+TF9 completes the bounded prior-art and theorem-significance audit requested by TF8. It consumes no
+fresh tree data and does not reopen the archived TF4 MIS fan.
+
+## Verified starting state
+
+Starting main HEAD: `2dcf6df89648dab8b050b1ebf05f332dceb90c54`.
+Starting post-TF8 main CI: `37059395616`, successful.
+PR #14 is merged; exact PR head
+`395ae9befe2e858a47fc73d2d00e30ad53e6427f` passed exact-head CI
+`37059137030`.
+
+TF-001028 remains `KNOWN_RESULT` revision 7. TF-001034 and TF-001037 remain
+`ARTIFACT_OF_FEATURE_SET` revision 6. TF-001091 and TF-001095 remain revision-5
+`ADVERSARIAL_PASSED`, as do the other sixteen active TF4 MIS facets. TF-001157 remains the
+highest allocated candidate and TF-001158 remains next.
+
+The experiment registry has exactly one TF4-0001 row and no TF5--TF9 scientific experiment row.
+Orders 1--14 are burned and orders at least 15 remain untouched.
+
+## Prior-art resolution
+
+The all-independent-set ingredient is classical. Prodinger and Tichy (1982), *Fibonacci Numbers of
+Graphs*, prove that an n-vertex tree has at least F_(n+2) independent sets, with equality only for
+P_n. The TF8 forest statement is an elementary direct corollary by joining forest components with
+bridges. It is not independent new mathematics.
+
+The decisive stronger result is Tian and Tu (2025), *The minimum number of maximal independent sets
+in graphs with given order and independence number*, Discrete Applied Mathematics 368, 52--65,
+DOI 10.1016/j.dam.2025.02.027. Their Theorem 1 gives
+
+m(T) >= F_(n-alpha(T)+2)
+
+for every tree, sharply. For a tree, n-alpha=nu by König/Gallai. For T!=P2, choose one private leaf
+for each support; the support--leaf edges are pairwise disjoint, so s(T)<=nu(T). Therefore
+
+m(T) >= F_(nu(T)+2) >= F_(s(T)+2).
+
+At n=2s and alpha=s, Tian--Tu's sharp construction is P_s corona K1. Hence the exact TF7
+fixed-support **value theorem** for s>=3 is a direct corollary of a strictly stronger published
+result plus the elementary matching observation.
+
+Taletskii and Malyshev (2022), *The number of maximal independent sets in trees with a given number
+of leaves*, DOI 10.1016/j.dam.2022.03.012, explicitly record both
+i(H)=mi(ext(H)) for ext(H)=H corona K1 and invariance of mi under adding leaf twins. Their fixed-leaf
+minimum, and the related twin-free minimum literature, condition on different parameters and do not
+supply the fixed-support only-if classification.
+
+Wilf (1986) and Sagan (1988) solve the order-wise **maximum** MIS problem for trees.
+Ortiz--Villanueva (2012) enumerate MIS in caterpillars. Those are related enumeration results but do
+not imply the fixed-support theorem.
+
+## Equality-only status
+
+The bounded audit did not locate an exact published version of
+
+m(T) >= i(T[S(T)])
+
+or of the TF8 equality criterion
+
+m(T)=i(T[S(T)]) iff T[C(T)] is edgeless.
+
+Nor did it locate a published characterization of **all** trees attaining the Tian--Tu lower bound
+that would directly imply TF8's complete fixed-support equality family. Tian--Tu prove sharpness by
+construction rather than by an iff extremal classification in the inspected theorem/manuscript.
+
+Thus the part least clearly represented in the located literature is the equality-only sharpening:
+the core-edgeless support-injection lemma and the proof that no fixed-support minimizers exist beyond
+duplicate-leaf blowups of P_s corona K1. This is a bounded-search status only. Negative search is not
+evidence of novelty, and equivalent literature under other terminology may exist.
+
+## Significance decision
+
+Do **not** create a separate theorem-focused repository.
+
+The fixed-support parameter is natural and the core criterion is clean, but the numerical extremal
+value is already subsumed by Tian--Tu; the independent-set path minimum is classical; and the corona
+and twin-leaf identities are already explicit in Taletskii--Malyshev. What remains is a short,
+elementary equality-only sharpening. The bounded audit does not establish enough independent
+theorem-project value to justify Lean, Palomar, paper, or arXiv packaging.
+
+## TreeForge decision
+
+Candidate lifecycle revisions: none.
+
+Residual TF4 MIS fan: keep all 18 finite survivors archived; no coefficient mining.
+
+Raw maximal_independent_set_count: retain unchanged.
+
+New discovery coordinate: none.
+
+New scientific experiment: none.
+
+Fresh order consumed: none.
+
+New candidate ID allocated: none; TF-001158 remains next.
+
+Candidate registry changed: no.
+
+Experiment registry changed: no.
+
+Theorem repository created: no.
+
+## Next session
+
+Keep orders at least 15 untouched. Do not reopen the MIS fan merely because the equality
+classification has bibliographic residue. Continue TreeForge only from a separately motivated
+scientific question with a controlled axis. Revisit the equality-only theorem outside TreeForge only
+if later expert bibliographic work supplies an independent reason.
+
+See `docs/TF9_FIXED_SUPPORT_PRIOR_ART.md` and
+`experiments/TF9-AUDIT-0001/audit_summary.json`.
+
+The exact merged final main HEAD and final post-merge CI are reported in the session closeout because
+a commit cannot contain its own resulting SHA.
+
+---
+
 # TF8 fixed-support equality handover
 
 TF8 completes the equality question left open by TF7 and stops without freezing a new scientific
