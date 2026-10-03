@@ -429,3 +429,37 @@ executed, no candidate is allocated, TF-001158 remains next, and orders at least
 untouched.
 
 See `docs/TF14_SEGMENT_DOMINATION_MAXIMUM_EQUALITY.md`.
+
+## TF15 — strict-rounded defect classification and fixed-segment closure
+
+Status: **COMPLETE (2026-10-03).**
+
+TF15 attacks only the strict-rounded residue-1/2 realization problem left by TF14. The complete
+constructive `(gamma,i)`-tree grammar of Dorfling--Goddard--Henning--Mynhardt (2006) supplies an
+exact local recurrence for `epsilon(T)=n(T)+L(T)-3i(T)`. Observation 11 lets every nontrivial
+`(gamma,i)`-tree use a construction starting from the D-labeled P1. Its mandatory first T1 produces
+a P2 with defect 1. Thereafter the defect increments are:
+
+- T1: +1 at a leaf attacher, +2 at a nonleaf;
+- T2/T3: -1 at a leaf attacher, 0 at a nonleaf;
+- T4/T5/T6: 0 at a leaf attacher, +1 at a nonleaf.
+
+Thus the final defect is exactly the sum of published local construction changes. On TF14's strict
+rounded branch, residue 1 maximizers are exactly the published `(gamma,i)` constructions ending
+with defect 1, and residue 2 maximizers are exactly those ending with defect 2. Both subcases have
+status **TREEFORGE_ELEMENTARY_DERIVATION_FROM_PUBLISHED_RESULTS**. The construction is not unique,
+but the endpoint sum is the graph invariant `n+L-3i`.
+
+Cabrera-Martínez's 2024 refined domination bound independently yields
+`2delta+|SL(T)|<=epsilon`, where `delta=L-h`. Hence residue 1 forces `delta=0` and at most
+one support-link; residue 2 allows only `delta=0, |SL|<=2` or `delta=1, |SL|=0`. Burned
+orders 1--14 show that equality in this support restriction is not necessary, so it is a useful
+necessary filter rather than the classification.
+
+Together with TF13 and TF14, the fixed-(n,q) numerical extrema and both equality sides are now
+complete at a recursive structural level. Decision: **close the fixed-segment thread and return to a
+research-question pause**. No TF15-0001 is frozen or executed, no candidate is allocated, no
+default invariant is added, TF-001158 remains next, and orders at least 15 remain untouched.
+
+See `docs/TF15_SEGMENT_DOMINATION_ROUNDED_DEFECT.md` and
+`experiments/tf15_segment_domination_rounded_defect.py`.

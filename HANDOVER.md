@@ -1,3 +1,55 @@
+# TF15 rounded-defect handover
+
+TF15 starts from verified TF14 main
+`63fa16c17f04b27b541a3222b10f6c933165aa39`. PR #20 was merged from exact head
+`4afc22d70df65be24057605ccf164fbfd66b23b8`; exact-head CI `37132239373` and
+post-merge CI `37132400796` both passed.
+
+## Final fixed-segment result
+
+The only TF14 residue was the strict rounded branch
+`floor((n+L)/3)<n-L` with `n+L` congruent to 1 or 2 modulo 3, where maximum realization is
+equivalent to `gamma=i=floor((n+L)/3)`.
+
+Dorfling--Goddard--Henning--Mynhardt (2006) give a complete six-operation construction of all
+`(gamma,i)`-trees, and their Observation 11 gives every nontrivial such tree a P1-starting
+construction. Tracking `epsilon=n+L-3i` through that grammar is exact. The mandatory first T1
+moves the defect from -2 on P1 to 1 on P2. Subsequent defect increments are T1: +1/+2,
+T2/T3: -1/0, and T4/T5/T6: 0/+1 for leaf/nonleaf attachers respectively.
+
+Therefore residue 1 is exactly the published `(gamma,i)` construction class whose defect walk ends
+at 1, and residue 2 is exactly the class whose walk ends at 2. Both statuses are
+**TREEFORGE_ELEMENTARY_DERIVATION_FROM_PUBLISHED_RESULTS**. This closes the maximum equality
+classification at a recursive structural level; no unique construction-independent geometric normal
+form is claimed.
+
+A separate support refinement from Cabrera-Martínez (2024) gives
+`2delta+|SL|<=epsilon`. It sharply restricts the residue but is not an iff: burned maximizers
+already exhibit strict slack.
+
+## Boundary and decision
+
+The deterministic TF15 reproducer uses only the 5,447 burned trees through order 14 for
+falsification/regression. It preserves the TF14 residue counts 49/119/49 and verifies the 2024
+support bound. No TxGraffiti discovery run occurs, no candidate is allocated, TF-001158 remains
+next, candidate and experiment registries are unchanged, no new default invariant is added, and
+orders at least 15 remain untouched. The diagnosis JSON is generated in CI as an artifact rather
+than implied to be committed.
+
+Decision: **close the fixed-segment thread**. TF11--TF15 have now resolved its numerical extrema,
+minimum equality class, and maximum equality class to published classifications plus explicit
+elementary reductions. Do not create TF16 merely to seek a prettier restatement.
+
+## Next session
+
+Return TreeForge to a research-question pause. Begin only from an independently motivated
+tree-theoretic question. Do not allocate TF-001158, change the invariant grammar, or inspect order 15
+until a prospective mathematical question justifies it.
+
+See `docs/TF15_SEGMENT_DOMINATION_ROUNDED_DEFECT.md`.
+
+---
+
 # TF14 maximum-equality handover
 
 TF14 starts from verified TF13 main
