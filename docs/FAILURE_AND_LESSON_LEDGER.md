@@ -273,3 +273,17 @@ freeze a new experiment were unchanged.
   `python -m experiments.tf6_mis_diagnosis`, matching the repository's earlier TF3 lesson about
   package-aware scientific entry points.
 - Scientific consequence: none. TF0--TF5 provenance and all frozen data boundaries remain unchanged.
+
+
+## 2026-10-03 — TF12 first PR-head CI missed one removed `ceil` call
+
+PR #18 run `37112335549` reached the unit-test step and failed only in the new TF12 deterministic
+diagnosis. During cleanup, the reproducer had replaced floating `ceil(... / 3)` uses with exact
+integer arithmetic and removed the `ceil` import, but one path-case branch of
+`_maximum_formula` still called `ceil`. Both TF12 tests therefore stopped at (P_2) with
+`NameError: ceil is not defined` before the new 80-cell extremal assertions ran.
+
+Corrective action: replace that remaining call with exact `(order + 2) // 3` arithmetic. This was
+a deterministic implementation/cleanup error only. It did not run TxGraffiti, inspect order 15,
+allocate a candidate, alter either registry, or change any mathematical formula or prior-art
+conclusion.
