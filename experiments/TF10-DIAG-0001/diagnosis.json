@@ -1,0 +1,285 @@
+{
+  "analysis_id": "TF10-DIAG-0001",
+  "classification": "NEXT_QUESTION_DIAGNOSIS_NO_SCIENTIFIC_EXPERIMENT",
+  "starting_main_head": "f4f71acc9fd57f5ee2630c2cfbcc979a95c68a89",
+  "starting_main_ci_run": 37062610463,
+  "fresh_data_consumed": false,
+  "diagnostic_data_access": "Repository records, registries, and already-burned TF0-TF9 evidence only; the TF10 reproducer generates no trees and computes no order-15 invariant values.",
+  "burned_data_boundary": {
+    "exhaustive_orders": [
+      1,
+      14
+    ],
+    "orders_at_least_15": "untouched"
+  },
+  "provenance_verification": {
+    "tf9_pr": 15,
+    "tf9_pr_head": "02fcbf6dca9cf74c27890ea0df61ef5e401aeeb1",
+    "tf9_pr_head_ci": 37062351898,
+    "tf9_merge_commit": "f4f71acc9fd57f5ee2630c2cfbcc979a95c68a89",
+    "tf9_post_merge_ci": 37062610463,
+    "tf001028": {
+      "revision": 7,
+      "state": "KNOWN_RESULT"
+    },
+    "tf001034": {
+      "revision": 6,
+      "state": "ARTIFACT_OF_FEATURE_SET"
+    },
+    "tf001037": {
+      "revision": 6,
+      "state": "ARTIFACT_OF_FEATURE_SET"
+    },
+    "tf001091": {
+      "revision": 5,
+      "state": "ADVERSARIAL_PASSED"
+    },
+    "tf001095": {
+      "revision": 5,
+      "state": "ADVERSARIAL_PASSED"
+    },
+    "tf4_mis_fan": {
+      "adversarial_passed": 18,
+      "artifact_of_feature_set": 2
+    },
+    "highest_allocated_candidate": "TF-001157",
+    "next_permanent_candidate_id": "TF-001158",
+    "tf4_experiment_registry_records": 1,
+    "tf5_tf6_tf7_tf8_tf9_tf10_scientific_experiment_records": 0
+  },
+  "process_lessons": {
+    "TF1": "A frozen configuration may legitimately yield zero candidates; zero yield does not justify weakening gates.",
+    "TF2": "Full-dimensional convex hulls over many features can create enormous opaque facet families.",
+    "TF3": "One-feature ratios improve readability but often encode bounded-order scale rather than stable structure.",
+    "TF4": "Fixed pairwise hulls recover interpretable low-dimensional geometry without TF2-style opacity.",
+    "TF5": "Finite survival plus an exact-form negative search can conceal stronger published fixed-parameter results.",
+    "TF6": "Awkward scale does not justify deleting or normalizing an invariant with genuine structural recurrence.",
+    "TF7_TF8": "Facet relations can expose real structural mathematics even when the original candidates do not graduate.",
+    "TF9": "Independently derived mathematics can be subsumed by stronger prior art; significance and novelty are separate."
+  },
+  "invariant_vocabulary_audit": {
+    "A_heavily_exercised": {
+      "target": "domination_number",
+      "features": [
+        "order",
+        "leaf_count",
+        "support_vertex_count",
+        "max_degree",
+        "diameter",
+        "matching_number",
+        "maximal_independent_set_count"
+      ],
+      "assessment": "Already exercised under full-dimensional, ratio, and fixed-pairwise grammars; the archived MIS fan is not reopened."
+    },
+    "B_present_but_withheld": [
+      {
+        "invariant": "edge_count",
+        "assessment": "Calibration only; affinely determined by order on trees."
+      },
+      {
+        "invariant": "degree_sum",
+        "assessment": "Calibration only; affinely determined by order on trees."
+      },
+      {
+        "invariant": "min_degree",
+        "assessment": "Constant on the nontrivial-tree discovery universe."
+      },
+      {
+        "invariant": "independence_number",
+        "assessment": "Redundant with order and matching_number on trees via alpha+nu=n."
+      },
+      {
+        "invariant": "radius",
+        "assessment": "Determined by diameter on trees and supplies no independent discovery axis."
+      },
+      {
+        "invariant": "eccentricity_sum",
+        "assessment": "Natural exact distance statistic, but no TF0-TF9 domination mechanism specifically requires it."
+      },
+      {
+        "invariant": "wiener_index",
+        "assessment": "Natural exact global distance statistic, but no pre-existing domination question selects it."
+      },
+      {
+        "invariant": "cherry_count",
+        "assessment": "Natural exact local leaf-clustering statistic, but no demonstrated domination mechanism selects it."
+      }
+    ],
+    "C_optional_predecessor_inspired": [
+      {
+        "invariant": "treestack_estimate",
+        "assessment": "Exact but specialized to the completed TreeStack programme; no independent domination-level reason selects it."
+      },
+      {
+        "invariant": "finite_stackability_probability(T,t)",
+        "assessment": "Exact rational but parameterized and expensive; it imports a second parameter and predecessor-specific question."
+      },
+      {
+        "invariant": "greedy_output_bias",
+        "assessment": "Exact on conservative orders but specialized to the Greedy Uniformity programme; selecting it would reopen a predecessor direction."
+      }
+    ],
+    "D_natural_absent_parameters": [
+      {
+        "parameter": "independent_domination_number",
+        "assessment": "Natural and direct, but its basic comparison with domination is immediate and it lies close to the closed MIS thread; no sharper question is identified."
+      },
+      {
+        "parameter": "total_domination_number",
+        "assessment": "Natural but changes the small-tree domain because K1 requires special treatment; no accumulated evidence selects that change."
+      },
+      {
+        "parameter": "packing_number",
+        "assessment": "Natural domination-adjacent parameter, but adding it would be a new feature family without a diagnosed blind spot."
+      },
+      {
+        "parameter": "vertex_cover_number",
+        "assessment": "Not useful as a new tree coordinate because bipartiteness identifies it with matching_number by Konig's theorem."
+      }
+    ],
+    "selection": "NO_NEW_INVARIANT_SELECTED"
+  },
+  "target_audit": {
+    "historical_target": "domination_number",
+    "keep_as_default_if_treeforge_resumes": true,
+    "target_change_selected": false,
+    "reason": "TF0-TF9 diagnose grammar, scale, and prior-art failure modes more clearly than target exhaustion; no alternative target has emerged with a more specific independent question."
+  },
+  "grammar_audit": {
+    "full_dimensional_convex_hull": "REJECTED_BY_TF2_OPACITY",
+    "ratios_only": "REJECTED_AS_NEXT_STEP_BY_TF3_SCALE_FITTING",
+    "fixed_pairwise_convex_hulls": "USEFUL_TF4_BASELINE_BUT_NOT_AUTOMATICALLY_REPEATED",
+    "restricted_three_feature_grammar": "NOT_SELECTED; no exact three-coordinate mechanism is independently identified",
+    "hypothesis_conditioning": "NOT_SELECTED; no natural subclass is singled out by a failed all-tree mechanism"
+  },
+  "subclass_audit": {
+    "bounded_maximum_degree_or_subcubic": "Natural class, but no TF0-TF9 diagnosis identifies degree three as the mechanism of an unresolved question.",
+    "caterpillars_or_spiders": "Already used extensively as hostile/interpreting families; promoting them would turn probes into a new problem without independent motivation.",
+    "twin_free_coronas_or_fixed_leaf_support_classes": "Too entangled with the closed TF7-TF9 MIS/support thread to drive TF10.",
+    "selection": "NO_SUBCLASS_SELECTED"
+  },
+  "decision_matrix": [
+    {
+      "alternative": "continue_domination_unchanged",
+      "scientific_question": "Repeat all-tree domination discovery with the existing seven features and fixed pairwise grammar.",
+      "target": "domination_number",
+      "changed_axis": "none",
+      "unchanged_axes": [
+        "target",
+        "features",
+        "grammar",
+        "domain"
+      ],
+      "independent_mathematical_motivation": "Domination remains natural, but no new question distinguishes this from repeating TF4.",
+      "known_literature_risk": "unchanged and substantial for classical tree parameters",
+      "interpretability_expectation": "high relative to TF2, as already demonstrated by TF4",
+      "exact_computation_feasibility": "high",
+      "confounding_risks": "scientific repetition and pressure to use order 15 as extra screening",
+      "decision": "REJECT",
+      "reason": "No material scientific axis or new question would change."
+    },
+    {
+      "alternative": "domination_plus_wiener_index",
+      "scientific_question": "Ask whether global pairwise distance mass contributes a domination relation not visible from diameter alone.",
+      "target": "domination_number",
+      "changed_axis": "feature vocabulary: add wiener_index",
+      "unchanged_axes": [
+        "target",
+        "pairwise grammar",
+        "all-tree domain"
+      ],
+      "independent_mathematical_motivation": "Wiener index is canonical and exact, but TF0-TF9 expose no domination mechanism that specifically requires it.",
+      "known_literature_risk": "nontrivial because both parameters are classical; no candidate-specific audit is warranted before a question exists",
+      "interpretability_expectation": "pairwise statements would remain readable",
+      "exact_computation_feasibility": "high on burned orders",
+      "confounding_risks": "raw scale/order coupling and feature expansion chosen mainly because the coordinate is available",
+      "decision": "REJECT",
+      "reason": "Natural invariant, but no independently diagnosed mathematical blind spot."
+    },
+    {
+      "alternative": "wiener_index_target",
+      "scientific_question": "Switch the target to Wiener index while retaining the existing seven feature coordinates and pairwise grammar.",
+      "target": "wiener_index",
+      "changed_axis": "target only",
+      "unchanged_axes": [
+        "features",
+        "pairwise grammar",
+        "all-tree domain"
+      ],
+      "independent_mathematical_motivation": "Wiener index is central and exact, but no TF0-TF9 result poses a precise new extremal question for it.",
+      "known_literature_risk": "high for classical distance-extremal relations",
+      "interpretability_expectation": "pairwise grammar remains legible",
+      "exact_computation_feasibility": "high",
+      "confounding_risks": "target reset used to escape a completed domination thread",
+      "decision": "REJECT",
+      "reason": "Changing target without a specific question would manufacture a new programme."
+    },
+    {
+      "alternative": "subcubic_domination",
+      "scientific_question": "Restrict the existing domination design to trees of maximum degree at most three.",
+      "target": "domination_number",
+      "changed_axis": "domain/hypothesis only",
+      "unchanged_axes": [
+        "features",
+        "pairwise grammar"
+      ],
+      "independent_mathematical_motivation": "Subcubic trees are standard, but no TF0-TF9 obstruction isolates degree three as the relevant mechanism.",
+      "known_literature_risk": "substantial for domination on degree-bounded graph classes",
+      "interpretability_expectation": "high",
+      "exact_computation_feasibility": "high",
+      "confounding_risks": "post-hoc restriction could make old geometry look cleaner",
+      "decision": "REJECT",
+      "reason": "The subclass is natural, but its selection is not evidence-driven here."
+    },
+    {
+      "alternative": "restricted_three_feature_domination",
+      "scientific_question": "Use a predeclared three-feature grammar around order, leaf_count, and support_vertex_count for domination.",
+      "target": "domination_number",
+      "changed_axis": "relation grammar only",
+      "unchanged_axes": [
+        "feature vocabulary",
+        "all-tree domain"
+      ],
+      "independent_mathematical_motivation": "Leaf/support structure is domination-relevant, but TF7-TF9 and known leaf/support bounds already cover substantial nearby structure.",
+      "known_literature_risk": "high near leaf/support domination bounds",
+      "interpretability_expectation": "moderate to high",
+      "exact_computation_feasibility": "high",
+      "confounding_risks": "grammar expansion selected after pairwise non-graduation",
+      "decision": "REJECT",
+      "reason": "No specific missing three-way mechanism has been identified."
+    },
+    {
+      "alternative": "pause_no_experiment",
+      "scientific_question": "Do not spend fresh data until an independently stated tree-theoretic question selects one target, feature, grammar, or domain axis.",
+      "target": "none for TF10",
+      "changed_axis": "none",
+      "unchanged_axes": [
+        "registries",
+        "burned-data boundary",
+        "archived threads"
+      ],
+      "independent_mathematical_motivation": "TF0-TF9 show that output volume is not a scientific reason to alter the search space.",
+      "known_literature_risk": "none created because no new claim is made",
+      "interpretability_expectation": "not applicable",
+      "exact_computation_feasibility": "not applicable",
+      "confounding_risks": "none; preserves the next clean holdout boundary",
+      "decision": "SELECT",
+      "reason": "Every concrete experiment alternative currently depends more on search design than on an independently motivated mathematical question."
+    }
+  ],
+  "decision": {
+    "selected_next_scientific_question": null,
+    "new_experiment_frozen": false,
+    "experiment_id": null,
+    "candidate_ids_allocated": [],
+    "candidate_registry_updated": false,
+    "experiment_registry_updated": false,
+    "next_permanent_candidate_id": "TF-001158",
+    "tf4_mis_fan_reopened": false,
+    "tf7_tf9_theorem_thread_reopened": false,
+    "raw_mis_coordinate_changed": false,
+    "order_15_consumed": false,
+    "reason": "TF10 finds no independently mathematical single-axis change; freezing an experiment now would optimize for output rather than answer a pre-existing tree-theoretic question.",
+    "next_session_recommendation": "Keep orders >=15 untouched. Resume discovery only when independent mathematics supplies a precise question whose cleanest test changes one axis; otherwise keep TreeForge paused."
+  }
+}
