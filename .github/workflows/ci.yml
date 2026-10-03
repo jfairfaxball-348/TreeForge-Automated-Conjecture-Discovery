@@ -100,7 +100,7 @@ jobs:
           name: tf12-segment-domination
           path: /tmp/tf12-segment-domination.json
 
-- name: TF13 segment/domination equality diagnosis
+      - name: TF13 segment/domination equality diagnosis
         run: |
           python -m experiments.tf13_segment_domination_equality --output /tmp/tf13-segment-domination-equality.json
           test -s /tmp/tf13-segment-domination-equality.json
