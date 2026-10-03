@@ -1,3 +1,58 @@
+# TF17 minimum-dominating-set multiplicity handover
+
+TF17 starts from verified TF16 main
+`63a7b45858eab3d7b734fde2506c1bf8c20622d3`. PR #22 exact head
+`19c0ebf69cc99a76dba5df6cf0411341e95c0032` passed CI `37147414924`; post-merge
+CI `37147577254` also passed. PR #22 changed only README, ROADMAP, HANDOVER, and the TF16
+audit document, so the candidate/experiment/invariant scientific state was untouched.
+
+## TF17 result
+
+The exact three-state rooted min-plus/count DP for minimum dominating sets is implemented as
+non-default theorem-support machinery. It returns `(gamma(T),zeta(T))` and has been
+independently validated by exhaustive subset enumeration through order 8, by all-root checks
+through order 8, and by gamma comparison with TreeForge's existing exhaustive routine on all
+5,447 burned unlabeled trees through order 14.
+
+The burned maxima are
+`1,2,1,4,3,8,8,16,18,32,40,64,84,128`.
+Every burned even-order extremizer is exactly a corona `H corona K1`; every burned odd-order
+extremizer from 3 through 13 is the unique balanced Taletskii `W_(a,b)`. The first family has
+`zeta=2^(n/2)`; the second follows Taletskii's exact
+`3*2^(a+b)-2^a-2^b` formula and elementary balancing.
+
+This clean exposed pattern is not an all-order conjecture. Taletskii's published degree-5
+`W_(4,4)` module has 19 vertices and 736 minimum dominating sets, and his module-joining
+operation preserves products. Thus a published order-38 construction has
+`736^2=541696 > 2^19=524288`, already ruling out the even corona grammar globally without
+opening any fresh TreeForge order.
+
+TF17 also proves two reusable reductions: a support with at least three leaf neighbours may lose
+one leaf without changing gamma or zeta, and a pendant rooted subtree is exactly
+substitution-equivalent to any rooted subtree with the same three (A,B,C) cost/count states.
+Neither yet yields a finite extremal normal form.
+
+End state: **A — exact counting machinery validated, structural extremizer theory still
+insufficient**.
+
+No TF17 scientific experiment is frozen or executed. No candidate is allocated. The candidate
+registry and experiment registry are unchanged. `TF-001158` remains next. The new count helper
+is not added to the default invariant registry. Order 15 was not generated or inspected; all
+orders at least 15 remain untouched.
+
+## Next session
+
+Continue theorem-first by translating Taletskii's separability/S-decomposition replacements and
+Petr--Portier--Versteegen's terminal-complexity restrictions into the exact rooted (A,B,C)
+signatures. Seek either a proved rooted-state dominance relation reducing every extremizer to a
+bounded gadget set or a proved finite-state extremal recurrence carrying order cost. Do not inspect
+order 15 or freeze a prediction unless such a theorem first determines both M_15 and its allowed
+extremizer family prospectively.
+
+See `docs/TF17_MINIMUM_DOMINATING_SET_MULTIPLICITY.md`.
+
+---
+
 # TF16 minimum-dominating-set multiplicity handover
 
 TF16 starts from verified TF15 main
