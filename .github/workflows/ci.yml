@@ -117,3 +117,13 @@ jobs:
         with:
           name: tf14-segment-domination-maximum-equality
           path: /tmp/tf14-segment-domination-maximum-equality.json
+
+
+      - name: TF15 rounded-defect diagnosis
+        run: |
+          python -m experiments.tf15_segment_domination_rounded_defect --output /tmp/tf15-segment-domination-rounded-defect.json
+          test -s /tmp/tf15-segment-domination-rounded-defect.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf15-segment-domination-rounded-defect
+          path: /tmp/tf15-segment-domination-rounded-defect.json
