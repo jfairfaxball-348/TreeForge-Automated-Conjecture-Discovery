@@ -330,3 +330,35 @@ Only then may a one-axis experiment be frozen.
 See `docs/TF11_RESEARCH_QUESTION_AUDIT.md` and
 `experiments/TF11-DIAG-0001/diagnosis.json`.
 
+
+
+## TF12 — fixed-segment domination representation diagnosis
+
+Status: **COMPLETE (2026-10-03).**
+
+TF12 implements exact `segment_count = n - n2 - 1` and independently checks it by explicit
+maximal degree-2 path decomposition on all 5,447 burned unlabeled trees through order 14. The new
+coordinate is required by the TF11 question rather than by candidate yield; no additional
+segment-sequence or residue coordinate is added.
+
+A deeper prior-art audit shows that the **numeric** fixed-((n,q)) problem is already implied by
+stronger results. Lemańska's 2004 leaf bound plus (L\le q) gives the exact minimum
+`ceil((n-q+2)/3)` for (q\ge3), attained by a star skeleton with all subdivisions on one arm.
+Gentner--Henning--Rautenbach's 2016 exact fixed-degree-sequence maximum specializes to
+`min(n-L, floor((n+L)/3))`; optimizing over the feasible fixed-(q) leaf interval
+`ceil((q+3)/2) <= L <= q` gives
+`min(floor(n/2), floor((n+q)/3), n-ceil((q+3)/2))`.
+Paths have (q=1) and domination number `ceil(n/3)`; (q=2) is impossible.
+
+The deterministic TF12 reproducer checks all 80 occupied ((n,q)) cells through order 14 and finds
+exact agreement with both formulas and with the predicted maximizing leaf counts. This is
+interpretation data only. A complete published classification of every fixed-((n,q)) minimizer
+and maximizer was not located in the bounded search; negative search is not novelty evidence.
+
+Representation decision: reject pairwise linear hulls and an extra residue grammar; treat the exact
+conditioned envelope as the correct nonexperimental mathematical description of the value problem;
+defer reduced-tree/subdivision recurrence until an equality-classification question is isolated;
+**maintain the experiment pause**. No TF12-0001 is frozen or executed, no candidate ID is
+allocated, TF-001158 remains next, and orders at least 15 remain untouched.
+
+See `docs/TF12_SEGMENT_DOMINATION_DIAGNOSIS.md`.

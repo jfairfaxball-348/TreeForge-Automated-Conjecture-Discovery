@@ -17,7 +17,7 @@ CANDIDATES = Path("data/registry/candidates.jsonl")
 EXPERIMENTS = Path("data/registry/experiments.jsonl")
 TF10_SPEC = Path("experiments/TF10-0001/spec.json")
 
-EXPECTED_CORE = (
+HISTORICAL_CORE = (
     "cherry_count",
     "degree_sum",
     "diameter",
@@ -80,7 +80,9 @@ def load_and_validate() -> dict[str, object]:
         for row in experiments
     )
 
-    assert default_registry().names() == EXPECTED_CORE
+    current_core = set(default_registry().names())
+    assert set(HISTORICAL_CORE) <= current_core
+    assert current_core <= set(HISTORICAL_CORE) | {"segment_count"}
     assert not TF10_SPEC.exists()
 
     selected = [row["alternative"] for row in payload["decision_matrix"] if row["decision"] == "SELECT"]
