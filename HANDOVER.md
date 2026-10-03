@@ -1,3 +1,75 @@
+# TF12 segment/domination handover
+
+TF12 developed the TF11 fixed-segment domination question without consuming fresh data. Starting
+main was `ca3d12661c6c6260b7489f8b9efb94416e698452`; TF11 PR #17 exact head
+`6d48ba673b0a06917c2f49b3098ab374e158efcd` passed CI `37109771347`, and
+post-merge CI `37109895238` passed.
+
+## What changed
+
+`segment_count` is now an exact core invariant:
+`segment_count(T)=|V(T)|-n2(T)-1`, with value 0 on (K_1). An independent explicit
+maximal degree-2-path traversal agrees with the formula on all 5,447 burned unlabeled trees of
+orders 1--14 and on named structural regression families. Subdivision invariance is tested.
+No segment-sequence or residue coordinate is promoted.
+
+## Mathematical resolution
+
+For (q\ge3), the number (L) of leaves satisfies
+`ceil((q+3)/2) <= L <= q`, while (n_2=n-q-1).
+
+Lemańska (2004) proves `gamma >= (n+2-L)/3` and characterizes equality. Together with
+(L\le q) and a one-long-arm subdivided-star construction this gives
+
+`gamma_min(n,q)=ceil((n-q+2)/3)` for (q\ge3).
+
+Gentner--Henning--Rautenbach (2016) prove the exact maximum domination number among forest
+realizations of a fixed degree sequence. For a tree with (L) leaves their formula reduces to
+`min(n-L, floor((n+L)/3))`. Optimizing over the feasible fixed-(q) leaf interval gives
+
+`gamma_max(n,q)=min(floor(n/2), floor((n+q)/3), n-ceil((q+3)/2))`.
+
+For (q=1), the tree is a path and both extrema are `ceil(n/3)`; (q=2) is impossible;
+((1,0)) is (K_1).
+
+All 80 occupied burned ((n,q)) cells through order 14 match these formulas and the maximizing
+leaf-count optimizer exactly. That finite agreement is diagnostic only; the value resolution rests
+on published stronger results plus the elementary reduction.
+
+The bounded search did not locate a complete published characterization of **all** fixed-((n,q))
+minimizers/maximizers. Lemańska's equality family, fixed-degree-sequence extremal papers, Kurnosov's
+2020 interval theorem, and domination-subdivision literature cover substantial adjacent structure.
+The remaining classification residue is therefore not claimed novel or open.
+
+## Decision
+
+New scientific experiment frozen: **no**.
+TF12-0001 created or executed: **no**.
+TxGraffiti run: **no**.
+Candidate ID allocated: **no**; TF-001158 remains next.
+Candidate registry changed: **no**.
+Experiment registry changed: **no**.
+TF4 MIS fan reopened: **no**.
+TF7--TF9 fixed-support thread reopened: **no**.
+Orders at least 15 inspected: **no**.
+
+The exact conditioned envelope is the natural mathematical representation, but it is not a reason
+to spend fresh data because the numerical surface is already analytically determined. Pairwise
+linear hulls and a separate residue grammar are rejected. A structural reduced-tree/subdivision
+recurrence is deferred until the equality-classification residue has its own precise statement.
+
+## Next session
+
+Keep order 15 sealed. Audit the complete equality classes against Lemańska's leaf-equality
+characterization and the structural fixed-degree-sequence extremizer literature. Derive the
+fixed-((n,q)) equality classes if they follow cleanly; otherwise state the precise residual
+classification question. Freeze no experiment unless that residual mathematics prospectively
+selects one controlled axis.
+
+See `docs/TF12_SEGMENT_DOMINATION_DIAGNOSIS.md`.
+
+---
+
 # TF11 research-question handover
 
 TF11 completed a question-selection audit without restarting automated discovery or consuming fresh
