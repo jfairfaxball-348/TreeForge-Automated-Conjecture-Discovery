@@ -6,8 +6,6 @@ from experiments.tf14_segment_domination_maximum_equality import (
     build_diagnosis,
     fixed_leaf_maximum_branch,
     independent_domination_number_dp,
-    support_core_cost,
-    support_core_target,
     validate_repository_boundary,
 )
 from treeforge.trees.canonical import generate_unlabeled_trees
