@@ -393,3 +393,39 @@ Maximum status: **PARTIALLY_RESOLVED**.
 No TF13 scientific experiment is frozen or executed, no candidate ID is allocated, TF-001158
 remains next, and order 15 remains sealed. See docs/TF13_SEGMENT_DOMINATION_EQUALITY.md and
 experiments/tf13_segment_domination_equality.py.
+
+
+## TF14 — fixed-segment maximum realization equality
+
+Status: **COMPLETE (2026-10-03).**
+
+TF14 audits the realization-level proof machinery behind the 2016 fixed-degree-sequence maximum and
+Kurnosov's 2020 interval theorem. Kurnosov's Theorem 3 gives only sufficient maximum-realization
+forms; its Remark 1 explicitly says they are not necessary, and its transformations prove
+reachability rather than a local maximum iff criterion.
+
+The maximum residue splits more sharply than TF13 recorded. For every optimizing leaf count (L),
+both the strict `n-L` branch and the tie branch are already completely characterized by TF13:
+`gamma=n-L` iff every nonleaf is a support. The only remaining branch is
+`floor((n+L)/3)<n-L`.
+
+On that strict rounded branch, Favaron's independent-domination bound yields the exact iff reduction
+`gamma=floor((n+L)/3)` iff
+`gamma=i=floor((n+L)/3)`. Published characterizations of `(gamma,i)`-trees therefore
+supply one half of the structure. If (n+Lequiv0pmod3), Favaron's own equality classification
+supplies the other half, so the residue-zero branch is a
+**DIRECT_COROLLARY_OF_PUBLISHED_CLASSIFICATIONS**. The bounded audit did not locate an exact
+classification for (n+Lequiv1,2pmod3).
+
+TF14 also proves the exact support-core reduction
+`gamma=h+tau`, where all support vertices are preselected and `tau` is the minimum number
+of nonleaf non-support vertices needed to finish domination. Writing (s) for the size of that
+core and (delta=L-h), strict-rounded maximality is exactly
+`tau=floor((s+2 delta)/3)`. This is a structural normalization, not a new registry invariant.
+
+Overall maximum-equality status remains **PARTIALLY_RESOLVED**, with only the strict-rounded
+residue-1/2 saturation problem unresolved after the bounded audit. No experiment is frozen or
+executed, no candidate is allocated, TF-001158 remains next, and orders at least 15 remain
+untouched.
+
+See `docs/TF14_SEGMENT_DOMINATION_MAXIMUM_EQUALITY.md`.

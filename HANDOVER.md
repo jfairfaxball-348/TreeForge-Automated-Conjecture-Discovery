@@ -1,3 +1,59 @@
+# TF14 maximum-equality handover
+
+TF14 starts from verified TF13 main
+`8213e511715f478f7f0e94f89902e6aa076a4a15`. PR #19 was merged from exact head
+`c48a2362ba4367278dc8b83469927edf10c5943d`; exact-head CI
+`37129172222` passed, and the recorded post-merge CI is `37129314891`.
+
+## Maximum-equality result
+
+TF14 removes the tie cases from the unresolved residue. For every optimizing leaf count (L), if
+`n-L <= floor((n+L)/3)`, then a realization is maximum iff
+`gamma=n-L`, equivalently iff every nonleaf is a support.
+
+The only remaining branch is
+`floor((n+L)/3)<n-L`. Favaron's bound on independent domination gives
+
+`gamma(T)=floor((n+L)/3) iff gamma(T)=i(T)=floor((n+L)/3)`.
+
+When (n+Lequiv0pmod3), this is exactly the intersection of Favaron's published real-equality
+trees with the published `(gamma,i)`-tree class. Status:
+**DIRECT_COROLLARY_OF_PUBLISHED_CLASSIFICATIONS**.
+
+When (n+Lequiv1) or (2pmod3), the bounded audit did not locate a published complete
+classification of the integer-saturation condition. TF14 reduces it exactly to a support-core
+partial-domination equality but does not claim a complete structural grammar. Overall maximum status:
+**PARTIALLY_RESOLVED**; remaining subcase:
+**UNRESOLVED_AFTER_BOUNDED_AUDIT**.
+
+Kurnosov (2020) does not close this gap: Theorem 3's two maximum structures are sufficient only,
+Remark 1 explicitly supplies maximum trees outside them, and the transformation results establish
+interval reachability rather than an iff maximum criterion.
+
+## Boundary and decision
+
+The deterministic TF14 reproducer uses only all 5,447 burned trees through order 14. No TxGraffiti
+run occurs, no candidate is allocated, the candidate and experiment registries are unchanged,
+TF-001158 remains next, the TF4 MIS fan and TF7--TF9 thread remain closed, and every order at
+least 15 remains untouched.
+
+The entry audit also found that the path
+`experiments/TF13-DIAG-0001/diagnosis.json` named in the TF14 brief was not committed at the
+verified TF13 main head. The TF13 reproducer and successful exact-head CI artifact are present; TF14
+does not rewrite TF13 history and records the discrepancy as non-scientific provenance.
+
+## Next session
+
+If the fixed-segment maximum question continues, attack only the strict-rounded residue-1/2
+saturation theorem. The two best theorem-first routes are to track Favaron slack through the
+published constructive `(gamma,i)`-tree grammar, or to classify equality in the support-core
+partial-domination bound. Do not inspect order 15 or allocate TF-001158 merely to search for a
+pattern.
+
+See `docs/TF14_SEGMENT_DOMINATION_MAXIMUM_EQUALITY.md`.
+
+---
+
 # TF13 segment/domination equality handover
 
 TF13 starts from the verified TF12 merge at

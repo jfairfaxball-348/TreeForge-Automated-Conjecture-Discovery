@@ -327,3 +327,31 @@ Corrective action: apply Ruff's import grouping/order without changing executabl
 data selection, assertions, documentation conclusions, or workflow scope. The failure did not run
 TxGraffiti, allocate a candidate, alter either registry, inspect order 15, or change any TF13
 theorem-status conclusion.
+
+
+## 2026-10-03 — TF14 entry audit found the named TF13 diagnosis JSON was not committed
+
+The TF14 brief named `experiments/TF13-DIAG-0001/diagnosis.json` among the required starting
+artifacts. At the verified TF13 main commit
+`8213e511715f478f7f0e94f89902e6aa076a4a15`, that path is absent. The deterministic
+reproducer `experiments/tf13_segment_domination_equality.py` is committed, and exact PR-head
+Actions run `37129172222` successfully executed it and uploaded the generated diagnosis as an
+artifact.
+
+Corrective action: do not fabricate or backfill a historical TF13 commit. TF14 records the
+materialization discrepancy explicitly and commits its own deterministic diagnosis artifact.
+Scientific consequence: none. No candidate, experiment registry row, invariant, tree of order 15,
+or theorem-status conclusion is affected.
+
+
+## 2026-10-03 — TF14 first PR-head CI stopped at unused test imports
+
+PR #20 run `37132064937` passed installation, all unit tests, and byte-compilation before Ruff
+reported two unused imports in the new TF14 test module. The imported support-core helpers were no
+longer referenced directly after the test was simplified to check their serialized diagnostic
+values.
+
+Corrective action: remove the two unused imports only. No mathematical statement, test expectation,
+diagnostic computation, prior-art conclusion, registry, candidate allocation, experiment boundary,
+or tree data changes. The failed run did not reach the deterministic TF14 workflow step and had no
+scientific consequence.

@@ -165,3 +165,18 @@ nonmaximizer, so the full maximizing tree-isomorphism classification does not fo
 fixed-degree-sequence theorem and remains unresolved after the bounded audit. No experiment is
 frozen, no candidate is allocated, TF-001158 remains next, and orders at least 15 remain untouched.
 See docs/TF13_SEGMENT_DOMINATION_EQUALITY.md.
+
+
+TF14 sharpens the remaining fixed-segment **maximum realization** problem without fresh data.
+The tie cases are already covered by TF13: whenever
+`n-L=floor((n+L)/3)`, a maximizing realization has `gamma=n-L`, hence exactly every
+nonleaf is a support. On the only genuinely residual branch,
+`floor((n+L)/3)<n-L`, Favaron's independent-domination bound gives the exact reduction
+`gamma=floor((n+L)/3)` iff
+`gamma=i=floor((n+L)/3)`. When `n+L` is divisible by 3, this is the intersection of
+Favaron's published equality family with the published `(gamma,i)`-tree class, so that subcase
+is a direct corollary of published classifications. The bounded audit did not locate a complete
+classification for the residue-1/2 integer-saturation cases. TF14 reduces those exactly to a
+support-core partial-domination equality, falsifies over-strong Kurnosov/canonical-core iff claims
+on burned orders 1--14, freezes no experiment, allocates no candidate, and leaves order 15 sealed.
+See `docs/TF14_SEGMENT_DOMINATION_MAXIMUM_EQUALITY.md`.
