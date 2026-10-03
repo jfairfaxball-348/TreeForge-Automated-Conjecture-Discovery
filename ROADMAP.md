@@ -463,3 +463,39 @@ default invariant is added, TF-001158 remains next, and orders at least 15 remai
 
 See `docs/TF15_SEGMENT_DOMINATION_ROUNDED_DEFECT.md` and
 `experiments/tf15_segment_domination_rounded_defect.py`.
+
+
+## TF16 — minimum-dominating-set multiplicity question audit
+
+Status: **COMPLETE (2026-10-03).**
+
+TF16 verifies the TF15 closeout at merged main
+`5652e29c5f6ed450482108b99503b11c087356e6`, exact PR #21 head
+`1a309f2a0c7792dc4b3f084f72ce9721e0e83080`, successful exact-head CI
+`37139422782`, and successful post-merge CI `37139661763`. Candidate and experiment
+registries plus the invariant catalog/core implementation are unchanged across TF15.
+
+The fixed-segment programme stays closed. A bounded landscape audit also rejects reopening the
+TF4/TF7--TF9 MIS thread, the completed Greedy-Uniformity predecessor programme, a branching-count
+variant of the segment question, a generic independent-domination reset, and implementation-led
+distance-index work.
+
+One independent question survives: if (zeta(T)) is the number of minimum dominating sets of a
+tree, determine
+[
+M_n=max{zeta(T): |V(T)|=n, T	ext{ a tree}}
+]
+and characterize all extremizers. Alvarado--Dantas--Mohr--Rautenbach (2019),
+Taletskii (2023), and Petr--Portier--Versteegen (2024) give strong exponential bounds and
+restricted-class structure, but the bounded TF16 search did not locate an exact unrestricted
+(n)-vertex extremal theorem. Negative search is not novelty evidence.
+
+The theorem-first audit proves the elementary forced-strong-support restriction and identifies a
+rooted min-plus/count DP as the exact natural computation. It does not yet produce a sufficiently
+specific extremizer grammar to test prospectively. Therefore TF16 freezes no experiment, adds no
+invariant, allocates no candidate, keeps TF-001158 next, and leaves every order at least 15
+untouched.
+
+End state: **A — new question justified, experiment not yet warranted.**
+
+See `docs/TF16_RESEARCH_QUESTION_AUDIT.md`.
