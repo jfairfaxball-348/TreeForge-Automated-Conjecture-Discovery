@@ -287,3 +287,43 @@ Corrective action: replace that remaining call with exact `(order + 2) // 3` ari
 a deterministic implementation/cleanup error only. It did not run TxGraffiti, inspect order 15,
 allocate a candidate, alter either registry, or change any mathematical formula or prior-art
 conclusion.
+
+## 2026-10-03 — TF12 equality search did not surface the rounded tree classification
+
+TF12 correctly separated Lemańska's real-valued equality theorem from the unresolved fixed-(n,q)
+equality question and explicitly treated its negative bounded search as non-novelty evidence.
+TF13 searched the rounded leaf-bound equality problem directly and located Hajian--Henning--Jafari
+Rad's 2019 tree families and their 2022 cactus classification. Specializing their Theorem 1 to
+trees closes the ceiling-slack cases G_0^0, G_0^1 and G_0^2.
+
+Scientific consequence: the TF12 numerical formulas, data boundary, and experiment-pause decision
+are unchanged. The minimum equality residue is smaller than TF12's bounded audit suggested and is
+now a direct corollary of published classification. No candidate or fresh data was involved.
+
+Process lesson: when an integer graph invariant is bounded by a nonintegral expression, an equality
+audit must search both exact real equality and equality after floor/ceiling rounding, including
+parameterized residual classes. A negative search for the unrounded statement alone must not be
+used to infer that rounded equality is unclassified.
+
+
+## 2026-10-03 — TF13 first branch CI had a YAML indentation error
+
+GitHub Actions run 37116185772 failed before creating any job because the newly appended TF13
+workflow step lost the leading indentation on its first list item, making the workflow YAML invalid.
+
+Corrective action: restore the step's existing job-level indentation and rerun the exact unchanged
+TF13 deterministic checks. This was workflow syntax only: no test, diagnosis, TxGraffiti call,
+candidate allocation, fresh-order construction, or scientific computation ran, and no mathematical
+claim or data boundary changed.
+
+
+## 2026-10-03 — TF13 exact-head CI stopped at import ordering
+
+PR #19 exact-head Actions run `37116302326` passed installation, all 79 unit tests, and
+byte-compilation. Ruff then reported only two import-order findings in the new TF13 reproducer and
+its test file, so the later deterministic workflow steps were skipped.
+
+Corrective action: apply Ruff's import grouping/order without changing executable mathematics,
+data selection, assertions, documentation conclusions, or workflow scope. The failure did not run
+TxGraffiti, allocate a candidate, alter either registry, inspect order 15, or change any TF13
+theorem-status conclusion.

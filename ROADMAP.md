@@ -362,3 +362,34 @@ defer reduced-tree/subdivision recurrence until an equality-classification quest
 allocated, TF-001158 remains next, and orders at least 15 remain untouched.
 
 See `docs/TF12_SEGMENT_DOMINATION_DIAGNOSIS.md`.
+
+## TF13 — fixed-segment domination equality audit
+
+Status: **COMPLETE (2026-10-03).**
+
+TF13 keeps the TF12 numerical extrema unchanged and resolves the minimum equality problem by
+specializing Hajian--Henning--Jafari Rad's published cactus classification to trees. If
+M=ceil((n-q+2)/3), r=3M-(n-q+2), a=ceil((q+3)/2), and d=q-L, then a q>=3 tree is a
+fixed-(n,q) minimizer exactly when 0<=d<=min(r,q-a), L=q-d, and the tree belongs to the
+published class G_0^(r-d). Lemańska's pairwise leaf-distance condition is exactly the residual
+m=0 slice, not the whole rounded equality class.
+
+For the maximum, if M=gamma_max(n,q), the complete maximizing leaf set is the integer interval
+
+max(a,3M-n) <= L <= min(q,n-M).
+
+For each such L, the admissible degree sequences are exactly those obtained by partitioning L-2
+into B=q+1-L positive branch excesses, together with n-q-1 degree-2 entries and L leaves.
+Gentner--Henning--Rautenbach guarantee at least one maximizing realization for each such sequence.
+TF13 also proves, for trees of order at least three, gamma(T)=n-L iff every nonleaf is a support.
+
+The complete maximizing tree-isomorphism class remains unresolved: burned order 6 already contains
+two nonisomorphic trees with degree sequence (3,2,2,1,1,1) and q=3 but domination numbers 2 and 3.
+Thus degree-sequence attainability cannot be promoted to an all-realizations classification.
+
+Minimum status: **DIRECT_COROLLARY_OF_PUBLISHED_CLASSIFICATION**.
+Maximum status: **PARTIALLY_RESOLVED**.
+
+No TF13 scientific experiment is frozen or executed, no candidate ID is allocated, TF-001158
+remains next, and order 15 remains sealed. See docs/TF13_SEGMENT_DOMINATION_EQUALITY.md and
+experiments/tf13_segment_domination_equality.py.
