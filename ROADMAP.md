@@ -499,3 +499,34 @@ untouched.
 End state: **A — new question justified, experiment not yet warranted.**
 
 See `docs/TF16_RESEARCH_QUESTION_AUDIT.md`.
+
+
+## TF17 — exact minimum-dominating-set multiplicity machinery and structural diagnosis
+
+Status: **COMPLETE (2026-10-03).**
+
+TF17 verifies TF16 provenance, implements the exact three-state rooted min-plus/count DP for
+`(gamma(T),zeta(T))` as non-default theorem-support machinery, and validates it independently:
+brute-force gamma/zeta agreement on every unlabeled tree through order 8, root invariance through
+order 8, and gamma agreement with the pre-existing exhaustive implementation on all 5,447 burned
+trees through order 14.
+
+The burned exact maxima are
+`1,2,1,4,3,8,8,16,18,32,40,64,84,128`.
+For every burned even order `n=2k`, the extremizers are exactly all coronas
+`H corona K1` with H a k-vertex tree, hence zeta=2^k. For every burned odd order
+`3<=n<=13`, the unique extremizer is Taletskii's balanced `W_(a,b)`, whose published
+formula `3*2^(a+b)-2^a-2^b` is maximized by balancing a and b.
+
+This exposed parity grammar is **not** frozen as a conjecture. Taletskii's published degree-5
+module-joining construction grows strictly faster than sqrt(2)^n; at order 38 it already yields
+`736^2 > 2^19`, so the even corona pattern is analytically non-global. TF17 proves safe
+twin-leaf pruning for supports with at least three leaves and records exact equality of rooted
+(A,B,C) profiles as a substitution principle, but no finite rooted-state dominance theorem has
+been obtained.
+
+End state: **A — exact machinery validated, structural extremizer theory still insufficient.**
+No experiment is frozen, no candidate is allocated, the helper is not promoted to the default
+invariant registry, TF-001158 remains next, and orders at least 15 remain untouched.
+
+See `docs/TF17_MINIMUM_DOMINATING_SET_MULTIPLICITY.md`.
