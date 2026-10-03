@@ -1,3 +1,50 @@
+# TF13 segment/domination equality handover
+
+TF13 starts from the verified TF12 merge at
+8d0c82567282d2bd2a3a571944cdf084e149439d. TF12 PR #18 exact head
+fa23e7437ff61c491c5697e52bc4442bd2b63be4 passed CI 37112447566, and post-merge CI
+37112600371 passed.
+
+## Equality result
+
+The minimum equality class is complete. Hajian--Henning--Jafari Rad's published cactus
+classification specializes to all trees and includes the rounded cases that Lemańska's real-equality
+theorem alone misses. For q>=3, let M=ceil((n-q+2)/3), r=3M-(n-q+2), and
+a=ceil((q+3)/2). A tree is a fixed-(n,q) minimizer iff for some
+0<=d<=min(r,q-a) it has L=q-d leaves and belongs to the published class G_0^(r-d).
+Status: DIRECT_COROLLARY_OF_PUBLISHED_CLASSIFICATION.
+
+The maximum side is only partially resolved. With M=gamma_max(n,q), the complete optimizing
+leaf-count set is max(a,3M-n)<=L<=min(q,n-M). For every optimizing L, the admissible
+degree sequences are exactly the positive partitions of L-2 into B=q+1-L branch excesses,
+together with n-q-1 degree-2 entries and L leaves; Gentner--Henning--Rautenbach guarantee an
+attaining realization for each sequence. For every tree of order at least three,
+gamma=n-L iff every nonleaf is a support.
+
+This still does not classify all maximizing tree realizations. Already at (n,q)=(6,3), the same
+degree sequence (3,2,2,1,1,1) has a realization with gamma=2 and another with gamma=3, the
+fixed-cell maximum. The remaining residue is an iff characterization of all realizations attaining
+the rounded floor((n+L)/3) branch, including ties. Status: PARTIALLY_RESOLVED.
+
+## Boundary and decision
+
+No TF13 scientific experiment is frozen or executed. No TxGraffiti discovery run occurs. No
+candidate is allocated; TF-001158 remains next. Candidate and experiment registries are unchanged.
+The TF4 MIS fan stays archived, TF7--TF9 stays closed, and every order at least 15 remains
+untouched. The deterministic TF13 reproducer uses burned orders 1--14 only to falsify over-strong
+classifications and verify the arithmetic reductions.
+
+No separate theorem repository is justified: the minimum result is a short published corollary, and
+the maximum result remains incomplete.
+
+## Next session
+
+If this question continues, keep the session theorem-first. Audit or derive a realization-level iff
+classification for the rounded fixed-leaf upper branch. Do not consume order 15 or allocate
+TF-001158 merely to search for a proof representation. See docs/TF13_SEGMENT_DOMINATION_EQUALITY.md.
+
+---
+
 # TF12 segment/domination handover
 
 TF12 developed the TF11 fixed-segment domination question without consuming fresh data. Starting
