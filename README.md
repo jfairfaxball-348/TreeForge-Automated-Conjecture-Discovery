@@ -182,3 +182,18 @@ on burned orders 1--14, freezes no experiment, allocates no candidate, and leave
 See `docs/TF14_SEGMENT_DOMINATION_MAXIMUM_EQUALITY.md`.
 
 TF15 closes the last fixed-segment **maximum realization** residue without fresh data. Dorfling--Goddard--Henning--Mynhardt's complete constructive `(gamma,i)`-tree grammar gives an exact recurrence for the Favaron numerator defect `epsilon=n+L-3i`: after the mandatory first T1 in a P1-starting construction the defect is 1, and every later T1--T6 operation changes it by a locally determined value according to the operation and whether the attacher was a leaf. Therefore the strict-rounded residue-1/2 maximizers are exactly the published `(gamma,i)` constructions whose defect walk ends at 1/2. Both statuses are **TREEFORGE_ELEMENTARY_DERIVATION_FROM_PUBLISHED_RESULTS**. A 2024 support-refined domination bound also gives the necessary restriction `2delta+|SL|<=epsilon`, but burned examples show equality there is not necessary. The full fixed-segment minimum/maximum equality programme is now complete at a recursive structural level; the thread is closed, no experiment or candidate is created, TF-001158 remains next, and order 15 remains sealed. See `docs/TF15_SEGMENT_DOMINATION_ROUNDED_DEFECT.md`.
+
+
+TF16 returns TreeForge to question-first mode after closing the fixed-segment programme. A bounded
+landscape and prior-art audit rejects reopening the archived MIS, predecessor greedy-bias,
+fixed-segment/branch-count, independent-domination, and implementation-led distance-index directions.
+One independent question survives: for each order (n), determine the maximum number of minimum
+dominating sets among (n)-vertex trees and characterize all extremizers. Published work gives
+strong exponential bounds in terms of domination number and order, plus sharp results for restricted
+maximum degree, but the bounded TF16 search did not locate the exact unrestricted (n)-vertex
+extremal theorem; this is not a novelty claim. Theorem-first analysis shows strong supports are
+forced into every minimum dominating set and identifies an exact rooted-tree min-plus/count DP as
+the natural future computation, but no structural extremizer hypothesis is yet frozen. TF16 therefore
+ends in state A: the question is justified, the experiment pause remains, no invariant/candidate/
+experiment is added, TF-001158 remains next, and orders at least 15 remain untouched. See
+`docs/TF16_RESEARCH_QUESTION_AUDIT.md`.
