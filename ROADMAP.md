@@ -289,3 +289,44 @@ TF-001158 remains next, registries are unchanged, the archived TF4 MIS fan is no
 TF7–TF9 theorem thread remains closed, and orders at least 15 remain untouched.
 
 See docs/TF10_NEXT_QUESTION_DIAGNOSIS.md and experiments/TF10-DIAG-0001/diagnosis.json.
+
+## TF11 — research-question audit
+
+Status: **COMPLETE (2026-10-03).**
+
+TF11 treats the TF10 pause as binding and asks for a mathematical question before any new discovery
+configuration. It compares five serious question directions plus continued pause, with a bounded
+prior-art risk screen and no numerical scoring.
+
+Selected question:
+
+> Among finite trees of order (n) with exactly (q) segments, what are the minimum and maximum
+> domination numbers, and which trees attain each extremum?
+
+A segment is a maximal path whose endpoints have degree different from 2 and whose internal vertices
+have degree 2; equivalently `segment_count = n - n2 - 1`, where `n2` is the number of
+degree-2 vertices. The parameter is independently standard in extremal tree theory, while ordinary
+domination is independently known to be sensitive to edge subdivision. The bounded TF11 literature
+screen did not locate an exact theorem settling the fixed-order/fixed-segment domination extremal
+problem; this is recorded only as negative bounded-search evidence, not as an openness or novelty
+claim.
+
+The competing fixed-branching-vertex question remains mathematically serious but is not selected
+because segment count more directly captures the subdivision mechanism. Fixed-domination Wiener
+extrema, strong-support/leaf-concentration refinements, and independent-domination interactions are
+rejected at this stage because the bounded search already exposes substantial directly adjacent
+literature.
+
+No scientific experiment is frozen. In particular, `segment_count` is not yet implemented, no
+relation/envelope grammar is chosen, no TxGraffiti run occurs, no candidate ID is allocated, the
+candidate and experiment registries remain unchanged, TF-001158 remains next, and every order at
+least 15 remains untouched.
+
+The next session should implement and independently test `segment_count`, deepen prior-art search
+around ordinary domination with fixed segment/degree-2 count, and use only burned orders 1–14 to
+decide whether a single prospective envelope/recurrence representation is mathematically forced.
+Only then may a one-axis experiment be frozen.
+
+See `docs/TF11_RESEARCH_QUESTION_AUDIT.md` and
+`experiments/TF11-DIAG-0001/diagnosis.json`.
+
