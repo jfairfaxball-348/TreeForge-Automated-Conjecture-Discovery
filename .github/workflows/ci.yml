@@ -136,3 +136,12 @@ jobs:
         with:
           name: tf17-minimum-dominating-sets
           path: /tmp/tf17-minimum-dominating-sets.json
+
+      - name: TF18 rooted-state dominance diagnosis
+        run: |
+          python -m experiments.tf18_rooted_state_diagnosis --output /tmp/tf18-rooted-state-diagnosis.json
+          test -s /tmp/tf18-rooted-state-diagnosis.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf18-rooted-state-diagnosis
+          path: /tmp/tf18-rooted-state-diagnosis.json

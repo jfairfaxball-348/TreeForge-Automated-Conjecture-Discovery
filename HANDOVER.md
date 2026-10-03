@@ -1,3 +1,67 @@
+# TF18 rooted-state dominance handover
+
+TF18 starts from verified TF17 main
+`7f5453c6923720da12764c62f83652d8c9d2182e`. PR #23 exact head
+`4e8e1887b9d9ff484361038ad8f7cbbedb9ac17f` passed exact-head CI
+`37152917160`; post-merge CI `37153127056` also passed. The TF17 diff contains only the
+intended DP/diagnosis/tests/CI/documentation changes, so candidate, experiment, and default-invariant
+state remained unchanged.
+
+## TF18 result
+
+The exact rooted interface admits a rigorous projective replacement preorder. Normalize every
+finite state cost by subtracting the A-state cost while retaining infeasibility and exact integer
+counts. If two pendant gadgets have the same normalized cost shape and the replacement has
+coordinatewise no-smaller state counts, then every outside boundary alternative receives one
+common cost shift: the global optimum tie set is unchanged and zeta cannot decrease. If every
+feasible state count is strictly larger, zeta strictly increases in every pendant context.
+
+Ordinary coordinatewise cost/count Pareto dominance is false. TF18 records a same-order burned
+order-8 counterexample in which all replacement state costs are no larger and all state counts are
+no smaller, yet lowering only A destroys an A/B tie and reduces the closed zeta from 2 to 1.
+
+The published mechanisms now have an exact DP dictionary. Taletskii's universal/empty vertices are
+whole-tree A/B cost gaps; adjacent-preleaf separability is an optimum edge-decoupling certificate;
+his W powers come from repeated copies of the rooted P2 gadget
+`A=B=(1,1), C=infeasible`. Petr--Portier--Versteegen's terminal path is iteration of the unary
+root transition. Their decisive five-vertex branch has signature
+`A=(2,1), B=(2,2), C=(2,2)`, explaining the exact 5-versus-3 branch factors and
+`5^k+3^k` construction count.
+
+These translations do not yield a finite unrestricted grammar. Taletskii's smaller replacements
+improve per-vertex growth rather than preserve exact order; his S-decomposition is a global
+many-reroot certificate and its size-at-most-three result is conditional on no empty vertices.
+Petr--Portier--Versteegen's terminal degree restrictions belong to a minimal counterexample for a
+fixed-gamma/strong-support functional and cannot be transplanted to M_n; W_(4,4) explicitly has a
+degree-5 2-terminal pattern.
+
+Burned diagnosis through order 14 finds 3,782 exact rooted signatures, 3,474 projective interfaces,
+37 normalized cost shapes, and 119 weakly projectively undominated interfaces at order 14. This is
+substantial compression but not a finite-state theorem. Rooted stars have unbounded normalized
+cost gaps, while endpoint-rooted paths already have unbounded exact state counts at maximum degree
+two.
+
+End state: **A — useful rooted dominance/replacement lemmas proved, but no finite extremal
+grammar**.
+
+No TF18 scientific experiment is frozen or executed. No candidate is allocated. The candidate
+registry and experiment registry remain unchanged. `TF-001158` remains next. The exact count
+helper remains non-default. Order 15 was not generated or inspected; all orders at least 15 remain
+untouched.
+
+## Next session
+
+Do not inspect order 15. If this line continues, attack one missing theorem only: either
+characterize the boundary cost-offset vectors realizable by actual tree contexts, which may permit
+a stronger context-safe preorder than projective equality, or combine Taletskii-style smaller
+replacements with an exact same-order compensating operation that spends released vertices while
+guaranteeing multiplicity. If neither route yields completeness, pause the unrestricted rooted-state
+line rather than mine larger orders.
+
+See `docs/TF18_ROOTED_STATE_DOMINANCE.md`.
+
+---
+
 # TF17 minimum-dominating-set multiplicity handover
 
 TF17 starts from verified TF16 main
