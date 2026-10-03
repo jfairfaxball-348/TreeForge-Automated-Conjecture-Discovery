@@ -1,3 +1,47 @@
+# TF16 minimum-dominating-set multiplicity handover
+
+TF16 starts from verified TF15 main
+`5652e29c5f6ed450482108b99503b11c087356e6`. PR #21 exact head
+`1a309f2a0c7792dc4b3f084f72ce9721e0e83080` passed CI `37139422782`; post-merge
+CI `37139661763` also passed. The merge has no file-content delta from the exact PR head, and
+the candidate registry, experiment registry, invariant catalog, and core invariant implementation
+are unchanged across TF15.
+
+## TF16 decision
+
+The fixed-segment thread remains closed. TF16's bounded landscape/prior-art audit selects one
+genuinely separate question:
+
+> for each (n), determine the maximum number of minimum dominating sets among (n)-vertex trees
+> and characterize all extremal trees.
+
+The literature already gives substantial constraints: fixed-domination-number exponential bounds,
+a global (n)-vertex exponential upper bound, and a sharp maximum-degree-at-most-four theorem.
+The bounded TF16 search did not locate an exact unrestricted (n)-vertex maximum/equality theorem;
+that is a search status only, not a novelty claim.
+
+Theorem-first work shows every strong support is forced into every minimum dominating set and that
+the required count admits a natural exact rooted-tree min-plus/count DP. No construction-level
+extremizer statement is yet strong enough to freeze prospectively.
+
+End state: **A — new question justified, experiment not yet warranted.**
+
+No TF16 scientific experiment is frozen or executed. No candidate is allocated. No new default
+invariant is added. TF-001158 remains next. Orders 1--14 remain burned and all orders at least 15
+remain untouched.
+
+## Next session
+
+Continue theorem-first on the extremal minimum-dominating-set multiplicity problem. Derive and
+independently validate the exact counting DP using burned data only, then analyze the structural
+operations behind the published extremal bounds. Freeze a prospective experiment only if one
+explicit extremizer family or local replacement theorem predicts a fresh outcome before order 15
+is exposed.
+
+See `docs/TF16_RESEARCH_QUESTION_AUDIT.md`.
+
+---
+
 # TF15 rounded-defect handover
 
 TF15 starts from verified TF14 main
