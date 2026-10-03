@@ -128,3 +128,15 @@ an independent mathematical rationale strong enough to justify fresh data. TF10 
 no experiment, allocates no candidate ID, keeps TF-001158 next, leaves the TF4 MIS fan and TF7–TF9
 thread closed, and preserves every order at least 15 untouched. See
 docs/TF10_NEXT_QUESTION_DIAGNOSIS.md.
+
+TF11 converts the TF10 pause into a question-first restart without yet restarting discovery. A
+bounded mathematical and prior-art audit selects one research question: among trees of order (n)
+with a fixed number (q) of segments (maximal degree-2 chains between leaves/branching vertices),
+determine the minimum and maximum domination numbers and characterize the extremal trees. Segment
+count is standard in extremal tree theory, and edge subdivision is independently known to affect
+ordinary domination; the bounded search did not locate an exact theorem settling this cross-question,
+which is not a novelty claim. TF11 does not implement the new coordinate, freeze an experiment, run
+TxGraffiti, allocate TF-001158, or inspect order 15. See
+`docs/TF11_RESEARCH_QUESTION_AUDIT.md` and
+`experiments/TF11-DIAG-0001/diagnosis.json`.
+

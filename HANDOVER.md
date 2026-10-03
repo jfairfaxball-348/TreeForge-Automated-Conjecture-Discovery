@@ -1,3 +1,57 @@
+# TF11 research-question handover
+
+TF11 completed a question-selection audit without restarting automated discovery or consuming fresh
+data.
+
+Starting `main` was `f742c37fefe440f8213b7bafbe2ad8a798f0ebc7`. TF10 PR #16 is
+merged; exact head `527bffd3b6b1ed577663fcaffe71536a34d4251d` passed CI
+`37104972109`, and post-merge CI `37105100784` passed.
+
+## Selected research question
+
+For finite trees (T) of order (n) with exactly (q) segments, determine the minimum and maximum
+possible domination numbers (gamma(T)) and characterize the extremal trees.
+
+A segment is a maximal path whose endpoints have degree different from 2 and whose internal vertices
+have degree 2. Equivalently, if (n_2(T)) is the number of degree-2 vertices, then
+`segment_count(T) = n(T) - n2(T) - 1`, with value 0 on (K_1).
+
+The reason is mathematical rather than configurational: segment count is a standard extremal
+tree parameter describing the homeomorphic skeleton, while edge subdivision is independently known
+to affect ordinary domination. A bounded literature screen found adjacent subdivision/domination and
+fixed-segment extremal literature but did not locate an exact fixed-((n,q)) domination theorem.
+That negative search is not evidence that the question is open or novel.
+
+## Experiment boundary
+
+No TF11 scientific experiment is frozen. `segment_count` is not yet implemented. No relation
+grammar is chosen, because subdivision can introduce arithmetic/residue effects and TF11 does not
+assume without justification that a single linear hull is the correct extremal representation.
+
+No TxGraffiti run occurred. No candidate was allocated. TF-001158 remains next. Candidate and
+experiment registries are unchanged. No `TF11-0001` spec exists. Orders 1–14 remain burned and
+orders at least 15 remain untouched. The archived TF4 MIS fan and the TF7–TF9 fixed-support thread
+remain closed.
+
+See `docs/TF11_RESEARCH_QUESTION_AUDIT.md` and
+`experiments/TF11-DIAG-0001/diagnosis.json`.
+
+## Next session
+
+Continue only from the selected fixed-segment domination question.
+
+Implement and test exact `segment_count` independently of candidate yield; deepen prior-art search
+for ordinary domination at fixed segment count, degree-2 count, homeomorphic reduction, and
+subdivision structure; then use only burned orders 1–14 to determine whether the mathematics forces
+one prospective extremal-envelope or recurrence representation. Freeze an experiment only if exactly
+one material scientific axis can be stated before fresh execution. Do not inspect order 15 until
+that freeze exists.
+
+The exact final merged TF11 `main` HEAD and post-merge CI are reported in the session closeout,
+because a commit cannot contain its own resulting SHA without changing that SHA.
+
+---
+
 # TF10 next-question handover
 
 TF10 completed the requested diagnosis without consuming fresh data or manufacturing another
