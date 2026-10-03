@@ -140,3 +140,16 @@ TxGraffiti, allocate TF-001158, or inspect order 15. See
 `docs/TF11_RESEARCH_QUESTION_AUDIT.md` and
 `experiments/TF11-DIAG-0001/diagnosis.json`.
 
+
+
+TF12 implements `segment_count` exactly and independently validates the degree-count formula against
+explicit maximal degree-2 path decomposition on every burned tree through order 14. A deeper
+prior-art audit changes the scientific status of the TF11 question: Lemańska's leaf lower bound,
+together with the elementary fixed-segment leaf range, determines the fixed-((n,q)) minimum
+value, while Gentner--Henning--Rautenbach's exact fixed-degree-sequence maximum determines the
+fixed-((n,q)) maximum after optimizing over feasible leaf counts. All 80 occupied burned
+((n,q)) cells agree with those derived formulas; this is a diagnostic check, not proof.
+The bounded search did not locate a complete published classification of all fixed-((n,q))
+extremizers, which is not a novelty claim. TF12 therefore keeps the scientific experiment pause:
+no TF12-0001, no TxGraffiti run, no candidate allocation, and orders at least 15 remain untouched.
+See `docs/TF12_SEGMENT_DOMINATION_DIAGNOSIS.md`.
