@@ -25,6 +25,37 @@ def support_vertex_count(graph: nx.Graph) -> int:
     return sum(any(u in leaves for u in graph.neighbors(v)) for v in graph.nodes())
 
 
+def segment_count(graph: nx.Graph) -> int:
+    """Return the number of maximal degree-2 chains in a finite tree."""
+    return graph.number_of_nodes() - sum(degree == 2 for degree in _degrees(graph)) - 1
+
+
+def _segment_count_by_decomposition(graph: nx.Graph) -> int:
+    """Independently count maximal degree-2 paths by explicit edge traversal."""
+    if graph.number_of_nodes() == 1:
+        return 0
+
+    endpoints = {v for v, degree in graph.degree() if degree != 2}
+    seen_edges: set[frozenset[object]] = set()
+    segments = 0
+    for start in endpoints:
+        for neighbor in graph.neighbors(start):
+            edge = frozenset((start, neighbor))
+            if edge in seen_edges:
+                continue
+            seen_edges.add(edge)
+            previous, current = start, neighbor
+            while current not in endpoints:
+                nxt = next(v for v in graph.neighbors(current) if v != previous)
+                seen_edges.add(frozenset((current, nxt)))
+                previous, current = current, nxt
+            segments += 1
+
+    if len(seen_edges) != graph.number_of_edges():
+        raise AssertionError("segment decomposition did not cover every tree edge")
+    return segments
+
+
 def matching_number(graph: nx.Graph) -> int:
     root = next(iter(graph.nodes()))
 
@@ -126,6 +157,13 @@ CORE_INVARIANTS = (
         "standard tree terminology",
         True,
         support_vertex_count,
+    ),
+    InvariantSpec(
+        "segment_count",
+        "number of maximal paths with degree-not-2 endpoints and degree-2 interiors",
+        "standard tree parameter; equivalently edges after suppressing degree-2 vertices",
+        True,
+        segment_count,
     ),
     InvariantSpec("diameter", "max_{u,v} d(u,v)", "standard", True, nx.diameter),
     InvariantSpec("radius", "min_v ecc(v)", "standard", True, nx.radius),
