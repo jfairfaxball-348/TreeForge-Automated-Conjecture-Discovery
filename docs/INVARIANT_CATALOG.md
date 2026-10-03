@@ -11,6 +11,7 @@ Every invariant has a mathematical definition, provenance, implementation, exact
 | `min_degree`, `max_degree`, `degree_sum` | degree statistics | exact integer | definition |
 | `leaf_count` | number of degree-one vertices (with `K1` handled separately) | exact integer | definition |
 | `support_vertex_count` | vertices adjacent to at least one leaf | exact integer | standard tree terminology |
+| `segment_count` | maximal paths with degree-not-2 endpoints and degree-2 interiors; equivalently `n - n2 - 1` or edges after suppressing degree-2 vertices | exact integer | standard structural tree parameter; added in TF12 for the independently selected fixed-segment question; formula implementation independently checked by explicit path decomposition |
 | `diameter`, `radius`, `eccentricity_sum` | standard distance parameters | exact integer | NetworkX shortest-path routines on trees |
 | `matching_number` | maximum matching size | exact integer | tree dynamic program |
 | `independence_number` | maximum independent-set size | exact integer | independent tree dynamic program |
