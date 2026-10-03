@@ -197,3 +197,20 @@ the natural future computation, but no structural extremizer hypothesis is yet f
 ends in state A: the question is justified, the experiment pause remains, no invariant/candidate/
 experiment is added, TF-001158 remains next, and orders at least 15 remain untouched. See
 `docs/TF16_RESEARCH_QUESTION_AUDIT.md`.
+
+
+TF17 implements the selected multiplicity question as exact theorem-support machinery without
+promoting it to the discovery registry. The three-state rooted min-plus/count DP is independently
+validated against brute-force minimum dominating sets on every unlabeled tree through order 8,
+against all possible roots through order 8, and against the existing exact domination-number
+implementation on all 5,447 burned trees through order 14. The burned extrema have an exact
+structural explanation: every even-order extremizer through 14 is a corona H corona K1, while every
+odd-order extremizer from 3 through 13 is the unique balanced Taletskii W_(a,b). These are not
+promoted to an all-order conjecture: Taletskii's published degree-5 module construction has
+exponential base strictly above sqrt(2), and already gives an order-38 construction with
+736^2 > 2^19, analytically ruling out the corona grammar globally. TF17 also records safe
+strong-support/twin-leaf pruning and an exact three-state rooted replacement signature, but no
+finite extremal-state theorem yet predicts M_15. The experiment pause therefore remains; no
+candidate or experiment is added, TF-001158 remains next, the new helper stays non-default, and
+orders at least 15 remain untouched. See
+`docs/TF17_MINIMUM_DOMINATING_SET_MULTIPLICITY.md`.

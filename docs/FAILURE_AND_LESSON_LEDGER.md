@@ -372,3 +372,23 @@ are false.
 Scientific consequence: the support bound remains a useful necessary restriction, but TF15 uses
 the published Dorfling et al. `(gamma,i)` construction and its exact defect recurrence for the
 complete iff. No fresh order, candidate, experiment, or default invariant was involved.
+
+
+## 2026-10-03 — TF17 burned corona/W pattern is not a global extremizer grammar
+
+The exact TF17 census on burned orders 1--14 exposes an unusually clean parity pattern: every
+even extremizer is a corona `H corona K1`, and every odd extremizer from order 3 through 13 is
+the balanced Taletskii `W_(a,b)`. That finite pattern is mathematically explained, but it is not
+safe to extrapolate.
+
+Taletskii's published degree-5 construction joins copies of `W_(4,4)` while preserving the
+multiplicative number of minimum dominating sets. Since `zeta(W_(4,4))=736`, the resulting
+order-38 tree has `736^2=541696` minimum dominating sets, already exceeding the
+`2^19=524288` value of every 38-vertex corona. The published construction has exponential base
+strictly greater than sqrt(2), so the simple burned parity grammar cannot be the unrestricted
+all-order solution.
+
+Scientific consequence: TF17 records the burned pattern as a structural diagnostic, not a
+conjecture, and freezes no order-15 experiment. Process lesson: even an exact family
+characterization on every burned order must be compared against asymptotically stronger published
+constructions before it is allowed to generate a fresh prediction.

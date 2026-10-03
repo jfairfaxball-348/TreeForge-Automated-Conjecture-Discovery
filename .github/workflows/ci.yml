@@ -127,3 +127,12 @@ jobs:
         with:
           name: tf15-segment-domination-rounded-defect
           path: /tmp/tf15-segment-domination-rounded-defect.json
+
+      - name: TF17 minimum-dominating-set diagnosis
+        run: |
+          python -m experiments.tf17_minimum_dominating_sets --output /tmp/tf17-minimum-dominating-sets.json
+          test -s /tmp/tf17-minimum-dominating-sets.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf17-minimum-dominating-sets
+          path: /tmp/tf17-minimum-dominating-sets.json
