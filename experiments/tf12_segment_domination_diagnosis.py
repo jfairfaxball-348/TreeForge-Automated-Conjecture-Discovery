@@ -6,7 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 from collections import Counter, defaultdict
-from math import ceil
+from functools import cache
 from pathlib import Path
 
 import networkx as nx
@@ -115,18 +115,19 @@ def _tree_description(graph: nx.Graph) -> dict[str, object]:
     }
 
 
+@cache
 def _minimum_formula(order: int, segments: int) -> int:
     if (order, segments) == (1, 0):
         return 1
     if segments == 1:
-        return ceil(order / 3)
+        return (order + 2) // 3
     if segments >= 3:
-        return ceil((order - segments + 2) / 3)
+        return (order - segments + 4) // 3
     raise AssertionError("segment count 2 is impossible for a tree")
 
 
 def _minimum_leaf_count(segments: int) -> int:
-    return ceil((segments + 3) / 2)
+    return (segments + 4) // 2
 
 
 def _maximum_formula(order: int, segments: int) -> int:
@@ -143,6 +144,7 @@ def _maximum_formula(order: int, segments: int) -> int:
     raise AssertionError("segment count 2 is impossible for a tree")
 
 
+@cache
 def _diagnostic_cells() -> list[dict[str, object]]:
     groups: dict[tuple[int, int], list[tuple[int, nx.Graph]]] = defaultdict(list)
     trees = generate_unlabeled_trees(1, 14)
