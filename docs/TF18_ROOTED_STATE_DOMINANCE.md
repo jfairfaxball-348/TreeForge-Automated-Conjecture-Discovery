@@ -223,7 +223,22 @@ M_n. The contrast is explicit: a W_(4,4) endpoint has four Q2 branches plus its 
 it is a 2-terminal vertex of degree five. That local pattern is excluded in their fixed-gamma
 minimal counterexample but is part of Taletskii's higher order-growth construction.
 
-## 7. Burned rooted-state diagnosis
+## 7. Current dominion-family work as local test cases
+
+TF18 also checked the 2026 dominion-family work of Allagan, Gray, Sawyer and Morgan
+(arXiv:2601.03485) and the related journal article on dominion in trees. Its path-pendant forcing
+dichotomy exactly matches the rooted mechanisms already isolated here: one private leaf per path
+vertex gives independent two-way choices, while two or more private leaves make the support
+universal/forced. The alternating-pendant families give Fibonacci recurrences because local choices
+cease to be independent and must be propagated along the path.
+
+These are useful exact regression families for any future rooted replacement theorem, but they are
+family-specific recurrences rather than an unrestricted completeness result. Their forcing branch is
+already covered by the strong-support state gap, and their one-pendant branch is the same pairwise
+choice mechanism as coronas/Q2-style local interfaces. TF18 therefore records them as mechanism
+checks, not as a new extremal grammar.
+
+## 8. Burned rooted-state diagnosis
 
 Only after the projective preorder was defined was it applied to orders 1--14. The deterministic
 reproducer is `experiments/tf18_rooted_state_diagnosis.py`.
@@ -252,7 +267,7 @@ extremizers use only seven projective interfaces; that concentration is diagnost
 
 No order-15 tree or signature is used.
 
-## 8. Analytic obstructions to raw finiteness
+## 9. Analytic obstructions to raw finiteness
 
 The nonstabilization is not purely empirical.
 
@@ -273,7 +288,7 @@ These examples do not rule out a finite **symbolic** extremal recurrence. They s
 recurrence needs an additional structural theorem or aggregation; raw normalized signatures do
 not become a finite universe by themselves.
 
-## 9. Candidate compressions and decision
+## 10. Candidate compressions and decision
 
 Rejected or incomplete routes:
 
@@ -300,7 +315,7 @@ TF18 therefore ends in preferred state **A**:
 - default invariant changed: **no**;
 - `minimum_dominating_set_count` remains non-default.
 
-## 10. Recommended next session
+## 11. Recommended next session
 
 Do not inspect order 15.
 
