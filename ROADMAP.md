@@ -530,3 +530,38 @@ No experiment is frozen, no candidate is allocated, the helper is not promoted t
 invariant registry, TF-001158 remains next, and orders at least 15 remain untouched.
 
 See `docs/TF17_MINIMUM_DOMINATING_SET_MULTIPLICITY.md`.
+
+
+## TF18 — rooted-state dominance and finite-grammar audit
+
+Status: **COMPLETE (2026-10-03).**
+
+TF18 formalizes the TF17 A/B/C signature as an exact pendant boundary object and proves a
+context-safe projective replacement theorem. After subtracting one common A-state baseline, equal
+normalized cost shapes preserve every boundary-state cost tie; coordinatewise larger exact state
+counts therefore cannot decrease zeta under pendant substitution, and strict improvement in every
+feasible state strictly improves zeta. Ordinary coordinatewise cost dominance is not safe: a
+same-order burned order-8 pair has no larger replacement costs and no smaller replacement counts
+but loses an A/B optimum tie and drops closed zeta from 2 to 1.
+
+Taletskii's and Petr--Portier--Versteegen's structural mechanisms are translated into the same
+states. Repeated degree-2 preleaf branches are the rooted P2 gadget
+`A=B=(1,1), C=infeasible`; the repeated-child recurrence gives the `2^m-1` factors in W-type
+calculations. The five-vertex PPV terminal branch has
+`A=(2,1), B=(2,2), C=(2,2)`, giving exactly five optimum completions under a selected parent and
+three under an externally dominated unselected parent. Their terminal degree restrictions remain
+specific to a fixed-gamma/strong-support minimal counterexample, while Taletskii's smaller
+replacements are per-vertex growth arguments rather than exact same-order replacements.
+
+Only after this preorder was proved, orders 1--14 were diagnosed. At order 14 there are 3,782 exact
+rooted signatures, 3,474 projective interfaces, 37 normalized cost shapes, and 119 weakly
+projectively undominated interfaces. This is useful compression but not a finite-state theorem.
+Analytically, rooted stars have unbounded normalized cost gaps and endpoint-rooted paths have
+unbounded exact count vectors even at maximum degree two.
+
+Decision: preferred end state **A**. Freeze no TF18 scientific experiment, allocate no candidate,
+leave `TF-001158` next, keep `minimum_dominating_set_count` non-default, and keep every order
+at least 15 untouched. Any continuation should attack tree-realizable context offsets or a
+same-order budgeted replacement theorem before any fresh data are exposed.
+
+See `docs/TF18_ROOTED_STATE_DOMINANCE.md`.
