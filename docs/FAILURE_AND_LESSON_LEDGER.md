@@ -342,3 +342,16 @@ Corrective action: do not fabricate or backfill a historical TF13 commit. TF14 r
 materialization discrepancy explicitly and commits its own deterministic diagnosis artifact.
 Scientific consequence: none. No candidate, experiment registry row, invariant, tree of order 15,
 or theorem-status conclusion is affected.
+
+
+## 2026-10-03 — TF14 first PR-head CI stopped at unused test imports
+
+PR #20 run `37132064937` passed installation, all unit tests, and byte-compilation before Ruff
+reported two unused imports in the new TF14 test module. The imported support-core helpers were no
+longer referenced directly after the test was simplified to check their serialized diagnostic
+values.
+
+Corrective action: remove the two unused imports only. No mathematical statement, test expectation,
+diagnostic computation, prior-art conclusion, registry, candidate allocation, experiment boundary,
+or tree data changes. The failed run did not reach the deterministic TF14 workflow step and had no
+scientific consequence.
