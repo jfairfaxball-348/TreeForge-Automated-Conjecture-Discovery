@@ -225,14 +225,44 @@ extremizers. This prevents a premature subclass experiment.
 
 ### Counting is naturally compositional on rooted trees
 
-A rooted-tree dynamic program can associate to each boundary state both:
+The exact counting invariant has a three-state rooted recurrence. Store each state as a pair
+`(minimum selected vertices, number of ways attaining that minimum)`. Let `oplus` choose the
+smaller cost and sum counts on a tie, and let `otimes` add costs and multiply counts.
 
-- the minimum number of selected vertices compatible with that state; and
-- the number of ways attaining that minimum.
+For a rooted vertex `v`, define:
 
-Combining child states uses min-plus arithmetic with counts summed over ties. Thus the natural new
-quantity is exactly computable without enumerating all vertex subsets. This is a feasibility
-observation, not yet a registry change or an experiment.
+- `A_v`: `v` is selected;
+- `B_v`: `v` is not selected and is already dominated by at least one child;
+- `C_v`: `v` is not selected and is not dominated below, so it must be dominated by its parent.
+
+For a leaf, `A=(1,1)`, `B=infinity`, and `C=(0,1)`. If the children of `v` are `u`, then
+
+`A_v = (1,1) otimes product_u (A_u oplus B_u oplus C_u)`
+
+because a selected parent can satisfy a child in state `C`, while
+
+`C_v = product_u B_u`
+
+because an unselected, as-yet-undominated parent cannot have a selected child and cannot itself
+satisfy a child waiting in state `C`.
+
+For `B_v`, children may be only in states `A` or `B`, and at least one child must be in
+`A`. This condition can be accumulated with two temporary pair states, `N` (“no selected child
+yet”) and `Y` (“at least one selected child”):
+
+- initialize `N=(0,1)`, `Y=infinity`;
+- for each child `u`, set
+  `N' = N otimes B_u` and
+  `Y' = (Y otimes (A_u oplus B_u)) oplus (N otimes A_u)`;
+- after the last child, set `B_v=Y`.
+
+At the root, `A_root oplus B_root` gives simultaneously `gamma(T)` and
+`zeta(T)`. Every edge is processed once and each state operation is constant-time exact integer
+arithmetic, so the recurrence is linear in the tree size apart from integer-growth cost.
+
+This gives a precise independent implementation target and a direct brute-force cross-check route on
+burned small trees. It is still only feasibility machinery: it does not identify the extremal
+sequence or a recursive extremizer grammar.
 
 The theorem-first work in TF16 therefore narrows the mechanism but does not prove the exact
 extremal sequence or a complete recursive extremizer grammar.
