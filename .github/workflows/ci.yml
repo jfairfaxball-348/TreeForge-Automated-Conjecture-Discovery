@@ -90,3 +90,12 @@ jobs:
         with:
           name: tf11-research-question-audit
           path: /tmp/tf11-research-question-audit.json
+
+      - name: TF12 segment/domination diagnosis
+        run: |
+          python -m experiments.tf12_segment_domination_diagnosis --output /tmp/tf12-segment-domination.json
+          test -s /tmp/tf12-segment-domination.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf12-segment-domination
+          path: /tmp/tf12-segment-domination.json
