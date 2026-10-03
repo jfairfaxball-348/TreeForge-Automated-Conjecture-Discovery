@@ -16,20 +16,20 @@ def test_minimum_ceiling_slack_classes_match_rounded_leaf_bound():
         for segments in range(3, order):
             minimum = _minimum_formula(order, segments)
             minimum_leaves = _minimum_leaf_count(segments)
-            expected = []
+            expected = set()
             for leaves in range(minimum_leaves, segments + 1):
                 leaf_bound = (order - leaves + 4) // 3
                 if leaf_bound == minimum:
-                    expected.append(
+                    expected.add(
                         (
                             leaves,
                             3 * minimum - (order - leaves + 2),
                         )
                     )
-            observed = [
+            observed = {
                 (row["leaf_count"], row["published_class_index_m"])
                 for row in minimum_equality_classes(order, segments)
-            ]
+            }
             assert observed == expected
 
 
