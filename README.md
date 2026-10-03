@@ -214,3 +214,19 @@ finite extremal-state theorem yet predicts M_15. The experiment pause therefore 
 candidate or experiment is added, TF-001158 remains next, the new helper stays non-default, and
 orders at least 15 remain untouched. See
 `docs/TF17_MINIMUM_DOMINATING_SET_MULTIPLICITY.md`.
+
+
+TF18 makes the rooted replacement question precise. Subtracting the A-state cost gives a lossless
+normalized cost shape; if two pendant gadgets have the same normalized shape and the replacement
+has no smaller exact count in any feasible state, then all outside boundary alternatives acquire
+one common cost shift, preserving the global optimum tie set and never decreasing zeta. A same-order
+order-8 counterexample shows why ordinary coordinatewise cost/count dominance is unsafe: selectively
+lowering one state can destroy an optimum tie and reduce multiplicity. The literature mechanisms
+also receive an exact state dictionary: Taletskii's repeated preleaf branches are copies of the
+rooted P2 signature, while the Petr--Portier--Versteegen five-vertex terminal branch has signature
+`A=(2,1), B=(2,2), C=(2,2)`, explaining its exact 5-versus-3 factors. Burned diagnosis through
+order 14 compresses 3,474 projective interfaces to 119 weakly undominated ones at order 14, but no
+theorem makes this frontier finite; stars have unbounded normalized cost gaps and paths have
+unbounded exact counts even at maximum degree two. TF18 therefore preserves the experiment pause:
+no candidate or experiment is added, TF-001158 remains next, the count helper remains non-default,
+and order 15 remains sealed. See `docs/TF18_ROOTED_STATE_DOMINANCE.md`.
