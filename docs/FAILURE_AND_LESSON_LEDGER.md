@@ -392,3 +392,46 @@ Scientific consequence: TF17 records the burned pattern as a structural diagnost
 conjecture, and freezes no order-15 experiment. Process lesson: even an exact family
 characterization on every burned order must be compared against asymptotically stronger published
 constructions before it is allowed to generate a fresh prediction.
+
+
+## 2026-10-03 — TF18 coordinatewise rooted Pareto dominance is not context-safe
+
+TF18 tested a natural but over-strong replacement intuition: replace a pendant rooted gadget by a
+same-order gadget whose A/B/C state costs are all no larger and whose optimum state counts are all
+no smaller. This does **not** preserve the number of global minimum dominating sets because
+selectively lowering one boundary-state cost can destroy an optimum tie.
+
+A burned order-8 pair gives an exact same-order counterexample. One rooted spider has
+`A=(3,1), B=(3,1), C=infeasible`, hence closed profile `(gamma,zeta)=(3,2)`. A second
+rooted spider has `A=(2,1), B=(3,2), C=infeasible`: every finite state cost is no larger and
+every state count is no smaller, yet the closed profile is `(2,1)`. The cheaper A state removes
+the A/B tie and halves zeta.
+
+Corrective action: use only **projective** cost comparison for arbitrary pendant contexts. The
+replacement states must differ by one common additive cost shift, equivalently have the same
+A-normalized cost shape; exact counts may then be compared coordinatewise. This preserves every
+boundary-state tie, so zeta cannot decrease. Same-order strict improvement in every feasible state
+is a valid extremal exclusion.
+
+Scientific consequence: ordinary Pareto pruning is rejected. The counterexample uses only burned
+order 8 and does not expose order 15.
+
+
+## 2026-10-03 — TF18 published local restrictions do not transfer automatically between extremal objectives
+
+Taletskii's local replacements and Petr--Portier--Versteegen's terminal restrictions are both
+structurally useful, but their proof objectives matter. Taletskii often replaces a tree by a
+smaller object with better multiplicity per vertex, which supports an exponential-rate
+minimal-counterexample argument rather than an exact same-order exclusion. Petr--Portier--
+Versteegen derive their terminal degree restrictions inside a minimal counterexample for a
+fixed-domination-number/strong-support extremal functional.
+
+The distinction is concrete: the degree-five branching pattern used in Taletskii's published
+higher-growth construction is precisely the sort of 2-terminal configuration excluded inside the
+Petr--Portier--Versteegen counterexample. Therefore those terminal restrictions cannot simply be
+declared forbidden in the unrestricted fixed-order problem.
+
+Scientific consequence: TF18 records an exact DP dictionary for both proof systems but does not
+manufacture a finite gadget grammar from restrictions proved for a different extremal objective.
+The projective preorder gives substantial burned-order compression, but finite observed frontiers
+remain diagnostics rather than evidence for a finite automaton.
