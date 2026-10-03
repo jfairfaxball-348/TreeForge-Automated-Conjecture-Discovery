@@ -268,3 +268,24 @@ untouched.
 
 See `docs/TF9_FIXED_SUPPORT_PRIOR_ART.md` and
 `experiments/TF9-AUDIT-0001/audit_summary.json`.
+
+
+## TF10 — next-question diagnosis
+
+Status: **COMPLETE (2026-10-03).**
+
+TF10 audited the accumulated TF1–TF9 evidence before touching fresh data. It separated the
+heavily exercised domination vocabulary from withheld core invariants, optional predecessor-inspired
+quantities, and plausible absent parameters; it then reassessed target, grammar, and natural
+subclasses independently.
+
+The explicit alternatives were continuation unchanged, one new feature (Wiener index), one new
+target (Wiener index), one natural subclass (subcubic trees), one restricted three-feature grammar,
+and pause. None of the experiment alternatives is selected by a sufficiently specific mathematical
+question rather than by search-design considerations.
+
+Decision: **pause; no TF10 scientific experiment is frozen**. No candidate ID is allocated,
+TF-001158 remains next, registries are unchanged, the archived TF4 MIS fan is not reopened, the
+TF7–TF9 theorem thread remains closed, and orders at least 15 remain untouched.
+
+See docs/TF10_NEXT_QUESTION_DIAGNOSIS.md and experiments/TF10-DIAG-0001/diagnosis.json.

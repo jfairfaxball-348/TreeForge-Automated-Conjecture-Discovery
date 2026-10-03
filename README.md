@@ -119,3 +119,12 @@ python experiments/benchmark_tf1.py --output /tmp/tf1-benchmark.json
 ```
 
 See `PROJECT_CHARTER.md`, `docs/RESEARCH_PROTOCOL.md`, `docs/INVARIANT_CATALOG.md`, `docs/CANDIDATE_LIFECYCLE.md`, `experiments/TF1-0001/RESULTS.md`, `experiments/TF2-0001/RESULTS.md`, `experiments/TF3-0001/RESULTS.md`, `experiments/TF4-0001/RESULTS.md`, `docs/TF4_DIAGNOSTIC.md`, `docs/TF4_EXPERIMENT_FREEZE.md`, `docs/TF5_TF001028_ANALYSIS.md`, `docs/TF6_MIS_COORDINATE_DIAGNOSIS.md`, and `docs/TF7_SUPPORT_MIS_DIAGNOSIS.md`, plus `docs/TF8_FIXED_SUPPORT_EQUALITY.md` and `docs/TF9_FIXED_SUPPORT_PRIOR_ART.md`, before adding another discovery experiment.
+
+
+TF10 audits what TreeForge should study next rather than forcing another run. It separately
+reassesses the invariant vocabulary, domination target, relation grammar, and natural subclass
+options and compares concrete alternatives without numerical scoring. No alternative currently has
+an independent mathematical rationale strong enough to justify fresh data. TF10 therefore freezes
+no experiment, allocates no candidate ID, keeps TF-001158 next, leaves the TF4 MIS fan and TF7–TF9
+thread closed, and preserves every order at least 15 untouched. See
+docs/TF10_NEXT_QUESTION_DIAGNOSIS.md.

@@ -1,3 +1,35 @@
+# TF10 next-question handover
+
+TF10 completed the requested diagnosis without consuming fresh data or manufacturing another
+experiment.
+
+Starting main was f4f71acc9fd57f5ee2630c2cfbcc979a95c68a89. TF9 PR #15 is merged; exact
+head 02fcbf6dca9cf74c27890ea0df61ef5e401aeeb1 passed CI 37062351898 and post-merge
+CI 37062610463 passed.
+
+The invariant vocabulary, domination target, relation grammar, and natural subclass options were
+audited separately. No alternative has a sufficiently independent mathematical rationale. Repeating
+TF4 is repetition; adding a withheld invariant is not selected by a diagnosed mechanism; changing
+target would reset the programme without a precise question; and restricting the domain would be
+post-hoc.
+
+Decision: **pause; freeze no TF10 scientific experiment**.
+
+No candidate is allocated. TF-001158 remains next. No TF10-0001 spec exists. Candidate and
+experiment registries are unchanged. Orders 1–14 remain burned and orders at least 15 remain
+untouched. The TF4 MIS fan stays archived, the TF7–TF9 fixed-support thread stays closed, and raw
+maximal_independent_set_count is unchanged.
+
+See docs/TF10_NEXT_QUESTION_DIAGNOSIS.md and experiments/TF10-DIAG-0001/diagnosis.json.
+
+## Next session
+
+Do not spend order 15 merely to restart automated discovery. Begin only from an independently
+stated tree-theoretic question. If such a question cleanly selects one target, feature, grammar, or
+domain change, freeze that single axis prospectively; otherwise keep TreeForge paused.
+
+---
+
 # TF9 fixed-support prior-art handover
 
 TF9 completes the bounded prior-art and theorem-significance audit requested by TF8. It consumes no

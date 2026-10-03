@@ -72,3 +72,13 @@ jobs:
         with:
           name: tf8-fixed-support-equality
           path: /tmp/tf8-fixed-support-equality.json
+      - name: TF9 audit integrity check
+        run: python -m pytest -q tests/test_tf9_audit.py
+      - name: TF10 next-question diagnosis
+        run: |
+          python -m experiments.tf10_next_question_diagnosis --output /tmp/tf10-next-question-diagnosis.json
+          test -s /tmp/tf10-next-question-diagnosis.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf10-next-question-diagnosis
+          path: /tmp/tf10-next-question-diagnosis.json
