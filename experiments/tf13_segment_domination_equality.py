@@ -17,6 +17,8 @@ from experiments.tf12_segment_domination_diagnosis import (
     _minimum_leaf_count,
     _segment_paths,
     domination_number_dp,
+)
+from experiments.tf12_segment_domination_diagnosis import (
     validate_repository_boundary as validate_tf12_boundary,
 )
 from treeforge.invariants.core import segment_count
