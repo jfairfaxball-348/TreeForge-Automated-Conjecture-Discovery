@@ -355,3 +355,20 @@ Corrective action: remove the two unused imports only. No mathematical statement
 diagnostic computation, prior-art conclusion, registry, candidate allocation, experiment boundary,
 or tree data changes. The failed run did not reach the deterministic TF14 workflow step and had no
 scientific consequence.
+
+## 2026-10-03 — TF15 support-refined equality is not the rounded-defect classification
+
+TF15 combined Cabrera-Martínez's 2024 refined domination bound with the strict-rounded equality
+equation and obtained the necessary condition `2delta+|SL(T)|<=epsilon`. It was tempting to hope
+that residue-1/2 maximizers would have equality here, reducing the final classification to the
+published 2024 equality family.
+
+Burned orders 1--14 falsify that stronger necessity. Among residue-1 strict-rounded maximizers, 50
+have `(delta,|SL|)=(0,0)`, including an order-10 example, so the inequality is strict. Among
+residue-2 maximizers, 33 have `(delta,|SL|)=(0,0)`, already from order 8. Thus rules such as
+“residue 1 means exactly one support-link” or “residue 2 means one extra leaf or two support-links”
+are false.
+
+Scientific consequence: the support bound remains a useful necessary restriction, but TF15 uses
+the published Dorfling et al. `(gamma,i)` construction and its exact defect recurrence for the
+complete iff. No fresh order, candidate, experiment, or default invariant was involved.
