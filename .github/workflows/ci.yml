@@ -82,3 +82,11 @@ jobs:
         with:
           name: tf10-next-question-diagnosis
           path: /tmp/tf10-next-question-diagnosis.json
+      - name: TF11 research-question audit
+        run: |
+          python -m experiments.tf11_research_question_audit --output /tmp/tf11-research-question-audit.json
+          test -s /tmp/tf11-research-question-audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf11-research-question-audit
+          path: /tmp/tf11-research-question-audit.json
