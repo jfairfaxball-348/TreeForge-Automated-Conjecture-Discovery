@@ -304,3 +304,14 @@ Process lesson: when an integer graph invariant is bounded by a nonintegral expr
 audit must search both exact real equality and equality after floor/ceiling rounding, including
 parameterized residual classes. A negative search for the unrounded statement alone must not be
 used to infer that rounded equality is unclassified.
+
+
+## 2026-10-03 — TF13 first branch CI had a YAML indentation error
+
+GitHub Actions run 37116185772 failed before creating any job because the newly appended TF13
+workflow step lost the leading indentation on its first list item, making the workflow YAML invalid.
+
+Corrective action: restore the step's existing job-level indentation and rerun the exact unchanged
+TF13 deterministic checks. This was workflow syntax only: no test, diagnosis, TxGraffiti call,
+candidate allocation, fresh-order construction, or scientific computation ran, and no mathematical
+claim or data boundary changed.
