@@ -153,3 +153,15 @@ The bounded search did not locate a complete published classification of all fix
 extremizers, which is not a novelty claim. TF12 therefore keeps the scientific experiment pause:
 no TF12-0001, no TxGraffiti run, no candidate allocation, and orders at least 15 remain untouched.
 See `docs/TF12_SEGMENT_DOMINATION_DIAGNOSIS.md`.
+
+TF13 resolves the fixed-segment **minimum equality class completely** and narrows the maximum
+equality residue without consuming fresh data. Hajian--Henning--Jafari Rad's cactus classification,
+specialized to trees, captures all rounded leaf-bound equality cases; after exact ceiling arithmetic,
+the fixed-(n,q) minimizers are precisely the eligible published G_0^m classes. On the maximum side,
+TF13 derives the complete optimizing leaf-count interval, characterizes every degree sequence capable
+of attaining the value, and proves the exact gamma=n-L support-structure branch. A burned-order
+counterexample at (n,q)=(6,3) shows that one degree sequence can contain both a maximizer and a
+nonmaximizer, so the full maximizing tree-isomorphism classification does not follow from the
+fixed-degree-sequence theorem and remains unresolved after the bounded audit. No experiment is
+frozen, no candidate is allocated, TF-001158 remains next, and orders at least 15 remain untouched.
+See docs/TF13_SEGMENT_DOMINATION_EQUALITY.md.
