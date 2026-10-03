@@ -315,3 +315,15 @@ Corrective action: restore the step's existing job-level indentation and rerun t
 TF13 deterministic checks. This was workflow syntax only: no test, diagnosis, TxGraffiti call,
 candidate allocation, fresh-order construction, or scientific computation ran, and no mathematical
 claim or data boundary changed.
+
+
+## 2026-10-03 — TF13 exact-head CI stopped at import ordering
+
+PR #19 exact-head Actions run `37116302326` passed installation, all 79 unit tests, and
+byte-compilation. Ruff then reported only two import-order findings in the new TF13 reproducer and
+its test file, so the later deterministic workflow steps were skipped.
+
+Corrective action: apply Ruff's import grouping/order without changing executable mathematics,
+data selection, assertions, documentation conclusions, or workflow scope. The failure did not run
+TxGraffiti, allocate a candidate, alter either registry, inspect order 15, or change any TF13
+theorem-status conclusion.
