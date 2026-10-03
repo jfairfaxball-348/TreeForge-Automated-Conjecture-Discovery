@@ -134,7 +134,7 @@ def _maximum_formula(order: int, segments: int) -> int:
     if (order, segments) == (1, 0):
         return 1
     if segments == 1:
-        return ceil(order / 3)
+        return (order + 2) // 3
     if segments >= 3:
         return min(
             order // 2,
