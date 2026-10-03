@@ -1,0 +1,227 @@
+{
+  "analysis_id": "TF11-DIAG-0001",
+  "classification": "RESEARCH_QUESTION_SELECTED_NO_SCIENTIFIC_EXPERIMENT",
+  "date": "2026-10-03",
+  "provenance_verification": {
+    "starting_main_head": "f742c37fefe440f8213b7bafbe2ad8a798f0ebc7",
+    "tf10_pr": 16,
+    "tf10_pr_head": "527bffd3b6b1ed577663fcaffe71536a34d4251d",
+    "tf10_pr_head_ci": 37104972109,
+    "tf10_merge_commit": "f742c37fefe440f8213b7bafbe2ad8a798f0ebc7",
+    "tf10_post_merge_ci": 37105100784,
+    "starting_ci_status": "success",
+    "next_candidate_id": "TF-001158",
+    "experiment_registry_scientific_ids": [
+      "TF1-0001",
+      "TF2-0001",
+      "TF3-0001",
+      "TF4-0001"
+    ],
+    "tf10_0001_spec_exists": false
+  },
+  "starting_constraint": {
+    "tf10_pause_is_binding": true,
+    "no_automated_conjecturing_during_tf11": true,
+    "no_archived_tf4_coefficient_mining": true,
+    "no_tf7_tf9_thread_reopening": true,
+    "purpose": "Select a question from tree mathematics before selecting search machinery."
+  },
+  "selected_question": {
+    "question_id": "TF11-Q-SEGMENTS-DOMINATION",
+    "statement": "For finite trees T of order n with exactly q segments, what are the minimum and maximum possible domination numbers gamma(T), and which trees attain each extremum?",
+    "segment_definition": "For K1 set q=0. Otherwise a segment is a maximal path whose endpoints have degree different from 2 and whose internal vertices, if any, have degree 2. Equivalently q is the number of edges after suppressing every degree-2 vertex, so q=n-n2-1 where n2 is the number of degree-2 vertices.",
+    "independent_motivation": [
+      "Segments are a standard tree-structural parameter that records the topological skeleton after degree-2 chains are suppressed.",
+      "Ordinary domination is sensitive to edge subdivision, so a parameter that separates skeleton complexity from subdivision mass is mathematically connected to the target before any TreeForge output exists.",
+      "Extremal problems at fixed segment count or segment sequence already occur independently in tree-index literature."
+    ],
+    "connection_to_treeforge": "TreeForge has repeatedly found that one-feature scale fits are inadequate for domination, but this question is not selected from an archived candidate coefficient. It supplies a missing structural coordinate with a pre-existing mathematical meaning.",
+    "target": "domination_number",
+    "domain": "all finite simple unlabeled trees",
+    "conditioning_parameters": [
+      "order",
+      "segment_count"
+    ],
+    "required_invariants": [
+      "order",
+      "domination_number",
+      "segment_count"
+    ],
+    "new_invariant": {
+      "name": "segment_count",
+      "status": "not_yet_implemented",
+      "exact_computation": "O(n): count degree-2 vertices n2 and return n-n2-1; equivalently suppress degree-2 vertices and count reduced-tree edges.",
+      "implementation_is_independent_of_candidate_yield": true
+    },
+    "likely_relation_form": "fixed-(n,q) extremal envelopes, potentially piecewise because domination along subdivided paths can depend on path-length residues",
+    "prospective_controlled_axis": "Introduce segment_count as the single new structural coordinate; keep domination_number as target and the all-tree domain. The exact freeze of the relation/envelope procedure is deferred to a later session.",
+    "experiment_frozen": false,
+    "reason_not_frozen": "The question is mature, but TF11 did not establish that the appropriate exact envelope representation should be a single linear pairwise hull rather than a residue-aware conditioned analysis. Freezing that choice now would add a search-design decision not yet forced by the mathematics."
+  },
+  "prior_art_screen": {
+    "status_language": "bounded search only; failure to locate an exact theorem is not novelty evidence",
+    "selected_question": [
+      {
+        "source": "H. Aram, S. M. Sheikholeslami, O. Favaron, Domination subdivision numbers of trees, Discrete Mathematics 309 (2009), 622-628.",
+        "doi": "10.1016/j.disc.2007.12.085",
+        "relevance": "Establishes subdivision as a genuine ordinary-domination operation on trees; it studies how many edge subdivisions are needed to increase gamma, not extremal gamma at fixed segment count."
+      },
+      {
+        "source": "E. O. D. Andriantiana, S. Wagner, H. Wang, Maximum Wiener Index of Trees with Given Segment Sequence, MATCH Commun. Math. Comput. Chem. 75 (2016), 91-104.",
+        "relevance": "Uses the same standard segment definition and studies extremal trees at fixed segment sequence/segment count, supporting the parameter's independent mathematical naturalness; target is Wiener index, not domination."
+      },
+      {
+        "source": "B. Borovičanin, On the Extremal Zagreb Indices of Trees with Given Number of Segments or Given Number of Branching Vertices, MATCH Commun. Math. Comput. Chem. 74 (2015), 57-79.",
+        "relevance": "Shows fixed segment and branching counts are established extremal tree parameterizations; target is Zagreb indices, not domination."
+      }
+    ],
+    "conclusion": "No exact theorem, stronger theorem, or characterization settling the selected fixed-(order,segment-count) domination problem was located in the bounded search. This is recorded only as 'not located in bounded search', not 'open' or 'novel'."
+  },
+  "question_selection_matrix": [
+    {
+      "alternative": "fixed_segments_domination",
+      "precise_question": "Among n-vertex trees with exactly q segments, what are the minimum and maximum domination numbers and the extremal trees?",
+      "target_objective": "domination_number extrema",
+      "conditioning_or_domain": "order n and segment_count q; all finite trees",
+      "independent_mathematical_motivation": "Segments encode the homeomorphic skeleton and subdivision structure; edge subdivision is known to interact with domination.",
+      "connection_to_tf0_tf10": "Addresses a structural vocabulary gap without mining the archived MIS fan.",
+      "required_invariants": [
+        "order",
+        "domination_number",
+        "segment_count"
+      ],
+      "new_invariant_needed": "segment_count",
+      "likely_relation_grammar": "conditioned extremal envelope; exact representation to be frozen later",
+      "known_literature_risk": "moderate: segments are classical in extremal tree-index work and subdivision is classical in domination, but the exact cross-question was not located in bounded search",
+      "exact_computation_feasibility": "high: segment_count is linear-time exact; domination_number is already exact and validated in TreeForge",
+      "main_confounding_risk": "segment count forgets individual segment lengths and their residues modulo 3, which may force a piecewise envelope",
+      "one_material_axis": "yes at question level: one new structural coordinate, segment_count",
+      "decision": "SELECT",
+      "reason": "The question exists independently of TreeForge, connects directly to a known domination operation, and identifies a single missing structural coordinate."
+    },
+    {
+      "alternative": "fixed_branch_vertices_domination",
+      "precise_question": "Among n-vertex trees with exactly b branching vertices (degree at least 3), what are the minimum and maximum domination numbers and the extremal trees?",
+      "target_objective": "domination_number extrema",
+      "conditioning_or_domain": "order n and branching-vertex count b; all finite trees",
+      "independent_mathematical_motivation": "Branching-vertex count is a standard measure of tree ramification used in extremal tree theory.",
+      "connection_to_tf0_tf10": "Would add a genuinely absent branching coordinate rather than reuse an archived coefficient.",
+      "required_invariants": [
+        "order",
+        "domination_number",
+        "branch_vertex_count"
+      ],
+      "new_invariant_needed": "branch_vertex_count",
+      "likely_relation_grammar": "conditioned extremal envelope",
+      "known_literature_risk": "moderate: branching-count extremal classes are well developed for other indices; no exact ordinary-domination theorem was located in bounded search",
+      "exact_computation_feasibility": "high: degree threshold count is linear-time exact",
+      "main_confounding_risk": "b alone ignores degree-2 subdivision mass and branch degrees; many topologically different segment systems share the same b",
+      "one_material_axis": "yes in principle",
+      "decision": "REJECT",
+      "reason": "It is serious, but the segment formulation more directly isolates the subdivision mechanism known to affect domination. Running both would split the next research axis."
+    },
+    {
+      "alternative": "fixed_domination_wiener_extrema",
+      "precise_question": "Among n-vertex trees with fixed domination number gamma, what are the extremal Wiener indices and extremal trees?",
+      "target_objective": "wiener_index extrema",
+      "conditioning_or_domain": "order n and domination_number gamma; all finite trees",
+      "independent_mathematical_motivation": "Distance-versus-coverage is a natural parameter interaction.",
+      "connection_to_tf0_tf10": "wiener_index is implemented but was deliberately withheld in TF10.",
+      "required_invariants": [
+        "order",
+        "domination_number",
+        "wiener_index"
+      ],
+      "new_invariant_needed": "none",
+      "likely_relation_grammar": "conditioned extremal envelope",
+      "known_literature_risk": "high: existing Wiener-index literature explicitly cites extremal trees for fixed order and domination number in a substantial regime",
+      "exact_computation_feasibility": "high",
+      "main_confounding_risk": "risk of rediscovering a classical or stronger existing extremal theorem",
+      "one_material_axis": "would change target/objective",
+      "decision": "REJECT",
+      "reason": "The prior-art risk is already substantial enough that this is not a clean restart question for TreeForge."
+    },
+    {
+      "alternative": "leaf_concentration_domination",
+      "precise_question": "For n-vertex trees, how does concentration of leaves at strong support vertices constrain domination number?",
+      "target_objective": "domination_number bounds",
+      "conditioning_or_domain": "all finite trees with support/strong-support structure constrained",
+      "independent_mathematical_motivation": "Leaf concentration changes local domination choices.",
+      "connection_to_tf0_tf10": "TreeForge already records leaf, support, and cherry counts, but the question is structural rather than implementation-driven.",
+      "required_invariants": [
+        "order",
+        "domination_number",
+        "support_vertex_count",
+        "strong_support_vertex_count or an equivalent leaf-concentration statistic"
+      ],
+      "new_invariant_needed": "possibly strong_support_vertex_count",
+      "likely_relation_grammar": "structural inequality",
+      "known_literature_risk": "high: a 2024 improved domination bound explicitly uses support vertices, support-link vertices, strong leaves, and strong support vertices and characterizes equality",
+      "exact_computation_feasibility": "high",
+      "main_confounding_risk": "a TreeForge scalar such as cherry_count could be a weaker proxy for already-developed support-structure theory",
+      "one_material_axis": "unclear without choosing among several related support statistics",
+      "decision": "REJECT",
+      "reason": "Recent literature already targets the same local mechanism with richer canonical support structure, so selecting one TreeForge proxy would be search-driven."
+    },
+    {
+      "alternative": "independent_domination_interaction",
+      "precise_question": "For n-vertex trees with fixed domination number gamma, what are the extremal independent domination numbers?",
+      "target_objective": "independent_domination_number extrema",
+      "conditioning_or_domain": "order n and domination_number gamma; all finite trees",
+      "independent_mathematical_motivation": "It compares unrestricted minimum dominating sets with independent minimum dominating sets.",
+      "connection_to_tf0_tf10": "Would require one new domination-adjacent invariant rather than mining archived candidates.",
+      "required_invariants": [
+        "order",
+        "domination_number",
+        "independent_domination_number"
+      ],
+      "new_invariant_needed": "independent_domination_number",
+      "likely_relation_grammar": "conditioned extremal envelope",
+      "known_literature_risk": "high: multiple recent papers study domination and independent domination relations in trees, including sharp bounds and extremal characterizations",
+      "exact_computation_feasibility": "feasible but would require a new exact dynamic program",
+      "main_confounding_risk": "high probability of entering an already dense domination-variant literature",
+      "one_material_axis": "new target/invariant",
+      "decision": "REJECT",
+      "reason": "The bounded screen already finds direct modern literature on the parameter interaction."
+    },
+    {
+      "alternative": "pause_no_question",
+      "precise_question": "Maintain the TF10 pause and do not select a new mathematical question.",
+      "target_objective": "none",
+      "conditioning_or_domain": "none",
+      "independent_mathematical_motivation": "Default safe state if no candidate question survives.",
+      "connection_to_tf0_tf10": "Exactly preserves TF10.",
+      "required_invariants": [],
+      "new_invariant_needed": "none",
+      "likely_relation_grammar": "none",
+      "known_literature_risk": "none",
+      "exact_computation_feasibility": "not applicable",
+      "main_confounding_risk": "none",
+      "one_material_axis": "none",
+      "decision": "REJECT",
+      "reason": "The fixed-segment domination question survives mathematical motivation and bounded prior-art triage, so a question can be selected without spending fresh data."
+    }
+  ],
+  "feasibility": {
+    "burned_orders_1_14_recomputed": false,
+    "order_15_timing_probe_run": false,
+    "order_15_values_inspected": false,
+    "segment_count_implementation_added": false,
+    "prospective_note": "A future implementation can compute segment_count exactly in linear time. No fresh-order runtime or invariant values are needed to justify adding that coordinate."
+  },
+  "decision": {
+    "selected_research_question": "TF11-Q-SEGMENTS-DOMINATION",
+    "question_selected": true,
+    "new_experiment_frozen": false,
+    "candidate_ids_allocated": [],
+    "next_candidate_id": "TF-001158",
+    "candidate_registry_changed": false,
+    "experiment_registry_changed": false,
+    "tf4_mis_fan_reopened": false,
+    "tf7_tf9_theorem_thread_reopened": false,
+    "raw_maximal_independent_set_count_changed": false,
+    "order_15_consumed": false,
+    "orders_at_least_15_untouched": true
+  },
+  "next_session_recommendation": "Start from the fixed-segment domination question. Implement and test exact segment_count independently of conjecture yield, deepen the prior-art check specifically for domination under fixed segments/degree-2 count, and decide prospectively whether a residue-aware extremal-envelope representation can be frozen with exactly one material axis. Do not run TxGraffiti or inspect order 15 unless that freeze is complete."
+}
