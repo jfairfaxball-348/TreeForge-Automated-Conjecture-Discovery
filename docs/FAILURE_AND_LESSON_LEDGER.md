@@ -287,3 +287,20 @@ Corrective action: replace that remaining call with exact `(order + 2) // 3` ari
 a deterministic implementation/cleanup error only. It did not run TxGraffiti, inspect order 15,
 allocate a candidate, alter either registry, or change any mathematical formula or prior-art
 conclusion.
+
+## 2026-10-03 — TF12 equality search did not surface the rounded tree classification
+
+TF12 correctly separated Lemańska's real-valued equality theorem from the unresolved fixed-(n,q)
+equality question and explicitly treated its negative bounded search as non-novelty evidence.
+TF13 searched the rounded leaf-bound equality problem directly and located Hajian--Henning--Jafari
+Rad's 2019 tree families and their 2022 cactus classification. Specializing their Theorem 1 to
+trees closes the ceiling-slack cases G_0^0, G_0^1 and G_0^2.
+
+Scientific consequence: the TF12 numerical formulas, data boundary, and experiment-pause decision
+are unchanged. The minimum equality residue is smaller than TF12's bounded audit suggested and is
+now a direct corollary of published classification. No candidate or fresh data was involved.
+
+Process lesson: when an integer graph invariant is bounded by a nonintegral expression, an equality
+audit must search both exact real equality and equality after floor/ceiling rounding, including
+parameterized residual classes. A negative search for the unrounded statement alone must not be
+used to infer that rounded equality is unclassified.
