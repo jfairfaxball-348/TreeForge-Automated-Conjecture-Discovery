@@ -1,13 +1,13 @@
+from experiments.tf12_segment_domination_diagnosis import (
+    _maximum_formula,
+    _minimum_formula,
+    _minimum_leaf_count,
+)
 from experiments.tf13_segment_domination_equality import (
     build_diagnosis,
     maximum_leaf_interval,
     minimum_equality_classes,
     validate_repository_boundary,
-)
-from experiments.tf12_segment_domination_diagnosis import (
-    _maximum_formula,
-    _minimum_formula,
-    _minimum_leaf_count,
 )
 
 
