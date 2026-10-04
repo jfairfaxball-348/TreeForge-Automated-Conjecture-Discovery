@@ -224,6 +224,74 @@ def _hub_objective(component_pairs: list[RootPair]) -> int:
     return total - omitted
 
 
+def _path_hub(m: int) -> tuple[nx.Graph, int]:
+    """Build a burned member of the P_(3m+1)+P2 hub family."""
+    if m < 1 or 3 * m + 4 > MAX_BURNED_ORDER:
+        raise ValueError("TF22 path-hub generation is restricted to burned orders")
+    component_order = 3 * m + 1
+    graph = nx.disjoint_union(nx.path_graph(component_order), nx.path_graph(2))
+    hub = graph.number_of_nodes()
+    graph.add_node(hub)
+    graph.add_edge(hub, 1)
+    graph.add_edge(hub, component_order)
+    return graph, hub
+
+
+def _best_single_hub_rewire(graph: nx.Graph, hub: object) -> int:
+    original = minimum_dominating_set_profile(graph)[1]
+    best = original
+    reduced = graph.copy()
+    reduced.remove_node(hub)
+    for old_root in list(graph.neighbors(hub)):
+        component = nx.node_connected_component(reduced, old_root)
+        for new_root in component:
+            if new_root == old_root:
+                continue
+            rewired = graph.copy()
+            rewired.remove_edge(hub, old_root)
+            rewired.add_edge(hub, new_root)
+            assert nx.is_tree(rewired)
+            best = max(best, minimum_dominating_set_profile(rewired)[1])
+    return best
+
+
+def _path_hub_rewire_record(m: int) -> dict[str, object]:
+    """Check a burned member of the analytic no-single-rewire family."""
+    graph, hub = _path_hub(m)
+    component_zeta = (m * m + 5 * m + 2) // 2
+    stable_beta = m + 1
+    best_critical_alpha = ((m + 2) ** 2) // 4
+    best_critical_beta = component_zeta - best_critical_alpha
+    critical_margin = best_critical_beta - stable_beta
+    expected_zeta = 2 * component_zeta - stable_beta
+
+    assert vertex_status(graph, hub) == "empty"
+    assert all(
+        vertex_status(graph, vertex) == "flexible"
+        for vertex in graph.nodes()
+        if vertex != hub
+    )
+    assert minimum_dominating_set_profile(graph)[1] == expected_zeta
+
+    best_rewire = _best_single_hub_rewire(graph, hub)
+    if m >= 3:
+        assert critical_margin > 2
+        assert best_rewire == expected_zeta
+
+    return {
+        "m": m,
+        "order": graph.number_of_nodes(),
+        "component_zeta": component_zeta,
+        "best_stable_beta": stable_beta,
+        "best_critical_alpha": best_critical_alpha,
+        "best_critical_beta": best_critical_beta,
+        "critical_margin": critical_margin,
+        "hub_zeta": expected_zeta,
+        "best_single_rewire_zeta": best_rewire,
+        "strict_single_rewire_exists": best_rewire > expected_zeta,
+    }
+
+
 def _w_balance_reversal() -> dict[str, object]:
     """Check the exact two-coordinate reversal at the smallest burned q=2."""
     balanced_graph, balanced_root = _w_tree(2, 2)
@@ -282,6 +350,38 @@ def _strong_banked_residual(graph: nx.Graph) -> bool:
         and len(private_leaves) == 2
         and empties == private_leaves
     )
+
+
+def _strong_banked_substrate_record(graph: nx.Graph) -> dict[str, object]:
+    """Delete one private leaf and verify the gamma-excellent substrate theorem."""
+    assert _strong_banked_residual(graph)
+    support = strong_supports(graph)[0]
+    private_leaves = [
+        neighbor
+        for neighbor in graph.neighbors(support)
+        if graph.degree(neighbor) == 1
+    ]
+    assert len(private_leaves) == 2
+
+    old_gamma, old_zeta = minimum_dominating_set_profile(graph)
+    reduced = graph.copy()
+    reduced.remove_node(private_leaves[0])
+    new_gamma, new_zeta = minimum_dominating_set_profile(reduced)
+
+    assert new_gamma == old_gamma
+    assert new_zeta > old_zeta
+    assert _all_flexible(reduced)
+
+    selected, dominated, _ = rooted_minimum_dominating_set_states(reduced, support)
+    assert selected.cost == dominated.cost == new_gamma
+    assert selected.count == old_zeta
+
+    return {
+        "old_profile": [old_gamma, old_zeta],
+        "substrate_profile": [new_gamma, new_zeta],
+        "support_alpha": selected.count,
+        "support_beta": dominated.count,
+    }
 
 
 def _burned_rows(max_order: int) -> list[dict[str, object]]:
@@ -346,6 +446,7 @@ def _burned_rows(max_order: int) -> list[dict[str, object]]:
 
             if _strong_banked_residual(graph):
                 strong_banked_count += 1
+                _strong_banked_substrate_record(graph)
                 if zeta == maximum:
                     strong_banked_extremizer_count += 1
 
@@ -381,6 +482,9 @@ def build_diagnosis(max_order: int = MAX_BURNED_ORDER) -> dict[str, object]:
         for m in range(1, 5)
         if 3 * m + 1 <= max_order
     ]
+    path_hub_rewire_check = (
+        _path_hub_rewire_record(3) if max_order >= 13 else None
+    )
     burned = _burned_rows(max_order)
 
     return {
@@ -402,6 +506,12 @@ def build_diagnosis(max_order: int = MAX_BURNED_ORDER) -> dict[str, object]:
             ),
             "w_root_pair_formula_checks": w_checks,
             "path_reroot_formula_checks": path_checks,
+            "path_hub_no_single_rewire_check": path_hub_rewire_check,
+            "strong_banked_substrate": (
+                "deleting either private leaf from a residual strong-banked "
+                "extremizer gives an all-flexible gamma-excellent substrate; "
+                "the old zeta is the support inclusion count there"
+            ),
             "w_balance_context_reversal": _w_balance_reversal(),
         },
         "burned_rows": burned,

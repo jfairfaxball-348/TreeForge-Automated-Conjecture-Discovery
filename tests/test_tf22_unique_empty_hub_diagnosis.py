@@ -1,5 +1,9 @@
+import networkx as nx
+
 from experiments.tf22_unique_empty_hub_diagnosis import (
     _path_formula_record,
+    _path_hub_rewire_record,
+    _strong_banked_substrate_record,
     _w_balance_reversal,
     _w_formula_record,
     build_diagnosis,
@@ -29,6 +33,25 @@ def test_tf22_path_family_exposes_context_sensitive_critical_rerooting():
     assert p10["critical_v4_c_count"] == 1
     assert p10["critical_reroot_delta_with_p2"] == -1
 
+
+
+def test_tf22_path_hub_defeats_every_single_edge_rewire():
+    row = _path_hub_rewire_record(3)
+    assert row["order"] == 13
+    assert row["component_zeta"] == 13
+    assert row["best_stable_beta"] == 4
+    assert row["critical_margin"] == 3
+    assert row["hub_zeta"] == 22
+    assert row["best_single_rewire_zeta"] == 22
+    assert row["strict_single_rewire_exists"] is False
+
+
+def test_tf22_strong_banked_leaf_deletion_exposes_gamma_excellent_substrate():
+    row = _strong_banked_substrate_record(nx.path_graph(3))
+    assert row["old_profile"] == [1, 1]
+    assert row["substrate_profile"] == [1, 2]
+    assert row["support_alpha"] == 1
+    assert row["support_beta"] == 1
 
 def test_tf22_burned_diagnosis_preserves_firewall_and_structural_split():
     validate_repository_boundary()

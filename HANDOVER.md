@@ -39,9 +39,15 @@ loses `2^(q-1)` in zeta but gains `2^(q-2)` in alpha. A P2 outside component pre
 balanced choice; P7 rooted at vertex 3 prefers the unbalanced choice. Thus even W-balancing reverses
 under legitimate all-flexible stable-root contexts.
 
+The path calculation strengthens further: for every m>=3, the unique-empty hub formed from
+P_(3m+1) at its best stable root and a P2 is resistant to every single hub-edge reattachment.
+Thus local rewiring fails on an analytic infinite family, not merely on one critical move.
+
 TF22 therefore does not prove that P5 is the only unique-empty extremizer in all orders. It also
-does not close the separate TF20 strong-banked class above P3. The no-empty S-decomposition side
-still lacks a complete exact-order extremal recurrence.
+does not close the separate TF20 strong-banked class above P3. It does prove that deleting either
+private leaf from every TF20 residual strong-banked extremizer yields a gamma-excellent tree, with
+the old zeta equal to the distinguished support's gamma-set inclusion count in that substrate. The
+no-empty S-decomposition side still lacks a complete exact-order extremal recurrence.
 
 ## Scientific boundary
 

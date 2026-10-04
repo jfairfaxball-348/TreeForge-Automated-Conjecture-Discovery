@@ -585,3 +585,30 @@ stronger global normal form.
 
 Process consequence: TF22 pauses the unrestricted multiplicity programme rather than extending
 burned diagnostics. Order 15 remains sealed; no candidate or experiment is allocated.
+
+
+## 2026-10-04 — TF22 single hub-edge rewiring fails on an infinite analytic family
+
+The first TF22 path calculation showed that one critical reroot can lose. The stronger exact gap
+count gives more: if a new empty hub joins P_(3m+1), at a beta-minimizing stable root, to P2,
+then for every m>=3 no stable or critical reattachment of either hub edge strictly improves zeta.
+The best critical-root omission penalty already exceeds the two selected-parent completions
+available from P2.
+
+Scientific consequence: attachment-root optimization is not merely missing a better local choice.
+Any future closure must change component structure or solve the weighted global objective; further
+single-edge reroot searches cannot be complete.
+
+## 2026-10-04 — TF22 strong-banked one-leaf deletion exposes the same structural substrate, not the same objective
+
+For the TF20 residual strong-banked form, delete either of the two private leaves at the unique
+universal support. Taletskii gives a strict gain at unchanged gamma. Old gamma-sets witness the
+previously flexible vertices and the support; every genuinely new gamma-set must omit the support
+and therefore contain the surviving leaf. Hence every vertex of the smaller tree is flexible:
+the smaller tree is gamma-excellent. The original zeta equals the number of substrate gamma-sets
+containing the distinguished support.
+
+Scientific consequence: both TF22 residues meet gamma-excellent structure after one deletion, but
+their extremal functionals differ. The unique-empty class uses a product-minus-product objective;
+the strong-banked class uses a distinguished-root inclusion count. Do not merge them without an
+exact objective-preserving theorem.

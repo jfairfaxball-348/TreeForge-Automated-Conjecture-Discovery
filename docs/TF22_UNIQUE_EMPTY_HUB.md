@@ -407,6 +407,73 @@ m+\binom{m+2}{2}
 Conditioning on omission of vertex 2 and on inclusion of vertex 4 gives the
 displayed root counts.
 
+
+### Infinite obstruction to every single hub-edge reattachment
+
+The preceding negative comparison can be strengthened from one bad critical
+move to complete local optimality.
+
+Keep \(R_m=P_{3m+1}\), root it at path vertex 2, add one rooted \(P_2\),
+and join both roots to a fresh hub; call the result \(H_m\). The root at
+vertex 2 already minimizes \(\beta\) among every stable root of \(R_m\), with
+
+\[
+\beta_{\min}=m+1.
+\]
+
+The critical vertices are exactly path positions \(3j+1\). Their inclusion
+counts are
+
+\[
+\alpha_j=(j+1)(m+1-j),
+\]
+
+so the best possible critical inclusion count is
+
+\[
+\alpha_{\mathrm{crit,max}}
+=
+\left\lfloor\frac{(m+2)^2}{4}\right\rfloor.
+\]
+
+Hence even the best critical root has omission excess
+
+\[
+d_m=
+\zeta(R_m)
+-
+\left\lfloor\frac{(m+2)^2}{4}\right\rfloor
+-(m+1).
+\]
+
+Every critical \(C\)-state has count one. The other component is \(P_2\),
+whose selected-parent minimum has two completions, so the best critical
+reattachment changes the whole-tree count by at most
+
+\[
+2-d_m.
+\]
+
+For every \(m\ge3\), \(d_m\ge3\). Stable reattachments cannot improve
+because vertex 2 already minimizes \(\beta\); critical reattachments strictly
+lose; and moving the \(P_2\) edge merely exchanges its two symmetric roots.
+Therefore
+
+> **for every \(m\ge3\), no single hub-edge reattachment anywhere in
+> \(H_m\) strictly increases \(\zeta\).**
+
+Moreover
+
+\[
+|H_m|=3m+4,\qquad
+\zeta(H_m)=m^2+4m+1.
+\]
+
+Thus hub-edge rewiring fails on an analytic infinite family, not merely on a
+single rooted comparison. The order-13 case \(m=3\) is checked by the TF22
+burned diagnosis; larger members are established only by the formulas above
+and are not generated.
+
 ## 7. The exact equal-order component preorder
 
 Fix every component except one rooted component \(R\). Let
@@ -646,31 +713,59 @@ TF20 proves that an exact extremizer with a strong support has:
 
 TF21 proves that \(P_3\) prevents pairing those two empty leaves.
 
-TF22 finds no theorem that excludes every nontrivial member of this class.
-The exact accounting explains why the obvious moves remain insufficient.
+TF22 obtains one further exact reduction without merging this class into the
+unique-empty argument.
 
-If one private leaf is deleted, Taletskii gives the desired strict
-multiplicity gain but again releases exactly one vertex. Reattaching that
-leaf at \(v\) recreates the original tree and deletes the new
-\(v\)-omitting minimum sets. Moving it elsewhere is not neutral in general.
-Even among burned residual trees there are nontrivial examples where no
-single relocation of that private leaf gives a strict improvement; this is a
-diagnostic failure of the operation, not an extremality theorem.
+### Theorem 13.1 — one-leaf deletion exposes a gamma-excellent substrate
 
-Removing \(v\) and its two leaves does not reduce the remaining branches to
-the unique-empty objective. Because \(v\) is selected in every original
-minimum dominating set, each branch is evaluated under the selected-parent
-quantity
+Delete either private leaf \(\ell\) and call the resulting tree \(R\).
+Taletskii's universal-vertex deletion gives
 
 \[
-\min(A_i,B_i,C_i),
+\gamma(R)=\gamma(T),\qquad \zeta(R)>\zeta(T).
 \]
 
-whose minimizing state and count are branch-dependent. The
-\(\gamma\)-excellent stable-root theorem therefore does not transfer.
+Every vertex other than \(v\) and its private leaves was flexible in \(T\),
+so its old containing/omitting gamma-sets remain valid in \(R\). Every old
+gamma-set contains \(v\), so \(R\) has gamma-sets containing \(v\).
+Because the multiplicity gain is strict, \(R\) also has a new gamma-set
+omitting \(v\): any new set containing \(v\) would already dominate the
+deleted leaf and hence would have been a gamma-set of \(T\). Such a
+\(v\)-omitting set must contain the surviving private leaf, while the old
+\(v\)-containing sets omit it.
+
+Thus every vertex of \(R\) is flexible. Equivalently, \(R\) is nontrivial
+gamma-excellent. In addition,
+
+\[
+\boxed{\;\zeta(T)=\alpha_R(v).\;}
+\]
+
+Indeed exactly the gamma-sets of \(R\) containing \(v\) still dominate after
+the deleted private leaf is restored.
+
+This sharpens the strong-banked residue: it is a one-vertex duplicate-leaf
+extension of a gamma-excellent tree with a distinguished support. It still
+has a different objective from the unique-empty hub. The strong-banked
+problem asks to maximize a distinguished-root **inclusion count**, whereas
+the unique-empty problem uses the product-minus-product functional. No
+theorem identified here converts one objective into the other.
+
+A canonical infinite subfamily can be disposed of. Take a centre with two
+private leaves and \(k\) additional \(P_2\)-arms. It has \(2^k\) minimum
+dominating sets. For every \(k\ge1\), a balanced Taletskii \(W\)-tree of
+the same order \(2k+3\) has strictly larger multiplicity; \(k=0\) is
+\(P_3\). This does not classify arbitrary gamma-excellent substrates.
+
+Removing \(v\) and its two leaves also does not reduce the remaining branches
+to the unique-empty objective. Because \(v\) is selected in every original
+minimum dominating set, each branch is evaluated under the selected-parent
+quantity \(\min(A_i,B_i,C_i)\), whose minimizing state and count are
+branch-dependent.
 
 The only burned exact strong-banked extremizer through order 14 remains
-\(P_3\). TF22 does not promote that finite observation to an all-order
+\(P_3\). TF22 verifies the substrate theorem on every burned residual tree,
+but does not promote the finite extremizer observation to an all-order
 classification.
 
 ## 14. PPV audit
