@@ -88,6 +88,30 @@ def test_tf21_burned_pairing_and_unique_empty_checks_preserve_firewall():
         0,
         7,
     ]
+    assert [row["residual_extremizer_count"] for row in rows] == [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+    ]
+    assert [row["one_empty_extremizer_count"] for row in rows] == [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+    ]
     assert [row["checked_empty_pairs"] for row in rows] == [
         0,
         0,
