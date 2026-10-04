@@ -514,3 +514,42 @@ Scientific consequence: TF20 narrows any exact extremizer containing a strong su
 one such support, with exactly two private leaves and a unique universal vertex, but does not
 eliminate that residual class. The unrestricted experiment pause remains.
 
+
+
+## 2026-10-04 — TF21 two empty vertices are pairable, one is not generically compensable
+
+TF20 left the no-universal empty-vertex move with a one-vertex deficit. TF21 proves that this
+obstruction disappears as soon as two empty vertices are present. After deleting one empty vertex,
+any second original empty vertex remains empty in its surviving component. The first deletion is
+strict by Taletskii; the second cannot decrease multiplicity. The double deletion is isolate-free,
+so TF20's d=2 compensation gives an exact same-order contradiction.
+
+Scientific consequence: every no-universal exact order-extremizer has at most one empty vertex.
+This is a theorem-level reduction, not an inference from burned counts.
+
+The remaining one-empty case cannot be eliminated by a universal compensator. The subdivided
+k-arm star has zeta `2^k-1`, while deleting its unique empty centre gives kP2 with zeta
+`2^k`; the gain is exactly one. At k=2 this is P5, the unique exact order-5 extremizer.
+Thus a strict smaller Taletskii forest can coexist with exact same-order extremality.
+
+Process lesson: strict multiplicity gain at order n-1 is not enough to justify any d=1 operation
+that can lose even one optimum configuration. A valid one-vertex closure theorem must exploit
+additional global structure beyond the magnitude of Taletskii's gain.
+
+
+## 2026-10-04 — TF21 a fresh connector can recreate the deleted-vertex obstruction exactly
+
+For the sole-empty case, every deletion component is entirely flexible and its attachment root has
+A/B tied at the component domination number with C no cheaper. Adding one fresh connector adjacent
+to every attachment root therefore has B-count
+`product(alpha_i+beta_i)-product(beta_i)`: exactly the original product-minus-product
+constraint.
+
+On kP2 this construction is the subdivided k-arm star and loses precisely the all-leaves choice.
+Likewise 2P2 can first be reconnected as P4 without losing multiplicity, but subdividing an edge to
+restore the missing vertex gives P5 and drops zeta from 4 to 3.
+
+Scientific consequence: the released vertex is not generically useful merely because it may join
+several components. The component-aware connector route and reconnect-then-subdivide route both hit
+the same d=1 obstruction. Further progress needs a genuinely global extremal comparison, not a
+different placement of the one compensating vertex.

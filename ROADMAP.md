@@ -628,3 +628,35 @@ is only the residual one-vertex deficit in the strong-bankless no-universal empt
 
 See `docs/TF20_GLOBAL_COMPENSATION_STRUCTURE.md`.
 
+
+
+## TF21 — exact one-vertex obstruction
+
+Status: **COMPLETE (2026-10-04), experiment pause preserved.**
+
+TF21 proves the missing pairing theorem for the no-universal side. If u and v are two distinct
+empty vertices, Taletskii deletion at u gives a strict smaller-forest gain; v remains empty in its
+surviving component, so deleting v cannot reduce that gain. The double deletion is isolate-free,
+has deficit two, preserves gamma, and has larger zeta. TF20's d=2 compensation then gives a strict
+same-order contradiction. Hence a no-universal exact extremizer has at most one empty vertex.
+
+The unique-empty residue is characterized exactly enough to expose why the programme still does not
+close. Deleting the sole empty hub u gives rooted components containing no universal or empty
+vertices; every component vertex is flexible, each attachment root has A=B at the component gamma,
+and C is not cheaper. Thus
+`zeta(T)=product zeta(T_i)-product zeta^-(T_i,r_i)`.
+In the TF20 marked support core, u is unmarked and internal.
+
+This class is not locally bounded. The subdivided k-arm star has unique empty centre, marked core
+K1,k, zeta `2^k-1`, and deletion forest kP2 with zeta `2^k`, so the strict gain can be
+only one and its ratio tends to one. The k=2 case is P5, the unique exact order-5 extremizer.
+Therefore no universal d=1 compensator can turn every strict Taletskii deletion into a strict
+same-order improvement. A direct fresh connector merely recreates the missing all-roots-omitted
+constraint; reconnect-then-subdivide already fails on 2P2 -> P4 -> P5.
+
+Decision: preferred end state **B/D**. Multi-empty configurations are closed, but the one-empty
+hub class and the separate TF20 strong-banked class remain. No M_15 value or order-15 family is
+derived, no experiment is frozen, no candidate is allocated, `TF-001158` remains next,
+`minimum_dominating_set_count` remains non-default, and order 15 remains untouched.
+
+See `docs/TF21_ONE_VERTEX_COMPENSATION.md`.
