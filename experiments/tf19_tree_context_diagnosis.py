@@ -17,6 +17,8 @@ from collections import defaultdict
 from pathlib import Path
 from typing import TypeAlias
 
+import networkx as nx
+
 from treeforge.invariants.minimum_dominating_sets import (
     INFEASIBLE,
     MinCount,
@@ -266,6 +268,36 @@ def _context_equivalence_examples() -> dict[str, object]:
     }
 
 
+def _tree_context_coordinatewise_counterexample() -> dict[str, object]:
+    """TF18's Pareto failure survives restriction to a genuine P2 context."""
+    r_graph = nx.Graph(
+        [(1, 0), (1, 2), (1, 4), (0, 5), (2, 3), (5, 6), (6, 7)]
+    )
+    s_graph = nx.Graph(
+        [(1, 0), (1, 2), (0, 4), (2, 3), (4, 5), (4, 6), (4, 7)]
+    )
+    r_states = rooted_minimum_dominating_set_states(r_graph, 2)
+    s_states = rooted_minimum_dominating_set_states(s_graph, 2)
+    outside_states = rooted_minimum_dominating_set_states(path(2), 0)
+
+    r_profile = compose_profile(outside_states, r_states)
+    s_profile = compose_profile(outside_states, s_states)
+    assert r_profile == (4, 4)
+    assert s_profile == (3, 2)
+
+    return {
+        "outside_context": "endpoint-rooted P2 (cost pattern E0)",
+        "R_signature": tuple((state.cost, state.count) for state in r_states),
+        "S_signature": tuple((state.cost, state.count) for state in s_states),
+        "R_filled_profile": r_profile,
+        "S_filled_profile": s_profile,
+        "conclusion": (
+            "coordinatewise no-larger absolute state costs and no-smaller state counts "
+            "can still destroy a tree-context optimum tie and reduce zeta"
+        ),
+    }
+
+
 def _padding_examples() -> dict[str, object]:
     # Existing strong support: adding more private leaves preserves gamma and zeta.
     base = star(2)
@@ -430,6 +462,7 @@ def build_diagnosis(max_order: int = MAX_BURNED_ORDER) -> dict[str, object]:
             "examples": equivalence_examples,
             "first_same_order_burned_projective_collapse": first_same_order_collapse,
         },
+        "tree_context_coordinatewise_counterexample": _tree_context_coordinatewise_counterexample(),
         "budget_compensation": padding_examples,
         "burned_context_rows": rows,
         "experiment_decision": {
