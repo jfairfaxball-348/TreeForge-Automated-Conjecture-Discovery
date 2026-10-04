@@ -598,3 +598,24 @@ available from P2.
 Scientific consequence: attachment-root optimization is not merely missing a better local choice.
 Any future closure must change component structure or solve the weighted global objective; further
 single-edge reroot searches cannot be complete.
+
+## 2026-10-04 — TF23 available machinery did not justify a new research question
+
+TF23 deliberately audited mathematical questions before touching burned data. Several apparently
+natural uses of the existing vocabulary fail for reasons that computation cannot repair: the
+fixed-order number of maximum matchings and maximum independent sets are already solved; tree
+gamma-graph diameter/reconfiguration already has tight published theory; and a matching-number
+question on the segment axis is substantially constrained by a finer fixed-segment-sequence theorem
+while remaining scientifically adjacent to the closed TF11--TF15 programme.
+
+The TF22 weighted gamma-excellent objective is different: the bounded search did not locate an
+exact weighted extremal theorem, but that absence is not novelty evidence. More importantly, the
+objective is presently selected only by being the residue of TF17--TF22. It therefore fails the
+independence gate even though exact rooted-DP and constructive-grammar machinery exists.
+
+Scientific lesson: **computational readiness, an unused invariant combination, or an unresolved
+residue is not enough to restart discovery.** A new cycle must be selected by an independent
+mathematical question before any burned or fresh data are consulted.
+
+Process consequence: TF23 performs no new burned census, freezes no experiment, allocates no
+candidate, changes no registry or default invariant, and leaves order 15 sealed.
