@@ -222,6 +222,16 @@ tree context.
 At equal gadget order this is a valid exact-order extremal exclusion.  Unlike TF18 projective
 dominance, it deliberately ignores cost/count coordinates that no tree context can observe.
 
+
+The TF18 coordinatewise-cost counterexample remains a counterexample even after restricting the
+outside to a genuine tree context.  Insert the two order-8 rooted spiders from TF18 into the
+canonical (E0) context (P_2).  The first has
+`A=(3,1), B=(3,1), C=infeasible`; the second has
+`A=(2,1), B=(3,2), C=infeasible`.  Although the second has no larger absolute state cost and no
+smaller state count, the filled profiles are respectively `(gamma,zeta)=(4,4)` and
+`(3,2)`.  The cheaper A state destroys the genuine-context A/B tie.  Thus restricting to actual
+trees does not rescue naive coordinatewise Pareto dominance; the lower-face condition is essential.
+
 ## 5. The quotient is nevertheless infinite
 
 The finite set of cost faces does **not** produce a finite exact automaton.
@@ -353,7 +363,32 @@ compression.  It is not used to infer stabilization or to fit a recurrence.
 The exact burned counts are recorded by the deterministic CI artifact and summarized here after
 validation.
 
-<!-- TF19_BURNED_TABLE -->
+| n | projective interfaces | context interfaces | face profiles | weak context-undominated | strict context survivors |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 1 | 1 | 1 | 1 | 1 |
+| 2 | 1 | 1 | 1 | 1 | 1 |
+| 3 | 2 | 2 | 2 | 2 | 2 |
+| 4 | 4 | 4 | 4 | 4 | 4 |
+| 5 | 9 | 9 | 6 | 7 | 7 |
+| 6 | 18 | 14 | 6 | 7 | 8 |
+| 7 | 38 | 28 | 6 | 11 | 13 |
+| 8 | 70 | 49 | 6 | 11 | 15 |
+| 9 | 139 | 91 | 6 | 15 | 16 |
+| 10 | 264 | 173 | 6 | 21 | 24 |
+| 11 | 501 | 317 | 6 | 19 | 20 |
+| 12 | 965 | 607 | 6 | 31 | 35 |
+| 13 | 1827 | 1137 | 6 | 25 | 27 |
+| 14 | 3474 | 2126 | 6 | 44 | 49 |
+
+At order 14 the proved context quotient reduces 3,474 TF18 projective interfaces to 2,126 exact
+context interfaces; within the six observed lower-face profiles only 44 are weakly
+context-undominated under the proved face-preserving count preorder.  This is substantial
+compression, but the analytic (P_{3k}) family already proves that the exact quotient is infinite.
+
+A same-order collapse occurs already at burned order 6: two rooted projective interfaces with the
+same costs `(0,1,infeasible)` but B-state counts 1 and 4 both reduce to the context interface in
+which A is uniquely active with count 1.  This is a concrete same-order witness that projective
+state counts can retain information no genuine tree context can use.
 
 No tree of order 15 or larger is used.
 
