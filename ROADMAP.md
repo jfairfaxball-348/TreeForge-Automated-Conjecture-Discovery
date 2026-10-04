@@ -660,3 +660,36 @@ derived, no experiment is frozen, no candidate is allocated, `TF-001158` remains
 `minimum_dominating_set_count` remains non-default, and order 15 remains untouched.
 
 See `docs/TF21_ONE_VERTEX_COMPENSATION.md`.
+
+
+## TF22 — unique-empty hub global structure
+
+Status: **COMPLETE (2026-10-04), unrestricted multiplicity programme paused.**
+
+TF22 identifies TF21's all-flexible deletion components with the established class of nontrivial
+gamma-excellent trees. Burton--Sumner's critical/stable theory and Samodivkin's corona-block
+reformulation then give a complete recursive shape grammar. TF22 proves that an actual unique-empty
+attachment root is stable, and conversely that joining a new hub to stable vertices of at least two
+nontrivial gamma-excellent trees produces exactly a no-universal tree with one empty vertex.
+
+The exact hub objective does not collapse with that structural grammar. For a stable-root component,
+write `s=zeta(R)` and `alpha` for the number of gamma-sets containing the root. With the other
+components fixed, the hub objective is `(A-B)s+B alpha` with `A>B>0`. Consequently
+context-universal same-order component replacement is exactly coordinatewise dominance in
+`(s,alpha)`; a two-component exchange has the analogous exact coordinates `(S,Q)`.
+
+TF22 gives analytic counterfamilies to the remaining natural closure attempts. On
+`P_(3m+1)`, rerooting from a stable vertex to a critical one can strictly lower the whole hub
+objective. Within Taletskii's `W_(a,b)` family, balancing `W_(q-1,q+1)` to `W_(q,q)`
+raises standalone zeta but lowers the rooted inclusion coordinate, and valid P2 versus P7 contexts
+reverse which same-order component is better. Hence there is no context-independent scalar ranking
+or balancing rule capable of closing the unique-empty class by the TF17--TF22 replacement methods.
+
+A stronger path-hub theorem shows that for every m>=3 the P_(3m+1)+P2 unique-empty hub is
+resistant to every single hub-edge reattachment, not only to one critical move. The no-empty
+S-decomposition side still lacks a complete exact-order recurrence, and TF20's separate
+strong-banked class remains unclosed above P3. Therefore TF22 derives no M_15
+prediction, freezes no experiment, allocates no candidate, leaves `TF-001158` next, keeps the
+minimum-dominating-set helper non-default, and leaves every order at least 15 untouched.
+
+See `docs/TF22_UNIQUE_EMPTY_HUB.md`.

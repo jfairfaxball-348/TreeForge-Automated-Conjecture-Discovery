@@ -553,3 +553,48 @@ Scientific consequence: the released vertex is not generically useful merely bec
 several components. The component-aware connector route and reconnect-then-subdivide route both hit
 the same d=1 obstruction. Further progress needs a genuinely global extremal comparison, not a
 different placement of the one compensating vertex.
+
+
+## 2026-10-04 — TF22 all-flexible components are gamma-excellent, but their hub order is two-dimensional
+
+TF22 identifies the all-flexible deletion components from TF21 with the established nontrivial
+gamma-excellent trees. Burton--Sumner's critical/stable theory implies that the actual unique-empty
+attachment roots are stable, and Samodivkin's corona-block reformulation gives a recursive shape
+grammar.
+
+The exact hub optimization does not collapse with the shape grammar. For a stable rooted component,
+the universal replacement coordinates are `(zeta, alpha)`, where alpha counts minimum dominating
+sets containing the root. Taletskii's W family gives same-order components that trade these two
+coordinates, and valid outside components reverse which tradeoff is better.
+
+Scientific lesson: a finite constructive grammar for graph shapes is not a finite-state extremal
+grammar when exact multiplicity counts remain unbounded and the objective exposes more than one
+positive coordinate. Do not infer component optimality from standalone zeta.
+
+## 2026-10-04 — TF22 rerooting and balancing are context-sensitive, not universal repairs
+
+For `P_(3m+1)`, moving a hub attachment from a stable root to a critical root can lower the total
+minimum-dominating-set count; the exact P2-context change is `(-m^2+m+4)/2`, negative for
+`m>=3`. Within the W family, balancing raises standalone zeta but can lower the rooted inclusion
+count, and P2 versus P7 contexts choose opposite same-order winners.
+
+Scientific lesson: leaving the unique-empty class by making the hub flexible is not automatically
+an improvement, and W-style balancing cannot be applied componentwise without the full outside
+product. Any future exchange theorem must retain the exact two-coordinate context or prove a
+stronger global normal form.
+
+Process consequence: TF22 pauses the unrestricted multiplicity programme rather than extending
+burned diagnostics. Order 15 remains sealed; no candidate or experiment is allocated.
+
+
+## 2026-10-04 — TF22 single hub-edge rewiring fails on an infinite analytic family
+
+The first TF22 path calculation showed that one critical reroot can lose. The stronger exact gap
+count gives more: if a new empty hub joins P_(3m+1), at a beta-minimizing stable root, to P2,
+then for every m>=3 no stable or critical reattachment of either hub edge strictly improves zeta.
+The best critical-root omission penalty already exceeds the two selected-parent completions
+available from P2.
+
+Scientific consequence: attachment-root optimization is not merely missing a better local choice.
+Any future closure must change component structure or solve the weighted global objective; further
+single-edge reroot searches cannot be complete.

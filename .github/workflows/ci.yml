@@ -175,3 +175,12 @@ jobs:
           name: tf21-one-vertex-compensation-diagnosis
           path: /tmp/tf21-one-vertex-compensation-diagnosis.json
 
+
+      - name: TF22 unique-empty hub diagnosis
+        run: |
+          python -m experiments.tf22_unique_empty_hub_diagnosis --output /tmp/tf22-unique-empty-hub-diagnosis.json
+          test -s /tmp/tf22-unique-empty-hub-diagnosis.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf22-unique-empty-hub-diagnosis
+          path: /tmp/tf22-unique-empty-hub-diagnosis.json
