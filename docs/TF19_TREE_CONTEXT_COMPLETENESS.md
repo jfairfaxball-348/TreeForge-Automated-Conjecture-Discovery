@@ -392,7 +392,30 @@ state counts can retain information no genuine tree context can use.
 
 No tree of order 15 or larger is used.
 
-## 10. Literature audit
+## 10. Candidate finite grammars considered
+
+The exact context theorem makes several natural grammar proposals precise enough to reject or
+defer without fresh data.
+
+- **The lower-face automaton alone:** there are only three context cost patterns and, in the burned
+  universe, six realized face profiles.  This is not complete because the exposed exact counts are
+  unbounded and the (P_{3k}) family is pairwise context-distinguishable.
+- **Q2/Q5 as a finite gadget menu:** these explain the strongest small modules and the
+  (2^m-1), 5, and 3 factors, but they occupy different context interfaces and no theorem excludes
+  the infinitely many other active count vectors.
+- **Taletskii S-parts of size at most three:** this remains conditional on having no empty vertices.
+  Empty behavior is context-active, and TF19 proves no same-order no-empty reduction.
+- **Smaller replacement plus a padding bank:** this is exact when the replacement already contains
+  an internal strong support, but there is no theorem that every deficient rooted configuration or
+  every order-extremizer supplies such a bank.
+- **A symbolic path/count parameter:** this can represent the infinite (P_{3k}) family, but adding
+  symbolic parameters is not a completeness theorem.  No finite set of symbolic transitions is
+  proved to cover every exact order-extremizer.
+
+Accordingly no candidate grammar in TF19 satisfies the Phase H requirement that every other rooted
+configuration be equivalent, dominated, or replaceable with exact order bookkeeping.
+
+## 11. Literature audit
 
 TF19 rechecked the sources already central to TF16--TF18:
 
@@ -408,7 +431,7 @@ A bounded 2025--2026 update search did not locate a stronger publication giving 
 unrestricted fixed-order sequence (M_n) together with all extremizers.  This is only a bounded
 search record.  It is **not** evidence of novelty or openness.
 
-## 11. Finite-grammar and experiment decision
+## 12. Finite-grammar and experiment decision
 
 TF19 resolves the TF18 question at the boundary level:
 
@@ -439,7 +462,7 @@ TF19 freezes **no** scientific experiment.  In particular:
 - default invariant changed: **no**;
 - `minimum_dominating_set_count` remains non-default theorem/diagnostic machinery.
 
-## 12. Recommended next session
+## 13. Recommended next session
 
 The local rooted-interface programme has now reached a natural stopping point.
 
