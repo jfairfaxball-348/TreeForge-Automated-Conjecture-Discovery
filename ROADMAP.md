@@ -693,3 +693,27 @@ prediction, freezes no experiment, allocates no candidate, leaves `TF-001158` ne
 minimum-dominating-set helper non-default, and leaves every order at least 15 untouched.
 
 See `docs/TF22_UNIQUE_EMPTY_HUB.md`.
+
+## TF23 — independent research-question audit
+
+Status: **COMPLETE (2026-10-04), experiment pause preserved.**
+
+TF23 verifies the complete TF22 provenance boundary and returns to question-first selection without
+running a tree census. Four independently stated candidates are triaged before any data: matching
+number at fixed order/segment count, the number of maximum matchings at fixed order, gamma-graph
+diameter for trees, and the number of maximum independent sets at fixed order. The latter three
+are directly covered by published exact/tight tree theory. The fixed-segment matching question has
+a plausible parity/DP mechanism, but a finer 2017 segment-sequence theorem already proves the
+starlike matching-number extremum, and reopening the segment axis immediately after TF11--TF15 is
+not justified by a sharper independent problem.
+
+TF23 also audits the weighted stable-root gamma-excellent objective left by TF22. It remains a
+well-defined theorem problem with rooted-DP and constructive-grammar machinery, but it fails the
+session's independence gate: its current motivation is precisely that it is the residue of the
+paused TF17--TF22 programme. A bounded search is not used to claim novelty.
+
+No question therefore reaches the burned-diagnostic gate. Orders 1--14 are not newly enumerated,
+order 15 is not opened, no experiment is frozen, no candidate is allocated, the registries remain
+unchanged, `TF-001158` remains next, and `minimum_dominating_set_count` remains non-default.
+
+See `docs/TF23_RESEARCH_QUESTION_AUDIT.md`.
