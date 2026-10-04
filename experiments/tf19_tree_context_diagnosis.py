@@ -17,8 +17,6 @@ from collections import defaultdict
 from pathlib import Path
 from typing import TypeAlias
 
-import networkx as nx
-
 from treeforge.invariants.minimum_dominating_sets import (
     INFEASIBLE,
     MinCount,
