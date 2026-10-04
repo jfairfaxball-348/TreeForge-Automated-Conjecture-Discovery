@@ -1,3 +1,61 @@
+# TF21 one-vertex compensation handover
+
+TF21 starts from verified TF20 main
+`4df7f281591d9a9a1f1a97ea0f86931236dcfd7a`. TF20 PR #26 exact head
+`83d4a4283452da534751bb301863169dd97f2e6b` passed exact-head CI
+`37188803865`; post-merge CI `37207236838` also passed. The earlier run
+`37188758167` passed unit tests and compile and stopped only at Ruff on one unused import;
+the exact TF20 head removed only that import. Candidate, experiment, and default-invariant state
+remain unchanged.
+
+## TF21 result
+
+The no-universal d=1 obstruction is now split exactly. If a tree has two distinct empty vertices,
+delete one. Taletskii gives a strict multiplicity gain. The second empty vertex remains empty in
+its component after that deletion, so deleting it cannot reduce the gain. The double deletion is
+isolate-free and has deficit two, so TF20's forest-budget theorem converts it to a strict same-order
+contradiction. Therefore a no-universal exact order-extremizer has at most one empty vertex.
+
+If there is exactly one empty vertex u, deleting it yields components in which every vertex is
+flexible: a component-universal vertex would be universal in the original tree, and a
+component-empty vertex would be a second empty original vertex. At each attachment root
+`A=B=gamma_i` and C is not cheaper. The exact multiplicity is
+`product zeta(T_i) - product zeta^-(T_i,r_i)`. In the TF20 marked support core, u is
+unmarked and internal.
+
+This residue remains genuinely unbounded. The subdivided k-arm star has one empty centre, no
+universal vertex, marked core K1,k, and zeta `2^k-1`; deleting the centre gives kP2 with
+zeta `2^k`. The strict d=1 gain can therefore be only one. For k=2 this is P5, which is the
+unique exact order-5 extremizer. Hence no universal one-vertex compensation theorem can turn every
+strict Taletskii deletion into a strict same-order improvement.
+
+The direct connector route also fails generically: on kP2, a fresh vertex joined to one endpoint
+of every component recreates exactly the subdivided star and loses precisely the all-leaves choice.
+Likewise, reconnecting 2P2 as P4 preserves four minimum dominating sets, but subdividing an edge to
+restore the missing vertex gives P5 with only three. The connected T-u case is impossible under the
+residual hypotheses because u has at least two nonempty neighbours.
+
+The separate TF20 strong-banked class is not absorbed by the pairing theorem. P3 has a universal
+centre and two empty leaves; deleting one leaf raises zeta from 1 to 2, while deleting both returns
+zeta to 1. This proves the no-universal hypothesis is essential.
+
+End state: **B/D — multi-empty d=1 eliminated, unique-empty obstruction remains unbounded.**
+No order-15 value or extremizer family is predicted, no experiment is frozen, no candidate is
+allocated, `TF-001158` remains next, the exact count helper remains non-default, and order 15+
+remains untouched.
+
+## Next session
+
+Do not inspect order 15. Continue this multiplicity programme only if there is an independently
+justified global theorem for the unique-empty hub class (flexible deletion components with
+A=B=gamma and noncheaper C) or for the separate strong-banked residue. Otherwise preserve the
+pause/close the programme rather than return to local quotient refinement, recurrence fitting, or
+larger burned-state mining.
+
+See `docs/TF21_ONE_VERTEX_COMPENSATION.md`.
+
+---
+
 # TF20 global compensation and bankless-structure handover
 
 TF20 starts from verified TF19 main
