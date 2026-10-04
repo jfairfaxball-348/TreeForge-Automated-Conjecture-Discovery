@@ -230,3 +230,20 @@ theorem makes this frontier finite; stars have unbounded normalized cost gaps an
 unbounded exact counts even at maximum degree two. TF18 therefore preserves the experiment pause:
 no candidate or experiment is added, TF-001158 remains next, the count helper remains non-default,
 and order 15 remains sealed. See `docs/TF18_ROOTED_STATE_DOMINANCE.md`.
+
+
+TF19 characterizes the exact information that **genuine one-hole tree contexts** can see in the
+TF17 A/B/C interface.  The reverse message is
+`K_A=min(A_out,B_out,C_out)`, `K_B=min(A_out,B_out)`, `K_C=A_out`; consequently every
+tree context has one of only three normalized boundary-cost patterns:
+`(0,0,0)`, `(0,0,1)`, or `(0,1,1)`.  This yields a strictly coarser exact quotient than
+TF18 projective signatures: retain the three exposed lower faces and exact counts only on states
+that occur on a face.  The quotient is minimal for exact normalized min-plus/count response, but is
+still infinite, already on endpoint-rooted `P_(3k)` because their exposed count vectors are
+unbounded and distinguishable by canonical path contexts.  TF19 also proves that released vertices
+may be padded neutrally as extra leaves at an **already strong support**, while `P2 -> P3` and Q2
+show arbitrary leaf padding can destroy multiplicity.  Burned orders 1--14 are used only after
+these theorems are fixed: at order 14, 3,474 projective interfaces collapse to 2,126 context
+interfaces and 44 weak context-undominated interfaces.  No finite exact-order grammar follows.
+No experiment or candidate is created, `TF-001158` remains next, the helper stays non-default,
+and order 15 remains sealed.  See `docs/TF19_TREE_CONTEXT_COMPLETENESS.md`.
