@@ -5,6 +5,7 @@ from experiments.tf19_tree_context_diagnosis import (
     _canonical_contexts,
     _context_equivalence_examples,
     _padding_examples,
+    _tree_context_coordinatewise_counterexample,
     build_diagnosis,
     compose_profile,
     context_face_profile,
@@ -76,6 +77,13 @@ def test_tf19_context_quotient_remains_infinite_on_path_family_witnesses():
     assert len({repr(row["context_interface"]) for row in witnesses}) == 4
 
 
+def test_tf19_naive_coordinatewise_dominance_fails_in_a_genuine_context():
+    example = _tree_context_coordinatewise_counterexample()
+    assert example["outside_context"] == "endpoint-rooted P2 (cost pattern E0)"
+    assert example["R_filled_profile"] == (4, 4)
+    assert example["S_filled_profile"] == (3, 2)
+
+
 def test_tf19_strong_support_padding_and_arbitrary_padding_failure():
     examples = _padding_examples()
     assert examples["strong_support_padding"]["before"]["profile"] == (1, 1)
@@ -94,6 +102,14 @@ def test_tf19_burned_diagnosis_preserves_firewall():
         "exhaustive_orders": [1, 8],
         "orders_at_least_15": "untouched",
     }
+    row8 = diagnosis["burned_context_rows"][-1]
+    assert row8["order"] == 8
+    assert row8["projective_interface_count"] == 70
+    assert row8["context_interface_count"] == 49
+    assert row8["context_face_profile_count"] == 6
+    assert row8["weak_context_undominated_count"] == 11
+    assert row8["strict_context_survivor_count"] == 15
+
     decision = diagnosis["experiment_decision"]
     assert decision["new_experiment_frozen"] is False
     assert decision["order_15_prediction_frozen"] is False
