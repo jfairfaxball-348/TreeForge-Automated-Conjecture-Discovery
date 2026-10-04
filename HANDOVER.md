@@ -1,3 +1,60 @@
+# TF19 tree-context completeness handover
+
+TF19 starts from verified TF18 main
+`af679ca707abf95d1b6dfc76b11035a65e3f2250`.  PR #24 exact head
+`886faac8df71811d0e4c4c9467026603a04f6ff2` passed exact-head CI
+`37156742490`; post-merge CI `37156926069` also passed.  The TF18 diff contains only the
+intended rooted-state diagnosis/tests/CI/documentation/history files, so candidate, experiment,
+and default-invariant state remained unchanged.
+
+## TF19 result
+
+Actual tree contexts are much more rigid than the arbitrary offsets allowed by TF18.  Deleting a
+pendant rooted subtree and rooting the outside component at its attachment parent gives the exact
+reverse message
+`K_A=min(A_out,B_out,C_out)`, `K_B=min(A_out,B_out)`, `K_C=A_out`.
+Every genuine context therefore has one of exactly three normalized cost patterns:
+`(0,0,0)`, `(0,0,1)`, or `(0,1,1)`.
+
+This produces the exact tree-context quotient: retain the lower face exposed by each of those three
+patterns and the exact counts only on states that occur on at least one face.  Three canonical
+outside paths (P_2,P_3,P_1) separate the quotient classes, so this is a Myhill--Nerode-style
+minimal congruence for exact normalized `(gamma,zeta)` response.  It is strictly coarser than
+projective equality, including same-order burned collapses.
+
+The decisive negative result is analytic: endpoint-rooted `P_(3k)` all have the same exposed
+cost geometry but count vectors
+`(k(k+3)/2,1,k)`, and genuine contexts distinguish different (k).  Thus the minimal exact
+tree-context quotient is still infinite.
+
+TF19 also proves one exact vertex-budget operation.  Extra private leaves at an **already strong
+support** preserve both `gamma` and `zeta` in every outside context, so a smaller replacement
+that already contains such a forcing bank can be padded back to the original order.  Arbitrary
+padding is unsafe: `P2` has two minimum dominating sets while `P3` has one, and a second leaf
+on Q2 destroys its A/B tie.
+
+Burned orders 1--14 are diagnosed only after the theorems are fixed.  At order 14, 3,474
+projective interfaces reduce to 2,126 context interfaces, six observed face profiles, 44 weak
+context-undominated interfaces, and 49 strict-context survivors.  These counts are diagnostic
+only; the path family already proves non-finiteness.
+
+End state: **A — exact tree-context equivalence characterized, but still infinitely many exact
+classes.**  No order-15 value or extremizer family is predicted, no experiment is frozen, no
+candidate is allocated, `TF-001158` remains next, the exact count helper remains non-default,
+and order 15+ remains untouched.
+
+## Next session
+
+Do not inspect order 15.  The local rooted-interface route has reached a natural stop.  Continue
+the unrestricted multiplicity problem only if there is an independently justified **global**
+structural theorem, for example a proof that exact order-extremizers necessarily contain enough
+forced strong-support structure to provide neutral compensation banks for all relevant smaller
+replacements.  Otherwise preserve the pause rather than mine larger orders.
+
+See `docs/TF19_TREE_CONTEXT_COMPLETENESS.md`.
+
+---
+
 # TF18 rooted-state dominance handover
 
 TF18 starts from verified TF17 main
