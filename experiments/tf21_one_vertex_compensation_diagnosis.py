@@ -212,11 +212,15 @@ def _unique_empty_record(graph: nx.Graph, empty: object) -> dict[str, object]:
     }
 
 
-def _subdivided_star_family() -> list[dict[str, object]]:
+def _subdivided_star_family(
+    max_order: int = MAX_BURNED_ORDER,
+) -> list[dict[str, object]]:
     """Finite checks of the analytic one-empty family inside the burned range."""
     rows = []
     for arms in range(2, 7):
         graph = _subdivided_star(arms)
+        if graph.number_of_nodes() > max_order:
+            continue
         assert graph.number_of_nodes() == 2 * arms + 1 <= MAX_BURNED_ORDER
 
         profile = minimum_dominating_set_profile(graph)
@@ -325,12 +329,16 @@ def _burned_rows(max_order: int) -> list[dict[str, object]]:
         trees = generate_unlabeled_trees(order, order)
         assert len(trees) == EXPECTED_TREE_COUNTS[order - 1]
 
+        profiles = [minimum_dominating_set_profile(graph) for graph in trees]
+        maximum = max(zeta for _, zeta in profiles)
         residual_count = 0
         one_empty_count = 0
         multiple_empty_count = 0
+        residual_extremizer_count = 0
+        one_empty_extremizer_count = 0
         checked_pairs = 0
 
-        for graph in trees:
+        for graph, graph_profile in zip(trees, profiles, strict=True):
             statuses = _statuses(graph)
             if "universal" in statuses.values():
                 continue
@@ -344,9 +352,13 @@ def _burned_rows(max_order: int) -> list[dict[str, object]]:
 
             assert not strong_supports(graph)
             residual_count += 1
+            if graph_profile[1] == maximum:
+                residual_extremizer_count += 1
 
             if len(empties) == 1:
                 one_empty_count += 1
+                if graph_profile[1] == maximum:
+                    one_empty_extremizer_count += 1
                 _unique_empty_record(graph, empties[0])
             else:
                 multiple_empty_count += 1
@@ -361,6 +373,8 @@ def _burned_rows(max_order: int) -> list[dict[str, object]]:
                 "residual_no_universal_empty_count": residual_count,
                 "one_empty_count": one_empty_count,
                 "multiple_empty_count": multiple_empty_count,
+                "residual_extremizer_count": residual_extremizer_count,
+                "one_empty_extremizer_count": one_empty_extremizer_count,
                 "checked_empty_pairs": checked_pairs,
             }
         )
@@ -371,7 +385,7 @@ def build_diagnosis(max_order: int = MAX_BURNED_ORDER) -> dict[str, object]:
     if not 1 <= max_order <= MAX_BURNED_ORDER:
         raise ValueError("TF21 diagnosis is restricted to burned orders 1--14")
 
-    family = _subdivided_star_family()
+    family = _subdivided_star_family(max_order=max_order)
     p5 = _p5_compensation_obstruction()
     p3 = _p3_strong_banked_warning()
     burned = _burned_rows(max_order)
