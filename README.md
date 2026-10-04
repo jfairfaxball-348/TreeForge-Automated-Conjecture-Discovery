@@ -263,3 +263,19 @@ representation, but its core is an arbitrary unbounded tree, so this is not a fi
 grammar. No order-15 prediction or experiment is frozen; `TF-001158` remains next and order 15+
 remains untouched. See `docs/TF20_GLOBAL_COMPENSATION_STRUCTURE.md`.
 
+
+
+TF21 resolves the multi-empty part of TF20's one-vertex obstruction. In a no-universal tree, any
+two distinct empty vertices can be deleted together: the second remains empty after the first
+deletion, the resulting deficit-two forest is isolate-free, gamma is preserved, and zeta remains
+strictly larger. TF20's P2 compensation therefore excludes every exact extremizer with two or more
+empty vertices. If exactly one empty vertex remains, deleting it yields components whose every
+vertex is flexible; at each attachment root A and B tie at the component domination number and C
+is not cheaper, giving the exact product-minus-product formula
+`zeta(T)=product zeta(T_i)-product zeta^-(T_i,r_i)`. The empty hub is unmarked and internal
+in the marked support core, but the class is still unbounded: subdivided k-arm stars have one empty
+centre, marked core K1,k, zeta `2^k-1`, and deletion gain exactly one. The k=2 member is P5,
+the unique order-5 extremizer, so a strict Taletskii d=1 deletion cannot always be converted into a
+strict same-order improvement. No complete finite grammar follows; no experiment/candidate is added,
+`TF-001158` remains next, the helper stays non-default, and order 15 remains sealed. See
+`docs/TF21_ONE_VERTEX_COMPENSATION.md`.
