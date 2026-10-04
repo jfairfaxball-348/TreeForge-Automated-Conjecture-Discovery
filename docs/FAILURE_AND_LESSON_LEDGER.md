@@ -598,17 +598,3 @@ available from P2.
 Scientific consequence: attachment-root optimization is not merely missing a better local choice.
 Any future closure must change component structure or solve the weighted global objective; further
 single-edge reroot searches cannot be complete.
-
-## 2026-10-04 — TF22 strong-banked one-leaf deletion exposes the same structural substrate, not the same objective
-
-For the TF20 residual strong-banked form, delete either of the two private leaves at the unique
-universal support. Taletskii gives a strict gain at unchanged gamma. Old gamma-sets witness the
-previously flexible vertices and the support; every genuinely new gamma-set must omit the support
-and therefore contain the surviving leaf. Hence every vertex of the smaller tree is flexible:
-the smaller tree is gamma-excellent. The original zeta equals the number of substrate gamma-sets
-containing the distinguished support.
-
-Scientific consequence: both TF22 residues meet gamma-excellent structure after one deletion, but
-their extremal functionals differ. The unique-empty class uses a product-minus-product objective;
-the strong-banked class uses a distinguished-root inclusion count. Do not merge them without an
-exact objective-preserving theorem.

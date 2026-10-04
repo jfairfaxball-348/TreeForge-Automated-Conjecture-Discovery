@@ -713,59 +713,31 @@ TF20 proves that an exact extremizer with a strong support has:
 
 TF21 proves that \(P_3\) prevents pairing those two empty leaves.
 
-TF22 obtains one further exact reduction without merging this class into the
-unique-empty argument.
+TF22 finds no theorem that excludes every nontrivial member of this class.
+The exact accounting explains why the obvious moves remain insufficient.
 
-### Theorem 13.1 — one-leaf deletion exposes a gamma-excellent substrate
+If one private leaf is deleted, Taletskii gives the desired strict
+multiplicity gain but again releases exactly one vertex. Reattaching that
+leaf at \(v\) recreates the original tree and deletes the new
+\(v\)-omitting minimum sets. Moving it elsewhere is not neutral in general.
+Even among burned residual trees there are nontrivial examples where no
+single relocation of that private leaf gives a strict improvement; this is a
+diagnostic failure of the operation, not an extremality theorem.
 
-Delete either private leaf \(\ell\) and call the resulting tree \(R\).
-Taletskii's universal-vertex deletion gives
-
-\[
-\gamma(R)=\gamma(T),\qquad \zeta(R)>\zeta(T).
-\]
-
-Every vertex other than \(v\) and its private leaves was flexible in \(T\),
-so its old containing/omitting gamma-sets remain valid in \(R\). Every old
-gamma-set contains \(v\), so \(R\) has gamma-sets containing \(v\).
-Because the multiplicity gain is strict, \(R\) also has a new gamma-set
-omitting \(v\): any new set containing \(v\) would already dominate the
-deleted leaf and hence would have been a gamma-set of \(T\). Such a
-\(v\)-omitting set must contain the surviving private leaf, while the old
-\(v\)-containing sets omit it.
-
-Thus every vertex of \(R\) is flexible. Equivalently, \(R\) is nontrivial
-gamma-excellent. In addition,
-
-\[
-\boxed{\;\zeta(T)=\alpha_R(v).\;}
-\]
-
-Indeed exactly the gamma-sets of \(R\) containing \(v\) still dominate after
-the deleted private leaf is restored.
-
-This sharpens the strong-banked residue: it is a one-vertex duplicate-leaf
-extension of a gamma-excellent tree with a distinguished support. It still
-has a different objective from the unique-empty hub. The strong-banked
-problem asks to maximize a distinguished-root **inclusion count**, whereas
-the unique-empty problem uses the product-minus-product functional. No
-theorem identified here converts one objective into the other.
-
-A canonical infinite subfamily can be disposed of. Take a centre with two
-private leaves and \(k\) additional \(P_2\)-arms. It has \(2^k\) minimum
-dominating sets. For every \(k\ge1\), a balanced Taletskii \(W\)-tree of
-the same order \(2k+3\) has strictly larger multiplicity; \(k=0\) is
-\(P_3\). This does not classify arbitrary gamma-excellent substrates.
-
-Removing \(v\) and its two leaves also does not reduce the remaining branches
-to the unique-empty objective. Because \(v\) is selected in every original
+Removing \(v\) and its two leaves does not reduce the remaining branches to
+the unique-empty objective. Because \(v\) is selected in every original
 minimum dominating set, each branch is evaluated under the selected-parent
-quantity \(\min(A_i,B_i,C_i)\), whose minimizing state and count are
-branch-dependent.
+quantity
+
+\[
+\min(A_i,B_i,C_i),
+\]
+
+whose minimizing state and count are branch-dependent. The
+\(\gamma\)-excellent stable-root theorem therefore does not transfer.
 
 The only burned exact strong-banked extremizer through order 14 remains
-\(P_3\). TF22 verifies the substrate theorem on every burned residual tree,
-but does not promote the finite extremizer observation to an all-order
+\(P_3\). TF22 does not promote that finite observation to an all-order
 classification.
 
 ## 14. PPV audit

@@ -687,9 +687,8 @@ or balancing rule capable of closing the unique-empty class by the TF17--TF22 re
 
 A stronger path-hub theorem shows that for every m>=3 the P_(3m+1)+P2 unique-empty hub is
 resistant to every single hub-edge reattachment, not only to one critical move. The no-empty
-S-decomposition side still lacks a complete exact-order recurrence. TF20's separate strong-banked
-class is not excluded above P3, although deleting one private leaf from any residual member yields a
-gamma-excellent substrate and converts the old zeta into a distinguished-support inclusion count. Therefore TF22 derives no M_15
+S-decomposition side still lacks a complete exact-order recurrence, and TF20's separate
+strong-banked class remains unclosed above P3. Therefore TF22 derives no M_15
 prediction, freezes no experiment, allocates no candidate, leaves `TF-001158` next, keeps the
 minimum-dominating-set helper non-default, and leaves every order at least 15 untouched.
 

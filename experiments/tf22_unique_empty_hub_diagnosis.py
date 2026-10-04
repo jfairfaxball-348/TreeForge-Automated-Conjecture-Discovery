@@ -352,38 +352,6 @@ def _strong_banked_residual(graph: nx.Graph) -> bool:
     )
 
 
-def _strong_banked_substrate_record(graph: nx.Graph) -> dict[str, object]:
-    """Delete one private leaf and verify the gamma-excellent substrate theorem."""
-    assert _strong_banked_residual(graph)
-    support = strong_supports(graph)[0]
-    private_leaves = [
-        neighbor
-        for neighbor in graph.neighbors(support)
-        if graph.degree(neighbor) == 1
-    ]
-    assert len(private_leaves) == 2
-
-    old_gamma, old_zeta = minimum_dominating_set_profile(graph)
-    reduced = graph.copy()
-    reduced.remove_node(private_leaves[0])
-    new_gamma, new_zeta = minimum_dominating_set_profile(reduced)
-
-    assert new_gamma == old_gamma
-    assert new_zeta > old_zeta
-    assert _all_flexible(reduced)
-
-    selected, dominated, _ = rooted_minimum_dominating_set_states(reduced, support)
-    assert selected.cost == dominated.cost == new_gamma
-    assert selected.count == old_zeta
-
-    return {
-        "old_profile": [old_gamma, old_zeta],
-        "substrate_profile": [new_gamma, new_zeta],
-        "support_alpha": selected.count,
-        "support_beta": dominated.count,
-    }
-
-
 def _burned_rows(max_order: int) -> list[dict[str, object]]:
     rows = []
     for order in range(1, max_order + 1):
@@ -446,7 +414,6 @@ def _burned_rows(max_order: int) -> list[dict[str, object]]:
 
             if _strong_banked_residual(graph):
                 strong_banked_count += 1
-                _strong_banked_substrate_record(graph)
                 if zeta == maximum:
                     strong_banked_extremizer_count += 1
 
@@ -507,11 +474,6 @@ def build_diagnosis(max_order: int = MAX_BURNED_ORDER) -> dict[str, object]:
             "w_root_pair_formula_checks": w_checks,
             "path_reroot_formula_checks": path_checks,
             "path_hub_no_single_rewire_check": path_hub_rewire_check,
-            "strong_banked_substrate": (
-                "deleting either private leaf from a residual strong-banked "
-                "extremizer gives an all-flexible gamma-excellent substrate; "
-                "the old zeta is the support inclusion count there"
-            ),
             "w_balance_context_reversal": _w_balance_reversal(),
         },
         "burned_rows": burned,

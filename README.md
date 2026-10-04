@@ -298,9 +298,7 @@ P2 and P7 outside contexts reverse which component is better. The path family `P
 shows that rerooting at a critical vertex can decrease the full hub objective. Thus the natural
 rerooting, balancing, and component-replacement routes do not produce a context-free finite menu.
 An infinite P_(3m+1)+P2 hub family is stronger still: for every m>=3 no single hub-edge
-reattachment anywhere strictly improves zeta. The separate TF20 strong-banked residue is not globally
-excluded above P3, but deleting one of its two private leaves always exposes a gamma-excellent
-substrate whose distinguished-support inclusion count equals the original zeta. The unrestricted
-multiplicity programme is paused: no M_15 value or order-15 family is derived, no experiment or
+reattachment anywhere strictly improves zeta. The separate TF20 strong-banked residue remains
+unclosed above P3. The unrestricted multiplicity programme is paused: no M_15 value or order-15 family is derived, no experiment or
 candidate is added, `TF-001158` remains next, and order 15 remains sealed. See
 `docs/TF22_UNIQUE_EMPTY_HUB.md`.
