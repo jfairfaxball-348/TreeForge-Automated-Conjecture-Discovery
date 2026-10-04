@@ -590,3 +590,41 @@ Decision: preferred end state **A**.  The rooted-interface programme should paus
 global forcing/replacement theorem is found.  No TF19 experiment is frozen, no candidate is
 allocated, `TF-001158` remains next, the count helper remains non-default, and all orders at
 least 15 remain untouched.  See `docs/TF19_TREE_CONTEXT_COMPLETENESS.md`.
+
+## TF20 — global compensation and bankless structure
+
+Status: **COMPLETE (2026-10-04), experiment pause preserved.**
+
+TF20 leaves the now-complete local context-quotient programme and attacks exact order bookkeeping
+globally. The TF19 three-face preorder yields an exact banked replacement theorem: a smaller
+context-improving pendant gadget can spend its vertex deficit at an untouched strong support.
+
+A stronger global theorem covers every strict smaller **isolate-free forest** improvement with
+deficit at least two. Write the deficit as `2a+3b`, add disjoint P2/P3 components, use
+`zeta(P2)=2`, `zeta(P3)=1`, and invoke Taletskii's same-order forest-to-tree lemma. The only
+generic missing budget is therefore one vertex. That gap is real: every one-leaf extension of P4
+has fewer minimum dominating sets than P4.
+
+This identifies Taletskii's unresolved exact-order obstruction precisely. After universal vertices
+are excluded, his empty-vertex reduction deletes exactly one vertex, strictly improves multiplicity,
+creates no isolated component, and occurs in a class with no strong supports. Strong-support banking
+therefore cannot repair it.
+
+TF20 nevertheless obtains strong global structure. An exact order-extremizer has at most one strong
+support; if one exists it has exactly two private leaves, is the unique universal vertex, and those
+two leaves are its only empty neighbours. Every strong-bankless tree has a canonical marked
+support-core representation obtained by deleting all leaves and marking the former supports, with
+every core leaf marked. The representation is complete but not finite: the marked core is an
+arbitrary tree.
+
+Taletskii's S-part-size-at-most-three moves are audited as genuine same-order forest exclusions once
+the no-empty hypothesis is available. Petr--Portier--Versteegen terminal restrictions remain tied
+to their fixed-domination-number functional and are not imported into the fixed-order problem.
+
+No complete global grammar or recurrence follows, so TF20 derives no M_15 value, freezes no
+experiment, allocates no candidate, leaves `TF-001158` next, keeps
+`minimum_dominating_set_count` non-default, and does not inspect order 15. The next theorem target
+is only the residual one-vertex deficit in the strong-bankless no-universal empty-vertex class.
+
+See `docs/TF20_GLOBAL_COMPENSATION_STRUCTURE.md`.
+
