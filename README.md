@@ -279,3 +279,25 @@ the unique order-5 extremizer, so a strict Taletskii d=1 deletion cannot always 
 strict same-order improvement. No complete finite grammar follows; no experiment/candidate is added,
 `TF-001158` remains next, the helper stays non-default, and order 15 remains sealed. See
 `docs/TF21_ONE_VERTEX_COMPENSATION.md`.
+
+
+TF22 identifies the exact global structure of TF21's unique-empty residue without closing its
+fixed-order extremal optimization. The deletion components are precisely the nontrivial
+gamma-excellent trees of Burton--Sumner, and the actual hub attachments are at stable vertices.
+Equivalently, every no-universal tree with exactly one empty vertex is obtained by joining a new
+hub to stable vertices in at least two nontrivial gamma-excellent components. This gives a complete
+recursive shape grammar, but not a finite extremal recurrence.
+
+For a stable-root component let `s=zeta(R)` and let `alpha` count minimum dominating sets
+containing its root. In any unique-empty hub the exact objective is a positive linear functional
+`(A-B)s+B alpha`. TF22 proves that context-universal equal-order replacement is therefore exactly
+coordinatewise dominance in `(s,alpha)`, with an analogous two-coordinate theorem for
+cross-component exchange. The obstruction is real: the same-order pair
+`W_(q,q)` versus `W_(q-1,q+1)` trades larger `zeta` against smaller `alpha`, and legitimate
+P2 and P7 outside contexts reverse which component is better. The path family `P_(3m+1)` likewise
+shows that rerooting at a critical vertex can decrease the full hub objective. Thus the natural
+rerooting, balancing, and component-replacement routes do not produce a context-free finite menu.
+The separate TF20 strong-banked residue is also not globally excluded above P3. The unrestricted
+multiplicity programme is paused: no M_15 value or order-15 family is derived, no experiment or
+candidate is added, `TF-001158` remains next, and order 15 remains sealed. See
+`docs/TF22_UNIQUE_EMPTY_HUB.md`.
