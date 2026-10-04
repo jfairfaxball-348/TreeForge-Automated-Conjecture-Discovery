@@ -1,3 +1,73 @@
+# TF22 unique-empty hub handover
+
+TF22 starts from verified TF21 main
+`1c6445b61c137d775c306452bc0b817c4dcca4b4`. TF21 PR #27 exact head
+`f93fa0b868fa061cd2cf062e736c885aec3bae8b` passed exact-head CI
+`37209711381`; post-merge CI `37209936379` also passed. Both runs completed the full
+unit, compile, static-analysis, historical deterministic, TF20, and TF21 suites. Candidate,
+experiment, and default-invariant state remain unchanged; `TF-001158` is still next and order
+15+ is untouched.
+
+## TF22 result
+
+The TF21 deletion components are exactly the nontrivial gamma-excellent trees of the domination
+literature. For a flexible root r, r is domination-critical exactly when its TF17 C-state has
+cost gamma-1. Since TF21's actual attachment roots have C-cost at least gamma, every unique-empty
+attachment is stable.
+
+Conversely, take at least two nontrivial gamma-excellent trees, choose one stable vertex in each,
+and join a new hub to those vertices. The hub is the unique empty vertex, all component vertices
+remain flexible, and
+`zeta(T)=product zeta(R_i)-product beta_i`.
+This is a complete structural grammar of the unique-empty class. Burton--Sumner's attachment
+construction and Samodivkin's critical coalescence of labeled 1-coronas give published recursive
+grammars for the components themselves.
+
+The extremal optimization remains genuinely two-dimensional. If
+`s=zeta(R)` and `alpha` counts gamma-sets containing a stable root, then with outside products
+A and B the hub objective is
+`(A-B)s+B alpha`.
+TF22 proves that a same-order rooted component dominates in every possible unique-empty context
+exactly when both s and alpha weakly increase. The two-component analogue uses
+`S=s_i s_j` and `Q=S-beta_i beta_j`.
+
+Two analytic obstructions show why this does not become a context-free replacement rule.
+For `P_(3m+1)`, rerooting from path vertex 2 (stable) to path vertex 4 (critical), with P2 as the
+other component, changes zeta by `(-m^2+m+4)/2`, which is negative for m>=3.
+For Taletskii's same-order components `W_(q,q)` and `W_(q-1,q+1)`, the unbalanced component
+loses `2^(q-1)` in zeta but gains `2^(q-2)` in alpha. A P2 outside component prefers the
+balanced choice; P7 rooted at vertex 3 prefers the unbalanced choice. Thus even W-balancing reverses
+under legitimate all-flexible stable-root contexts.
+
+TF22 therefore does not prove that P5 is the only unique-empty extremizer in all orders. It also
+does not close the separate TF20 strong-banked class above P3. The no-empty S-decomposition side
+still lacks a complete exact-order extremal recurrence.
+
+## Scientific boundary
+
+No order-15 tree was generated or inspected. Burned diagnostics remain restricted to orders 1--14.
+The candidate registry is unchanged and still ends at TF-001157. The last scientific experiment
+is still TF4-0001. `minimum_dominating_set_count` remains non-default theorem/diagnostic
+machinery.
+
+No M_15 value is predicted, no order-15 construction set is frozen, no experiment is frozen, and
+no candidate is allocated.
+
+## Next session
+
+The unrestricted minimum-dominating-set multiplicity programme should remain paused unless a new
+theorem-level input appears: an exact extremal theorem for the stable-root
+`(zeta,alpha)` Pareto envelope of gamma-excellent trees, a genuinely context-aware global
+optimization theorem that handles the W antichain, or an all-order exclusion of the residual
+strong-banked class. Do not continue by enlarging burned diagnostics, refining the TF19 quotient,
+or opening order 15.
+
+Absent such input, return TreeForge to independent research-question audit mode while preserving
+TF16--TF22 as a complete record of the multiplicity programme's exact machinery, structural
+progress, and obstruction.
+
+---
+
 # TF21 one-vertex compensation handover
 
 TF21 starts from verified TF20 main
