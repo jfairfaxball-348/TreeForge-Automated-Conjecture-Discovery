@@ -565,3 +565,28 @@ at least 15 untouched. Any continuation should attack tree-realizable context of
 same-order budgeted replacement theorem before any fresh data are exposed.
 
 See `docs/TF18_ROOTED_STATE_DOMINANCE.md`.
+
+
+## TF19 — exact tree-context quotient and budget compensation
+
+Status: **COMPLETE (2026-10-04).**
+
+TF19 resolves the local completeness question left by TF18.  A one-hole tree context rooted at the
+attachment parent sends the exact reverse message
+`(min(A,B,C), min(A,B), A)`; its normalized costs are therefore restricted to exactly three
+patterns: `(0,0,0)`, `(0,0,1)`, and `(0,1,1)`.  The resulting exact boundary congruence is
+strictly coarser than projective equality: only the three realizable lower faces and exact counts on
+states exposed by at least one face matter.  Three canonical path contexts separate all quotient
+classes.
+
+The quotient does **not** make the unrestricted problem finite.  Endpoint-rooted `P_(3k)` have
+one fixed lower-face pattern but pairwise distinguishable exposed count vectors, proving infinitely
+many exact context classes even at maximum degree two.  TF19 also proves a conditional same-order
+compensation lemma: any number of released vertices may be spent as extra private leaves at an
+already strong support without changing `gamma` or `zeta` in any outside context.  Arbitrary
+padding is false, as `P2 -> P3` and the destruction of Q2's A/B tie show.
+
+Decision: preferred end state **A**.  The rooted-interface programme should pause unless a new
+global forcing/replacement theorem is found.  No TF19 experiment is frozen, no candidate is
+allocated, `TF-001158` remains next, the count helper remains non-default, and all orders at
+least 15 remain untouched.  See `docs/TF19_TREE_CONTEXT_COMPLETENESS.md`.

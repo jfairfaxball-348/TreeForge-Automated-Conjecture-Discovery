@@ -435,3 +435,49 @@ Scientific consequence: TF18 records an exact DP dictionary for both proof syste
 manufacture a finite gadget grammar from restrictions proved for a different extremal objective.
 The projective preorder gives substantial burned-order compression, but finite observed frontiers
 remain diagnostics rather than evidence for a finite automaton.
+
+
+## 2026-10-04 — TF19 projective equality is not minimal for genuine tree contexts
+
+TF18 deliberately proved its projective replacement theorem against an arbitrary abstract outside
+offset vector.  TF19 derived the exact reverse message of a genuine one-hole tree context and found
+that the outside costs can realize only `(0,0,0)`, `(0,0,1)`, or `(0,1,1)` after
+normalization.  Coordinates that never lie on a lower face for those three patterns are invisible
+to every tree context.
+
+Corrective action: replace projective equality, when exact context equivalence rather than an
+arbitrary-context sufficient condition is needed, by the three-face quotient with exact counts only
+on context-active states.  This is a real compression: a same-order collapse already occurs on
+burned order 6, and order 14 drops from 3,474 projective interfaces to 2,126 context interfaces.
+
+Scientific consequence: the refinement does not create a finite automaton.  Endpoint-rooted
+`P_(3k)` have pairwise distinguishable active count vectors, so the exact tree-context quotient
+is analytically infinite.  Further burned state mining cannot establish finite exact-state
+completeness.
+
+## 2026-10-04 — TF19 arbitrary vertex-budget padding is unsafe
+
+A tempting repair for Taletskii-style smaller replacements is to spend released vertices by adding
+leaves.  This is false without a forcing hypothesis: `P2` has two minimum dominating sets,
+whereas adding one leaf at an endpoint gives `P3` with one.  Likewise, the Q2 rooted branch
+changes from `A=B=(1,1)` to `A=(1,1), B=(2,1)` after a second private leaf is attached,
+destroying its multiplicity-generating A/B tie.
+
+Corrective action: TF19 proves only the exact safe form.  Once a vertex is already a strong support,
+adding any number of further private leaves preserves both `gamma` and `zeta`, uniformly in
+every outside context.  Such an existing strong support is a valid vertex-budget bank; creating one
+is not generally neutral.
+
+Scientific consequence: smaller rate-improving replacements can be converted to same-order
+replacements only when a suitable forcing bank is independently guaranteed.  TF19 obtains no
+global theorem guaranteeing such banks in every exact order-extremizer.
+
+## 2026-10-04 — TF19 first branch CI stopped at one unused import
+
+TF19 branch Actions run `37180597958` passed installation, all unit tests, and byte-compilation.
+Ruff then reported one unused `networkx` import in the new deterministic context diagnosis, so
+all later deterministic workflow steps were skipped.
+
+Corrective action: remove that import.  Run `37180734949` then passed the full suite, including
+the unchanged historical checks and the new TF19 burned-order diagnosis.  The failed run did not
+execute TF19's burned census, inspect order 15, alter a registry, or change any mathematical claim.
