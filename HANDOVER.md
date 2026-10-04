@@ -1,3 +1,69 @@
+# TF20 global compensation and bankless-structure handover
+
+TF20 starts from verified TF19 main
+`f493a2ca380c9876c3687bbbf4a30a81f6ce6b52`. PR #25 exact head
+`57839138093b9a6da04d7f0e9e23069cf00be079` passed exact-head CI
+`37181108083`; post-merge CI `37181221379` also passed. The TF19 diff contains only the
+intended tree-context theorem/diagnosis, tests, CI, documentation, and history files. Candidate,
+experiment, and default-invariant state remained unchanged.
+
+## TF20 result
+
+The exact TF19 three-face context preorder now gives a reusable **banked same-order replacement
+theorem**: a smaller pendant replacement with the same E0/E1/E2 lower faces and no smaller active
+state counts may spend its exact vertex deficit as extra leaves at an untouched strong support.
+The common A-cost shift is tracked separately; `zeta` is weakly or strictly improved according to
+the active counts.
+
+More importantly, strong supports are not the only compensation mechanism. If a strict
+multiplicity-improving isolate-free forest replacement has vertex deficit `d>=2`, write
+`d=2a+3b`, add `a` disjoint P2 components and `b` disjoint P3 components, and invoke
+Taletskii's same-order forest-to-tree Lemma 5. Since `zeta(P2)=2` and `zeta(P3)=1`, this
+converts every such deficit at least two into a strict exact-order tree improvement. The generic
+uncovered budget is therefore exactly **one vertex**.
+
+That one-vertex gap is genuine: every one-leaf extension of P4 has at most 3 minimum dominating
+sets, while P4 has 4. It is also exactly where Taletskii's key empty-vertex reduction lands. After
+universal vertices are excluded, deleting an empty vertex gives a strict smaller isolate-free forest
+with deficit one; the same no-universal hypothesis rules out strong supports, so no TF19 bank is
+available.
+
+TF20 also proves a global structural restriction. An exact order-extremizer has at most one strong
+support. If it has one, that vertex is the unique universal vertex, has exactly two private leaves,
+and those two leaves are its only empty neighbours. The no-empty S-decomposition regime is
+automatically strong-bankless, because every strong support is universal and its private leaves are
+empty.
+
+Every strong-bankless tree of order at least three has a canonical **marked support core**:
+delete all leaves to obtain a tree H and mark exactly the former supports. Every core leaf is marked,
+and the original tree is recovered by attaching exactly one private leaf to every mark. Conversely
+every marked tree with all core leaves marked gives a strong-bankless tree. This is a complete
+representation, but not a finite extremal grammar: H remains an arbitrary tree with unbounded
+degree and geometry.
+
+Taletskii's S-part-size-at-most-three exclusions are now recognized as already exact-order
+same-order forest arguments once the no-empty hypothesis is available. Petr--Portier--Versteegen's
+terminal restrictions still do not transfer, because their reductions compare a fixed-gamma,
+strong-support-sensitive inductive functional rather than produce absolute smaller forests with
+larger `zeta`.
+
+End state: **A — substantial global replacement theory, but the bankless one-vertex empty-vertex
+case remains uncontrolled.** No order-15 value or extremizer family is predicted, no experiment is
+frozen, no candidate is allocated, `TF-001158` remains next, the exact count helper remains
+non-default, and order 15+ remains untouched.
+
+## Next session
+
+Do not inspect order 15. Attack only the residual one-vertex deficit in the strong-bankless,
+no-universal empty-vertex class. The most promising routes are a theorem pairing two independent
+empty-vertex reductions, or a restricted one-vertex compensator expressed on the marked support
+core. If neither survives exact accounting, pause the unrestricted multiplicity programme rather
+than return to local state mining.
+
+See `docs/TF20_GLOBAL_COMPENSATION_STRUCTURE.md`.
+
+---
+
 # TF19 tree-context completeness handover
 
 TF19 starts from verified TF18 main

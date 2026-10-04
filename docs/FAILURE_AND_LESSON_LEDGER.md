@@ -481,3 +481,36 @@ all later deterministic workflow steps were skipped.
 Corrective action: remove that import.  Run `37180734949` then passed the full suite, including
 the unchanged historical checks and the new TF19 burned-order diagnosis.  The failed run did not
 execute TF19's burned census, inspect order 15, alter a registry, or change any mathematical claim.
+
+## 2026-10-04 — TF20 generic one-vertex compensation is false
+
+TF20 closes most of the vertex-budget problem globally: if a strict smaller isolate-free forest
+replacement releases at least two vertices, the deficit can be written as `2a+3b`, filled by
+disjoint P2/P3 components, and converted back to a same-order tree with Taletskii's forest lemma.
+It was tempting to expect that the remaining one-vertex deficit could always be handled by adding
+one leaf somewhere.
+
+That stronger statement is false. P4 has four minimum dominating sets. Attaching one new leaf at
+an endpoint produces P5 with three; attaching it at an internal vertex produces the other
+attachment orbit with two. Thus every one-leaf extension of P4 decreases `zeta`.
+
+Corrective action: treat `d=1` as a separate structural problem. Do not infer a generic
+one-vertex bank from the successful P2/P3 compensation theorem.
+
+Scientific consequence: Taletskii's no-universal empty-vertex reduction remains genuinely
+unresolved for exact order, because it has exactly this one-vertex deficit.
+
+## 2026-10-04 — TF20 strong-support banking and no-empty S-decomposition are orthogonal
+
+A strong support is universal in every minimum dominating set, and each of its private leaves is
+empty. Therefore any tree satisfying Taletskii's no-empty hypothesis has no strong support at all.
+
+Corrective action: do not try to establish the no-empty hypothesis by assuming the existence of a
+strong-support compensation bank. The bank itself creates empty vertices. Use strong-support
+banking only for replacements that leave an already existing bank untouched, and treat the
+no-empty/S-decomposition route on the strong-bankless side.
+
+Scientific consequence: TF20 narrows any exact extremizer containing a strong support to at most
+one such support, with exactly two private leaves and a unique universal vertex, but does not
+eliminate that residual class. The unrestricted experiment pause remains.
+

@@ -155,3 +155,13 @@ jobs:
         with:
           name: tf19-tree-context-diagnosis
           path: /tmp/tf19-tree-context-diagnosis.json
+
+      - name: TF20 global-compensation diagnosis
+        run: |
+          python -m experiments.tf20_global_compensation_diagnosis --output /tmp/tf20-global-compensation-diagnosis.json
+          test -s /tmp/tf20-global-compensation-diagnosis.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tf20-global-compensation-diagnosis
+          path: /tmp/tf20-global-compensation-diagnosis.json
+
