@@ -247,3 +247,19 @@ these theorems are fixed: at order 14, 3,474 projective interfaces collapse to 2
 interfaces and 44 weak context-undominated interfaces.  No finite exact-order grammar follows.
 No experiment or candidate is created, `TF-001158` remains next, the helper stays non-default,
 and order 15 remains sealed.  See `docs/TF19_TREE_CONTEXT_COMPLETENESS.md`.
+
+TF20 moves the unrestricted minimum-dominating-set multiplicity programme from local rooted
+interfaces to global exact-order structure. It proves an exact strong-support banked replacement
+theorem using TF19's three genuine context faces, and a stronger forest-budget principle: every
+strict multiplicity-improving isolate-free forest replacement with vertex deficit at least two can
+be padded by disjoint P2/P3 components and converted by Taletskii's same-order forest lemma into a
+strict n-vertex tree improvement. The only generic missing budget is one vertex, and this gap is
+real because every one-leaf extension of P4 lowers `zeta` from 4 to at most 3. This is exactly the
+deficit of Taletskii's empty-vertex reduction after universal vertices are excluded, when no strong
+support bank can exist. TF20 also proves that an exact order-extremizer has at most one strong
+support; if present it is the unique universal vertex with exactly two private leaves and no other
+empty neighbour. Every tree with no strong support has a canonical marked support-core
+representation, but its core is an arbitrary unbounded tree, so this is not a finite extremal
+grammar. No order-15 prediction or experiment is frozen; `TF-001158` remains next and order 15+
+remains untouched. See `docs/TF20_GLOBAL_COMPENSATION_STRUCTURE.md`.
+
