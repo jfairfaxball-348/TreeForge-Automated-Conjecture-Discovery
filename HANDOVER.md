@@ -1,3 +1,64 @@
+# TF23 independent research-question audit handover
+
+TF23 starts from verified TF22 main
+`0f16ae6a8482a7531d8e9a5dac77b8cb388f023b`. TF22 PR #28 exact head
+`49f84988ba2b2b9b2a374e3cf90594beed151dfb` passed exact-head CI
+`37225316919`; post-merge CI `37225577808` also passed. Both runs completed the full unit,
+compile, static-analysis, historical deterministic, TF20 global-compensation, TF21 one-vertex-
+compensation, and TF22 unique-empty-hub suites. PR #28 changed exactly the eight files recorded in
+`docs/TF23_RESEARCH_QUESTION_AUDIT.md`.
+
+The live registry boundary was rechecked directly: the candidate registry contains 1,157 unique
+permanent IDs ending at `TF-001157`, `TF-001158` is absent and remains next, and the scientific
+experiment registry still ends at `TF4-0001`. The default invariant registry still contains only
+`CORE_INVARIANTS`; `minimum_dominating_set_count` remains explicitly non-default diagnostic/theorem
+machinery. No order-15-or-larger generation or inspection occurred.
+
+## TF23 result
+
+TF23 audits the completed TreeForge lines before proposing any new computation. TF1--TF5 remain a
+closed grammar/method diagnosis rather than a reason to rerun generic domination discovery.
+TF6--TF9 support/MIS is closed after stronger prior art subsumed the main numerical bound.
+TF11--TF15 fixed-segment domination is closed at its published-plus-elementary recursive structural
+endpoint. TF17--TF22 minimum-dominating-set multiplicity remains paused at the exact two-coordinate
+unique-empty hub obstruction and separate strong-banked residue.
+
+A small candidate set was formulated before data. Maximum-matching multiplicity at fixed order is
+already completely characterized by Heuberger--Wagner (2011). Maximum-independent-set multiplicity
+at fixed order is already characterized by Zito (1991). Tree gamma-graph diameter/reconfiguration
+has tight published bounds and constructive algorithms (2018--2020). Matching number at fixed
+order and segment count has a clean mechanism, but Andriantiana--Wagner--Wang (2017) already prove
+the starlike minimum-matching theorem at the finer fixed-segment-sequence level; immediately
+reopening the segment axis is not justified by the remaining envelope problem.
+
+The TF22 weighted stable-root gamma-excellent extremum is deliberately not selected. It is coherent
+and the bounded search did not reveal an exact weighted theorem, but its current motivation is only
+that it survived TF22. A negative search is not novelty evidence, and an exhausted programme's
+residue is not an independent TreeForge question.
+
+Therefore **no question survives TF23**. Because the question gate fails, TF23 performs no burned
+orders 1--14 diagnostics at all and does not reach an experiment-freeze decision beyond preserving
+the pause.
+
+## Scientific boundary
+
+No TxGraffiti generation, candidate allocation, experiment-registry change, default-invariant
+change, or scientific corpus generation occurs in TF23. The last scientific experiment remains
+`TF4-0001`; `TF-001158` remains next; orders 15+ remain untouched.
+
+## Next session
+
+Keep order 15 sealed. Resume TreeForge only when an independently sourced mathematical problem
+selects a precise tree class, quantity/property, and plausible exact mechanism before data. Good
+triggers would be an explicit open problem in current tree theory, a published structural theorem
+with a clearly missing extremal/equality case that fits TreeForge's machinery, or an external
+application that independently selects an existing invariant.
+
+Do not restart TF4, fixed-segment domination, support/MIS, or the TF22 weighted gamma-excellent
+residue merely to avoid a pause. The pause is the TF23 scientific result.
+
+---
+
 # TF22 unique-empty hub handover
 
 TF22 starts from verified TF21 main
